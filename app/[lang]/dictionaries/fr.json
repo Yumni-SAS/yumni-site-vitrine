@@ -1,0 +1,973 @@
+{
+  "common": {
+    "freeTrial": "Essai gratuit",
+    "freeTrialStart": "Commencer gratuitement",
+    "requestDemo": "Demander une démo",
+    "demo": "Démo",
+    "learnMore": "En savoir plus",
+    "seeAllFeatures": "Voir toutes les fonctionnalités →",
+    "startFree": "Essayer gratuitement →",
+    "back": "← Retour à l'accueil",
+    "hostedInFrance": "Hébergé en France 🇫🇷",
+    "gdprCompliant": "RGPD Conforme",
+    "noCreditCard": "Sans carte bancaire",
+    "noCommitment": "Sans engagement",
+    "tls": "TLS 1.3",
+    "scaleway": "Scaleway Cloud",
+    "security": "Sécurité :",
+    "france": "France 🇫🇷",
+    "response": "Réponse",
+    "lessThan24h": "< 24h ouvrées",
+    "gdpr": "RGPD",
+    "compliant": "Conforme",
+    "frPar": "fr-par"
+  },
+  "header": {
+    "product": "Produit",
+    "solutions": "Solutions",
+    "pricing": "Tarifs",
+    "resources": "Ressources"
+  },
+  "footer": {
+    "tagline": "Plateforme de pilotage RSE tout-en-un. CSRD\u00a0Ready.",
+    "product": "Produit",
+    "solutions": "Solutions",
+    "resources": "Ressources",
+    "company": "Entreprise",
+    "productLinks": {
+      "cockpit": "Cockpit",
+      "kpis": "KPIs & Alertes",
+      "wsjf": "Priorisation WSJF",
+      "risks": "Gestion des risques",
+      "reporting": "Reporting",
+      "esrs": "Conformité ESRS"
+    },
+    "solutionLinks": {
+      "consulting": "Cabinets de conseil",
+      "sme": "PME",
+      "groups": "ETI & Groupes",
+      "pricing": "Tarifs"
+    },
+    "resourceLinks": {
+      "blog": "Blog",
+      "guides": "Guides",
+      "glossary": "Glossaire RSE",
+      "webinars": "Webinars"
+    },
+    "companyLinks": {
+      "about": "À propos",
+      "contact": "Contact",
+      "security": "Sécurité & RGPD",
+      "legal": "Mentions légales"
+    },
+    "copyright": "© {year} Yumni. Tous droits réservés.",
+    "legalNotice": "Mentions légales",
+    "privacy": "Confidentialité",
+    "terms": "CGU"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Plateforme SaaS RSE — CSRD Ready",
+      "title1": "Pilotez votre",
+      "titleHighlight": "stratégie RSE",
+      "title2": "en temps réel",
+      "subtitle": "Du cockpit stratégique au rapport COMEX — en un clic. Yumni centralise KPIs, risques, plans d'action et conformité ESRS dans une plateforme unique.",
+      "trustedBy": "Ils nous font confiance"
+    },
+    "trust": {
+      "items": [
+        "Cabinet Greenshift",
+        "ESG Advisory",
+        "RSE Conseil",
+        "Vertuo Group",
+        "Impact Strategy"
+      ]
+    },
+    "socialProof": {
+      "items": [
+        { "num": "500+", "label": "entreprises pilotées" },
+        { "num": "40", "label": "jours/an récupérés en moyenne" },
+        { "num": "12s", "label": "pour générer un rapport COMEX" },
+        { "num": "99.9%", "label": "uptime garanti" }
+      ]
+    },
+    "problem": {
+      "eyebrow": "Le problème",
+      "title": "Le pilotage RSE ne devrait pas être un parcours du combattant",
+      "items": [
+        {
+          "num": "48h",
+          "stat": "pour compiler un reporting RSE",
+          "detail": "Des jours entiers perdus à copier-coller entre Excel et PowerPoint. Un tunnel avant chaque COMEX."
+        },
+        {
+          "num": "0",
+          "stat": "alerte avant l'audit",
+          "detail": "Vos KPIs dérivent en silence pendant des semaines. Vous le découvrez quand il est trop tard."
+        },
+        {
+          "num": "?",
+          "stat": "priorisation objective",
+          "detail": "15 initiatives RSE, pas de méthode. Les décisions se prennent au doigt mouillé."
+        }
+      ]
+    },
+    "solution": {
+      "eyebrow": "La solution",
+      "title1": "Découvrez Yumni",
+      "title2": "en 30 secondes",
+      "description": "Du dashboard stratégique au rapport généré — voyez comment Yumni transforme votre pilotage RSE en une expérience fluide et centralisée.",
+      "videoLength": "0:30"
+    },
+    "features": {
+      "eyebrow": "Fonctionnalités",
+      "title1": "Tout ce dont vous avez besoin.",
+      "title2": "Rien de superflu.",
+      "items": [
+        {
+          "tag": "Cockpit",
+          "title": "Cockpit stratégique",
+          "subtitle": "Vue d'ensemble en temps réel",
+          "description": "Score RSE consolidé, progression par pilier, tendances mensuelles. Un seul écran pour tout comprendre — du board au terrain."
+        },
+        {
+          "tag": "KPIs",
+          "title": "KPIs & Alertes",
+          "subtitle": "Seuils intelligents, zéro surprise",
+          "description": "Définissez vos cibles, posez des seuils. Yumni surveille et alerte quand un indicateur dérive — avant que ça ne devienne un problème."
+        },
+        {
+          "tag": "WSJF",
+          "title": "Priorisation WSJF",
+          "subtitle": "Priorisez par l'impact, pas l'intuition",
+          "description": "POC-Ready. Chaque initiative est scorée objectivement selon la valeur métier, l'urgence et l'effort. Fini le pilotage au doigt mouillé."
+        },
+        {
+          "tag": "Risques",
+          "title": "Gestion des risques",
+          "subtitle": "Matrice probabilité × impact",
+          "description": "Cartographiez, évaluez, traitez. Chaque risque est classé par probabilité et sévérité — avec un plan d'atténuation prêt."
+        },
+        {
+          "tag": "Reporting",
+          "title": "Reporting COMEX",
+          "subtitle": "Du clic au PDF branded",
+          "description": "12 secondes. C'est le temps qu'il faut pour générer un rapport COMEX complet avec vos couleurs, vos KPIs et vos commentaires."
+        },
+        {
+          "tag": "ESRS",
+          "title": "Conformité ESRS",
+          "subtitle": "12 standards, mappés et guidés",
+          "description": "Gap analysis, double matérialité, couverture ESRS en temps réel. Yumni vous guide vers la conformité CSRD — pas à pas."
+        }
+      ]
+    },
+    "stats": {
+      "items": [
+        { "value": 40, "suffix": "", "unit": "jours/an", "label": "récupérés" },
+        { "value": 1, "suffix": "", "unit": "clic", "label": "rapport COMEX" },
+        { "value": 12, "suffix": "", "unit": "standards", "label": "ESRS couverts" },
+        { "value": 100, "suffix": "%", "unit": "", "label": "temps réel" }
+      ]
+    },
+    "audience": {
+      "eyebrow": "Par cible",
+      "title1": "Une solution adaptée",
+      "title2": "à votre réalité",
+      "items": [
+        {
+          "tag": "Cabinet de conseil",
+          "title": "Multipliez l'impact de votre cabinet",
+          "subtitle": "Sans multiplier vos effectifs.",
+          "points": [
+            "Multi-tenant : 1 compte, N clients, données isolées",
+            "Rapport client généré en 12 secondes",
+            "Méthodologie WSJF vendable à vos clients"
+          ],
+          "cta": "Solution cabinet →",
+          "href": "/solutions/cabinets-conseil"
+        },
+        {
+          "tag": "PME",
+          "title": "Votre RSE structurée",
+          "subtitle": "Sans embaucher un responsable RSE.",
+          "points": [
+            "Gratuit pour démarrer, moins cher qu'un consultant",
+            "Templates pré-configurés, démarrage en 10 min",
+            "Conformité ESRS guidée pas à pas"
+          ],
+          "cta": "Commencer gratuitement →",
+          "href": "/essai-gratuit"
+        },
+        {
+          "tag": "ETI & Groupes",
+          "title": "Pilotez la RSE de votre groupe",
+          "subtitle": "Chaque filiale, chaque KPI, un seul cockpit.",
+          "points": [
+            "Vue consolidée multi-filiales en 1 écran",
+            "RBAC granulaire, 4 niveaux de permissions",
+            "Hébergé en France, RGPD by design"
+          ],
+          "cta": "Demander une démo groupe →",
+          "href": "/demo"
+        }
+      ]
+    },
+    "cta": {
+      "badge": "Gratuit pour démarrer • Sans engagement",
+      "title1": "Prêt à piloter",
+      "titleHighlight": "votre RSE ?",
+      "description": "Rejoignez les entreprises qui transforment leur pilotage RSE avec Yumni. De la stratégie à l'action, en une seule plateforme.",
+      "scoreRSE": "Score RSE",
+      "kpisActifs": "KPIs actifs",
+      "risques": "Risques",
+      "actions": "Actions",
+      "rapportPret": "Rapport prêt",
+      "esrsStandards": "12/12 standards",
+      "actionEnCours": "Action en cours",
+      "bilanCarbone": "Bilan Carbone Q4",
+      "uptime": "Uptime"
+    },
+    "dashMock": {
+      "scoreRSE": "Score RSE",
+      "kpisActifs": "KPIs actifs",
+      "risques": "Risques",
+      "actions": "Actions",
+      "cockpit": "app.yumni.fr / cockpit"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "eyebrow": "Tarifs",
+      "title1": "Un prix",
+      "titleHighlight": "transparent",
+      "title2": "pour chaque ambition",
+      "subtitle1": "Commencez gratuitement. Montez en puissance quand vous êtes prêt.",
+      "subtitle2": "Pas de carte bancaire. Pas d'engagement. Vos données vous appartiennent."
+    },
+    "popularBadge": "Le plus populaire",
+    "plans": [
+      {
+        "name": "Freemium",
+        "tagline": "Pour démarrer. Pour prouver.",
+        "price": "Gratuit",
+        "priceSuffix": "",
+        "priceNote": "Sans carte bancaire",
+        "cta": "Commencer maintenant",
+        "features": [
+          "1 organisation",
+          "5 utilisateurs",
+          "20 projets",
+          "Toutes les features core",
+          "Dashboard & Score RSE",
+          "KPIs & Alertes",
+          "Matrice des risques",
+          "Priorisation WSJF",
+          "Conformité ESRS basique",
+          "Hébergé en France 🇫🇷"
+        ]
+      },
+      {
+        "name": "Pro",
+        "tagline": "Pour scaler. Pour dominer.",
+        "price": "Sur devis",
+        "priceSuffix": "",
+        "priceNote": "Adapté à votre usage",
+        "cta": "Demander un devis",
+        "features": [
+          "Organisations illimitées",
+          "Utilisateurs illimités",
+          "Projets illimités",
+          "Toutes les features core",
+          "Dashboard & Score RSE",
+          "KPIs & Alertes",
+          "Matrice des risques",
+          "Priorisation WSJF",
+          "Conformité ESRS avancée",
+          "Rapport COMEX avancé",
+          "Multi-organisation",
+          "API REST",
+          "Support prioritaire",
+          "Hébergé en France 🇫🇷"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "tagline": "Pour les groupes. Sans compromis.",
+        "price": "Sur mesure",
+        "priceSuffix": "",
+        "priceNote": "Engagement personnalisé",
+        "cta": "Contacter les ventes",
+        "features": [
+          "Tout le plan Pro",
+          "Multi-tenant groupe",
+          "SSO / SAML",
+          "SLA garanti",
+          "Account manager dédié",
+          "Option on-premise",
+          "Onboarding personnalisé",
+          "Formation équipe dédiée",
+          "Intégrations sur mesure",
+          "Hébergé en France 🇫🇷"
+        ]
+      }
+    ],
+    "comparison": {
+      "eyebrow": "Comparatif détaillé",
+      "title": "Tout ce qui est inclus",
+      "description": "Le Freemium n'est pas une version bridée. C'est le vrai produit, avec de vraies features. Les plans supérieurs débloquent la puissance pour les équipes.",
+      "featureCol": "Fonctionnalité",
+      "freeCol": "Freemium",
+      "proCol": "Pro",
+      "enterpriseCol": "Enterprise",
+      "startCta": "Commencer →",
+      "quoteCta": "Devis →",
+      "contactCta": "Contacter →",
+      "basic": "basique",
+      "categories": [
+        {
+          "category": "Pilotage",
+          "items": [
+            { "name": "Dashboard & Score RSE", "free": true, "pro": true, "enterprise": true },
+            { "name": "KPIs & Alertes automatiques", "free": true, "pro": true, "enterprise": true },
+            { "name": "Priorisation WSJF", "free": true, "pro": true, "enterprise": true },
+            { "name": "Matrice des risques", "free": true, "pro": true, "enterprise": true },
+            { "name": "Drill-down 4 niveaux", "free": true, "pro": true, "enterprise": true }
+          ]
+        },
+        {
+          "category": "Reporting & Conformité",
+          "items": [
+            { "name": "Rapport COMEX (basique)", "free": true, "pro": true, "enterprise": true },
+            { "name": "Rapport COMEX avancé (branding)", "free": false, "pro": true, "enterprise": true },
+            { "name": "Conformité ESRS / CSRD", "free": "basique", "pro": true, "enterprise": true },
+            { "name": "Gap analysis ESRS", "free": false, "pro": true, "enterprise": true },
+            { "name": "Double matérialité", "free": false, "pro": true, "enterprise": true },
+            { "name": "Export PowerPoint natif", "free": true, "pro": true, "enterprise": true }
+          ]
+        },
+        {
+          "category": "Collaboration",
+          "items": [
+            { "name": "Kanban & Calendrier", "free": true, "pro": true, "enterprise": true },
+            { "name": "Commentaires & @mentions", "free": true, "pro": true, "enterprise": true },
+            { "name": "Multi-organisation", "free": false, "pro": true, "enterprise": true },
+            { "name": "API REST", "free": false, "pro": true, "enterprise": true }
+          ]
+        },
+        {
+          "category": "Support & Sécurité",
+          "items": [
+            { "name": "Hébergé en France (Scaleway)", "free": true, "pro": true, "enterprise": true },
+            { "name": "MFA / 2FA", "free": true, "pro": true, "enterprise": true },
+            { "name": "RGPD by design", "free": true, "pro": true, "enterprise": true },
+            { "name": "Support email", "free": true, "pro": true, "enterprise": true },
+            { "name": "Support prioritaire", "free": false, "pro": true, "enterprise": true },
+            { "name": "SSO / SAML", "free": false, "pro": false, "enterprise": true },
+            { "name": "SLA garanti", "free": false, "pro": false, "enterprise": true },
+            { "name": "Account manager dédié", "free": false, "pro": false, "enterprise": true }
+          ]
+        }
+      ]
+    },
+    "stats": {
+      "eyebrow": "En chiffres",
+      "title1": "Le temps de piloter.",
+      "titleHighlight": "Pas de compiler.",
+      "items": [
+        { "value": 12, "suffix": "s", "label": "Générer un rapport COMEX" },
+        { "value": 40, "suffix": "j/an", "label": "Récupérés sur le reporting" },
+        { "value": 12, "suffix": "", "label": "Standards ESRS couverts" },
+        { "value": 4, "suffix": "", "label": "Niveaux de pilotage" }
+      ]
+    },
+    "roi": {
+      "eyebrow": "Calculateur ROI",
+      "title": "Combien Yumni vous fait",
+      "titleHighlight": "économiser",
+      "etpLabel": "Personnes impliquées dans le reporting",
+      "daysLabel": "Jours de reporting par mois",
+      "savedDays": "Jours économisés par an",
+      "daysUnit": "jours",
+      "savedMoney": "Économies estimées par an",
+      "moneyNote": "Basé sur un coût journalier moyen de 450 €/ETP"
+    },
+    "guarantees": [
+      {
+        "title": "Vos données vous appartiennent",
+        "desc": "Export complet à tout moment. Aucun lock-in. Suppression sur demande (RGPD)."
+      },
+      {
+        "title": "Pas de carte bancaire",
+        "desc": "Le Freemium est gratuit, pour toujours. Pas de piège. Pas de surprise à J+30."
+      },
+      {
+        "title": "Hébergé en France",
+        "desc": "Scaleway, région fr-par. Souveraineté européenne. Aucun transfert hors UE."
+      }
+    ],
+    "faq": {
+      "eyebrow": "Questions fréquentes",
+      "title": "Tout ce que vous devez savoir",
+      "items": [
+        {
+          "q": "Comment fonctionne le plan Freemium ?",
+          "a": "Le plan Freemium est gratuit, sans limite de durée et sans carte bancaire. Vous accédez à toutes les features core de Yumni : dashboard, KPIs, WSJF, matrice des risques et conformité ESRS basique. Limité à 1 organisation, 5 utilisateurs et 20 projets."
+        },
+        {
+          "q": "Puis-je changer de plan à tout moment ?",
+          "a": "Oui. Vous pouvez passer du Freemium au Pro à tout moment sans perte de données. Le passage à Enterprise nécessite un échange avec notre équipe commerciale pour adapter l'offre à votre structure."
+        },
+        {
+          "q": "Mes données sont-elles sécurisées ?",
+          "a": "Absolument. Yumni est hébergé en France par Scaleway (région fr-par). Chiffrement TLS 1.3 en transit, AES-256 au repos. RBAC 4 niveaux, isolation des données par organisation (RLS PostgreSQL). RGPD by design."
+        },
+        {
+          "q": "Quelle est la différence entre Pro et Enterprise ?",
+          "a": "Le plan Enterprise ajoute des fonctionnalités de niveau groupe : SSO/SAML, SLA garanti, account manager dédié, onboarding personnalisé, intégrations sur mesure et option d'hébergement on-premise."
+        },
+        {
+          "q": "Combien de temps prend le déploiement ?",
+          "a": "Freemium : inscrivez-vous en 60 secondes, commencez immédiatement. Pro : configuration en moins d'une journée. Enterprise : onboarding personnalisé en 1 à 2 semaines selon la complexité."
+        },
+        {
+          "q": "Proposez-vous des réductions pour les associations ou ONG ?",
+          "a": "Oui, nous proposons des tarifs adaptés pour les organisations à but non lucratif. Contactez notre équipe commerciale pour en discuter."
+        }
+      ]
+    },
+    "finalCta": {
+      "title1": "Prêt à piloter votre RSE",
+      "titleHighlight": "comme un pro",
+      "description": "Rejoignez les entreprises qui ont choisi de piloter leur stratégie RSE avec clarté, méthode et impact."
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title1": "Parlons de votre",
+      "titleHighlight": "projet RSE",
+      "subtitle1": "Notre équipe répond sous 24h ouvrées.",
+      "subtitle2": "Démo, devis, partenariat, presse — un seul formulaire."
+    },
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Sophie Lefebvre",
+      "email": "Email professionnel",
+      "emailPlaceholder": "sophie@greentech.fr",
+      "phone": "Téléphone",
+      "phoneOptional": "(optionnel)",
+      "phonePlaceholder": "+33 6 12 34 56 78",
+      "company": "Entreprise",
+      "companyPlaceholder": "GreenTech Industries",
+      "requestType": "Type de demande",
+      "message": "Message",
+      "messagePlaceholder": "Décrivez votre projet, vos besoins ou votre question...",
+      "required": "*",
+      "sending": "Envoi en cours...",
+      "submit": "Envoyer le message",
+      "privacy": "En soumettant ce formulaire, vous acceptez notre",
+      "privacyLink": "politique de confidentialité",
+      "privacyEnd": ". Vos données ne seront jamais partagées avec des tiers.",
+      "windowBar": "yumni.fr / contact"
+    },
+    "requestTypes": [
+      "Démo produit",
+      "Devis Pro/Enterprise",
+      "Programme partenaire",
+      "Support",
+      "Presse"
+    ],
+    "success": {
+      "title": "Message envoyé !",
+      "description": "Merci pour votre intérêt. Notre équipe vous répondra sous 24h ouvrées."
+    },
+    "info": {
+      "emailLabel": "contact@yumni.fr",
+      "emailSub": "Pour toute question",
+      "linkedinLabel": "LinkedIn Yumni",
+      "linkedinSub": "Suivez nos actualités",
+      "scheduleLabel": "France — Horaires européens",
+      "scheduleSub": "Lun–Ven, 9h–18h CET",
+      "responseTitle": "Réponse sous 24h",
+      "responseSub": "Garanti pour les demandes commerciales"
+    },
+    "faq": {
+      "eyebrow": "Questions rapides",
+      "title": "Avant de nous écrire",
+      "items": [
+        {
+          "q": "Combien coûte Yumni ?",
+          "a": "Le plan Freemium est gratuit, pour toujours. Les plans Pro et Enterprise sont sur devis, adaptés à votre usage.",
+          "linkLabel": "Voir les tarifs →",
+          "linkHref": "/tarifs"
+        },
+        {
+          "q": "Puis-je voir une démo avant de m'engager ?",
+          "a": "Absolument. Demandez une démo via ce formulaire ou directement sur notre page dédiée.",
+          "linkLabel": "Page démo →",
+          "linkHref": "/demo"
+        },
+        {
+          "q": "Mes données sont-elles en sécurité ?",
+          "a": "Hébergement Scaleway en France (fr-par), chiffrement TLS 1.3/AES-256, RGPD by design, MFA inclus.",
+          "linkLabel": "En savoir plus →",
+          "linkHref": "/securite"
+        },
+        {
+          "q": "Puis-je tester sans carte bancaire ?",
+          "a": "Oui. Le Freemium n'exige aucune carte bancaire. Inscrivez-vous en 60 secondes et commencez immédiatement.",
+          "linkLabel": "Essayer gratuitement →",
+          "linkHref": "/essai-gratuit"
+        }
+      ]
+    },
+    "finalCta": {
+      "title1": "Pas encore prêt à écrire ?",
+      "titleHighlight": "Testez par vous-même.",
+      "description": "Le plan Freemium est 100% gratuit, sans carte bancaire. Découvrez Yumni en 2 minutes.",
+      "cta1": "Commencer gratuitement",
+      "cta2": "Voir la démo"
+    },
+    "errors": {
+      "generic": "Une erreur est survenue.",
+      "network": "Erreur réseau. Vérifiez votre connexion."
+    }
+  },
+  "partners": {
+    "hero": {
+      "eyebrow": "Programme prescripteurs",
+      "title1": "Devenez partenaire Yumni.",
+      "titleHighlight": "Outillez vos clients.",
+      "title2": "Renforcez votre valeur.",
+      "subtitle": "Cabinets RSE, consultants indépendants, agences spécialisées : Yumni vous propose un partenariat prescripteur. Vous conservez le conseil et la relation client. Nous fournissons la plateforme."
+    },
+    "model": {
+      "eyebrow": "Le modèle partenaire",
+      "title": "Votre expertise.",
+      "titleHighlight": "Notre technologie.",
+      "columnYou": "Vous",
+      "columnClients": "Vos clients",
+      "rows": [
+        { "you": "Expertise RSE / CSRD", "clients": "Conseil stratégique" },
+        { "you": "Yumni (multi-org)", "clients": "Plateforme de pilotage" },
+        { "you": "Accès gratuit cabinet", "clients": "Tarif partenaire négocié" }
+      ]
+    },
+    "benefits": {
+      "eyebrow": "Ce que vous obtenez",
+      "title": "Tout est inclus.",
+      "titleHighlight": "Rien à payer.",
+      "items": [
+        { "title": "Accès gratuit à la plateforme pour votre cabinet", "description": "Toutes les features, sans limite de durée. Votre cabinet pilote comme un expert." },
+        { "title": "Tarif préférentiel pour vos clients", "description": "Offre négociée pour chacun de vos clients. Vous augmentez votre valeur perçue." },
+        { "title": "Badge \"Partenaire Yumni Certifié\"", "description": "Différenciateur commercial. Affiché sur votre site et vos supports." },
+        { "title": "Matériaux de vente co-brandés", "description": "Slides, one-pager, supports personnalisés à vos couleurs." },
+        { "title": "Formation produit incluse", "description": "Onboarding complet de votre équipe. Maîtrisez l'outil comme un expert." },
+        { "title": "Support prioritaire", "description": "File dédiée. Temps de réponse garanti. Un vrai partenariat." }
+      ]
+    },
+    "expectations": {
+      "eyebrow": "Ce qu'on attend de vous",
+      "title": "Un partenariat",
+      "titleHighlight": "à double sens",
+      "items": [
+        { "title": "Prescription active auprès de vos clients", "description": "Recommandez Yumni quand la plateforme est pertinente pour leur pilotage RSE." },
+        { "title": "Feedback produit régulier", "description": "Vous êtes nos meilleurs testeurs. Vos retours terrain façonnent la roadmap pour tous." },
+        { "title": "Témoignage ou cas client co-publié (optionnel)", "description": "Pour inspirer d'autres cabinets et renforcer votre visibilité." }
+      ]
+    },
+
+    "cta": {
+      "eyebrow": "Prêt à nous rejoindre ?",
+      "title1": "Candidatez au",
+      "titleHighlight": "programme partenaire",
+      "description": "Complétez le formulaire ci-dessous. Notre équipe partenariats vous recontacte sous 48h.",
+      "form": {
+        "name": "Nom complet",
+        "namePlaceholder": "Jean Dupont",
+        "email": "Email professionnel",
+        "emailPlaceholder": "jean@cabinet-rse.fr",
+        "company": "Cabinet / Structure",
+        "companyPlaceholder": "Cabinet RSE Conseil",
+        "clients": "Nombre de clients RSE accompagnés",
+        "clientsPlaceholder": "12",
+        "message": "Pourquoi souhaitez-vous devenir partenaire ?",
+        "messagePlaceholder": "Décrivez votre activité et vos attentes vis-à-vis du programme...",
+        "submit": "Candidater au programme partenaire",
+        "required": "*",
+        "sending": "Envoi en cours...",
+        "privacy": "Vos données sont protégées. Réponse garantie sous 48h ouvrées."
+      },
+      "success": {
+        "title": "Candidature envoyée !",
+        "description": "Merci pour votre intérêt. Notre équipe partenariats vous recontacte sous 48h ouvrées."
+      }
+    },
+    "finalCta": {
+      "title1": "Pas encore prêt ?",
+      "titleHighlight": "Explorez Yumni.",
+      "description": "Le plan Freemium est 100% gratuit. Découvrez la plateforme par vous-même avant de devenir partenaire.",
+      "cta1": "Essayer gratuitement",
+      "cta2": "Voir les tarifs"
+    }
+  },
+  "security": {
+    "hero": {
+      "eyebrow": "Sécurité & RGPD",
+      "title": "Vos données RSE méritent",
+      "titleHighlight": "une protection RSE.",
+      "subtitle": "Yumni est conçu pour les équipes RSE qui traitent des données sensibles : KPIs sociaux, risques légaux, données collaborateurs. Chaque décision d'architecture reflète ce niveau d'exigence.",
+      "statusLabel": "Statut système",
+      "statusValue": "OPÉRATIONNEL",
+      "statusItems": [
+        { "label": "Chiffrement", "value": "Actif — TLS 1.3 / AES-256" },
+        { "label": "Hébergement", "value": "fr-par · Scaleway · France" },
+        { "label": "MFA", "value": "Actif sur tous les comptes" },
+        { "label": "RLS PostgreSQL", "value": "Isolation données activée" }
+      ]
+    },
+    "hosting": {
+      "eyebrow": "Souveraineté",
+      "title": "Hébergé en France.",
+      "titleHighlight": "Vos données aussi.",
+      "description": "Yumni est hébergé exclusivement sur Scaleway, data center France (fr-par), soumis au droit européen. Aucune donnée ne transite hors UE.",
+      "items": [
+        { "label": "Infrastructure", "value": "Scaleway Cloud", "detail": "Data center fr-par, Paris" },
+        { "label": "Juridiction", "value": "Droit européen", "detail": "Soumis au RGPD & NIS2" },
+        { "label": "Transit données", "value": "UE uniquement", "detail": "Aucun transfert hors UE" },
+        { "label": "Disponibilité", "value": "99.9% SLA", "detail": "Monitoring continu" }
+      ]
+    },
+    "encryption": {
+      "eyebrow": "Chiffrement",
+      "title": "Vos données,",
+      "titleHighlight": "blindées à chaque étape.",
+      "transit": {
+        "label": "En transit",
+        "protocol": "TLS 1.3",
+        "description": "Toutes les connexions entre votre navigateur et nos serveurs sont chiffrées avec TLS 1.3, le protocole le plus sécurisé disponible."
+      },
+      "rest": {
+        "label": "Au repos",
+        "protocol": "AES-256",
+        "description": "Chaque donnée stockée dans notre infrastructure est chiffrée avec AES-256, standard utilisé par les institutions financières et gouvernementales."
+      },
+      "passwords": {
+        "label": "Mots de passe",
+        "protocol": "bcrypt",
+        "description": "Les mots de passe ne sont jamais stockés en clair. Hachage bcrypt avec salt aléatoire — irréversible par design."
+      }
+    },
+    "auth": {
+      "eyebrow": "Authentification",
+      "title": "Zéro accès",
+      "titleHighlight": "non autorisé.",
+      "description": "Un système d'authentification multi-niveaux conçu pour résister aux attaques les plus sophistiquées.",
+      "items": [
+        { "title": "JWT + refresh tokens avec rotation", "description": "Tokens à courte durée de vie, rotation automatique à chaque usage. Compromis = révocation immédiate." },
+        { "title": "MFA / 2FA natif", "description": "Authentification à deux facteurs disponible sur tous les plans, sans surcoût. TOTP compatible avec Authy, Google Authenticator." },
+        { "title": "Rate limiting anti-brute force", "description": "Blocage automatique après tentatives répétées. Délais exponentiels. IP banning ciblé." },
+        { "title": "CAPTCHA Cloudflare Turnstile", "description": "Protection à l'inscription sans friction pour l'utilisateur légitime. Invisible pour les humains, bloquant pour les bots." },
+        { "title": "Session invalidation complète", "description": "À la déconnexion, tous les tokens actifs sont révoqués côté serveur. Aucune session zombie possible." }
+      ]
+    },
+    "rbac": {
+      "eyebrow": "Contrôle d'accès",
+      "title": "Chaque utilisateur",
+      "titleHighlight": "voit ce qu'il doit voir.",
+      "description": "4 niveaux de permissions granulaires. Isolation totale des données entre organisations via Row Level Security PostgreSQL.",
+      "levels": [
+        { "role": "Owner", "description": "Accès complet, gestion des membres et facturation", "color": "green" },
+        { "role": "Admin", "description": "Configuration, invitations, export des données", "color": "green" },
+        { "role": "Manager", "description": "Création et édition des projets, KPIs et actions", "color": "orange" },
+        { "role": "Viewer", "description": "Lecture seule — idéal pour les parties prenantes", "color": "muted" }
+      ],
+      "isolation": "Isolation par organisation via RLS PostgreSQL — aucun utilisateur ne peut accéder aux données d'une autre organisation, même en cas de bug applicatif."
+    },
+    "gdpr": {
+      "eyebrow": "RGPD",
+      "title": "Vos droits,",
+      "titleHighlight": "garantis par design.",
+      "description": "La conformité RGPD n'est pas une case à cocher chez Yumni — elle est codée dans chaque couche de l'architecture.",
+      "rights": [
+        { "title": "Droit d'accès", "description": "Consultez l'intégralité de vos données stockées par Yumni sur simple demande." },
+        { "title": "Droit de rectification", "description": "Corrigez toute donnée inexacte directement depuis votre compte ou via notre DPO." },
+        { "title": "Droit à l'effacement", "description": "Vos données sont supprimées dans les 30 jours suivant la résiliation. Irréversible et complet." },
+        { "title": "Export complet", "description": "Téléchargez l'intégralité de vos données à tout moment, dans un format ouvert et lisible." },
+        { "title": "Pas de revente", "description": "Vos données ne sont jamais vendues, partagées ou utilisées à des fins commerciales tierces. Jamais." }
+      ],
+      "dpo": "Contact DPO",
+      "dpoEmail": "rgpd@yumni.fr",
+      "retention": "Conservation : données supprimées dans les 30 jours suivant résiliation"
+    },
+    "certifications": {
+      "eyebrow": "Certifications",
+      "title": "La conformité",
+      "titleHighlight": "comme boussole.",
+      "description": "Certifications actuelles et roadmap de conformité — notre engagement de transparence envers nos clients.",
+      "items": [
+        { "name": "RGPD", "status": "active", "label": "Conforme", "description": "Hébergement et architecture conformes au Règlement Général sur la Protection des Données" },
+        { "name": "NIS2", "status": "progress", "label": "Objectif 2026", "description": "Directive européenne sur la cybersécurité des infrastructures critiques" },
+        { "name": "SOC 2 Type II", "status": "roadmap", "label": "Roadmap", "description": "Audit indépendant de la sécurité, disponibilité et confidentialité des données" },
+        { "name": "ISO 27001", "status": "roadmap", "label": "Roadmap", "description": "Standard international de management de la sécurité de l'information" }
+      ]
+    },
+    "cta": {
+      "title": "Une question sur",
+      "titleHighlight": "la sécurité ?",
+      "description": "Notre équipe et notre DPO répondent sous 24h ouvrées à toutes les questions de sécurité et de conformité.",
+      "dpoButton": "Contacter le DPO",
+      "trialButton": "Essayer gratuitement",
+      "trialSub": "Aucun risque — hébergé en France, sans engagement"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "À propos",
+      "title1": "Notre mission :",
+      "titleHighlight": "rendre le pilotage RSE accessible",
+      "title2": "à toutes les entreprises.",
+      "subtitle": "Le CRM a démocratisé la relation client. Yumni démocratise le pilotage RSE."
+    },
+    "vision": {
+      "eyebrow": "Vision",
+      "title": "Chaque entreprise mérite",
+      "titleHighlight": "une stratégie RSE structurée.",
+      "description": "Quelle que soit sa taille, chaque organisation doit pouvoir structurer sa stratégie RSE, mesurer son impact et reporter avec confiance — sans avoir besoin d'une armée de consultants.",
+      "stats": [
+        { "value": "12", "suffix": "sec", "label": "Pour générer un rapport COMEX" },
+        { "value": "0", "suffix": "", "label": "Consultant nécessaire pour démarrer" },
+        { "value": "100", "suffix": "%", "label": "Hébergé en France" }
+      ]
+    },
+    "values": {
+      "eyebrow": "Nos valeurs",
+      "title": "Les principes qui",
+      "titleHighlight": "guident chaque décision.",
+      "items": [
+        {
+          "name": "Transparence",
+          "description": "Nos données vous appartiennent, notre code est propre, notre roadmap est publique.",
+          "icon": "eye"
+        },
+        {
+          "name": "Impact",
+          "description": "Chaque feature est jugée à l'aune de l'impact RSE qu'elle génère pour nos utilisateurs.",
+          "icon": "target"
+        },
+        {
+          "name": "Souveraineté",
+          "description": "Hébergement France, RGPD by design, pas de dépendance aux hyperscalers américains.",
+          "icon": "shield"
+        }
+      ]
+    },
+    "timeline": {
+      "eyebrow": "Notre histoire",
+      "title": "Du problème",
+      "titleHighlight": "à la solution.",
+      "events": [
+        { "date": "2024", "title": "Genèse", "description": "Constat : les outils RSE sont trop complexes, trop chers, trop lents. Les PME sont laissées pour compte." },
+        { "date": "2024", "title": "Premiers tests", "description": "Validation terrain avec 15 cabinets conseil et PME. Affinage de l'expérience utilisateur." },
+        { "date": "2025", "title": "Lancement Freemium", "description": "Ouverture au public avec un plan gratuit sans limite de durée. Les premiers utilisateurs nous rejoignent." },
+        { "date": "Aujourd'hui", "title": "Croissance", "description": "Amélioration continue, nouvelles features, premiers clients enterprise. L'aventure continue." }
+      ]
+    },
+    "team": {
+      "eyebrow": "L'équipe",
+      "title": "Les humains derrière",
+      "titleHighlight": "Yumni.",
+      "description": "Une équipe resserrée, passionnée par l'impact et la qualité produit."
+    },
+    "cta": {
+      "title": "Envie de nous",
+      "titleHighlight": "rejoindre ?",
+      "description": "Nous construisons l'outil qui démocratise le pilotage RSE. Si vous partagez cette mission, parlons-en.",
+      "primaryButton": "Voir les offres",
+      "secondaryButton": "Nous contacter"
+    }
+  },
+"legal": {
+    "hero": {
+      "eyebrow": "Mentions légales",
+      "title1": "Transparence",
+      "titleHighlight": "& conformité",
+      "subtitle": "Retrouvez ici l'ensemble des informations légales relatives à l'utilisation de Yumni, conformément à la réglementation française et européenne."
+    },
+    "nav": {
+      "legalNotice": "Mentions légales",
+      "terms": "CGU",
+      "sales": "CGV",
+      "privacy": "Confidentialité",
+      "cookies": "Cookies"
+    },
+    "lastUpdate": "Dernière mise à jour",
+    "legalNotice": {
+      "title": "Mentions légales",
+      "editor": {
+        "title": "Éditeur du site",
+        "company": "Yumni SAS",
+        "capital": "Capital social : 10 000 €",
+        "rcs": "RCS Paris B 123 456 789",
+        "siret": "SIRET : 123 456 789 00001",
+        "vat": "TVA intracommunautaire : FR 12 345678901",
+        "address": "42 rue de la République, 75011 Paris, France",
+        "phone": "Téléphone : +33 1 23 45 67 89",
+        "email": "Email : contact@yumni.fr",
+        "director": "Directeur de la publication : [Nom du fondateur]"
+      },
+      "hosting": {
+        "title": "Hébergement",
+        "company": "Scaleway SAS",
+        "address": "8 rue de la Ville l'Évêque, 75008 Paris, France",
+        "location": "Data center : fr-par (Paris, France)",
+        "note": "L'ensemble des données sont hébergées exclusivement en France, conformément à notre engagement de souveraineté numérique."
+      },
+      "intellectual": {
+        "title": "Propriété intellectuelle",
+        "content": "L'ensemble du contenu de ce site (textes, images, graphismes, logo, icônes, sons, logiciels, etc.) est la propriété exclusive de Yumni SAS ou de ses partenaires et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle. Toute reproduction, représentation, modification, publication, transmission, dénaturation, totale ou partielle du site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que ce soit est interdite sans autorisation écrite préalable de Yumni SAS."
+      }
+    },
+    "terms": {
+      "title": "Conditions Générales d'Utilisation",
+      "sections": [
+        {
+          "title": "1. Objet",
+          "content": "Les présentes Conditions Générales d'Utilisation (CGU) ont pour objet de définir les modalités et conditions dans lesquelles Yumni SAS met à disposition sa plateforme de pilotage RSE, ainsi que les droits et obligations des utilisateurs dans ce cadre."
+        },
+        {
+          "title": "2. Acceptation des CGU",
+          "content": "L'accès et l'utilisation de la plateforme Yumni impliquent l'acceptation sans réserve des présentes CGU. L'utilisateur reconnaît avoir pris connaissance de ces conditions et s'engage à les respecter."
+        },
+        {
+          "title": "3. Description du service",
+          "content": "Yumni est une plateforme SaaS de pilotage de la stratégie RSE (Responsabilité Sociétale des Entreprises). Elle permet notamment : la gestion des axes stratégiques et objectifs RSE, le suivi des KPIs et indicateurs, la gestion des risques, la génération de rapports COMEX, la conformité ESRS/CSRD."
+        },
+        {
+          "title": "4. Accès au service",
+          "content": "L'accès à la plateforme nécessite la création d'un compte utilisateur. L'utilisateur s'engage à fournir des informations exactes et à maintenir la confidentialité de ses identifiants de connexion. Tout accès non autorisé à un compte doit être immédiatement signalé à Yumni."
+        },
+        {
+          "title": "5. Obligations de l'utilisateur",
+          "content": "L'utilisateur s'engage à : utiliser la plateforme conformément à sa destination, ne pas porter atteinte à la sécurité ou à l'intégrité du service, respecter les droits de propriété intellectuelle de Yumni, ne pas transmettre de contenus illicites, diffamatoires ou préjudiciables."
+        },
+        {
+          "title": "6. Disponibilité du service",
+          "content": "Yumni s'efforce d'assurer une disponibilité de la plateforme 24h/24 et 7j/7, avec un objectif de 99.9% d'uptime. Toutefois, Yumni se réserve le droit de suspendre temporairement l'accès pour maintenance ou mise à jour. Les utilisateurs seront informés dans la mesure du possible."
+        },
+        {
+          "title": "7. Responsabilité",
+          "content": "Yumni met en œuvre tous les moyens raisonnables pour assurer un service de qualité. Toutefois, Yumni ne saurait être tenue responsable des dommages indirects résultant de l'utilisation ou de l'impossibilité d'utiliser la plateforme."
+        },
+        {
+          "title": "8. Modification des CGU",
+          "content": "Yumni se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront informés de toute modification substantielle. La poursuite de l'utilisation de la plateforme après notification vaut acceptation des nouvelles conditions."
+        }
+      ]
+    },
+    "sales": {
+      "title": "Conditions Générales de Vente",
+      "sections": [
+        {
+          "title": "1. Objet",
+          "content": "Les présentes Conditions Générales de Vente (CGV) s'appliquent à toute souscription aux services payants proposés par Yumni SAS sur sa plateforme."
+        },
+        {
+          "title": "2. Services et tarifs",
+          "content": "Yumni propose plusieurs formules d'abonnement (Freemium, Pro, Enterprise) dont les caractéristiques et tarifs sont détaillés sur la page Tarifs du site. Les prix sont indiqués en euros hors taxes. La TVA applicable sera ajoutée au moment de la facturation."
+        },
+        {
+          "title": "3. Souscription",
+          "content": "La souscription à un abonnement payant s'effectue en ligne via notre plateforme. Le client reçoit une confirmation par email comprenant le récapitulatif de sa commande et les présentes CGV."
+        },
+        {
+          "title": "4. Paiement",
+          "content": "Le paiement s'effectue par carte bancaire ou prélèvement SEPA selon la formule choisie. Les abonnements sont facturés mensuellement ou annuellement selon l'option retenue. Le paiement annuel bénéficie d'une remise de 20%."
+        },
+        {
+          "title": "5. Durée et renouvellement",
+          "content": "Les abonnements sont souscrits pour une durée mensuelle ou annuelle et sont renouvelés automatiquement à leur échéance. Le client peut résilier son abonnement à tout moment depuis son espace client, la résiliation prenant effet à la fin de la période en cours."
+        },
+        {
+          "title": "6. Droit de rétractation",
+          "content": "Conformément à l'article L221-28 du Code de la consommation, le droit de rétractation ne s'applique pas aux contrats de fourniture de services pleinement exécutés avant la fin du délai de rétractation et dont l'exécution a commencé avec l'accord préalable exprès du consommateur."
+        },
+        {
+          "title": "7. Garantie et support",
+          "content": "Yumni s'engage à fournir un support technique réactif avec un temps de réponse garanti de moins de 24h ouvrées. En cas de dysfonctionnement majeur, Yumni mettra en œuvre tous les moyens nécessaires pour rétablir le service."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "intro": "Yumni SAS s'engage à protéger la vie privée de ses utilisateurs et à traiter leurs données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).",
+      "sections": [
+        {
+          "title": "1. Responsable du traitement",
+          "content": "Yumni SAS, dont le siège social est situé au 42 rue de la République, 75011 Paris, est responsable du traitement des données personnelles collectées sur cette plateforme."
+        },
+        {
+          "title": "2. Données collectées",
+          "content": "Nous collectons les données suivantes : informations d'identification (nom, prénom, email professionnel), données de connexion (logs, adresse IP), données d'utilisation de la plateforme, données RSE saisies par l'utilisateur dans le cadre de l'utilisation du service."
+        },
+        {
+          "title": "3. Finalités du traitement",
+          "content": "Les données sont collectées pour : la fourniture et l'amélioration du service Yumni, la gestion de la relation client et du support, l'envoi de communications relatives au service (si consentement), le respect de nos obligations légales."
+        },
+        {
+          "title": "4. Base légale",
+          "content": "Le traitement de vos données repose sur : l'exécution du contrat (fourniture du service), notre intérêt légitime (amélioration du service, sécurité), votre consentement (communications marketing), nos obligations légales (comptabilité, fiscalité)."
+        },
+        {
+          "title": "5. Durée de conservation",
+          "content": "Les données sont conservées pendant la durée de la relation contractuelle. Après résiliation, les données sont supprimées dans un délai de 30 jours, à l'exception des données nécessaires au respect de nos obligations légales (comptabilité : 10 ans)."
+        },
+        {
+          "title": "6. Vos droits",
+          "content": "Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition au traitement de vos données. Pour exercer vos droits, contactez notre DPO : rgpd@yumni.fr"
+        },
+        {
+          "title": "7. Sécurité",
+          "content": "Yumni met en œuvre des mesures techniques et organisationnelles appropriées pour garantir la sécurité de vos données : chiffrement TLS 1.3 en transit, AES-256 au repos, authentification multi-facteurs, isolation des données par organisation."
+        },
+        {
+          "title": "8. Transferts hors UE",
+          "content": "Aucun transfert de données hors Union Européenne n'est effectué. L'ensemble de nos données sont hébergées exclusivement en France par Scaleway."
+        }
+      ],
+      "dpoContact": "Contact DPO : rgpd@yumni.fr"
+    },
+    "cookies": {
+      "title": "Politique cookies",
+      "intro": "Ce site utilise des cookies et technologies similaires pour améliorer votre expérience et analyser l'utilisation du service.",
+      "sections": [
+        {
+          "title": "Qu'est-ce qu'un cookie ?",
+          "content": "Un cookie est un petit fichier texte stocké sur votre appareil lors de votre visite sur un site web. Il permet au site de mémoriser vos préférences et de vous reconnaître lors de vos visites ultérieures."
+        },
+        {
+          "title": "Cookies essentiels",
+          "content": "Ces cookies sont nécessaires au fonctionnement du site. Ils permettent notamment : l'authentification et la gestion de session, la sécurité et la prévention de fraude, la mémorisation de vos préférences."
+        },
+        {
+          "title": "Cookies analytiques",
+          "content": "Nous utilisons Plausible Analytics, une solution respectueuse de la vie privée et conforme RGPD. Plausible ne dépose aucun cookie et ne collecte aucune donnée personnelle. Les statistiques sont anonymisées."
+        },
+        {
+          "title": "Gestion de vos préférences",
+          "content": "Vous pouvez configurer votre navigateur pour refuser les cookies. Notez que certaines fonctionnalités du site pourraient ne plus être accessibles si vous désactivez les cookies essentiels."
+        }
+      ],
+      "noCookieBanner": "Notre solution d'analytics (Plausible) étant cookieless et RGPD-native, aucune bannière de consentement n'est requise pour la navigation sur ce site."
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Yumni — Pilotez votre stratégie RSE en temps réel",
+      "description": "Plateforme SaaS tout-en-un de pilotage RSE. Dashboard, KPIs, WSJF, gestion des risques, reporting COMEX et conformité ESRS/CSRD. Hébergé en France.",
+      "ogTitle": "Yumni — Pilotez votre stratégie RSE en temps réel",
+      "ogDescription": "Du cockpit stratégique au rapport COMEX — en un clic. CSRD Ready, ESRS Compliant, Hébergé en France."
+    }
+  }
+}

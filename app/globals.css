@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ── Palette ─────────────────────────────────── */
+  --color-cream: #FFFFFF;
+  --color-white: #FFFFFF;
+  --color-forest: #1B3A2D;
+  --color-forest-light: #2D5A46;
+  --color-green: #00814A;
+  --color-green-light: #E8F5EE;
+  --color-green-muted: #B8DFC9;
+  --color-orange: #E8752A;
+  --color-orange-light: #FEF3EC;
+  --color-orange-muted: #F5C9A8;
+  --color-ink: #1A1A1A;
+  --color-ink-light: #3D3D3D;
+  --color-muted: #6B7280;
+  --color-subtle: #9CA3AF;
+  --color-line: #E8E8E8;
+  --color-line-dark: #D4D4D4;
+  --color-sand: #F5F5F5;
+
+  /* ── Typography ─────────────────────────────── */
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-nunito);
+}
+
+/* ── Base ──────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: auto;
+  scrollbar-color: #B8DFC9 #FFFFFF;
+}
+
+::selection {
+  background: #00814A;
+  color: #fff;
+}
+
+/* ── Scrollbar ────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+  border-left: 1px solid #E8E8E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #B8DFC9;
+  border-radius: 5px;
+  border: 2px solid #FFFFFF;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00814A;
+}
+
+/* ── Floating animations ──────────────────────── */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(2deg); }
+}
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(-1.5deg); }
+}
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.15); opacity: 0.1; }
+  100% { transform: scale(1); opacity: 0.3; }
+}
+
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-float-medium { animation: float-medium 6s ease-in-out infinite; }
+.animate-float-fast { animation: float-fast 4s ease-in-out infinite; }
+.animate-pulse-ring { animation: pulse-ring 4s ease-in-out infinite; }
