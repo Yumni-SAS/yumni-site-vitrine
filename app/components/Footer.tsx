@@ -98,7 +98,7 @@ export default function Footer() {
           {trustBadges.map((badge) => (
             <span
               key={badge}
-              className="text-xs text-white/50 px-3 py-1.5 rounded-full border border-white/10"
+              className="text-xs text-white/50 px-3 py-1.5 rounded-lg border border-white/10"
             >
               {badge}
             </span>

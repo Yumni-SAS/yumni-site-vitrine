@@ -42,7 +42,7 @@ export default function Header() {
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
             ? "bg-white/90 backdrop-blur-xl border-b border-line shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
-            : "bg-white/80 backdrop-blur-xl border-b border-transparent"
+            : "bg-transparent border-b border-transparent"
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
@@ -79,10 +79,10 @@ export default function Header() {
           {/* Right side */}
           <div className="flex items-center gap-4">
             {/* Language switcher */}
-            <div className="flex items-center rounded-full border border-line bg-sand/60 p-0.5">
+            <div className="flex items-center rounded-lg border border-line bg-sand/60 p-0.5">
               <button
                 onClick={() => switchLocale("fr")}
-                className={`text-xs font-medium px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer ${
+                className={`text-xs font-medium px-2.5 py-1 rounded-md transition-all duration-200 cursor-pointer ${
                   locale === "fr"
                     ? "bg-white text-forest shadow-sm"
                     : "text-muted hover:text-ink"
@@ -92,7 +92,7 @@ export default function Header() {
               </button>
               <button
                 onClick={() => switchLocale("en")}
-                className={`text-xs font-medium px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer ${
+                className={`text-xs font-medium px-2.5 py-1 rounded-md transition-all duration-200 cursor-pointer ${
                   locale === "en"
                     ? "bg-white text-forest shadow-sm"
                     : "text-muted hover:text-ink"
@@ -110,7 +110,7 @@ export default function Header() {
             </Link>
             <Link
               href={`/${locale}/essai-gratuit`}
-              className="bg-green text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-forest transition-colors"
+              className="bg-green text-white text-sm font-medium px-5 py-2 rounded-xl hover:bg-forest transition-colors"
             >
               {t.common.freeTrial}
             </Link>

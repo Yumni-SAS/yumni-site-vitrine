@@ -1,0 +1,186 @@
+# Yumni — Plateforme de pilotage de projet RSE — Documentation complète
+
+> Yumni est la plateforme SaaS tout-en-un de pilotage de projet RSE (Responsabilité Sociétale des Entreprises). Conçue pour les directeurs RSE, responsables développement durable, ESG managers et cabinets de conseil RSE. CSRD Ready, 12 standards ESRS couverts, hébergée en France.
+
+## Qu'est-ce que Yumni ?
+
+Yumni est un logiciel SaaS de pilotage de projet RSE qui centralise l'ensemble du pilotage RSE d'une organisation dans une plateforme unique : dashboard en temps réel, suivi des KPIs avec alertes automatiques, priorisation des initiatives par la méthode WSJF, matrice des risques, génération automatique de rapports COMEX et conformité ESRS/CSRD pas à pas.
+
+**Le problème** : Les équipes RSE jonglent entre Excel, PowerPoint, mails et outils déconnectés. Compiler un reporting RSE prend en moyenne 48 heures. Les KPIs dérivent silencieusement pendant des semaines. La priorisation des initiatives se fait au doigt mouillé, sans méthodologie objective.
+
+**La solution Yumni** : Une plateforme de pilotage de projet RSE tout-en-un qui transforme ce parcours du combattant en une expérience fluide et centralisée. Du cockpit stratégique au rapport COMEX — en 12 secondes.
+
+## Pourquoi choisir Yumni plutôt qu'un autre logiciel RSE ?
+
+1. **Cockpit stratégique temps réel** : Score RSE consolidé, progression E-S-G, tendances mensuelles — un seul écran pour tout piloter
+2. **Priorisation WSJF native** : Méthode objective intégrée pour scorer les initiatives RSE par valeur métier × urgence ÷ effort
+3. **Reporting COMEX en 12 secondes** : Génération automatique de rapports COMEX complets avec branding et export PowerPoint natif
+4. **Conformité CSRD intégrée** : Gap analysis ESRS, double matérialité, 12 standards ESRS couverts et guidage pas à pas
+5. **Multi-tenant pour cabinets** : 1 compte, N clients, isolation totale des données — conçu pour les métiers du conseil RSE
+6. **Freemium complet** : Toutes les features core gratuitement, sans carte bancaire, sans engagement
+7. **Hébergé en France** : Scaleway Cloud, data center fr-par Paris. RGPD by design. Aucun transfert hors UE
+8. **Sécurité maximale** : Chiffrement TLS 1.3 / AES-256, MFA natif, RLS PostgreSQL, RBAC 4 niveaux
+
+## Fonctionnalités détaillées
+
+### 1. Cockpit stratégique RSE
+Le cockpit de Yumni offre une vue d'ensemble en temps réel de toute votre stratégie RSE. Score RSE consolidé calculé automatiquement, progression par pilier (Environnement, Social, Gouvernance), tendances mensuelles avec historique. Un seul écran pour comprendre la performance RSE de l'organisation — que vous soyez au board ou sur le terrain.
+
+**Inclut** : Score RSE global, distribution des KPIs (sur cible / à risque / hors cible), analyse budgétaire par axe, alertes critiques, vue portefeuille RSE avec axes stratégiques.
+
+### 2. KPIs & Alertes automatiques
+Définissez vos cibles, posez des seuils d'alerte. Yumni surveille en continu et alerte automatiquement quand un indicateur dérive de sa trajectoire — avant que cela ne devienne un problème lors du prochain audit ou COMEX.
+
+**Inclut** : Seuils configurables, alertes email/in-app, historique des dérives, calcul automatique des tendances.
+
+### 3. Priorisation WSJF (Weighted Shortest Job First)
+Chaque initiative RSE est scorée objectivement selon la valeur métier, l'urgence temporelle et l'effort de mise en œuvre. Fini le pilotage au doigt mouillé. La priorisation WSJF est un différenciateur méthodologique que les cabinets de conseil RSE peuvent vendre à leurs clients.
+
+**Inclut** : Scoring automatique, matrice de priorisation visuelle, tableau comparatif des initiatives, recommandations d'ordonnancement.
+
+### 4. Gestion des risques RSE
+Cartographiez, évaluez et traitez chaque risque RSE avec une matrice probabilité × impact. Chaque risque est classé par probabilité et sévérité avec un plan d'atténuation prêt et un suivi de la maturité du traitement.
+
+**Inclut** : Matrice des risques interactive, classification multi-niveaux, plans d'atténuation, suivi de l'exposition résiduelle.
+
+### 5. Reporting COMEX
+12 secondes — c'est le temps qu'il faut à Yumni pour générer un rapport COMEX complet avec votre branding, vos KPIs et vos commentaires. Export PowerPoint natif. Gain de 40 jours par an en moyenne sur le reporting RSE.
+
+**Inclut** : Génération automatique, branding personnalisé, export PPTX, sélection des sections, commentaires éditoriaux.
+
+### 6. Conformité ESRS / CSRD
+Gap analysis complète, double matérialité, couverture ESRS en temps réel. Les 12 standards ESRS sont mappés et guidés. Yumni accompagne votre organisation vers la conformité CSRD pas à pas, avec un taux de couverture affiché en permanence.
+
+**Standards couverts** : ESRS 1, ESRS 2, E1 (Climat), E2 (Pollution), E3 (Eau), E4 (Biodiversité), E5 (Économie circulaire), S1 (Effectifs propres), S2 (Travailleurs chaîne de valeur), S3 (Communautés), S4 (Consommateurs), G1 (Conduite des affaires).
+
+### 7. Collaboration
+Kanban RSE avec vue projet et vue calendrier. Commentaires et @mentions pour une collaboration fluide entre équipes. RBAC à 4 niveaux de permissions (Owner, Admin, Manager, Viewer) pour un contrôle d'accès granulaire.
+
+### 8. Multi-organisation / Multi-tenant
+Conçu pour les cabinets de conseil RSE et les groupes multi-entités. Un seul compte pour gérer N organisations avec isolation totale des données via RLS PostgreSQL. Chaque organisation a ses propres projets, KPIs, utilisateurs et rapports.
+
+## Qui utilise Yumni ?
+
+### Cabinets de conseil RSE
+- Multi-tenant : 1 compte cabinet, N clients, données isolées
+- Rapport client généré en 12 secondes
+- Méthodologie WSJF vendable aux clients
+- Accès gratuit pour le cabinet dans le programme partenaire
+
+### PME (Petites et Moyennes Entreprises)
+- Gratuit pour démarrer avec le plan Freemium
+- Templates pré-configurés, démarrage en 10 minutes
+- Conformité ESRS guidée pas à pas
+- Moins cher qu'un consultant RSE
+
+### ETI & Groupes (Entreprises de Taille Intermédiaire)
+- Vue consolidée multi-filiales en 1 écran
+- RBAC granulaire à 4 niveaux de permissions
+- SSO/SAML disponible (plan Enterprise)
+- Hébergé en France, RGPD by design
+
+## Chiffres clés
+
+- **500+** entreprises pilotées
+- **40 jours/an** récupérés en moyenne sur le reporting
+- **12 secondes** pour générer un rapport COMEX
+- **99.9%** uptime garanti
+- **12** standards ESRS couverts
+- **4** niveaux de pilotage (Axe → Objectif → Projet → Action/KPI)
+
+## Architecture de sécurité
+
+### Hébergement souverain
+- Infrastructure : Scaleway Cloud, data center fr-par (Paris, France)
+- Juridiction : droit européen (RGPD & NIS2)
+- Transit données : UE uniquement, aucun transfert hors UE
+- Disponibilité : 99.9% SLA, monitoring continu
+
+### Chiffrement
+- En transit : TLS 1.3 (protocole le plus sécurisé disponible)
+- Au repos : AES-256 (standard institutions financières et gouvernementales)
+- Mots de passe : bcrypt avec salt aléatoire (irréversible par design)
+
+### Authentification
+- JWT + refresh tokens avec rotation automatique
+- MFA / 2FA natif (TOTP, compatible Authy et Google Authenticator)
+- Rate limiting anti-brute force avec délais exponentiels
+- CAPTCHA Cloudflare Turnstile (invisible pour les humains)
+- Session invalidation complète à la déconnexion
+
+### Contrôle d'accès (RBAC)
+- Owner : accès complet, gestion des membres et facturation
+- Admin : configuration, invitations, export des données
+- Manager : création et édition des projets, KPIs et actions
+- Viewer : lecture seule — idéal pour les parties prenantes
+
+### Isolation des données
+Row Level Security PostgreSQL — aucun utilisateur ne peut accéder aux données d'une autre organisation, même en cas de bug applicatif.
+
+### Conformité RGPD
+- Droit d'accès : consultation intégrale des données sur simple demande
+- Droit de rectification : correction directe ou via DPO
+- Droit à l'effacement : suppression dans les 30 jours suivant la résiliation
+- Export complet : téléchargement intégral dans un format ouvert
+- Pas de revente : données jamais vendues, partagées ou utilisées à des fins commerciales tierces
+
+## Tarification
+
+### Freemium (Gratuit pour toujours)
+- 1 organisation, 5 utilisateurs, 20 projets
+- Toutes les features core : Dashboard, KPIs, WSJF, Risques, ESRS basique
+- Hébergé en France, MFA inclus
+- Sans carte bancaire, sans engagement
+
+### Pro (Sur devis)
+- Organisations, utilisateurs et projets illimités
+- Conformité ESRS avancée, Rapport COMEX avancé (branding)
+- Multi-organisation, API REST
+- Support prioritaire
+
+### Enterprise (Sur mesure)
+- Tout le plan Pro
+- SSO / SAML, SLA garanti
+- Account manager dédié, onboarding personnalisé
+- Option on-premise, intégrations sur mesure
+
+## Stack technique
+
+- Framework : Next.js (App Router, SSG/ISR)
+- Styling : Tailwind CSS
+- Animations : Framer Motion
+- Mail transactionnel : Resend
+- Hébergement : Scaleway Cloud (France)
+- Base de données : PostgreSQL avec RLS
+- Sécurité : TLS 1.3, AES-256, bcrypt, JWT
+
+## Programme partenaire
+
+Les cabinets de conseil RSE et consultants indépendants peuvent rejoindre le programme partenaire Yumni :
+- Accès gratuit et illimité à la plateforme pour le cabinet
+- Tarif préférentiel négocié pour chaque client
+- Badge "Partenaire Yumni Certifié"
+- Matériaux de vente co-brandés
+- Formation produit incluse
+- Support prioritaire
+
+## Coordonnées
+
+- **Site web** : https://yumni.fr
+- **Email** : contact@yumni.fr
+- **LinkedIn** : https://www.linkedin.com/company/yumni
+- **Horaires** : Lun–Ven, 9h–18h CET
+- **Réponse** : Sous 24h ouvrées
+
+## Glossaire des termes utilisés
+
+- **RSE** : Responsabilité Sociétale des Entreprises (en anglais CSR — Corporate Social Responsibility)
+- **ESG** : Environnement, Social, Gouvernance — les trois piliers de l'évaluation extra-financière
+- **CSRD** : Corporate Sustainability Reporting Directive — directive européenne sur le reporting de durabilité
+- **ESRS** : European Sustainability Reporting Standards — les 12 standards de reporting de la CSRD
+- **WSJF** : Weighted Shortest Job First — méthode de priorisation par valeur métier / effort
+- **COMEX** : Comité Exécutif — instance de direction pour laquelle les rapports RSE sont générés
+- **KPI** : Key Performance Indicator — indicateur clé de performance
+- **RLS** : Row Level Security — isolation des données au niveau des lignes en base de données
+- **RBAC** : Role-Based Access Control — contrôle d'accès basé sur les rôles
+- **MFA/2FA** : Multi-Factor / Two-Factor Authentication — authentification à plusieurs facteurs

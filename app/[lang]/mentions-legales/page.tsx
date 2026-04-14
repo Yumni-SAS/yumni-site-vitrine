@@ -179,25 +179,23 @@ export default function LegalPage() {
     <>
       {/* ─── HERO ─────────────────────────────────────────────── */}
       <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-        {/* Background patterns */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div
-            className="absolute inset-0 opacity-[0.035]"
-            style={{
-              backgroundImage:
-                "linear-gradient(#1B3A2D 1px, transparent 1px), linear-gradient(90deg, #1B3A2D 1px, transparent 1px)",
-              backgroundSize: "48px 48px",
-            }}
-          />
-          <div
-            className="absolute inset-0 opacity-[0.025]"
-            style={{
-              backgroundImage: "radial-gradient(circle, #1B3A2D 0.8px, transparent 0.8px)",
-              backgroundSize: "20px 20px",
-            }}
-          />
-          <div className="absolute -top-32 -right-32 w-[700px] h-[700px] rounded-full bg-green-light/50 blur-[140px]" />
-          <div className="absolute top-1/2 -left-48 w-[500px] h-[500px] rounded-full bg-orange-light/30 blur-[120px]" />
+        {/* Background — matching homepage hero style */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Large sweeping arcs — creates depth and visual pull */}
+          <svg className="absolute -right-[15%] -top-[10%] w-[80%] h-[120%] opacity-[0.05]" viewBox="0 0 800 800" fill="none">
+            <circle cx="400" cy="400" r="380" stroke="#1B3A2D" strokeWidth="1.2" />
+            <circle cx="400" cy="400" r="300" stroke="#1B3A2D" strokeWidth="0.8" />
+            <circle cx="400" cy="400" r="220" stroke="#1B3A2D" strokeWidth="0.5" />
+          </svg>
+          {/* Soft green ambient — top right */}
+          <div className="absolute -top-[200px] -right-[200px] w-[700px] h-[700px] rounded-full bg-green/[0.05]" />
+          {/* Warm accent — bottom left */}
+          <div className="absolute bottom-0 -left-[100px] w-[400px] h-[400px] rounded-full bg-orange/[0.05]" />
+          {/* Warm gradient towards bottom */}
+          <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-orange/[0.05] via-orange/[0.025] to-transparent" />
+          {/* Ambient blobs */}
+          <div className="absolute bottom-[5%] left-[25%] w-[500px] h-[500px] rounded-full bg-orange/[0.05] blur-[100px]" />
+          <div className="absolute bottom-[8%] right-[15%] w-[400px] h-[400px] rounded-full bg-green/[0.05] blur-[80px]" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">

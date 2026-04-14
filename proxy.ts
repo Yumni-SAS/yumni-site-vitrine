@@ -46,7 +46,7 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Skip internal paths (_next), api routes, and static files
-    "/((?!_next|api|favicon\\.ico|.*\\..*).*)",
+    // Skip internal paths (_next), api routes, static files, robots, sitemap, llms
+    "/((?!_next|api|favicon\\.ico|robots\\.txt|sitemap\\.xml|llms\\.txt|llms-full\\.txt|.*\\..*).*)",
   ],
 };

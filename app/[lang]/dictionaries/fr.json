@@ -29,7 +29,7 @@
     "resources": "Ressources"
   },
   "footer": {
-    "tagline": "Plateforme de pilotage RSE tout-en-un. CSRD\u00a0Ready.",
+    "tagline": "Plateforme de pilotage de projet RSE tout-en-un. CSRD\u00a0Ready.",
     "product": "Produit",
     "solutions": "Solutions",
     "resources": "Ressources",
@@ -67,11 +67,11 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Plateforme SaaS RSE — CSRD Ready",
+      "eyebrow": "Plateforme de pilotage de projet RSE — CSRD Ready",
       "title1": "Pilotez votre",
-      "titleHighlight": "stratégie RSE",
+      "titleHighlight": "projet RSE",
       "title2": "en temps réel",
-      "subtitle": "Du cockpit stratégique au rapport COMEX — en un clic. Yumni centralise KPIs, risques, plans d'action et conformité ESRS dans une plateforme unique.",
+      "subtitle": "La plateforme de pilotage RSE tout-en-un. Du cockpit stratégique au rapport COMEX — en un clic. Yumni centralise KPIs, risques, plans d'action et conformité ESRS dans un seul outil.",
       "trustedBy": "Ils nous font confiance"
     },
     "trust": {
@@ -93,22 +93,22 @@
     },
     "problem": {
       "eyebrow": "Le problème",
-      "title": "Le pilotage RSE ne devrait pas être un parcours du combattant",
+      "title": "Le pilotage de projet RSE ne devrait pas être un parcours du combattant",
       "items": [
         {
           "num": "48h",
           "stat": "pour compiler un reporting RSE",
-          "detail": "Des jours entiers perdus à copier-coller entre Excel et PowerPoint. Un tunnel avant chaque COMEX."
+          "detail": "Des jours entiers perdus à copier-coller entre Excel et PowerPoint. Sans plateforme de pilotage RSE dédiée, c'est un tunnel avant chaque COMEX."
         },
         {
           "num": "0",
           "stat": "alerte avant l'audit",
-          "detail": "Vos KPIs dérivent en silence pendant des semaines. Vous le découvrez quand il est trop tard."
+          "detail": "Vos KPIs dérivent en silence pendant des semaines. Sans outil de pilotage RSE, vous le découvrez quand il est trop tard."
         },
         {
           "num": "?",
           "stat": "priorisation objective",
-          "detail": "15 initiatives RSE, pas de méthode. Les décisions se prennent au doigt mouillé."
+          "detail": "15 initiatives RSE, pas de méthode. Sans logiciel de pilotage de projet RSE, les décisions se prennent au doigt mouillé."
         }
       ]
     },
@@ -116,7 +116,7 @@
       "eyebrow": "La solution",
       "title1": "Découvrez Yumni",
       "title2": "en 30 secondes",
-      "description": "Du dashboard stratégique au rapport généré — voyez comment Yumni transforme votre pilotage RSE en une expérience fluide et centralisée.",
+      "description": "Du dashboard stratégique au rapport généré — voyez comment la plateforme Yumni transforme votre pilotage de projet RSE en une expérience fluide et centralisée.",
       "videoLength": "0:30"
     },
     "features": {
@@ -217,7 +217,7 @@
       "badge": "Gratuit pour démarrer • Sans engagement",
       "title1": "Prêt à piloter",
       "titleHighlight": "votre RSE ?",
-      "description": "Rejoignez les entreprises qui transforment leur pilotage RSE avec Yumni. De la stratégie à l'action, en une seule plateforme.",
+      "description": "Rejoignez les entreprises qui transforment leur pilotage de projet RSE avec Yumni. De la stratégie à l'action, en une seule plateforme de pilotage RSE.",
       "scoreRSE": "Score RSE",
       "kpisActifs": "KPIs actifs",
       "risques": "Risques",
@@ -962,12 +962,331 @@
       "noCookieBanner": "Notre solution d'analytics (Plausible) étant cookieless et RGPD-native, aucune bannière de consentement n'est requise pour la navigation sur ce site."
     }
   },
+  "solutions": {
+    "hero": {
+      "eyebrow": "SOLUTIONS",
+      "title1": "Votre réalité.",
+      "titleAccent": "Notre solution.",
+      "subtitle": "Cabinets de conseil, PME ou ETI — chaque organisation a ses contraintes, ses urgences, son rapport à la RSE. Yumni s'adapte à votre contexte et vous donne exactement ce dont vous avez besoin.",
+      "scroll": "Découvrez votre solution"
+    },
+    "personas": [
+      {
+        "tag": "Cabinet de conseil",
+        "icon": "cabinet",
+        "shortTitle": "Cabinets",
+        "stat": "12 sec",
+        "statLabel": "par rapport client"
+      },
+      {
+        "tag": "PME",
+        "icon": "pme",
+        "shortTitle": "PME",
+        "stat": "10 min",
+        "statLabel": "pour démarrer"
+      },
+      {
+        "tag": "ETI & Groupes",
+        "icon": "eti",
+        "shortTitle": "ETI",
+        "stat": "1 clic",
+        "statLabel": "rapport groupe"
+      }
+    ],
+    "cabinets": {
+      "num": "01",
+      "eyebrow": "CABINETS DE CONSEIL RSE",
+      "title": "Multipliez l'impact de votre cabinet.",
+      "titleAccent": "Sans multiplier vos effectifs.",
+      "subtitle": "Yumni est la plateforme de pilotage RSE que vous proposez à vos clients. Vous gardez le conseil et la relation. On fournit l'outil.",
+      "pains": [
+        {
+          "before": "Reporting client chronophage",
+          "after": "Rapport automatique en 12 secondes",
+          "detail": "Vous compilez des données éparpillées dans des Excel clients toutes les semaines. Avec Yumni : rapport brandé, généré en un clic."
+        },
+        {
+          "before": "Pas de vue consolidée multi-clients",
+          "after": "1 login, tous vos clients, données isolées",
+          "detail": "Vous jonglez entre 12 clients, 12 fichiers, 12 outils différents. Avec Yumni : vue consolidée, données toujours à jour."
+        },
+        {
+          "before": "Méthode non outillée",
+          "after": "WSJF intégré dans la plateforme",
+          "detail": "Votre expertise reste dans des slides. Avec Yumni : la méthode est intégrée. Vos clients la vivent, pas seulement la lisent."
+        },
+        {
+          "before": "Audit CSRD fastidieux",
+          "after": "Mapping ESRS automatique",
+          "detail": "La préparation ESRS prend des semaines. Avec Yumni : gap analysis instantanée, rapport auditeur en un clic."
+        }
+      ],
+      "metrics": [
+        { "value": 12, "suffix": "s", "label": "par rapport client" },
+        { "value": 5, "suffix": "min", "label": "onboarding client" },
+        { "value": 30, "suffix": "+", "label": "clients gérables" },
+        { "value": 100, "suffix": "%", "label": "données isolées" }
+      ],
+      "keyArgument": "Yumni devient l'outil de pilotage que vous proposez à vos clients. Vous passez de consultant ponctuel à partenaire technologique continu.",
+      "archTitle": "Architecture multi-tenant",
+      "archLabels": ["Votre cabinet", "Client A", "Client B", "Client C", "Vue consolidée"],
+      "cta1": "Demander une démo cabinet",
+      "cta2": "Programme partenaire →"
+    },
+    "pme": {
+      "num": "02",
+      "eyebrow": "PME",
+      "title": "Votre RSE structurée.",
+      "titleAccent": "Sans embaucher un responsable RSE.",
+      "subtitle": "La CSRD vous oblige à reporter. Vous n'avez pas d'équipe dédiée, pas de consultant à plein temps. Yumni est fait pour vous.",
+      "pains": [
+        {
+          "before": "Pas de budget pour un cabinet",
+          "after": "Freemium : gratuit, toutes les features core",
+          "detail": "Un cabinet RSE coûte entre 800 et 1 500 €/jour. Yumni Freemium : gratuit. Toutes les features core incluses."
+        },
+        {
+          "before": "Pas d'expertise RSE interne",
+          "after": "Templates préconfigurés pour votre secteur",
+          "detail": "Vous ne savez pas par où commencer. Yumni propose des templates avec axes, objectifs et KPIs recommandés. Prêt en 2 minutes."
+        },
+        {
+          "before": "La peur de l'audit CSRD",
+          "after": "Conformité ESRS guidée pas à pas",
+          "detail": "Les 12 standards ESRS vous semblent abstraits. Yumni les rend concrets : chaque action est liée aux standards qu'elle couvre."
+        },
+        {
+          "before": "Excel = impasse",
+          "after": "Plateforme clé en main, évolutive",
+          "detail": "Yumni remplace vos fichiers dès aujourd'hui et évolue avec vous. Le Freemium suffit pour démarrer."
+        }
+      ],
+      "journey": [
+        "Inscription gratuite (60 sec)",
+        "Template PME chargé",
+        "Premiers KPIs configurés",
+        "Premier rapport COMEX",
+        "Couverture ESRS évaluée"
+      ],
+      "priceHighlight": "Gratuit pour démarrer. Moins cher qu'une journée de conseil pour piloter.",
+      "cta1": "Commencer gratuitement — sans carte bancaire",
+      "cta2": "Voir les tarifs →"
+    },
+    "eti": {
+      "num": "03",
+      "eyebrow": "ETI & GROUPES",
+      "title": "Pilotez la RSE de votre groupe.",
+      "titleAccent": "Chaque filiale, chaque KPI, un seul cockpit.",
+      "subtitle": "Multi-sites, multi-filiales, multi-réglementations. Yumni consolide tout en temps réel, sécurise l'accès par entité, et génère votre rapport groupe en 1 clic.",
+      "pains": [
+        {
+          "before": "Consolidation multi-filiales impossible",
+          "after": "Chaque entité saisit, le groupe consolide en temps réel",
+          "detail": "Chaque filiale a ses propres fichiers. La consolidation groupe prend 2 semaines. Avec Yumni : consolidation automatique."
+        },
+        {
+          "before": "RBAC insuffisant",
+          "after": "4 niveaux de permissions, isolation RLS",
+          "detail": "Caen ne voit pas Strasbourg. 4 rôles (Owner, Admin, Manager, Viewer), isolation par organisation via RLS PostgreSQL."
+        },
+        {
+          "before": "Reporting groupe = 2 semaines",
+          "after": "Rapport consolidé en 1 clic",
+          "detail": "Chaque filiale, chaque axe, chaque KPI. Format PowerPoint natif. Généré en 12 secondes."
+        },
+        {
+          "before": "Sécurité non négociable",
+          "after": "MFA, hébergement France, RGPD by design",
+          "detail": "MFA/2FA natif, JWT + refresh, rate limiting, hébergement Scaleway France (fr-par), chiffrement TLS 1.3 / AES-256."
+        }
+      ],
+      "archTitle": "Architecture multi-entités",
+      "archLabels": ["Direction Groupe RSE", "Filiale A — Normandie", "Filiale B — Est", "Filiale C — Sud", "Dashboard consolidé"],
+      "securityBadges": [
+        { "label": "RBAC 4 niveaux", "icon": "shield" },
+        { "label": "MFA / 2FA", "icon": "lock" },
+        { "label": "Hébergé France", "icon": "flag" },
+        { "label": "RGPD by design", "icon": "check" },
+        { "label": "RLS PostgreSQL", "icon": "database" },
+        { "label": "TLS 1.3 + AES-256", "icon": "encrypt" }
+      ],
+      "cta1": "Demander une démo groupe",
+      "cta2": "Contacter notre équipe entreprise →"
+    },
+    "comparison": {
+      "title": "Comparez les solutions",
+      "features": [
+        { "name": "Dashboard RSE temps réel", "cabinet": true, "pme": true, "eti": true },
+        { "name": "KPIs & alertes automatiques", "cabinet": true, "pme": true, "eti": true },
+        { "name": "Priorisation WSJF", "cabinet": true, "pme": true, "eti": true },
+        { "name": "Rapport COMEX 1 clic", "cabinet": true, "pme": true, "eti": true },
+        { "name": "Conformité ESRS / CSRD", "cabinet": true, "pme": true, "eti": true },
+        { "name": "Multi-organisation", "cabinet": true, "pme": false, "eti": true },
+        { "name": "Vue consolidée groupe", "cabinet": true, "pme": false, "eti": true },
+        { "name": "RBAC granulaire", "cabinet": true, "pme": false, "eti": true },
+        { "name": "Templates sectoriels", "cabinet": false, "pme": true, "eti": false },
+        { "name": "SSO / SAML", "cabinet": false, "pme": false, "eti": true },
+        { "name": "Account manager dédié", "cabinet": false, "pme": false, "eti": true }
+      ],
+      "headers": ["Fonctionnalité", "Cabinets", "PME", "ETI"]
+    },
+    "finalCta": {
+      "title1": "Prêt à transformer",
+      "titleAccent": "votre pilotage RSE",
+      "title2": "?",
+      "subtitle": "Rejoignez les entreprises qui pilotent déjà leur stratégie RSE avec Yumni.",
+      "cta1": "Essayer gratuitement",
+      "cta2": "Demander une démo"
+    }
+  },
+  "product": {
+    "hero": {
+      "eyebrow": "PRODUIT",
+      "title1": "Une plateforme.",
+      "title2": "Tout votre pilotage RSE.",
+      "subtitle": "De la définition des axes stratégiques à la génération automatique du rapport COMEX — Yumni couvre l'intégralité du cycle de vie RSE.",
+      "hierarchy": ["Axes stratégiques", "Objectifs SMART", "Projets RSE", "Actions terrain", "KPIs & Jalons"]
+    },
+    "features": [
+      {
+        "tag": "01",
+        "id": "cockpit",
+        "title": "Cockpit Dashboard",
+        "subtitle": "Votre score RSE en un coup d'œil.",
+        "description": "Votre score RSE global, vos alertes en temps réel, vos axes au vert ou en danger — en un seul écran. Percez jusqu'au détail de chaque action en 3 clics.",
+        "bullets": ["Score RSE global pondéré par axe", "Alertes automatiques sur KPIs et risques critiques", "Drill-down : Axe → Objectif → Projet → Action", "Suivi budget prévu vs. réel par projet"]
+      },
+      {
+        "tag": "02",
+        "id": "kpis",
+        "title": "KPIs & Alertes",
+        "subtitle": "40+ KPIs. Zéro surprise.",
+        "description": "Configurez vos indicateurs RSE une fois. Suivez leur évolution en temps réel. Recevez une alerte dès qu'un KPI décroche — avant le COMEX.",
+        "bullets": ["40+ KPIs RSE préconfigurés (E, S, G)", "Heatmap de progression vert / orange / rouge", "Alertes automatiques par seuils personnalisables", "Historique trimestriel avec comparaison N-1"]
+      },
+      {
+        "tag": "03",
+        "id": "wsjf",
+        "title": "Priorisation WSJF",
+        "subtitle": "15 initiatives. Budget pour 5. Laissez les données décider.",
+        "description": "Méthode WSJF adaptée à la RSE. Chaque initiative scorée objectivement. Du funnel d'idées au projet validé en quelques clics.",
+        "bullets": ["Score = (Valeur + Urgence + Risque) ÷ Effort", "Pipeline visuel : Inbox → Vote → Score → Projet", "Consensus basé sur les données, pas la politique", "Conversion automatique idée → projet RSE"]
+      },
+      {
+        "tag": "04",
+        "id": "risques",
+        "title": "Gestion des risques",
+        "subtitle": "Chaque risque tracé. Chaque auditeur satisfait.",
+        "description": "Matrice Impact × Probabilité. Chaque risque relié à ses actions de mitigation, son responsable et sa deadline. Traçabilité complète pour vos audits CSRD.",
+        "bullets": ["Matrice 5×5 avec code couleur (vert → rouge)", "4 catégories : Légal, Opérationnel, Réputationnel, Financier", "Chaîne d'audit complète : qui, quand, quoi", "Alertes automatiques sur risques critiques"]
+      },
+      {
+        "tag": "05",
+        "id": "reporting",
+        "title": "Rapport COMEX",
+        "subtitle": "3 jours → 12 secondes.",
+        "description": "Yumni génère automatiquement votre rapport COMEX en PowerPoint natif. Données en temps réel. Branding personnalisé. Export immédiat.",
+        "bullets": ["Format PowerPoint natif, compatible Office", "Logo et charte graphique personnalisés", "Planification auto : hebdo, mensuel, trimestriel", "40 jours/an libérés par équipe RSE"]
+      },
+      {
+        "tag": "06",
+        "id": "esrs",
+        "title": "Conformité ESRS",
+        "subtitle": "Conforme par design. Pas par rattrapage.",
+        "description": "Mapping automatique de vos initiatives sur les 12 standards ESRS. Gap analysis instantanée. Double matérialité intégrée.",
+        "bullets": ["12 standards ESRS couverts nativement", "Gap analysis : standards non couverts identifiés", "Double matérialité (financière + impact)", "Rapport ESRS exportable pour les auditeurs"]
+      },
+      {
+        "tag": "07",
+        "id": "collaboration",
+        "title": "Collaboration",
+        "subtitle": "Fini les 47 threads email.",
+        "description": "Kanban drag-and-drop. Calendrier RSE. Commentaires avec @mentions. Notifications. Tout le travail au même endroit.",
+        "bullets": ["Kanban d'actions : À faire / En cours / Terminé", "Calendrier des jalons et deadlines", "Commentaires et @mentions sur chaque action", "Journal d'activité et audit trail complet"]
+      },
+      {
+        "tag": "08",
+        "id": "multi-org",
+        "title": "Multi-organisation",
+        "subtitle": "1 compte. N organisations.",
+        "description": "Gestion multi-clients pour les cabinets, multi-filiales pour les groupes. Données isolées. Vue consolidée.",
+        "bullets": ["Onboarding nouveau client en < 5 minutes", "Chaque client dans un espace isolé", "Vue transversale consolidée", "Rapports multi-organisations en 1 clic"]
+      }
+    ],
+    "roadmap": {
+      "eyebrow": "ROADMAP",
+      "title": "La vision produit",
+      "steps": [
+        { "phase": "Fondations", "title": "Collaboration & Contrôle", "description": "Commentaires, pièces jointes, RBAC pour une collaboration fluide et sécurisée." },
+        { "phase": "Structuration", "title": "Double Matérialité", "description": "Seuils, chaîne de valeur, campagnes structurées pour la conformité ESRS." },
+        { "phase": "Optimisation", "title": "Pilotage Stratégique", "description": "Dashboards interactifs, alertes proactives, KPI liés aux enjeux matériels." },
+        { "phase": "Workflow", "title": "Actions Connectées", "description": "Matérialité, actions et KPIs dans un workflow intelligent avec suivi Kanban." },
+        { "phase": "Intelligence", "title": "IA & Benchmark", "description": "IA et benchmarks sectoriels pour guider vos décisions RSE." },
+        { "phase": "Reporting", "title": "Transparence Totale", "description": "Rapports CSRD, traçabilité totale et partage public RSE." }
+      ]
+    },
+    "cta": {
+      "title1": "Voyez-le",
+      "titleAccent": "en action",
+      "subtitle": "Essayez Yumni gratuitement ou demandez une démonstration personnalisée.",
+      "cta1": "Essayer gratuitement",
+      "cta2": "Demander une démo"
+    }
+  },
   "meta": {
     "home": {
-      "title": "Yumni — Pilotez votre stratégie RSE en temps réel",
-      "description": "Plateforme SaaS tout-en-un de pilotage RSE. Dashboard, KPIs, WSJF, gestion des risques, reporting COMEX et conformité ESRS/CSRD. Hébergé en France.",
-      "ogTitle": "Yumni — Pilotez votre stratégie RSE en temps réel",
-      "ogDescription": "Du cockpit stratégique au rapport COMEX — en un clic. CSRD Ready, ESRS Compliant, Hébergé en France."
+      "title": "Yumni — Plateforme de pilotage de projet RSE | CSRD Ready",
+      "description": "Yumni est la plateforme de pilotage de projet RSE tout-en-un. Dashboard temps réel, KPIs, priorisation WSJF, gestion des risques, reporting COMEX et conformité ESRS/CSRD. Hébergé en France. Essai gratuit.",
+      "ogTitle": "Yumni — Plateforme de pilotage de projet RSE en temps réel",
+      "ogDescription": "Du cockpit stratégique au rapport COMEX — en un clic. La plateforme de pilotage RSE préférée des directeurs RSE. CSRD Ready, ESRS Compliant, Hébergé en France."
+    },
+    "product": {
+      "title": "Produit — Yumni | Logiciel de pilotage RSE & conformité CSRD",
+      "description": "Découvrez Yumni, le logiciel de pilotage RSE tout-en-un : cockpit stratégique, KPIs & alertes, priorisation WSJF, matrice des risques, reporting COMEX en 12 secondes et conformité ESRS. La plateforme de pilotage de projet RSE pour PME, ETI et cabinets.",
+      "ogTitle": "Produit Yumni — Logiciel de pilotage RSE & conformité CSRD",
+      "ogDescription": "Cockpit RSE, KPIs, WSJF, risques, reporting COMEX et conformité ESRS — tout dans une seule plateforme de pilotage de projet RSE."
+    },
+    "solutions": {
+      "title": "Solutions RSE — Cabinets de conseil, PME, ETI & Groupes | Yumni",
+      "description": "Yumni s'adapte à votre organisation : plateforme RSE multi-tenant pour cabinets de conseil, solution clé en main pour PME, vue consolidée pour ETI et groupes. Pilotez votre stratégie RSE avec la plateforme qui comprend votre réalité.",
+      "ogTitle": "Solutions de pilotage RSE — Cabinets, PME, ETI | Yumni",
+      "ogDescription": "Une plateforme de pilotage RSE adaptée à chaque organisation. Multi-tenant pour les cabinets, templates pour les PME, consolidation pour les ETI."
+    },
+    "about": {
+      "title": "À propos de Yumni — Mission, équipe & vision RSE",
+      "description": "Yumni développe la plateforme de pilotage de projet RSE qui permet aux entreprises de piloter leur stratégie RSE en temps réel. Découvrez notre mission, notre équipe et notre vision pour démocratiser le pilotage RSE.",
+      "ogTitle": "À propos de Yumni — La plateforme de pilotage RSE",
+      "ogDescription": "Nous construisons la plateforme de pilotage RSE pour rendre le pilotage RSE accessible à toutes les entreprises."
+    },
+    "contact": {
+      "title": "Contact — Yumni | Démo, devis & partenariat RSE",
+      "description": "Contactez l'équipe Yumni pour une démo de la plateforme de pilotage RSE, un devis personnalisé ou un partenariat. Réponse sous 24h ouvrées. Plateforme RSE hébergée en France.",
+      "ogTitle": "Contactez Yumni — Démo & devis plateforme RSE",
+      "ogDescription": "Demandez une démo ou un devis pour la plateforme de pilotage de projet RSE Yumni. Réponse garantie sous 24h ouvrées."
+    },
+    "pricing": {
+      "title": "Tarifs — Yumni | Plateforme RSE à partir de 0€ — Freemium, Pro, Enterprise",
+      "description": "Découvrez les tarifs de Yumni : plan Freemium gratuit, Pro sur devis, Enterprise sur mesure. La plateforme de pilotage de projet RSE la plus accessible du marché. Sans carte bancaire, sans engagement.",
+      "ogTitle": "Tarifs Yumni — Plateforme de pilotage RSE dès 0€",
+      "ogDescription": "Freemium gratuit pour toujours, Pro sur devis, Enterprise sur mesure. Commencez à piloter votre RSE gratuitement."
+    },
+    "partners": {
+      "title": "Programme partenaires — Yumni | Cabinets RSE & consultants",
+      "description": "Rejoignez le programme partenaire Yumni : accès gratuit à la plateforme de pilotage RSE, tarifs préférentiels pour vos clients, badge certifié et support prioritaire. Pour cabinets RSE et consultants indépendants.",
+      "ogTitle": "Programme partenaire Yumni — Cabinets RSE & consultants",
+      "ogDescription": "Accès gratuit à la plateforme, tarifs clients préférentiels, badge certifié. Devenez partenaire de la plateforme de pilotage RSE Yumni."
+    },
+    "security": {
+      "title": "Sécurité & RGPD — Yumni | Hébergement France, chiffrement, conformité",
+      "description": "Yumni garantit la protection de vos données RSE : hébergement Scaleway en France (fr-par), chiffrement TLS 1.3 & AES-256, RBAC 4 niveaux, RLS PostgreSQL, RGPD by design, MFA natif. Aucun transfert hors UE.",
+      "ogTitle": "Sécurité & RGPD — Plateforme RSE Yumni",
+      "ogDescription": "Hébergement France, chiffrement TLS 1.3 / AES-256, RGPD by design. Vos données RSE protégées aux plus hauts standards."
+    },
+    "legal": {
+      "title": "Mentions légales — Yumni | Plateforme de pilotage RSE",
+      "description": "Mentions légales du site yumni.fr — éditeur, hébergeur, propriété intellectuelle, politique de confidentialité et conditions générales d'utilisation de la plateforme de pilotage RSE Yumni.",
+      "ogTitle": "Mentions légales — Yumni",
+      "ogDescription": "Informations légales du site yumni.fr — plateforme de pilotage de projet RSE."
     }
   }
 }

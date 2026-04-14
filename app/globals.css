@@ -16,9 +16,9 @@
   --color-ink-light: #3D3D3D;
   --color-muted: #6B7280;
   --color-subtle: #9CA3AF;
-  --color-line: #E8E8E8;
-  --color-line-dark: #D4D4D4;
-  --color-sand: #F5F5F5;
+  --color-line: #E5E3DF;
+  --color-line-dark: #D2D0CB;
+  --color-sand: #F3F2EE;
 
   /* ── Typography ─────────────────────────────── */
   --font-display: var(--font-fraunces);
@@ -28,8 +28,8 @@
 /* ── Base ──────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
-  scrollbar-width: auto;
-  scrollbar-color: #B8DFC9 #FFFFFF;
+  scrollbar-width: thin;
+  scrollbar-color: #D2D0CB #FAFAF8;
 }
 
 ::selection {
@@ -39,19 +39,19 @@ html {
 
 /* ── Scrollbar ────────────────────────────────── */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FFFFFF;
-  border-left: 1px solid #E8E8E8;
+  background: #FAFAF8;
+  border-left: 1px solid #E5E3DF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #B8DFC9;
-  border-radius: 5px;
-  border: 2px solid #FFFFFF;
+  background: #D2D0CB;
+  border-radius: 4px;
+  border: 2px solid #FAFAF8;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #00814A;
+  background: #9CA3AF;
 }
 
 /* ── Floating animations ──────────────────────── */

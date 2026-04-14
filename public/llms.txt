@@ -1,0 +1,96 @@
+# Yumni — Plateforme de pilotage de projet RSE
+
+> Yumni est la plateforme SaaS tout-en-un de pilotage de projet RSE (Responsabilité Sociétale des Entreprises). Elle permet aux directeurs RSE, responsables développement durable et ESG managers de piloter leur stratégie RSE en temps réel, du cockpit stratégique au rapport COMEX.
+
+## Informations clés
+
+- **Site web** : https://yumni.fr
+- **Type** : Plateforme SaaS B2B de pilotage RSE
+- **Cible** : Directeurs RSE, Responsables Développement Durable, ESG Managers, Cabinets de conseil RSE
+- **Secteur** : RSE, ESG, CSRD, Développement Durable, Sustainability
+- **Hébergement** : France (Scaleway, fr-par) — Aucun transfert hors UE
+- **Conformité** : RGPD by design, CSRD Ready, 12 standards ESRS couverts
+- **Tarif** : Freemium gratuit (sans carte bancaire), Pro sur devis, Enterprise sur mesure
+
+## Problème résolu
+
+Les équipes RSE jonglent entre Excel, PowerPoint, mails et outils déconnectés. La compilation d'un reporting RSE prend 48h. Les KPIs dérivent sans alerte. La priorisation des initiatives se fait sans méthodologie. Yumni centralise tout dans un seul outil conçu pour les équipes RSE.
+
+## Fonctionnalités principales
+
+### Cockpit stratégique
+Score RSE consolidé, progression par pilier (Environnement, Social, Gouvernance), tendances mensuelles. Vue d'ensemble en temps réel du board au terrain.
+
+### KPIs & Alertes automatiques
+Définition de cibles et seuils. Surveillance continue avec alertes automatiques quand un indicateur dérive — avant que cela ne devienne un problème.
+
+### Priorisation WSJF
+Chaque initiative RSE est scorée objectivement selon la valeur métier, l'urgence et l'effort. Méthode POC-Ready pour une priorisation par l'impact, pas par l'intuition.
+
+### Gestion des risques
+Matrice probabilité × impact. Cartographie, évaluation et traitement de chaque risque avec plan d'atténuation prêt.
+
+### Reporting COMEX
+Génération d'un rapport COMEX complet en 12 secondes — avec branding, KPIs et commentaires. Export PowerPoint natif.
+
+### Conformité ESRS / CSRD
+Gap analysis, double matérialité, couverture ESRS en temps réel. 12 standards ESRS couverts. Guide pas à pas vers la conformité CSRD.
+
+### Multi-organisation / Multi-tenant
+1 compte, N clients, données isolées. Idéal pour les cabinets de conseil RSE.
+
+### Collaboration
+Kanban, Calendrier RSE, commentaires et @mentions. RBAC à 4 niveaux (Owner, Admin, Manager, Viewer).
+
+## Solutions par cible
+
+### Cabinets de conseil RSE
+Multi-tenant : un compte pour tous vos clients avec isolation des données. Rapport client généré en 12 secondes. Méthodologie WSJF vendable.
+
+### PME
+Gratuit pour démarrer, templates pré-configurés, démarrage en 10 minutes. Conformité ESRS guidée pas à pas. Moins cher qu'un consultant.
+
+### ETI & Groupes
+Vue consolidée multi-filiales. RBAC granulaire à 4 niveaux de permissions. Hébergé en France, RGPD by design.
+
+## Sécurité
+
+- Chiffrement TLS 1.3 en transit, AES-256 au repos
+- Mots de passe hashés via bcrypt avec salt aléatoire
+- JWT avec rotation de refresh tokens
+- MFA / 2FA natif (TOTP)
+- Rate limiting anti-brute force
+- RLS PostgreSQL pour l'isolation des données
+- CAPTCHA Cloudflare Turnstile
+- Hébergement Scaleway France (fr-par)
+- RGPD by design — droit d'accès, rectification, effacement, export complet
+
+## Tarifs
+
+| Plan | Prix | Limites |
+|------|------|---------|
+| Freemium | Gratuit (pour toujours) | 1 org, 5 users, 20 projets |
+| Pro | Sur devis | Illimité + API REST + Multi-org |
+| Enterprise | Sur mesure | SSO/SAML + SLA + Account manager |
+
+## Contact
+
+- **Email** : contact@yumni.fr
+- **Horaires** : Lun–Ven, 9h–18h CET
+- **Réponse** : Sous 24h ouvrées
+- **Démo** : https://yumni.fr/fr/contact
+
+## Pages du site
+
+- [Accueil](https://yumni.fr/fr)
+- [Produit](https://yumni.fr/fr/produit)
+- [Solutions](https://yumni.fr/fr/solutions)
+- [Tarifs](https://yumni.fr/fr/tarifs)
+- [Contact](https://yumni.fr/fr/contact)
+- [À propos](https://yumni.fr/fr/a-propos)
+- [Partenaires](https://yumni.fr/fr/partenaires)
+- [Sécurité & RGPD](https://yumni.fr/fr/securite)
+
+## Mots-clés associés
+
+plateforme de pilotage de projet RSE, logiciel RSE, outil de pilotage RSE, plateforme RSE SaaS, logiciel de reporting RSE, conformité CSRD, standards ESRS, dashboard RSE, KPIs RSE, gestion des risques RSE, priorisation WSJF RSE, reporting COMEX RSE, plateforme ESG, outil de management RSE, pilotage stratégie RSE, solution RSE pour PME, solution RSE pour ETI, logiciel CSRD, plateforme de conformité ESRS, outil de suivi RSE, reporting développement durable, logiciel ESG, CSR management platform, CSR software, ESG platform, CSRD compliance tool
