@@ -2030,11 +2030,16 @@ function SolutionSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
           <FadeIn className="lg:col-span-3">
-            <div className="relative rounded-2xl border border-line overflow-hidden bg-white aspect-[16/10] flex items-center justify-center group cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="relative z-10 w-20 h-20 rounded-full bg-green flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <svg width="22" height="24" viewBox="0 0 18 20" fill="none" className="ml-1"><path d="M0 0L18 10L0 20V0Z" fill="white" /></svg>
-              </div>
-              <span className="absolute bottom-4 right-4 text-xs text-muted">{t.home.solution.videoLength}</span>
+            <div className="relative w-full max-w-[520px] rounded-2xl border border-line overflow-hidden bg-white aspect-[1/1] shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <iframe
+                className="absolute left-1/2 top-0 h-full w-[152%] -translate-x-1/2"
+                src="https://www.youtube.com/embed/4rAj0jq9MSE?rel=0&modestbranding=1&showinfo=0&controls=1&fs=1&iv_load_policy=3&disablekb=1&playsinline=1"
+                title="YouTube Shorts"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
             </div>
           </FadeIn>
           <FadeIn delay={0.15} className="lg:col-span-2">
