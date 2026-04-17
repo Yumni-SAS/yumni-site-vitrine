@@ -1233,6 +1233,92 @@
       "cta2": "Demander une démo"
     }
   },
+  "demo": {
+    "hero": {
+      "eyebrow": "Démo personnalisée",
+      "title1": "Voyez Yumni",
+      "titleHighlight": "en action",
+      "subtitle": "Du cockpit stratégique au rapport COMEX : découvrez comment Yumni transforme le pilotage RSE de votre organisation."
+    },
+
+    "form": {
+      "windowBar": "yumni.fr / réserver une démo",
+      "firstName": "Prénom",
+      "firstNamePlaceholder": "Sophie",
+      "email": "Email professionnel",
+      "emailPlaceholder": "sophie@greentech.fr",
+      "company": "Entreprise",
+      "companyPlaceholder": "GreenTech Industries",
+      "companySize": "Taille de l'entreprise",
+      "companySizes": ["PME < 250 salariés", "ETI 250–5 000", "Cabinet RSE", "Groupe +5 000"],
+      "challenge": "Principal défi RSE",
+      "challenges": ["Reporting CSRD", "Pilotage KPIs", "Priorisation initiatives", "Gestion des risques", "Conformité ESRS", "Autre"],
+      "message": "Message",
+      "messagePlaceholder": "Décrivez brièvement votre contexte ou vos attentes...",
+      "messageOptional": "(optionnel)",
+      "required": "*",
+      "sending": "Envoi en cours...",
+      "submit": "Voir la démo personnalisée →",
+      "privacy": "En soumettant ce formulaire, vous acceptez notre",
+      "privacyLink": "politique de confidentialité",
+      "privacyEnd": ". Vos données ne seront jamais partagées."
+    },
+    "trust": {
+      "noCommitment": "Démo sans engagement",
+      "noSharing": "Données non partagées",
+      "response": "Réponse sous 24h ouvrées"
+    },
+    "valueProps": {
+      "title": "Ce que vous verrez",
+      "items": [
+        { "title": "Le cockpit en temps réel", "desc": "Score RSE, alertes, heatmap KPIs en un seul écran." },
+        { "title": "La priorisation WSJF", "desc": "Vos initiatives scorées objectivement. Fini les arbitrages politiques." },
+        { "title": "Le rapport COMEX", "desc": "Généré en 12 secondes, pas en 3 jours. PowerPoint natif." },
+        { "title": "La conformité ESRS", "desc": "Gap analysis et mapping automatique sur les 12 standards." }
+      ]
+    },
+
+    "calendly": {
+      "title": "Choisissez votre créneau",
+      "subtitle": "30 minutes avec un expert Yumni pour découvrir la plateforme en conditions réelles."
+    },
+    "success": {
+      "title": "Demande envoyée !",
+      "description": "Nous avons bien reçu vos informations. Choisissez un créneau ci-contre pour finaliser votre rendez-vous.",
+      "back": "← Retour à l'accueil"
+    },
+    "stats": [
+      { "value": "12s", "label": "rapport COMEX" },
+      { "value": "40j", "label": "récupérés / an" },
+      { "value": "12", "label": "standards ESRS" }
+    ],
+    "errors": {
+      "generic": "Une erreur est survenue. Veuillez réessayer.",
+      "network": "Erreur réseau. Vérifiez votre connexion."
+    },
+    "tunnel": {
+      "backToSite": "Retour au site",
+      "availableSlots": "Créneaux disponibles cette semaine",
+      "title1": "30 minutes pour transformer",
+      "titleHighlight": "votre pilotage RSE",
+      "subtitle": "Une démo personnalisée avec un expert Yumni. On vous montre exactement comment la plateforme s'adapte à votre contexte, avec vos données, vos enjeux, vos urgences.",
+      "benefits": [
+        { "icon": "", "text": "Votre score RSE en temps réel : alertes, heatmap, drill-down en 3 clics" },
+        { "icon": "", "text": "La priorisation WSJF qui remplace les arbitrages politiques par les données" },
+        { "icon": "", "text": "Un rapport COMEX généré en 12 secondes, pas en 3 jours" },
+        { "icon": "", "text": "Le mapping ESRS automatique avec gap analysis instantanée sur 12 standards" }
+      ],
+      "step1Label": "Choisissez un créneau",
+      "step2Label": "Vos coordonnées",
+      "formTitle": "Parlez-nous de vous",
+      "formSubtitle": "60 secondes pour préparer une démo adaptée à votre contexte.",
+      "nextStepCTA": "Continuer",
+      "calendlyTitle": "Choisissez votre créneau",
+      "calendlySubtitle": "30 min avec un expert Yumni. Caméra facultative, zéro engagement.",
+      "socialProof": "directeurs RSE ont déjà vu la démo",
+      "socialProofCount": "142+"
+    }
+  },
   "meta": {
     "home": {
       "title": "Yumni — Plateforme de pilotage de projet RSE | CSRD Ready",
@@ -1263,6 +1349,12 @@
       "description": "Contactez l'équipe Yumni pour une démo de la plateforme de pilotage RSE, un devis personnalisé ou un partenariat. Réponse sous 24h ouvrées. Plateforme RSE hébergée en France.",
       "ogTitle": "Contactez Yumni — Démo & devis plateforme RSE",
       "ogDescription": "Demandez une démo ou un devis pour la plateforme de pilotage de projet RSE Yumni. Réponse garantie sous 24h ouvrées."
+    },
+    "demo": {
+      "title": "Démo — Yumni | Découvrez la plateforme de pilotage RSE en action",
+      "description": "Réservez une démo personnalisée de Yumni : cockpit RSE, KPIs, priorisation WSJF, gestion des risques et reporting COMEX en 12 secondes. 30 minutes pour tout comprendre.",
+      "ogTitle": "Démo Yumni — Voyez la plateforme de pilotage RSE en action",
+      "ogDescription": "Du cockpit stratégique au rapport COMEX. Réservez 30 minutes pour découvrir comment Yumni transforme votre pilotage RSE."
     },
     "pricing": {
       "title": "Tarifs — Yumni | Plateforme RSE à partir de 0€ — Freemium, Pro, Enterprise",

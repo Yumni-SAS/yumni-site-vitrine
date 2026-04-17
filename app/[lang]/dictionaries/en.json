@@ -1233,6 +1233,92 @@
       "cta2": "Request a demo"
     }
   },
+  "demo": {
+    "hero": {
+      "eyebrow": "Personalized demo",
+      "title1": "See Yumni",
+      "titleHighlight": "in action",
+      "subtitle": "From the strategic cockpit to the board report: discover how Yumni transforms CSR management for your organization."
+    },
+
+    "form": {
+      "windowBar": "yumni.fr / book a demo",
+      "firstName": "First name",
+      "firstNamePlaceholder": "Sophie",
+      "email": "Professional email",
+      "emailPlaceholder": "sophie@greentech.com",
+      "company": "Company",
+      "companyPlaceholder": "GreenTech Industries",
+      "companySize": "Company size",
+      "companySizes": ["SME < 250 employees", "Mid-cap 250–5,000", "CSR consulting firm", "Enterprise +5,000"],
+      "challenge": "Main CSR challenge",
+      "challenges": ["CSRD Reporting", "KPI Monitoring", "Initiative prioritization", "Risk management", "ESRS Compliance", "Other"],
+      "message": "Message",
+      "messagePlaceholder": "Briefly describe your context or expectations...",
+      "messageOptional": "(optional)",
+      "required": "*",
+      "sending": "Sending...",
+      "submit": "See the personalized demo →",
+      "privacy": "By submitting this form, you agree to our",
+      "privacyLink": "privacy policy",
+      "privacyEnd": ". Your data will never be shared."
+    },
+    "trust": {
+      "noCommitment": "No-commitment demo",
+      "noSharing": "Data not shared",
+      "response": "Response within 24 business hours"
+    },
+    "valueProps": {
+      "title": "What you'll see",
+      "items": [
+        { "title": "Real-time cockpit", "desc": "CSR score, alerts, KPI heatmap in a single screen." },
+        { "title": "WSJF prioritization", "desc": "Your initiatives scored objectively. No more politics." },
+        { "title": "Board report", "desc": "Generated in 12 seconds, not 3 days. Native PowerPoint." },
+        { "title": "ESRS compliance", "desc": "Gap analysis and automatic mapping across 12 standards." }
+      ]
+    },
+
+    "calendly": {
+      "title": "Choose your time slot",
+      "subtitle": "30 minutes with a Yumni expert to discover the platform in real conditions."
+    },
+    "success": {
+      "title": "Request sent!",
+      "description": "We received your information. Choose a time slot on the left to finalize your appointment.",
+      "back": "← Back to home"
+    },
+    "stats": [
+      { "value": "12s", "label": "board report" },
+      { "value": "40d", "label": "saved / year" },
+      { "value": "12", "label": "ESRS standards" }
+    ],
+    "errors": {
+      "generic": "An error occurred. Please try again.",
+      "network": "Network error. Check your connection."
+    },
+    "tunnel": {
+      "backToSite": "Back to site",
+      "availableSlots": "Slots available this week",
+      "title1": "30 minutes to transform",
+      "titleHighlight": "your CSR management",
+      "subtitle": "A personalized demo with a Yumni expert. We show you exactly how the platform adapts to your context, with your data, your challenges, your priorities.",
+      "benefits": [
+        { "icon": "", "text": "Your real-time CSR score: alerts, heatmap, drill-down in 3 clicks" },
+        { "icon": "", "text": "WSJF prioritization that replaces political decisions with data" },
+        { "icon": "", "text": "A board report generated in 12 seconds, not 3 days" },
+        { "icon": "", "text": "Automatic ESRS mapping with instant gap analysis across 12 standards" }
+      ],
+      "step1Label": "Pick a slot",
+      "step2Label": "Your details",
+      "formTitle": "Tell us about you",
+      "formSubtitle": "60 seconds to prepare a demo tailored to your context.",
+      "nextStepCTA": "Continue",
+      "calendlyTitle": "Choose your time slot",
+      "calendlySubtitle": "30 min with a Yumni expert. Camera optional, zero commitment.",
+      "socialProof": "CSR directors have already seen the demo",
+      "socialProofCount": "142+"
+    }
+  },
   "meta": {
     "home": {
       "title": "Yumni — CSR Project Management Platform | CSRD Ready",
@@ -1263,6 +1349,12 @@
       "description": "Contact the Yumni team for a demo of our CSR management platform, a personalized quote or a partnership. Response within 24 business hours. CSR platform hosted in France.",
       "ogTitle": "Contact Yumni — Demo & Quote for CSR Platform",
       "ogDescription": "Request a demo or quote for the Yumni CSR project management platform. Guaranteed response within 24 business hours."
+    },
+    "demo": {
+      "title": "Demo — Yumni | Discover the CSR Management Platform in Action",
+      "description": "Book a personalized Yumni demo: CSR cockpit, KPIs, WSJF prioritization, risk management and board reporting in 12 seconds. 30 minutes to understand everything.",
+      "ogTitle": "Yumni Demo — See the CSR Platform in Action",
+      "ogDescription": "From the strategic cockpit to the board report. Book 30 minutes to discover how Yumni transforms your CSR management."
     },
     "pricing": {
       "title": "Pricing — Yumni | CSR Platform from €0 — Freemium, Pro, Enterprise",

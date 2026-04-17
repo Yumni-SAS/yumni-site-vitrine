@@ -77,3 +77,42 @@ html {
 .animate-float-medium { animation: float-medium 6s ease-in-out infinite; }
 .animate-float-fast { animation: float-fast 4s ease-in-out infinite; }
 .animate-pulse-ring { animation: pulse-ring 4s ease-in-out infinite; }
+
+/* ── Demo conversion tunnel — immersive mode ── */
+body.demo-tunnel {
+  background-color: #FFFFFF !important;
+}
+body.demo-tunnel header {
+  display: none !important;
+}
+body.demo-tunnel footer {
+  display: none !important;
+}
+body.demo-tunnel main {
+  padding: 0 !important;
+}
+@media (min-width: 1024px) {
+  body.demo-tunnel {
+    overflow: hidden;
+    height: 100dvh;
+  }
+  body.demo-tunnel main {
+    height: 100dvh;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes subtle-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+.animate-subtle-glow {
+  animation: subtle-glow 4s ease-in-out infinite;
+}
