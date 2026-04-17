@@ -2023,6 +2023,80 @@ function ProblemSection() {
 
 function SolutionSection() {
   const { t, locale } = useDictionary();
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [progressRatio, setProgressRatio] = useState(0);
+  const seekBarRef = useRef<HTMLButtonElement | null>(null);
+  const isSeekingRef = useRef(false);
+
+  const toggleVideo = async () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    try {
+      if (video.paused) {
+        await video.play();
+        setIsPlaying(true);
+      } else {
+        video.pause();
+        setIsPlaying(false);
+      }
+    } catch {
+      // If the browser blocks playback for any reason, we simply keep the overlay.
+      setIsPlaying(false);
+    }
+  };
+
+  const seekTo = (timeSeconds: number) => {
+    const video = videoRef.current;
+    if (!video || !Number.isFinite(video.duration) || video.duration <= 0) return;
+    video.currentTime = Math.max(0, Math.min(video.duration, timeSeconds));
+  };
+
+  const seekBy = (deltaSeconds: number) => {
+    const video = videoRef.current;
+    if (!video) return;
+    seekTo(video.currentTime + deltaSeconds);
+  };
+
+  const seekFromClientX = (clientX: number) => {
+    const video = videoRef.current;
+    const bar = seekBarRef.current;
+    if (!video || !bar) return;
+    if (!Number.isFinite(video.duration) || video.duration <= 0) return;
+
+    const rect = bar.getBoundingClientRect();
+    const ratioRaw = (clientX - rect.left) / Math.max(1, rect.width);
+    const ratio = Math.max(0, Math.min(1, ratioRaw));
+    setProgressRatio(ratio);
+    seekTo(video.duration * ratio);
+  };
+
+  const handleSeekPointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    isSeekingRef.current = true;
+    (e.currentTarget as HTMLButtonElement).setPointerCapture(e.pointerId);
+    // Some browsers only refresh the frame on seek while the video is playing.
+    // Since the video is muted, starting playback on user interaction is safe.
+    const video = videoRef.current;
+    if (video && video.paused) {
+      video
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch(() => setIsPlaying(false));
+    }
+    seekFromClientX(e.clientX);
+  };
+
+  const handleSeekPointerMove = (e: React.PointerEvent<HTMLButtonElement>) => {
+    if (!isSeekingRef.current) return;
+    seekFromClientX(e.clientX);
+  };
+
+  const handleSeekPointerUp = () => {
+    isSeekingRef.current = false;
+  };
+
   return (
     <section className="py-24 md:py-36 bg-sand/40 relative overflow-hidden">
       {/* Large soft circle — creates spatial depth */}
@@ -2030,11 +2104,89 @@ function SolutionSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
           <FadeIn className="lg:col-span-3">
-            <div className="relative rounded-2xl border border-line overflow-hidden bg-white aspect-[16/10] flex items-center justify-center group cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="relative z-10 w-20 h-20 rounded-full bg-green flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <svg width="22" height="24" viewBox="0 0 18 20" fill="none" className="ml-1"><path d="M0 0L18 10L0 20V0Z" fill="white" /></svg>
+            <div className="relative w-full max-w-[520px] rounded-2xl border border-line overflow-hidden bg-white aspect-[1/1] shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer flex items-center justify-center">
+              <video
+                ref={videoRef}
+                className="absolute inset-0 w-full h-full object-cover"
+                src="https://assets-yumni-general.s3.fr-par.scw.cloud/video-teaser-yumni.mp4"
+                muted
+                playsInline
+                loop
+                preload="metadata"
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
+                onTimeUpdate={(e) => {
+                  const v = e.currentTarget;
+                  if (!Number.isFinite(v.duration) || v.duration <= 0) return;
+                  setProgressRatio(v.currentTime / v.duration);
+                }}
+              />
+
+              <button
+                type="button"
+                onClick={toggleVideo}
+                aria-label={isPlaying ? "Pause" : "Lire la vidéo"}
+                className="relative z-10 w-20 h-20 rounded-full bg-green/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:scale-110 transition-all duration-300 shadow-lg"
+              >
+                {isPlaying ? (
+                  <svg width="26" height="24" viewBox="0 0 26 24" fill="none" aria-hidden="true">
+                    <rect x="6" y="4" width="4" height="16" rx="1.5" fill="white" />
+                    <rect x="16" y="4" width="4" height="16" rx="1.5" fill="white" />
+                  </svg>
+                ) : (
+                  <svg width="22" height="24" viewBox="0 0 18 20" fill="none" aria-hidden="true">
+                    <path d="M0 0L18 10L0 20V0Z" fill="white" />
+                  </svg>
+                )}
+              </button>
+
+              {/* Hover-only seek controls */}
+              <div className="absolute inset-0 z-10 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity">
+                <div className="absolute inset-0 pointer-events-none">
+                  <div className="absolute left-4 right-4 top-1/2 flex -translate-y-1/2 items-center justify-between">
+                  <button
+                    type="button"
+                    aria-label="Reculer"
+                    onClick={() => seekBy(-5)}
+                    className="pointer-events-auto w-10 h-10 rounded-full bg-ink/30 hover:bg-ink/45 backdrop-blur-sm flex items-center justify-center transition-colors"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M12 6L6 12L12 18V6Z" fill="white" />
+                      <path d="M14 6H16V18H14V6Z" fill="white" />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    aria-label="Avancer"
+                    onClick={() => seekBy(5)}
+                    className="pointer-events-auto w-10 h-10 rounded-full bg-ink/30 hover:bg-ink/45 backdrop-blur-sm flex items-center justify-center transition-colors"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M12 6L18 12L12 18V6Z" fill="white" />
+                      <path d="M8 6H10V18H8V6Z" fill="white" />
+                    </svg>
+                  </button>
+                  </div>
+
+                  <div className="absolute bottom-3 left-4 right-4">
+                    <button
+                      type="button"
+                    ref={seekBarRef}
+                    onPointerDown={handleSeekPointerDown}
+                    onPointerMove={handleSeekPointerMove}
+                    onPointerUp={handleSeekPointerUp}
+                    onPointerCancel={handleSeekPointerUp}
+                      aria-label="Avancer ou reculer dans la vidéo"
+                      className="pointer-events-auto touch-none select-none relative w-full h-2 rounded-full bg-white/15 cursor-pointer"
+                    >
+                      <div
+                        className="absolute left-0 top-0 h-full rounded-full bg-green/70"
+                        style={{ width: `${Math.max(0, Math.min(1, progressRatio)) * 100}%` }}
+                      />
+                    </button>
+                  </div>
+                </div>
               </div>
-              <span className="absolute bottom-4 right-4 text-xs text-muted">{t.home.solution.videoLength}</span>
             </div>
           </FadeIn>
           <FadeIn delay={0.15} className="lg:col-span-2">
