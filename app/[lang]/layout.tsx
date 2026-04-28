@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { Fraunces, Nunito } from "next/font/google";
+import Script from "next/script";
 import { getDictionary, hasLocale } from "./dictionaries";
 import type { Locale } from "./dictionaries";
 import { DictionaryProvider } from "./dictionary-provider";
@@ -109,6 +110,7 @@ export default async function LangLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </DictionaryProvider>
+      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       </body>
     </html>
   );
