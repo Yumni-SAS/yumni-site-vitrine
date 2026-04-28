@@ -67,11 +67,11 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "CSR Project Management Platform — CSRD Ready",
-      "title1": "Manage your",
-      "titleHighlight": "CSR project",
-      "title2": "in real time",
-      "subtitle": "The all-in-one CSR management platform. From the strategic cockpit to the board report — in one click. Yumni centralizes KPIs, risks, action plans and ESRS compliance in a single tool.",
+      "eyebrow": "",
+      "title1": "Secure your",
+      "titleHighlight": "CSR compliance",
+      "title2": "before the audit",
+      "subtitle": "CSRD, ESRS, double materiality: Yumni structures your CSR governance and reduces your financial, legal and reputational risks.",
       "trustedBy": "Trusted by"
     },
     "trust": {
@@ -85,126 +85,126 @@
     },
     "socialProof": {
       "items": [
-        { "num": "500+", "label": "companies managed" },
-        { "num": "40", "label": "days/year saved on average" },
-        { "num": "12s", "label": "to generate a board report" },
+        { "num": "500+", "label": "organizations managed" },
+        { "num": "40", "label": "days/year saved per CSR team" },
+        { "num": "12s", "label": "to generate an auditor report" },
         { "num": "99.9%", "label": "guaranteed uptime" }
       ]
     },
     "problem": {
-      "eyebrow": "The problem",
-      "title": "CSR management shouldn't be an obstacle course",
+      "eyebrow": "The regulatory challenge",
+      "title": "CSR inaction costs more than compliance",
       "items": [
         {
-          "num": "48h",
-          "stat": "to compile a CSR report",
-          "detail": "Entire days lost copying and pasting between Excel and PowerPoint. A tunnel before each board meeting."
+          "num": "€€€",
+          "stat": "Penalties, exclusion, reputation",
+          "detail": "Non-compliance, inconsistent data, missing traceability: penalties, lost financing and public contract exclusion."
         },
         {
-          "num": "0",
-          "stat": "alerts before the audit",
-          "detail": "Your KPIs drift silently for weeks. You find out when it's too late."
+          "num": "2026",
+          "stat": "CSRD deadline for mid-caps",
+          "detail": "Without structured governance, compliance deadlines are impossible to meet. The risk is already here."
         },
         {
-          "num": "?",
-          "stat": "objective prioritization",
-          "detail": "15 CSR initiatives, no methodology. Decisions are made on gut feeling."
+          "num": "12",
+          "stat": "ESRS standards to cover",
+          "detail": "12 standards, double materiality, KPIs by pillar. Excel won't cut it. Compliance requires a dedicated tool."
         }
       ]
     },
     "solution": {
-      "eyebrow": "The solution",
-      "title1": "Discover Yumni",
+      "eyebrow": "The operational answer",
+      "title1": "See Yumni",
       "title2": "in 30 seconds",
-      "description": "From the strategic dashboard to the generated report — see how Yumni transforms your CSR management into a smooth, centralized experience.",
+      "description": "Risk mapping, ESRS governance, auditor report everything you need to be compliant on day one.",
       "videoLength": "0:30"
     },
     "features": {
       "eyebrow": "Features",
-      "title1": "Everything you need.",
-      "title2": "Nothing superfluous.",
+      "title1": "CSR governance",
+      "title2": "built for what's at stake.",
       "items": [
         {
           "tag": "Cockpit",
           "title": "Strategic cockpit",
-          "subtitle": "Real-time overview",
-          "description": "Consolidated CSR score, progress by pillar, monthly trends. A single screen to understand everything — from the board to the field."
+          "subtitle": "Consolidated view for leadership",
+          "description": "CSR score, progress by pillar, critical alerts. One screen for the board no manual synthesis."
         },
         {
           "tag": "KPIs",
           "title": "KPIs & Alerts",
-          "subtitle": "Smart thresholds, zero surprises",
-          "description": "Define your targets, set thresholds. Yumni monitors and alerts when an indicator drifts — before it becomes a problem."
+          "subtitle": "Catch deviations before the audit",
+          "description": "Alert thresholds on all your indicators. Detect gaps before they become non-compliance risks."
         },
         {
           "tag": "WSJF",
           "title": "WSJF Prioritization",
-          "subtitle": "Prioritize by impact, not intuition",
-          "description": "POC-Ready. Each initiative is objectively scored based on business value, urgency and effort. No more management by gut feeling."
+          "subtitle": "Decide by value, not intuition",
+          "description": "Prioritize initiatives by business impact, regulatory urgency and effort. Every CSR investment is justifiable."
         },
         {
           "tag": "Risks",
           "title": "Risk management",
-          "subtitle": "Probability × impact matrix",
-          "description": "Map, assess, treat. Each risk is classified by probability and severity — with a ready-made mitigation plan."
+          "subtitle": "Mapping and auditor traceability",
+          "description": "Probability × impact matrix, mitigation plans, assigned owners. Full traceability for CSRD auditors."
         },
         {
           "tag": "Reporting",
           "title": "Board reporting",
-          "subtitle": "From click to branded PDF",
-          "description": "12 seconds. That's the time it takes to generate a complete board report with your colors, your KPIs and your comments."
+          "subtitle": "3 days of work → 12 seconds",
+          "description": "Auto-generated board report in PowerPoint. Real-time data, custom branding, instant export."
         },
         {
           "tag": "ESRS",
           "title": "ESRS Compliance",
-          "subtitle": "12 standards, mapped and guided",
-          "description": "Gap analysis, double materiality, real-time ESRS coverage. Yumni guides you towards CSRD compliance — step by step."
+          "subtitle": "12 standards, governed and documented",
+          "description": "Gap analysis, double materiality, real-time ESRS coverage. Your CSRD dossier prepared and kept up to date."
         }
       ]
     },
     "stats": {
       "items": [
-        { "value": 40, "suffix": "", "unit": "days/year", "label": "recovered" },
-        { "value": 1, "suffix": "", "unit": "click", "label": "board report" },
-        { "value": 12, "suffix": "", "unit": "standards", "label": "ESRS covered" },
-        { "value": 100, "suffix": "%", "unit": "", "label": "real time" }
+        { "value": 40, "suffix": "", "unit": "days/year", "label": "saved on reporting" },
+        { "value": 1, "suffix": "", "unit": "click", "label": "board report ready" },
+        { "value": 12, "suffix": "", "unit": "standards", "label": "ESRS covered natively" },
+        { "value": 100, "suffix": "%", "unit": "", "label": "real-time data" }
       ]
     },
     "audience": {
-      "eyebrow": "By audience",
-      "title1": "A solution adapted",
-      "title2": "to your reality",
+      "eyebrow": "By decision-maker",
+      "title1": "A response adapted",
+      "title2": "to your responsibility",
       "items": [
         {
           "tag": "Consulting firm",
-          "title": "Multiply your firm's impact",
-          "subtitle": "Without multiplying your headcount.",
+          "title": "Industrialize your CSRD offering",
+          "subtitle": "Same rigor, every client.",
           "points": [
             "Multi-tenant: 1 account, N clients, isolated data",
-            "Client report generated in 12 seconds",
-            "WSJF methodology sellable to your clients"
+            "Auditor report in 12 seconds",
+            "ESRS gap analysis sellable to your clients"
           ],
           "cta": "Consulting solution →",
           "href": "/solutions/cabinets-conseil"
         },
         {
           "tag": "SME",
-          "title": "Your CSR, structured",
-          "subtitle": "Without hiring a CSR manager.",
+          "title": "Get ahead of CSRD without a dedicated team",
+          "subtitle": "Cheaper than a consultant. More reliable than Excel.",
           "points": [
-            "Free to start, cheaper than a consultant",
-            "Pre-configured templates, 10-min setup",
-            "ESRS compliance guided step by step"
+            "Operational in 10 minutes",
+            "Pre-configured templates",
+            "ESRS compliance guided standard by standard"
           ],
           "cta": "Start for free →",
           "href": "/essai-gratuit"
         },
         {
           "tag": "Mid-caps & Groups",
-          "title": "Manage your group's CSR",
-          "subtitle": "Every subsidiary, every KPI, one cockpit.",
+          "title": "Consolidate CSR across the group",
+          "subtitle": "Every subsidiary, every KPI, one view.",
           "points": [
-            "Consolidated multi-subsidiary view in 1 screen",
+            "Real-time multi-subsidiary consolidation",
             "Granular RBAC, 4 permission levels",
             "Hosted in France, GDPR by design"
           ],
@@ -214,10 +214,10 @@
       ]
     },
     "cta": {
-      "badge": "Free to start • No commitment",
-      "title1": "Ready to manage",
-      "titleHighlight": "your CSR?",
-      "description": "Join the companies transforming their CSR management with Yumni. From strategy to action, in a single platform.",
+      "badge": "Demo available • No commitment • Hosted in France",
+      "title1": "Ready to secure",
+      "titleHighlight": "your CSR compliance?",
+      "description": "Get ahead of your obligations. Structure your governance. Walk into the audit with confidence.",
       "scoreRSE": "CSR Score",
       "kpisActifs": "Active KPIs",
       "risques": "Risks",
@@ -239,75 +239,111 @@
   "pricing": {
     "hero": {
       "eyebrow": "Pricing",
-      "title1": "A",
-      "titleHighlight": "transparent",
-      "title2": "price for every ambition",
-      "subtitle1": "Start for free. Scale up when you're ready.",
-      "subtitle2": "No credit card. No commitment. Your data belongs to you."
+      "title1": "Start for free.",
+      "titleHighlight": "Grow without limits.",
+      "title2": "",
+      "subtitle1": "A complete Freemium to try today.",
+      "subtitle2": "Starter, Pro and Enterprise plans to grow at your own pace."
     },
-    "popularBadge": "Most popular",
+    "billingToggle": {
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "save": "2 months free"
+    },
+    "deploymentPhase": {
+      "title": "Progressive rollout",
+      "phase1Label": "Phase 1 — Available now",
+      "phase1Plans": "Freemium · Starter · Enterprise",
+      "phase2Label": "Phase 2 — From Oct. 2026",
+      "phase2Plans": "+ Pro + AI"
+    },
+    "popularBadge": "Recommended",
+    "comingSoonBadge": "Coming soon · Late 2026",
     "plans": [
       {
         "name": "Freemium",
-        "tagline": "To get started. To prove it.",
-        "price": "Free",
-        "priceSuffix": "",
-        "priceNote": "No credit card required",
-        "cta": "Start now",
+        "tagline": "To test Yumni",
+        "disclaimer": "A product preview — not a daily work tool. For professional use, upgrade to Starter.",
+        "price": "0",
+        "priceSuffix": " EUR",
+        "priceNote": "Free, no commitment",
+        "annualPrice": "0",
+        "annualPriceSuffix": " EUR",
+        "annualPriceNote": "Always free",
+        "users": "1 user · 1 organization",
+        "cta": "Try for free",
+        "comingSoon": false,
         "features": [
+          "1 user",
           "1 organization",
-          "5 users",
-          "20 projects",
-          "All core features",
-          "Dashboard & CSR Score",
-          "KPIs & Alerts",
-          "Risk matrix",
-          "WSJF Prioritization",
-          "Basic ESRS Compliance",
+          "Limited features",
+          "Product preview"
+        ]
+      },
+      {
+        "name": "Starter",
+        "tagline": "To launch your CSR strategy",
+        "disclaimer": null,
+        "price": "19",
+        "priceSuffix": " € / month",
+        "priceNote": "Guaranteed fixed price · never changes",
+        "annualPrice": "15",
+        "annualPriceSuffix": " € / month",
+        "annualPriceNote": "Billed annually · 2 months free",
+        "users": "Up to 5 users · 1 organization",
+        "cta": "Get started",
+        "comingSoon": false,
+        "features": [
+          "Up to 5 users",
+          "1 organization",
+          "All features",
+          "No AI",
+          "Collaboration & invitations included",
+          "Full reporting & exports",
           "Hosted in France 🇫🇷"
         ]
       },
       {
-        "name": "Pro",
-        "tagline": "To scale. To dominate.",
-        "price": "Custom pricing",
+        "name": "Pro + AI",
+        "tagline": "To accelerate with AI",
+        "disclaimer": "Launching late 2026.",
+        "price": "Coming soon",
         "priceSuffix": "",
-        "priceNote": "Adapted to your usage",
-        "cta": "Request a quote",
+        "priceNote": "Launching late 2026",
+        "annualPrice": "Coming soon",
+        "annualPriceSuffix": "",
+        "annualPriceNote": "Launching late 2026",
+        "users": "Multi-organizations",
+        "cta": "Get notified",
+        "comingSoon": true,
         "features": [
-          "Unlimited organizations",
-          "Unlimited users",
-          "Unlimited projects",
-          "All core features",
-          "Dashboard & CSR Score",
-          "KPIs & Alerts",
-          "Risk matrix",
-          "WSJF Prioritization",
-          "Advanced ESRS Compliance",
-          "Advanced Board Report",
-          "Multi-organization",
-          "REST API",
-          "Priority support",
+          "All features",
+          "AI (late 2026)",
+          "Sovereign architecture (Scaleway)",
+          "Multi-organizations",
+          "99.5% uptime",
           "Hosted in France 🇫🇷"
         ]
       },
       {
         "name": "Enterprise",
-        "tagline": "For groups. No compromise.",
+        "tagline": "To deploy at scale",
+        "disclaimer": null,
         "price": "Custom",
         "priceSuffix": "",
-        "priceNote": "Personalized commitment",
-        "cta": "Contact sales",
+        "priceNote": "Negotiated pricing based on scope",
+        "annualPrice": "Custom",
+        "annualPriceSuffix": "",
+        "annualPriceNote": "Personalized commitment",
+        "users": "Unlimited · Multi-organizations",
+        "cta": "Contact our team",
+        "comingSoon": false,
         "features": [
-          "Everything in Pro",
-          "Multi-tenant group",
-          "SSO / SAML",
-          "Guaranteed SLA",
+          "Unlimited users",
+          "Multi-organizations",
+          "AI + dedicated infra (late 2026)",
+          "99.9% uptime",
           "Dedicated account manager",
-          "On-premise option",
-          "Personalized onboarding",
-          "Dedicated team training",
-          "Custom integrations",
           "Hosted in France 🇫🇷"
         ]
       }
@@ -315,57 +351,52 @@
     "comparison": {
       "eyebrow": "Detailed comparison",
       "title": "Everything that's included",
-      "description": "Freemium is not a crippled version. It's the real product, with real features. Higher plans unlock power for teams.",
-      "featureCol": "Feature",
-      "freeCol": "Freemium",
-      "proCol": "Pro",
+      "description": "One principle: all features are available from Starter. Moving up is justified by team size and AI access — never by artificially locked features.",
+      "featureCol": "Criteria",
+      "freemiumCol": "Freemium",
+      "starterCol": "Starter",
+      "proCol": "Pro + AI",
       "enterpriseCol": "Enterprise",
-      "startCta": "Start →",
-      "quoteCta": "Quote →",
+      "startCta": "Try →",
+      "starterCta": "Start →",
+      "notifyCta": "Get notified →",
       "contactCta": "Contact →",
-      "basic": "basic",
       "categories": [
         {
-          "category": "Management",
+          "category": "Access & Scope",
           "items": [
-            { "name": "Dashboard & CSR Score", "free": true, "pro": true, "enterprise": true },
-            { "name": "KPIs & Automatic Alerts", "free": true, "pro": true, "enterprise": true },
-            { "name": "WSJF Prioritization", "free": true, "pro": true, "enterprise": true },
-            { "name": "Risk Matrix", "free": true, "pro": true, "enterprise": true },
-            { "name": "4-level drill-down", "free": true, "pro": true, "enterprise": true }
+            { "name": "Users", "freemium": "1", "starter": "5", "pro": false, "enterprise": "Unlimited" },
+            { "name": "Organizations", "freemium": "1", "starter": "1", "pro": "Multi", "enterprise": "Unlimited" }
           ]
         },
         {
-          "category": "Reporting & Compliance",
+          "category": "Strategic management",
           "items": [
-            { "name": "Board Report (basic)", "free": true, "pro": true, "enterprise": true },
-            { "name": "Advanced Board Report (branding)", "free": false, "pro": true, "enterprise": true },
-            { "name": "ESRS / CSRD Compliance", "free": "basic", "pro": true, "enterprise": true },
-            { "name": "ESRS Gap Analysis", "free": false, "pro": true, "enterprise": true },
-            { "name": "Double Materiality", "free": false, "pro": true, "enterprise": true },
-            { "name": "Native PowerPoint export", "free": true, "pro": true, "enterprise": true }
+            { "name": "Axes, Objectives, Projects, Actions, KPIs", "freemium": "Limited", "starter": true, "pro": true, "enterprise": true },
+            { "name": "WSJF Ideas, Risks, Milestones", "freemium": "Limited", "starter": true, "pro": true, "enterprise": true },
+            { "name": "CSRD / ESRS Compliance", "freemium": "Limited", "starter": true, "pro": true, "enterprise": true }
           ]
         },
         {
-          "category": "Collaboration",
+          "category": "Collaboration & Data",
           "items": [
-            { "name": "Kanban & Calendar", "free": true, "pro": true, "enterprise": true },
-            { "name": "Comments & @mentions", "free": true, "pro": true, "enterprise": true },
-            { "name": "Multi-organization", "free": false, "pro": true, "enterprise": true },
-            { "name": "REST API", "free": false, "pro": true, "enterprise": true }
+            { "name": "Collaboration & Invitations", "freemium": false, "starter": true, "pro": true, "enterprise": true },
+            { "name": "Attachments", "freemium": false, "starter": true, "pro": true, "enterprise": true },
+            { "name": "Reporting & Exports", "freemium": "Limited", "starter": true, "pro": true, "enterprise": true }
           ]
         },
         {
-          "category": "Support & Security",
+          "category": "Artificial intelligence",
           "items": [
-            { "name": "Hosted in France (Scaleway)", "free": true, "pro": true, "enterprise": true },
-            { "name": "MFA / 2FA", "free": true, "pro": true, "enterprise": true },
-            { "name": "GDPR by design", "free": true, "pro": true, "enterprise": true },
-            { "name": "Email support", "free": true, "pro": true, "enterprise": true },
-            { "name": "Priority support", "free": false, "pro": true, "enterprise": true },
-            { "name": "SSO / SAML", "free": false, "pro": false, "enterprise": true },
-            { "name": "Guaranteed SLA", "free": false, "pro": false, "enterprise": true },
-            { "name": "Dedicated account manager", "free": false, "pro": false, "enterprise": true }
+            { "name": "AI", "freemium": false, "starter": false, "pro": "Soon", "enterprise": "Soon" }
+          ]
+        },
+        {
+          "category": "Infrastructure & SLA",
+          "items": [
+            { "name": "Uptime", "freemium": "Standard", "starter": "Standard", "pro": "99.5%", "enterprise": "99.9%" },
+            { "name": "Infrastructure", "freemium": "Shared", "starter": "Shared", "pro": "Shared", "enterprise": "Dedicated" },
+            { "name": "Hosted in France (Scaleway)", "freemium": true, "starter": true, "pro": true, "enterprise": true }
           ]
         }
       ]
@@ -394,8 +425,8 @@
     },
     "guarantees": [
       {
-        "title": "Your data belongs to you",
-        "desc": "Full export at any time. No lock-in. Deletion on request (GDPR)."
+        "title": "Starter price locked forever",
+        "desc": "€19/user/month. This price will never change. Early customers benefit from this lifetime guarantee."
       },
       {
         "title": "No credit card",
@@ -411,35 +442,39 @@
       "title": "Everything you need to know",
       "items": [
         {
-          "q": "How does the Freemium plan work?",
-          "a": "The Freemium plan is free, with no time limit and no credit card required. You get access to all of Yumni's core features: dashboard, KPIs, WSJF, risk matrix and basic ESRS compliance. Limited to 1 organization, 5 users and 20 projects."
+          "q": "What is the Freemium plan really for?",
+          "a": "Freemium is a product preview — not a daily work tool. It is intentionally limited (1 user, 1 organization, restricted features) so you can test Yumni before committing. For professional use, upgrade to Starter at €19/user/month."
         },
         {
-          "q": "Can I change plans at any time?",
-          "a": "Yes. You can upgrade from Freemium to Pro at any time without losing data. Switching to Enterprise requires a discussion with our sales team to adapt the offer to your organization."
+          "q": "Is the €19 Starter price really final?",
+          "a": "Yes, it's a firm commitment. €19/user/month, this price will never change regardless of how other plans evolve. Early customers benefit from this lifetime guarantee. It's our promise to those who trust us from the start."
+        },
+        {
+          "q": "When will Pro + AI launch, and at what price?",
+          "a": "Pro + AI is planned for October 2026. Its pricing will be set only after validation of the sovereign AI architecture (Scaleway Europe, open-source model) and real cost calculation. We will not communicate any price before then. Contact us to be notified first."
+        },
+        {
+          "q": "What's the difference between Starter and Enterprise?",
+          "a": "Starter covers up to 5 users in 1 organization — ideal for an SME, consulting firm or CSR team. Enterprise is designed for large organizations: unlimited users, multi-organizations, dedicated infrastructure, guaranteed 99.9% SLA and dedicated account manager. Pricing on request."
+        },
+        {
+          "q": "Is there a discount for annual billing?",
+          "a": "Yes. By choosing annual billing on the Starter plan, you get a 20% discount, equivalent to approximately €15/user/month instead of €19. That's 2 months free over the year."
         },
         {
           "q": "Is my data secure?",
           "a": "Absolutely. Yumni is hosted in France by Scaleway (fr-par region). TLS 1.3 encryption in transit, AES-256 at rest. 4-level RBAC, data isolation by organization (RLS PostgreSQL). GDPR by design."
         },
         {
-          "q": "What's the difference between Pro and Enterprise?",
-          "a": "The Enterprise plan adds group-level features: SSO/SAML, guaranteed SLA, dedicated account manager, personalized onboarding, custom integrations and on-premise hosting option."
-        },
-        {
-          "q": "How long does deployment take?",
-          "a": "Freemium: sign up in 60 seconds, start immediately. Pro: configuration in less than a day. Enterprise: personalized onboarding in 1 to 2 weeks depending on complexity."
-        },
-        {
-          "q": "Do you offer discounts for non-profits or NGOs?",
-          "a": "Yes, we offer adapted pricing for non-profit organizations. Contact our sales team to discuss."
+          "q": "Do you offer pricing for non-profits or NGOs?",
+          "a": "Yes, we review requests on a case-by-case basis. Contact our team to discuss."
         }
       ]
     },
     "finalCta": {
       "title1": "Ready to manage your CSR",
-      "titleHighlight": "like a pro",
-      "description": "Join the companies that have chosen to manage their CSR strategy with clarity, method and impact."
+      "titleHighlight": "with clarity",
+      "description": "Start free. Upgrade to Starter when you're ready. No surprises, no lock-in."
     }
   },
   "contact": {
@@ -448,7 +483,7 @@
       "title1": "Let's talk about your",
       "titleHighlight": "CSR project",
       "subtitle1": "Our team responds within 24 business hours.",
-      "subtitle2": "Demo, quote, partnership, press — one form."
+      "subtitle2": "Demo, quote, partnership, press one form."
     },
     "form": {
       "name": "Name",
@@ -487,7 +522,7 @@
       "emailSub": "For any question",
       "linkedinLabel": "LinkedIn Yumni",
       "linkedinSub": "Follow our news",
-      "scheduleLabel": "France — European hours",
+      "scheduleLabel": "France European hours",
       "scheduleSub": "Mon–Fri, 9am–6pm CET",
       "responseTitle": "Response within 24h",
       "responseSub": "Guaranteed for sales inquiries"
@@ -621,7 +656,7 @@
       "statusLabel": "System status",
       "statusValue": "OPERATIONAL",
       "statusItems": [
-        { "label": "Encryption", "value": "Active — TLS 1.3 / AES-256" },
+        { "label": "Encryption", "value": "Active TLS 1.3 / AES-256" },
         { "label": "Hosting", "value": "fr-par · Scaleway · France" },
         { "label": "MFA", "value": "Active on all accounts" },
         { "label": "PostgreSQL RLS", "value": "Data isolation enabled" }
@@ -656,7 +691,7 @@
       "passwords": {
         "label": "Passwords",
         "protocol": "bcrypt",
-        "description": "Passwords are never stored in plaintext. bcrypt hashing with random salt — irreversible by design."
+        "description": "Passwords are never stored in plaintext. bcrypt hashing with random salt irreversible by design."
       }
     },
     "auth": {
@@ -681,15 +716,15 @@
         { "role": "Owner", "description": "Full access, member management and billing", "color": "green" },
         { "role": "Admin", "description": "Configuration, invitations, data export", "color": "green" },
         { "role": "Manager", "description": "Create and edit projects, KPIs and actions", "color": "orange" },
-        { "role": "Viewer", "description": "Read-only — ideal for stakeholders", "color": "muted" }
+        { "role": "Viewer", "description": "Read-only ideal for stakeholders", "color": "muted" }
       ],
-      "isolation": "Organization isolation via PostgreSQL RLS — no user can access another organization's data, even in case of an application bug."
+      "isolation": "Organization isolation via PostgreSQL RLS no user can access another organization's data, even in case of an application bug."
     },
     "gdpr": {
       "eyebrow": "GDPR",
       "title": "Your rights,",
       "titleHighlight": "guaranteed by design.",
-      "description": "GDPR compliance isn't a checkbox at Yumni — it's coded into every layer of the architecture.",
+      "description": "GDPR compliance isn't a checkbox at Yumni it's coded into every layer of the architecture.",
       "rights": [
         { "title": "Right of access", "description": "View all your data stored by Yumni upon simple request." },
         { "title": "Right of rectification", "description": "Correct any inaccurate data directly from your account or via our DPO." },
@@ -705,7 +740,7 @@
       "eyebrow": "Certifications",
       "title": "Compliance",
       "titleHighlight": "as a compass.",
-      "description": "Current certifications and compliance roadmap — our commitment to transparency with our clients.",
+      "description": "Current certifications and compliance roadmap our commitment to transparency with our clients.",
       "items": [
         { "name": "GDPR", "status": "active", "label": "Compliant", "description": "Hosting and architecture compliant with the General Data Protection Regulation" },
         { "name": "NIS2", "status": "progress", "label": "Target 2026", "description": "European directive on cybersecurity of critical infrastructures" },
@@ -719,7 +754,7 @@
       "description": "Our team and DPO respond within 24 business hours to all security and compliance questions.",
       "dpoButton": "Contact the DPO",
       "trialButton": "Start for free",
-      "trialSub": "No risk — hosted in France, no commitment"
+      "trialSub": "No risk hosted in France, no commitment"
     }
   },
   "about": {
@@ -734,7 +769,7 @@
       "eyebrow": "Vision",
       "title": "Every company deserves",
       "titleHighlight": "a structured CSR strategy.",
-      "description": "Regardless of size, every organization should be able to structure its CSR strategy, measure its impact and report with confidence — without needing an army of consultants.",
+      "description": "Regardless of size, every organization should be able to structure its CSR strategy, measure its impact and report with confidence without needing an army of consultants.",
       "stats": [
         { "value": "12", "suffix": "sec", "label": "To generate a board report" },
         { "value": "0", "suffix": "", "label": "Consultant needed to start" },
@@ -967,7 +1002,7 @@
       "eyebrow": "SOLUTIONS",
       "title1": "Your reality.",
       "titleAccent": "Our solution.",
-      "subtitle": "Consulting firms, SMEs or mid-caps — every organization has its constraints, its urgencies, its relationship with CSR. Yumni adapts to your context and gives you exactly what you need.",
+      "subtitle": "Consulting firms, SMEs or mid-caps every organization has its constraints, its urgencies, its relationship with CSR. Yumni adapts to your context and gives you exactly what you need.",
       "scroll": "Discover your solution"
     },
     "personas": [
@@ -1069,7 +1104,7 @@
         "ESRS coverage assessed"
       ],
       "priceHighlight": "Free to start. Cheaper than a day of consulting to manage.",
-      "cta1": "Start for free — no credit card",
+      "cta1": "Start for free no credit card",
       "cta2": "See pricing →"
     },
     "eti": {
@@ -1101,7 +1136,7 @@
         }
       ],
       "archTitle": "Multi-entity architecture",
-      "archLabels": ["Group CSR Direction", "Subsidiary A — North", "Subsidiary B — East", "Subsidiary C — South", "Consolidated dashboard"],
+      "archLabels": ["Group CSR Direction", "Subsidiary A North", "Subsidiary B East", "Subsidiary C South", "Consolidated dashboard"],
       "securityBadges": [
         { "label": "RBAC 4 levels", "icon": "shield" },
         { "label": "MFA / 2FA", "icon": "lock" },
@@ -1144,7 +1179,7 @@
       "eyebrow": "PRODUCT",
       "title1": "One platform.",
       "title2": "Your entire CSR management.",
-      "subtitle": "From defining strategic axes to automatically generating board reports — Yumni covers the entire CSR lifecycle.",
+      "subtitle": "From defining strategic axes to automatically generating board reports Yumni covers the entire CSR lifecycle.",
       "hierarchy": ["Strategic Axes", "SMART Objectives", "CSR Projects", "Field Actions", "KPIs & Milestones"]
     },
     "features": [
@@ -1153,7 +1188,7 @@
         "id": "cockpit",
         "title": "Cockpit Dashboard",
         "subtitle": "Your CSR score at a glance.",
-        "description": "Your global CSR score, real-time alerts, axes in green or in danger — on a single screen. Drill down to any action in 3 clicks.",
+        "description": "Your global CSR score, real-time alerts, axes in green or in danger on a single screen. Drill down to any action in 3 clicks.",
         "bullets": ["Global CSR score weighted by axis", "Automatic alerts on KPIs and critical risks", "Drill-down: Axis → Objective → Project → Action", "Planned vs. actual budget tracking per project"]
       },
       {
@@ -1161,7 +1196,7 @@
         "id": "kpis",
         "title": "KPIs & Alerts",
         "subtitle": "40+ KPIs. Zero surprises.",
-        "description": "Configure your CSR indicators once. Track their progress in real time. Get an alert as soon as a KPI drops — before the board meeting.",
+        "description": "Configure your CSR indicators once. Track their progress in real time. Get an alert as soon as a KPI drops before the board meeting.",
         "bullets": ["40+ preconfigured CSR KPIs (E, S, G)", "Green / orange / red progression heatmap", "Automatic alerts with customizable thresholds", "Quarterly history with year-over-year comparison"]
       },
       {
@@ -1321,64 +1356,64 @@
   },
   "meta": {
     "home": {
-      "title": "Yumni — CSR Project Management Platform | CSRD Ready",
+      "title": "Yumni CSR Project Management Platform | CSRD Ready",
       "description": "Yumni is the all-in-one CSR project management platform. Real-time dashboard, KPIs, WSJF prioritization, risk management, board reporting and ESRS/CSRD compliance. Hosted in France. Free trial.",
-      "ogTitle": "Yumni — CSR Project Management Platform in Real Time",
-      "ogDescription": "From the strategic cockpit to the board report — in one click. The CSR management platform chosen by CSR directors. CSRD Ready, ESRS Compliant, Hosted in France."
+      "ogTitle": "Yumni CSR Project Management Platform in Real Time",
+      "ogDescription": "From the strategic cockpit to the board report in one click. The CSR management platform chosen by CSR directors. CSRD Ready, ESRS Compliant, Hosted in France."
     },
     "product": {
-      "title": "Product — Yumni | CSR Management Software & CSRD Compliance",
+      "title": "Product Yumni | CSR Management Software & CSRD Compliance",
       "description": "Discover Yumni, the all-in-one CSR management software: strategic cockpit, KPIs & alerts, WSJF prioritization, risk matrix, board reporting in 12 seconds and ESRS compliance. The CSR project management platform for SMEs, mid-caps and consulting firms.",
-      "ogTitle": "Yumni Product — CSR Management Software & CSRD Compliance",
-      "ogDescription": "CSR cockpit, KPIs, WSJF, risks, board reporting and ESRS compliance — everything in a single CSR project management platform."
+      "ogTitle": "Yumni Product CSR Management Software & CSRD Compliance",
+      "ogDescription": "CSR cockpit, KPIs, WSJF, risks, board reporting and ESRS compliance everything in a single CSR project management platform."
     },
     "solutions": {
-      "title": "CSR Solutions — Consulting Firms, SMEs, Mid-caps & Groups | Yumni",
+      "title": "CSR Solutions Consulting Firms, SMEs, Mid-caps & Groups | Yumni",
       "description": "Yumni adapts to your organization: multi-tenant CSR platform for consulting firms, turnkey solution for SMEs, consolidated view for mid-caps and groups. Manage your CSR strategy with the platform that understands your reality.",
-      "ogTitle": "CSR Management Solutions — Consulting, SME, Mid-caps | Yumni",
+      "ogTitle": "CSR Management Solutions Consulting, SME, Mid-caps | Yumni",
       "ogDescription": "A CSR management platform adapted to every organization. Multi-tenant for firms, templates for SMEs, consolidation for mid-caps."
     },
     "about": {
-      "title": "About Yumni — Mission, Team & CSR Vision",
+      "title": "About Yumni Mission, Team & CSR Vision",
       "description": "Yumni develops the CSR project management platform that enables companies to manage their CSR strategy in real time. Discover our mission, team and vision to democratize CSR management.",
-      "ogTitle": "About Yumni — The CSR Management Platform",
+      "ogTitle": "About Yumni The CSR Management Platform",
       "ogDescription": "We build the CSR management platform to make CSR steering accessible to every company."
     },
     "contact": {
-      "title": "Contact — Yumni | Demo, Quote & CSR Partnership",
+      "title": "Contact Yumni | Demo, Quote & CSR Partnership",
       "description": "Contact the Yumni team for a demo of our CSR management platform, a personalized quote or a partnership. Response within 24 business hours. CSR platform hosted in France.",
-      "ogTitle": "Contact Yumni — Demo & Quote for CSR Platform",
+      "ogTitle": "Contact Yumni Demo & Quote for CSR Platform",
       "ogDescription": "Request a demo or quote for the Yumni CSR project management platform. Guaranteed response within 24 business hours."
     },
     "demo": {
-      "title": "Demo — Yumni | Discover the CSR Management Platform in Action",
+      "title": "Demo Yumni | Discover the CSR Management Platform in Action",
       "description": "Book a personalized Yumni demo: CSR cockpit, KPIs, WSJF prioritization, risk management and board reporting in 12 seconds. 30 minutes to understand everything.",
-      "ogTitle": "Yumni Demo — See the CSR Platform in Action",
+      "ogTitle": "Yumni Demo See the CSR Platform in Action",
       "ogDescription": "From the strategic cockpit to the board report. Book 30 minutes to discover how Yumni transforms your CSR management."
     },
     "pricing": {
-      "title": "Pricing — Yumni | CSR Platform from €0 — Freemium, Pro, Enterprise",
+      "title": "Pricing Yumni | Free Freemium · Starter €19/user · Pro + AI coming soon · Enterprise",
       "description": "Discover Yumni pricing: free Freemium plan, Pro on quote, custom Enterprise. The most accessible CSR project management platform on the market. No credit card, no commitment.",
-      "ogTitle": "Yumni Pricing — CSR Management Platform from €0",
+      "ogTitle": "Yumni Pricing CSR Management Platform from €0",
       "ogDescription": "Free Freemium forever, Pro on quote, custom Enterprise. Start managing your CSR for free."
     },
     "partners": {
-      "title": "Partner Program — Yumni | CSR Consulting Firms & Consultants",
+      "title": "Partner Program Yumni | CSR Consulting Firms & Consultants",
       "description": "Join the Yumni partner program: free access to the CSR management platform, preferential rates for your clients, certified badge and priority support. For CSR firms and independent consultants.",
-      "ogTitle": "Yumni Partner Program — CSR Firms & Consultants",
+      "ogTitle": "Yumni Partner Program CSR Firms & Consultants",
       "ogDescription": "Free platform access, preferential client rates, certified badge. Become a partner of the Yumni CSR management platform."
     },
     "security": {
-      "title": "Security & GDPR — Yumni | France Hosting, Encryption, Compliance",
+      "title": "Security & GDPR Yumni | France Hosting, Encryption, Compliance",
       "description": "Yumni guarantees the protection of your CSR data: Scaleway hosting in France (fr-par), TLS 1.3 & AES-256 encryption, 4-level RBAC, PostgreSQL RLS, GDPR by design, native MFA. No data transfer outside the EU.",
-      "ogTitle": "Security & GDPR — Yumni CSR Platform",
+      "ogTitle": "Security & GDPR Yumni CSR Platform",
       "ogDescription": "France hosting, TLS 1.3 / AES-256 encryption, GDPR by design. Your CSR data protected at the highest standards."
     },
     "legal": {
-      "title": "Legal Notice — Yumni | CSR Management Platform",
-      "description": "Legal notices for yumni.fr — publisher, host, intellectual property, privacy policy and terms of use for the Yumni CSR management platform.",
-      "ogTitle": "Legal Notice — Yumni",
-      "ogDescription": "Legal information for yumni.fr — CSR project management platform."
+      "title": "Legal Notice Yumni | CSR Management Platform",
+      "description": "Legal notices for yumni.fr publisher, host, intellectual property, privacy policy and terms of use for the Yumni CSR management platform.",
+      "ogTitle": "Legal Notice Yumni",
+      "ogDescription": "Legal information for yumni.fr CSR project management platform."
     }
   }
 }

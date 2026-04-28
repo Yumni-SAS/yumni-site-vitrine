@@ -947,7 +947,7 @@ export default function SecuritePage() {
                         }`}>
                           {org}
                           <span className={`ml-2 text-[10px] font-normal ${i === 2 ? "text-green/60" : "text-white/20"}`}>
-                            {i === 2 ? "— accès lecture" : "— isolée par RLS"}
+                            {i === 2 ? "accès lecture" : "isolée par RLS"}
                           </span>
                         </div>
                         {i < 2 && (

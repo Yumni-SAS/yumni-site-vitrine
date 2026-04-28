@@ -67,11 +67,11 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Plateforme de pilotage de projet RSE — CSRD Ready",
-      "title1": "Pilotez votre",
-      "titleHighlight": "projet RSE",
-      "title2": "en temps réel",
-      "subtitle": "La plateforme de pilotage RSE tout-en-un. Du cockpit stratégique au rapport COMEX — en un clic. Yumni centralise KPIs, risques, plans d'action et conformité ESRS dans un seul outil.",
+      "eyebrow": "",
+      "title1": "Anticipez vos",
+      "titleHighlight": "obligations RSE",
+      "title2": "avant qu'elles s'imposent",
+      "subtitle": "CSRD, ESRS, double matérialité : Yumni structure votre pilotage RSE et réduit vos risques financiers, juridiques et réputationnels.",
       "trustedBy": "Ils nous font confiance"
     },
     "trust": {
@@ -85,126 +85,126 @@
     },
     "socialProof": {
       "items": [
-        { "num": "500+", "label": "entreprises pilotées" },
-        { "num": "40", "label": "jours/an récupérés en moyenne" },
-        { "num": "12s", "label": "pour générer un rapport COMEX" },
-        { "num": "99.9%", "label": "uptime garanti" }
+        { "num": "500+", "label": "organisations pilotées" },
+        { "num": "40", "label": "jours/an économisés par équipe RSE" },
+        { "num": "12s", "label": "pour générer un rapport auditeur" },
+        { "num": "99.9%", "label": "de disponibilité garantie" }
       ]
     },
     "problem": {
-      "eyebrow": "Le problème",
-      "title": "Le pilotage de projet RSE ne devrait pas être un parcours du combattant",
+      "eyebrow": "L'enjeu réglementaire",
+      "title": "L'inaction RSE coûte plus cher que la conformité",
       "items": [
         {
-          "num": "48h",
-          "stat": "pour compiler un reporting RSE",
-          "detail": "Des jours entiers perdus à copier-coller entre Excel et PowerPoint. Sans plateforme de pilotage RSE dédiée, c'est un tunnel avant chaque COMEX."
+          "num": "€€€",
+          "stat": "Pénalités, exclusion, réputation",
+          "detail": "Non-conformité, données incohérentes, traçabilité absente : pénalités, perte de financement et exclusion des marchés publics."
         },
         {
-          "num": "0",
-          "stat": "alerte avant l'audit",
-          "detail": "Vos KPIs dérivent en silence pendant des semaines. Sans outil de pilotage RSE, vous le découvrez quand il est trop tard."
+          "num": "2026",
+          "stat": "Toutes les entreprises concernées par la CSRD",
+          "detail": "PME, ETI, grandes entreprises : la CSRD s'impose à toutes les organisations d'ici 2026. Préparer sa conformité ne souffre plus d'attente."
         },
         {
-          "num": "?",
-          "stat": "priorisation objective",
-          "detail": "15 initiatives RSE, pas de méthode. Sans logiciel de pilotage de projet RSE, les décisions se prennent au doigt mouillé."
+          "num": "12",
+          "stat": "Standards ESRS à couvrir",
+          "detail": "12 standards, double matérialité, KPIs par pilier. Excel ne suffit pas. La conformité exige un outil dédié."
         }
       ]
     },
     "solution": {
-      "eyebrow": "La solution",
-      "title1": "Découvrez Yumni",
+      "eyebrow": "La réponse opérationnelle",
+      "title1": "Voyez Yumni",
       "title2": "en 30 secondes",
-      "description": "Du dashboard stratégique au rapport généré — voyez comment la plateforme Yumni transforme votre pilotage de projet RSE en une expérience fluide et centralisée.",
+      "description": "Cartographie des risques, pilotage ESRS, rapport auditeur tout ce qu'il faut pour arriver conforme le jour J.",
       "videoLength": "0:30"
     },
     "features": {
       "eyebrow": "Fonctionnalités",
-      "title1": "Tout ce dont vous avez besoin.",
-      "title2": "Rien de superflu.",
+      "title1": "Un pilotage RSE",
+      "title2": "à la hauteur des enjeux.",
       "items": [
         {
           "tag": "Cockpit",
           "title": "Cockpit stratégique",
-          "subtitle": "Vue d'ensemble en temps réel",
-          "description": "Score RSE consolidé, progression par pilier, tendances mensuelles. Un seul écran pour tout comprendre — du board au terrain."
+          "subtitle": "Vision consolidée pour la direction",
+          "description": "Score RSE, avancement par pilier, alertes critiques. Un écran pour le COMEX sans synthèse manuelle."
         },
         {
           "tag": "KPIs",
           "title": "KPIs & Alertes",
-          "subtitle": "Seuils intelligents, zéro surprise",
-          "description": "Définissez vos cibles, posez des seuils. Yumni surveille et alerte quand un indicateur dérive — avant que ça ne devienne un problème."
+          "subtitle": "Détecter les dérives avant l'audit",
+          "description": "Seuils d'alerte sur tous vos indicateurs. Détection des écarts avant qu'ils ne deviennent des risques de non-conformité."
         },
         {
           "tag": "WSJF",
           "title": "Priorisation WSJF",
-          "subtitle": "Priorisez par l'impact, pas l'intuition",
-          "description": "POC-Ready. Chaque initiative est scorée objectivement selon la valeur métier, l'urgence et l'effort. Fini le pilotage au doigt mouillé."
+          "subtitle": "Arbitrer par la valeur, pas l'intuition",
+          "description": "Priorisez vos initiatives par impact business, urgence réglementaire et effort. Chaque investissement RSE est justifiable."
         },
         {
           "tag": "Risques",
           "title": "Gestion des risques",
-          "subtitle": "Matrice probabilité × impact",
-          "description": "Cartographiez, évaluez, traitez. Chaque risque est classé par probabilité et sévérité — avec un plan d'atténuation prêt."
+          "subtitle": "Cartographie et traçabilité auditeur",
+          "description": "Matrice probabilité × impact, plans de mitigation, responsables assignés. Traçabilité complète pour les auditeurs CSRD."
         },
         {
           "tag": "Reporting",
           "title": "Reporting COMEX",
-          "subtitle": "Du clic au PDF branded",
-          "description": "12 secondes. C'est le temps qu'il faut pour générer un rapport COMEX complet avec vos couleurs, vos KPIs et vos commentaires."
+          "subtitle": "3 jours de travail → 12 secondes",
+          "description": "Rapport COMEX auto-généré en PowerPoint. Données temps réel, branding personnalisé, export immédiat."
         },
         {
           "tag": "ESRS",
           "title": "Conformité ESRS",
-          "subtitle": "12 standards, mappés et guidés",
-          "description": "Gap analysis, double matérialité, couverture ESRS en temps réel. Yumni vous guide vers la conformité CSRD — pas à pas."
+          "subtitle": "12 standards, pilotés et documentés",
+          "description": "Gap analysis, double matérialité, couverture ESRS temps réel. Votre dossier CSRD préparé et maintenu à jour."
         }
       ]
     },
     "stats": {
       "items": [
-        { "value": 40, "suffix": "", "unit": "jours/an", "label": "récupérés" },
-        { "value": 1, "suffix": "", "unit": "clic", "label": "rapport COMEX" },
-        { "value": 12, "suffix": "", "unit": "standards", "label": "ESRS couverts" },
-        { "value": 100, "suffix": "%", "unit": "", "label": "temps réel" }
+        { "value": 40, "suffix": "", "unit": "jours/an", "label": "économisés sur le reporting" },
+        { "value": 1, "suffix": "", "unit": "clic", "label": "rapport COMEX prêt" },
+        { "value": 12, "suffix": "", "unit": "standards", "label": "ESRS couverts nativement" },
+        { "value": 100, "suffix": "%", "unit": "", "label": "données en temps réel" }
       ]
     },
     "audience": {
-      "eyebrow": "Par cible",
-      "title1": "Une solution adaptée",
-      "title2": "à votre réalité",
+      "eyebrow": "Par profil décideur",
+      "title1": "Une réponse adaptée",
+      "title2": "à votre responsabilité",
       "items": [
         {
           "tag": "Cabinet de conseil",
-          "title": "Multipliez l'impact de votre cabinet",
-          "subtitle": "Sans multiplier vos effectifs.",
+          "title": "Industrialisez votre offre CSRD",
+          "subtitle": "Même rigueur, chaque client.",
           "points": [
             "Multi-tenant : 1 compte, N clients, données isolées",
-            "Rapport client généré en 12 secondes",
-            "Méthodologie WSJF vendable à vos clients"
+            "Rapport auditeur en 12 secondes",
+            "Gap analysis ESRS vendable à vos clients"
           ],
           "cta": "Solution cabinet →",
           "href": "/solutions/cabinets-conseil"
         },
         {
           "tag": "PME",
-          "title": "Votre RSE structurée",
-          "subtitle": "Sans embaucher un responsable RSE.",
+          "title": "Anticipez la CSRD sans équipe dédiée",
+          "subtitle": "Moins cher qu'un consultant. Plus fiable qu'Excel.",
           "points": [
-            "Gratuit pour démarrer, moins cher qu'un consultant",
-            "Templates pré-configurés, démarrage en 10 min",
-            "Conformité ESRS guidée pas à pas"
+            "Opérationnel en 10 minutes",
+            "Templates préconfigurés",
+            "Conformité ESRS guidée standard par standard"
           ],
-          "cta": "Commencer gratuitement →",
-          "href": "/essai-gratuit"
+          "cta": "Voir la solution PME →",
+          "href": "/solutions"
         },
         {
           "tag": "ETI & Groupes",
-          "title": "Pilotez la RSE de votre groupe",
-          "subtitle": "Chaque filiale, chaque KPI, un seul cockpit.",
+          "title": "Consolidez la RSE de tout le groupe",
+          "subtitle": "Chaque filiale, chaque KPI, une vue.",
           "points": [
-            "Vue consolidée multi-filiales en 1 écran",
+            "Consolidation multi-filiales temps réel",
             "RBAC granulaire, 4 niveaux de permissions",
             "Hébergé en France, RGPD by design"
           ],
@@ -214,10 +214,10 @@
       ]
     },
     "cta": {
-      "badge": "Gratuit pour démarrer • Sans engagement",
-      "title1": "Prêt à piloter",
-      "titleHighlight": "votre RSE ?",
-      "description": "Rejoignez les entreprises qui transforment leur pilotage de projet RSE avec Yumni. De la stratégie à l'action, en une seule plateforme de pilotage RSE.",
+      "badge": "Démo disponible • Sans engagement • Hébergé en France",
+      "title1": "Prêt à sécuriser",
+      "titleHighlight": "votre conformité RSE ?",
+      "description": "Anticipez vos obligations. Structurez votre pilotage. Arrivez confiant le jour de l'audit.",
       "scoreRSE": "Score RSE",
       "kpisActifs": "KPIs actifs",
       "risques": "Risques",
@@ -239,75 +239,111 @@
   "pricing": {
     "hero": {
       "eyebrow": "Tarifs",
-      "title1": "Un prix",
-      "titleHighlight": "transparent",
-      "title2": "pour chaque ambition",
-      "subtitle1": "Commencez gratuitement. Montez en puissance quand vous êtes prêt.",
-      "subtitle2": "Pas de carte bancaire. Pas d'engagement. Vos données vous appartiennent."
+      "title1": "Commencez gratuitement.",
+      "titleHighlight": "Évoluez sans contrainte.",
+      "title2": "",
+      "subtitle1": "Un Freemium complet pour essayer dès aujourd'hui.",
+      "subtitle2": "Des offres Starter, Pro et Enterprise pour grandir à votre rythme."
     },
-    "popularBadge": "Le plus populaire",
+    "billingToggle": {
+      "monthly": "Mensuel",
+      "annual": "Annuel",
+      "save": "2 mois offerts"
+    },
+    "deploymentPhase": {
+      "title": "Déploiement progressif",
+      "phase1Label": "Phase 1 — Disponible maintenant",
+      "phase1Plans": "Freemium · Starter · Enterprise",
+      "phase2Label": "Phase 2 — À partir d'oct. 2026",
+      "phase2Plans": "+ Pro + IA"
+    },
+    "popularBadge": "Recommandé",
+    "comingSoonBadge": "Bientôt · Fin 2026",
     "plans": [
       {
         "name": "Freemium",
-        "tagline": "Pour démarrer. Pour prouver.",
-        "price": "Gratuit",
-        "priceSuffix": "",
-        "priceNote": "Sans carte bancaire",
-        "cta": "Commencer maintenant",
+        "tagline": "Pour tester Yumni",
+        "disclaimer": "Aperçu du produit — pas un outil de travail quotidien. Pour un usage professionnel, passez au Starter.",
+        "price": "0",
+        "priceSuffix": " EUR",
+        "priceNote": "Gratuit, sans engagement",
+        "annualPrice": "0",
+        "annualPriceSuffix": " EUR",
+        "annualPriceNote": "Toujours gratuit",
+        "users": "1 utilisateur · 1 organisation",
+        "cta": "Essayer gratuitement",
+        "comingSoon": false,
         "features": [
+          "1 utilisateur",
           "1 organisation",
-          "5 utilisateurs",
-          "20 projets",
-          "Toutes les features core",
-          "Dashboard & Score RSE",
-          "KPIs & Alertes",
-          "Matrice des risques",
-          "Priorisation WSJF",
-          "Conformité ESRS basique",
+          "Fonctionnalités limitées",
+          "Aperçu du produit"
+        ]
+      },
+      {
+        "name": "Starter",
+        "tagline": "Pour lancer votre stratégie RSE",
+        "disclaimer": null,
+        "price": "19",
+        "priceSuffix": " € / mois",
+        "priceNote": "Prix fixe garanti · ne sera jamais modifié",
+        "annualPrice": "15",
+        "annualPriceSuffix": " € / mois",
+        "annualPriceNote": "Facturé annuellement · 2 mois offerts",
+        "users": "Jusqu'à 5 utilisateurs · 1 organisation",
+        "cta": "Démarrer maintenant",
+        "comingSoon": false,
+        "features": [
+          "Jusqu'à 5 utilisateurs",
+          "1 organisation",
+          "Toutes les fonctionnalités",
+          "Sans IA",
+          "Collaboration & invitations incluses",
+          "Reporting & exports complets",
           "Hébergé en France 🇫🇷"
         ]
       },
       {
-        "name": "Pro",
-        "tagline": "Pour scaler. Pour dominer.",
-        "price": "Sur devis",
+        "name": "Pro + IA",
+        "tagline": "Pour accélérer avec l'IA",
+        "disclaimer": "Lancement fin 2026.",
+        "price": "À venir",
         "priceSuffix": "",
-        "priceNote": "Adapté à votre usage",
-        "cta": "Demander un devis",
+        "priceNote": "Lancement fin 2026",
+        "annualPrice": "À venir",
+        "annualPriceSuffix": "",
+        "annualPriceNote": "Lancement fin 2026",
+        "users": "Multi-organisations",
+        "cta": "Être informé du lancement",
+        "comingSoon": true,
         "features": [
-          "Organisations illimitées",
-          "Utilisateurs illimités",
-          "Projets illimités",
-          "Toutes les features core",
-          "Dashboard & Score RSE",
-          "KPIs & Alertes",
-          "Matrice des risques",
-          "Priorisation WSJF",
-          "Conformité ESRS avancée",
-          "Rapport COMEX avancé",
-          "Multi-organisation",
-          "API REST",
-          "Support prioritaire",
+          "Toutes les fonctionnalités",
+          "IA (fin 2026)",
+          "Architecture souveraine (Scaleway)",
+          "Multi-organisations",
+          "99,5% de disponibilité",
           "Hébergé en France 🇫🇷"
         ]
       },
       {
         "name": "Enterprise",
-        "tagline": "Pour les groupes. Sans compromis.",
-        "price": "Sur mesure",
+        "tagline": "Pour déployer à grande échelle",
+        "disclaimer": null,
+        "price": "Sur devis",
         "priceSuffix": "",
-        "priceNote": "Engagement personnalisé",
-        "cta": "Contacter les ventes",
+        "priceNote": "Tarif négocié selon périmètre",
+        "annualPrice": "Sur devis",
+        "annualPriceSuffix": "",
+        "annualPriceNote": "Engagement personnalisé",
+        "users": "Illimité · Multi-organisations",
+        "cta": "Contacter l'équipe",
+        "comingSoon": false,
         "features": [
-          "Tout le plan Pro",
-          "Multi-tenant groupe",
-          "SSO / SAML",
-          "SLA garanti",
+          "Utilisateurs illimités",
+          "Multi-organisations",
+          "IA + infra dédiée (fin 2026)",
+          "99,9% de disponibilité",
           "Account manager dédié",
-          "Option on-premise",
-          "Onboarding personnalisé",
-          "Formation équipe dédiée",
-          "Intégrations sur mesure",
           "Hébergé en France 🇫🇷"
         ]
       }
@@ -315,57 +351,52 @@
     "comparison": {
       "eyebrow": "Comparatif détaillé",
       "title": "Tout ce qui est inclus",
-      "description": "Le Freemium n'est pas une version bridée. C'est le vrai produit, avec de vraies features. Les plans supérieurs débloquent la puissance pour les équipes.",
-      "featureCol": "Fonctionnalité",
-      "freeCol": "Freemium",
-      "proCol": "Pro",
+      "description": "Un seul principe : toutes les fonctionnalités sont accessibles dès le Starter. La montée en gamme se justifie par la taille de l'équipe et l'IA — jamais par des fonctionnalités verrouillées artificiellement.",
+      "featureCol": "Critère",
+      "freemiumCol": "Freemium",
+      "starterCol": "Starter",
+      "proCol": "Pro + IA",
       "enterpriseCol": "Enterprise",
-      "startCta": "Commencer →",
-      "quoteCta": "Devis →",
+      "startCta": "Essayer →",
+      "starterCta": "Démarrer →",
+      "notifyCta": "Être informé →",
       "contactCta": "Contacter →",
-      "basic": "basique",
       "categories": [
         {
-          "category": "Pilotage",
+          "category": "Accès & Périmètre",
           "items": [
-            { "name": "Dashboard & Score RSE", "free": true, "pro": true, "enterprise": true },
-            { "name": "KPIs & Alertes automatiques", "free": true, "pro": true, "enterprise": true },
-            { "name": "Priorisation WSJF", "free": true, "pro": true, "enterprise": true },
-            { "name": "Matrice des risques", "free": true, "pro": true, "enterprise": true },
-            { "name": "Drill-down 4 niveaux", "free": true, "pro": true, "enterprise": true }
+            { "name": "Utilisateurs", "freemium": "1", "starter": "5", "pro": false, "enterprise": "Illimité" },
+            { "name": "Organisations", "freemium": "1", "starter": "1", "pro": "Multi", "enterprise": "Illimité" }
           ]
         },
         {
-          "category": "Reporting & Conformité",
+          "category": "Pilotage stratégique",
           "items": [
-            { "name": "Rapport COMEX (basique)", "free": true, "pro": true, "enterprise": true },
-            { "name": "Rapport COMEX avancé (branding)", "free": false, "pro": true, "enterprise": true },
-            { "name": "Conformité ESRS / CSRD", "free": "basique", "pro": true, "enterprise": true },
-            { "name": "Gap analysis ESRS", "free": false, "pro": true, "enterprise": true },
-            { "name": "Double matérialité", "free": false, "pro": true, "enterprise": true },
-            { "name": "Export PowerPoint natif", "free": true, "pro": true, "enterprise": true }
+            { "name": "Axes, Objectifs, Projets, Actions, KPIs", "freemium": "Limité", "starter": true, "pro": true, "enterprise": true },
+            { "name": "Idées WSJF, Risques, Jalons", "freemium": "Limité", "starter": true, "pro": true, "enterprise": true },
+            { "name": "Conformité CSRD / ESRS", "freemium": "Limité", "starter": true, "pro": true, "enterprise": true }
           ]
         },
         {
-          "category": "Collaboration",
+          "category": "Collaboration & Données",
           "items": [
-            { "name": "Kanban & Calendrier", "free": true, "pro": true, "enterprise": true },
-            { "name": "Commentaires & @mentions", "free": true, "pro": true, "enterprise": true },
-            { "name": "Multi-organisation", "free": false, "pro": true, "enterprise": true },
-            { "name": "API REST", "free": false, "pro": true, "enterprise": true }
+            { "name": "Collaboration & Invitations", "freemium": false, "starter": true, "pro": true, "enterprise": true },
+            { "name": "Pièces jointes", "freemium": false, "starter": true, "pro": true, "enterprise": true },
+            { "name": "Reporting & Exports", "freemium": "Limité", "starter": true, "pro": true, "enterprise": true }
           ]
         },
         {
-          "category": "Support & Sécurité",
+          "category": "Intelligence artificielle",
           "items": [
-            { "name": "Hébergé en France (Scaleway)", "free": true, "pro": true, "enterprise": true },
-            { "name": "MFA / 2FA", "free": true, "pro": true, "enterprise": true },
-            { "name": "RGPD by design", "free": true, "pro": true, "enterprise": true },
-            { "name": "Support email", "free": true, "pro": true, "enterprise": true },
-            { "name": "Support prioritaire", "free": false, "pro": true, "enterprise": true },
-            { "name": "SSO / SAML", "free": false, "pro": false, "enterprise": true },
-            { "name": "SLA garanti", "free": false, "pro": false, "enterprise": true },
-            { "name": "Account manager dédié", "free": false, "pro": false, "enterprise": true }
+            { "name": "IA", "freemium": false, "starter": false, "pro": "Bientôt", "enterprise": "Bientôt" }
+          ]
+        },
+        {
+          "category": "Infrastructure & SLA",
+          "items": [
+            { "name": "Disponibilité", "freemium": "Standard", "starter": "Standard", "pro": "99,5%", "enterprise": "99,9%" },
+            { "name": "Infrastructure", "freemium": "Mutualisée", "starter": "Mutualisée", "pro": "Mutualisée", "enterprise": "Dédiée" },
+            { "name": "Hébergé en France (Scaleway)", "freemium": true, "starter": true, "pro": true, "enterprise": true }
           ]
         }
       ]
@@ -394,8 +425,8 @@
     },
     "guarantees": [
       {
-        "title": "Vos données vous appartiennent",
-        "desc": "Export complet à tout moment. Aucun lock-in. Suppression sur demande (RGPD)."
+        "title": "Prix Starter garanti à vie",
+        "desc": "19 €/user/mois pour toujours. Ce tarif ne sera jamais modifié. Les premiers clients bénéficient de cette garantie."
       },
       {
         "title": "Pas de carte bancaire",
@@ -411,35 +442,39 @@
       "title": "Tout ce que vous devez savoir",
       "items": [
         {
-          "q": "Comment fonctionne le plan Freemium ?",
-          "a": "Le plan Freemium est gratuit, sans limite de durée et sans carte bancaire. Vous accédez à toutes les features core de Yumni : dashboard, KPIs, WSJF, matrice des risques et conformité ESRS basique. Limité à 1 organisation, 5 utilisateurs et 20 projets."
+          "q": "À quoi sert vraiment le Freemium ?",
+          "a": "Le Freemium est un aperçu du produit — pas un outil de travail quotidien. Il est volontairement limité (1 utilisateur, 1 organisation, fonctionnalités restreintes) pour que vous puissiez tester Yumni avant de vous engager. Pour un usage professionnel, passez au Starter à 19 €/user/mois."
         },
         {
-          "q": "Puis-je changer de plan à tout moment ?",
-          "a": "Oui. Vous pouvez passer du Freemium au Pro à tout moment sans perte de données. Le passage à Enterprise nécessite un échange avec notre équipe commerciale pour adapter l'offre à votre structure."
+          "q": "Le tarif Starter à 19 € est-il vraiment définitif ?",
+          "a": "Oui, c'est une garantie ferme. 19 €/user/mois, ce tarif ne sera jamais modifié quelle que soit l'évolution des autres offres. Les premiers clients bénéficient de cette garantie à vie. C'est notre engagement envers ceux qui nous font confiance dès le début."
+        },
+        {
+          "q": "Quand arrivera l'offre Pro + IA, et à quel prix ?",
+          "a": "L'offre Pro + IA est prévue pour octobre 2026. Son tarif sera fixé uniquement après validation de l'architecture IA souveraine (Scaleway Europe, modèle open source) et calcul des coûts réels. Nous ne communiquerons aucun prix avant. Contactez-nous pour être informé en priorité."
+        },
+        {
+          "q": "Quelle est la différence entre Starter et Enterprise ?",
+          "a": "Le Starter couvre jusqu'à 5 utilisateurs dans 1 organisation — idéal pour une PME, un cabinet ou une équipe RSE. L'Enterprise est conçu pour les grandes structures : utilisateurs illimités, multi-organisations, infrastructure dédiée, SLA 99,9% garanti et account manager dédié. Tarif sur devis."
+        },
+        {
+          "q": "Y a-t-il une remise pour la facturation annuelle ?",
+          "a": "Oui. En optant pour la facturation annuelle sur le Starter, vous bénéficiez de 20% de remise, soit environ 15 €/user/mois au lieu de 19 €. Cela représente 2 mois offerts sur l'année."
         },
         {
           "q": "Mes données sont-elles sécurisées ?",
           "a": "Absolument. Yumni est hébergé en France par Scaleway (région fr-par). Chiffrement TLS 1.3 en transit, AES-256 au repos. RBAC 4 niveaux, isolation des données par organisation (RLS PostgreSQL). RGPD by design."
         },
         {
-          "q": "Quelle est la différence entre Pro et Enterprise ?",
-          "a": "Le plan Enterprise ajoute des fonctionnalités de niveau groupe : SSO/SAML, SLA garanti, account manager dédié, onboarding personnalisé, intégrations sur mesure et option d'hébergement on-premise."
-        },
-        {
-          "q": "Combien de temps prend le déploiement ?",
-          "a": "Freemium : inscrivez-vous en 60 secondes, commencez immédiatement. Pro : configuration en moins d'une journée. Enterprise : onboarding personnalisé en 1 à 2 semaines selon la complexité."
-        },
-        {
-          "q": "Proposez-vous des réductions pour les associations ou ONG ?",
-          "a": "Oui, nous proposons des tarifs adaptés pour les organisations à but non lucratif. Contactez notre équipe commerciale pour en discuter."
+          "q": "Proposez-vous des tarifs pour les associations ou ONG ?",
+          "a": "Oui, nous étudions les demandes au cas par cas. Contactez notre équipe pour en discuter."
         }
       ]
     },
     "finalCta": {
       "title1": "Prêt à piloter votre RSE",
-      "titleHighlight": "comme un pro",
-      "description": "Rejoignez les entreprises qui ont choisi de piloter leur stratégie RSE avec clarté, méthode et impact."
+      "titleHighlight": "avec méthode",
+      "description": "Commencez gratuitement. Passez au Starter quand vous êtes prêt. Pas de surprise, pas de verrouillage."
     }
   },
   "contact": {
@@ -448,7 +483,7 @@
       "title1": "Parlons de votre",
       "titleHighlight": "projet RSE",
       "subtitle1": "Notre équipe répond sous 24h ouvrées.",
-      "subtitle2": "Démo, devis, partenariat, presse — un seul formulaire."
+      "subtitle2": "Démo, devis, partenariat, presse un seul formulaire."
     },
     "form": {
       "name": "Nom",
@@ -487,7 +522,7 @@
       "emailSub": "Pour toute question",
       "linkedinLabel": "LinkedIn Yumni",
       "linkedinSub": "Suivez nos actualités",
-      "scheduleLabel": "France — Horaires européens",
+      "scheduleLabel": "France Horaires européens",
       "scheduleSub": "Lun–Ven, 9h–18h CET",
       "responseTitle": "Réponse sous 24h",
       "responseSub": "Garanti pour les demandes commerciales"
@@ -621,7 +656,7 @@
       "statusLabel": "Statut système",
       "statusValue": "OPÉRATIONNEL",
       "statusItems": [
-        { "label": "Chiffrement", "value": "Actif — TLS 1.3 / AES-256" },
+        { "label": "Chiffrement", "value": "Actif TLS 1.3 / AES-256" },
         { "label": "Hébergement", "value": "fr-par · Scaleway · France" },
         { "label": "MFA", "value": "Actif sur tous les comptes" },
         { "label": "RLS PostgreSQL", "value": "Isolation données activée" }
@@ -656,7 +691,7 @@
       "passwords": {
         "label": "Mots de passe",
         "protocol": "bcrypt",
-        "description": "Les mots de passe ne sont jamais stockés en clair. Hachage bcrypt avec salt aléatoire — irréversible par design."
+        "description": "Les mots de passe ne sont jamais stockés en clair. Hachage bcrypt avec salt aléatoire irréversible par design."
       }
     },
     "auth": {
@@ -681,15 +716,15 @@
         { "role": "Owner", "description": "Accès complet, gestion des membres et facturation", "color": "green" },
         { "role": "Admin", "description": "Configuration, invitations, export des données", "color": "green" },
         { "role": "Manager", "description": "Création et édition des projets, KPIs et actions", "color": "orange" },
-        { "role": "Viewer", "description": "Lecture seule — idéal pour les parties prenantes", "color": "muted" }
+        { "role": "Viewer", "description": "Lecture seule idéal pour les parties prenantes", "color": "muted" }
       ],
-      "isolation": "Isolation par organisation via RLS PostgreSQL — aucun utilisateur ne peut accéder aux données d'une autre organisation, même en cas de bug applicatif."
+      "isolation": "Isolation par organisation via RLS PostgreSQL aucun utilisateur ne peut accéder aux données d'une autre organisation, même en cas de bug applicatif."
     },
     "gdpr": {
       "eyebrow": "RGPD",
       "title": "Vos droits,",
       "titleHighlight": "garantis par design.",
-      "description": "La conformité RGPD n'est pas une case à cocher chez Yumni — elle est codée dans chaque couche de l'architecture.",
+      "description": "La conformité RGPD n'est pas une case à cocher chez Yumni elle est codée dans chaque couche de l'architecture.",
       "rights": [
         { "title": "Droit d'accès", "description": "Consultez l'intégralité de vos données stockées par Yumni sur simple demande." },
         { "title": "Droit de rectification", "description": "Corrigez toute donnée inexacte directement depuis votre compte ou via notre DPO." },
@@ -705,7 +740,7 @@
       "eyebrow": "Certifications",
       "title": "La conformité",
       "titleHighlight": "comme boussole.",
-      "description": "Certifications actuelles et roadmap de conformité — notre engagement de transparence envers nos clients.",
+      "description": "Certifications actuelles et roadmap de conformité notre engagement de transparence envers nos clients.",
       "items": [
         { "name": "RGPD", "status": "active", "label": "Conforme", "description": "Hébergement et architecture conformes au Règlement Général sur la Protection des Données" },
         { "name": "NIS2", "status": "progress", "label": "Objectif 2026", "description": "Directive européenne sur la cybersécurité des infrastructures critiques" },
@@ -719,7 +754,7 @@
       "description": "Notre équipe et notre DPO répondent sous 24h ouvrées à toutes les questions de sécurité et de conformité.",
       "dpoButton": "Contacter le DPO",
       "trialButton": "Essayer gratuitement",
-      "trialSub": "Aucun risque — hébergé en France, sans engagement"
+      "trialSub": "Aucun risque hébergé en France, sans engagement"
     }
   },
   "about": {
@@ -734,7 +769,7 @@
       "eyebrow": "Vision",
       "title": "Chaque entreprise mérite",
       "titleHighlight": "une stratégie RSE structurée.",
-      "description": "Quelle que soit sa taille, chaque organisation doit pouvoir structurer sa stratégie RSE, mesurer son impact et reporter avec confiance — sans avoir besoin d'une armée de consultants.",
+      "description": "Quelle que soit sa taille, chaque organisation doit pouvoir structurer sa stratégie RSE, mesurer son impact et reporter avec confiance sans avoir besoin d'une armée de consultants.",
       "stats": [
         { "value": "12", "suffix": "sec", "label": "Pour générer un rapport COMEX" },
         { "value": "0", "suffix": "", "label": "Consultant nécessaire pour démarrer" },
@@ -967,7 +1002,7 @@
       "eyebrow": "SOLUTIONS",
       "title1": "Votre réalité.",
       "titleAccent": "Notre solution.",
-      "subtitle": "Cabinets de conseil, PME ou ETI — chaque organisation a ses contraintes, ses urgences, son rapport à la RSE. Yumni s'adapte à votre contexte et vous donne exactement ce dont vous avez besoin.",
+      "subtitle": "Cabinets de conseil, PME ou ETI chaque organisation a ses contraintes, ses urgences, son rapport à la RSE. Yumni s'adapte à votre contexte et vous donne exactement ce dont vous avez besoin.",
       "scroll": "Découvrez votre solution"
     },
     "personas": [
@@ -1069,7 +1104,7 @@
         "Couverture ESRS évaluée"
       ],
       "priceHighlight": "Gratuit pour démarrer. Moins cher qu'une journée de conseil pour piloter.",
-      "cta1": "Commencer gratuitement — sans carte bancaire",
+      "cta1": "Commencer gratuitement sans carte bancaire",
       "cta2": "Voir les tarifs →"
     },
     "eti": {
@@ -1101,7 +1136,7 @@
         }
       ],
       "archTitle": "Architecture multi-entités",
-      "archLabels": ["Direction Groupe RSE", "Filiale A — Normandie", "Filiale B — Est", "Filiale C — Sud", "Dashboard consolidé"],
+      "archLabels": ["Direction Groupe RSE", "Filiale A Normandie", "Filiale B Est", "Filiale C Sud", "Dashboard consolidé"],
       "securityBadges": [
         { "label": "RBAC 4 niveaux", "icon": "shield" },
         { "label": "MFA / 2FA", "icon": "lock" },
@@ -1144,7 +1179,7 @@
       "eyebrow": "PRODUIT",
       "title1": "Une plateforme.",
       "title2": "Tout votre pilotage RSE.",
-      "subtitle": "De la définition des axes stratégiques à la génération automatique du rapport COMEX — Yumni couvre l'intégralité du cycle de vie RSE.",
+      "subtitle": "De la définition des axes stratégiques à la génération automatique du rapport COMEX Yumni couvre l'intégralité du cycle de vie RSE.",
       "hierarchy": ["Axes stratégiques", "Objectifs SMART", "Projets RSE", "Actions terrain", "KPIs & Jalons"]
     },
     "features": [
@@ -1153,7 +1188,7 @@
         "id": "cockpit",
         "title": "Cockpit Dashboard",
         "subtitle": "Votre score RSE en un coup d'œil.",
-        "description": "Votre score RSE global, vos alertes en temps réel, vos axes au vert ou en danger — en un seul écran. Percez jusqu'au détail de chaque action en 3 clics.",
+        "description": "Votre score RSE global, vos alertes en temps réel, vos axes au vert ou en danger en un seul écran. Percez jusqu'au détail de chaque action en 3 clics.",
         "bullets": ["Score RSE global pondéré par axe", "Alertes automatiques sur KPIs et risques critiques", "Drill-down : Axe → Objectif → Projet → Action", "Suivi budget prévu vs. réel par projet"]
       },
       {
@@ -1161,7 +1196,7 @@
         "id": "kpis",
         "title": "KPIs & Alertes",
         "subtitle": "40+ KPIs. Zéro surprise.",
-        "description": "Configurez vos indicateurs RSE une fois. Suivez leur évolution en temps réel. Recevez une alerte dès qu'un KPI décroche — avant le COMEX.",
+        "description": "Configurez vos indicateurs RSE une fois. Suivez leur évolution en temps réel. Recevez une alerte dès qu'un KPI décroche avant le COMEX.",
         "bullets": ["40+ KPIs RSE préconfigurés (E, S, G)", "Heatmap de progression vert / orange / rouge", "Alertes automatiques par seuils personnalisables", "Historique trimestriel avec comparaison N-1"]
       },
       {
@@ -1321,64 +1356,64 @@
   },
   "meta": {
     "home": {
-      "title": "Yumni — Plateforme de pilotage de projet RSE | CSRD Ready",
+      "title": "Yumni Plateforme de pilotage de projet RSE | CSRD Ready",
       "description": "Yumni est la plateforme de pilotage de projet RSE tout-en-un. Dashboard temps réel, KPIs, priorisation WSJF, gestion des risques, reporting COMEX et conformité ESRS/CSRD. Hébergé en France. Essai gratuit.",
-      "ogTitle": "Yumni — Plateforme de pilotage de projet RSE en temps réel",
-      "ogDescription": "Du cockpit stratégique au rapport COMEX — en un clic. La plateforme de pilotage RSE préférée des directeurs RSE. CSRD Ready, ESRS Compliant, Hébergé en France."
+      "ogTitle": "Yumni Plateforme de pilotage de projet RSE en temps réel",
+      "ogDescription": "Du cockpit stratégique au rapport COMEX en un clic. La plateforme de pilotage RSE préférée des directeurs RSE. CSRD Ready, ESRS Compliant, Hébergé en France."
     },
     "product": {
-      "title": "Produit — Yumni | Logiciel de pilotage RSE & conformité CSRD",
+      "title": "Produit Yumni | Logiciel de pilotage RSE & conformité CSRD",
       "description": "Découvrez Yumni, le logiciel de pilotage RSE tout-en-un : cockpit stratégique, KPIs & alertes, priorisation WSJF, matrice des risques, reporting COMEX en 12 secondes et conformité ESRS. La plateforme de pilotage de projet RSE pour PME, ETI et cabinets.",
-      "ogTitle": "Produit Yumni — Logiciel de pilotage RSE & conformité CSRD",
-      "ogDescription": "Cockpit RSE, KPIs, WSJF, risques, reporting COMEX et conformité ESRS — tout dans une seule plateforme de pilotage de projet RSE."
+      "ogTitle": "Produit Yumni Logiciel de pilotage RSE & conformité CSRD",
+      "ogDescription": "Cockpit RSE, KPIs, WSJF, risques, reporting COMEX et conformité ESRS tout dans une seule plateforme de pilotage de projet RSE."
     },
     "solutions": {
-      "title": "Solutions RSE — Cabinets de conseil, PME, ETI & Groupes | Yumni",
+      "title": "Solutions RSE Cabinets de conseil, PME, ETI & Groupes | Yumni",
       "description": "Yumni s'adapte à votre organisation : plateforme RSE multi-tenant pour cabinets de conseil, solution clé en main pour PME, vue consolidée pour ETI et groupes. Pilotez votre stratégie RSE avec la plateforme qui comprend votre réalité.",
-      "ogTitle": "Solutions de pilotage RSE — Cabinets, PME, ETI | Yumni",
+      "ogTitle": "Solutions de pilotage RSE Cabinets, PME, ETI | Yumni",
       "ogDescription": "Une plateforme de pilotage RSE adaptée à chaque organisation. Multi-tenant pour les cabinets, templates pour les PME, consolidation pour les ETI."
     },
     "about": {
-      "title": "À propos de Yumni — Mission, équipe & vision RSE",
+      "title": "À propos de Yumni Mission, équipe & vision RSE",
       "description": "Yumni développe la plateforme de pilotage de projet RSE qui permet aux entreprises de piloter leur stratégie RSE en temps réel. Découvrez notre mission, notre équipe et notre vision pour démocratiser le pilotage RSE.",
-      "ogTitle": "À propos de Yumni — La plateforme de pilotage RSE",
+      "ogTitle": "À propos de Yumni La plateforme de pilotage RSE",
       "ogDescription": "Nous construisons la plateforme de pilotage RSE pour rendre le pilotage RSE accessible à toutes les entreprises."
     },
     "contact": {
-      "title": "Contact — Yumni | Démo, devis & partenariat RSE",
+      "title": "Contact Yumni | Démo, devis & partenariat RSE",
       "description": "Contactez l'équipe Yumni pour une démo de la plateforme de pilotage RSE, un devis personnalisé ou un partenariat. Réponse sous 24h ouvrées. Plateforme RSE hébergée en France.",
-      "ogTitle": "Contactez Yumni — Démo & devis plateforme RSE",
+      "ogTitle": "Contactez Yumni Démo & devis plateforme RSE",
       "ogDescription": "Demandez une démo ou un devis pour la plateforme de pilotage de projet RSE Yumni. Réponse garantie sous 24h ouvrées."
     },
     "demo": {
-      "title": "Démo — Yumni | Découvrez la plateforme de pilotage RSE en action",
+      "title": "Démo Yumni | Découvrez la plateforme de pilotage RSE en action",
       "description": "Réservez une démo personnalisée de Yumni : cockpit RSE, KPIs, priorisation WSJF, gestion des risques et reporting COMEX en 12 secondes. 30 minutes pour tout comprendre.",
-      "ogTitle": "Démo Yumni — Voyez la plateforme de pilotage RSE en action",
+      "ogTitle": "Démo Yumni Voyez la plateforme de pilotage RSE en action",
       "ogDescription": "Du cockpit stratégique au rapport COMEX. Réservez 30 minutes pour découvrir comment Yumni transforme votre pilotage RSE."
     },
     "pricing": {
-      "title": "Tarifs — Yumni | Plateforme RSE à partir de 0€ — Freemium, Pro, Enterprise",
-      "description": "Découvrez les tarifs de Yumni : plan Freemium gratuit, Pro sur devis, Enterprise sur mesure. La plateforme de pilotage de projet RSE la plus accessible du marché. Sans carte bancaire, sans engagement.",
-      "ogTitle": "Tarifs Yumni — Plateforme de pilotage RSE dès 0€",
-      "ogDescription": "Freemium gratuit pour toujours, Pro sur devis, Enterprise sur mesure. Commencez à piloter votre RSE gratuitement."
+      "title": "Tarifs Yumni | Freemium gratuit · Starter 19€/user · Pro + IA à venir · Enterprise",
+      "description": "Tarifs Yumni : Freemium gratuit (aperçu), Starter à 19€/user/mois (prix garanti à vie), Pro + IA en octobre 2026, Enterprise sur devis. Toutes les fonctionnalités dès le Starter. Sans carte bancaire.",
+      "ogTitle": "Tarifs Yumni — Simple, transparent, sans surprise",
+      "ogDescription": "Freemium pour tester, Starter à 19€ garanti, Pro + IA en octobre 2026, Enterprise sur devis. Commencez à piloter votre RSE gratuitement."
     },
     "partners": {
-      "title": "Programme partenaires — Yumni | Cabinets RSE & consultants",
+      "title": "Programme partenaires Yumni | Cabinets RSE & consultants",
       "description": "Rejoignez le programme partenaire Yumni : accès gratuit à la plateforme de pilotage RSE, tarifs préférentiels pour vos clients, badge certifié et support prioritaire. Pour cabinets RSE et consultants indépendants.",
-      "ogTitle": "Programme partenaire Yumni — Cabinets RSE & consultants",
+      "ogTitle": "Programme partenaire Yumni Cabinets RSE & consultants",
       "ogDescription": "Accès gratuit à la plateforme, tarifs clients préférentiels, badge certifié. Devenez partenaire de la plateforme de pilotage RSE Yumni."
     },
     "security": {
-      "title": "Sécurité & RGPD — Yumni | Hébergement France, chiffrement, conformité",
+      "title": "Sécurité & RGPD Yumni | Hébergement France, chiffrement, conformité",
       "description": "Yumni garantit la protection de vos données RSE : hébergement Scaleway en France (fr-par), chiffrement TLS 1.3 & AES-256, RBAC 4 niveaux, RLS PostgreSQL, RGPD by design, MFA natif. Aucun transfert hors UE.",
-      "ogTitle": "Sécurité & RGPD — Plateforme RSE Yumni",
+      "ogTitle": "Sécurité & RGPD Plateforme RSE Yumni",
       "ogDescription": "Hébergement France, chiffrement TLS 1.3 / AES-256, RGPD by design. Vos données RSE protégées aux plus hauts standards."
     },
     "legal": {
-      "title": "Mentions légales — Yumni | Plateforme de pilotage RSE",
-      "description": "Mentions légales du site yumni.fr — éditeur, hébergeur, propriété intellectuelle, politique de confidentialité et conditions générales d'utilisation de la plateforme de pilotage RSE Yumni.",
-      "ogTitle": "Mentions légales — Yumni",
-      "ogDescription": "Informations légales du site yumni.fr — plateforme de pilotage de projet RSE."
+      "title": "Mentions légales Yumni | Plateforme de pilotage RSE",
+      "description": "Mentions légales du site yumni.fr éditeur, hébergeur, propriété intellectuelle, politique de confidentialité et conditions générales d'utilisation de la plateforme de pilotage RSE Yumni.",
+      "ogTitle": "Mentions légales Yumni",
+      "ogDescription": "Informations légales du site yumni.fr plateforme de pilotage de projet RSE."
     }
   }
 }

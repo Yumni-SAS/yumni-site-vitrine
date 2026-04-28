@@ -93,26 +93,28 @@ function TiltCard({
   children,
   className = "",
   glowColor = "rgba(0,129,74,0.08)",
+  disabled = false,
 }: {
   children: React.ReactNode;
   className?: string;
   glowColor?: string;
+  disabled?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [6, -6]), {
+  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [4, -4]), {
     stiffness: 300,
     damping: 30,
   });
-  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-6, 6]), {
+  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-4, 4]), {
     stiffness: 300,
     damping: 30,
   });
 
   function handleMouse(e: React.MouseEvent) {
-    if (!ref.current) return;
+    if (!ref.current || disabled) return;
     const rect = ref.current.getBoundingClientRect();
     x.set((e.clientX - rect.left) / rect.width - 0.5);
     y.set((e.clientY - rect.top) / rect.height - 0.5);
@@ -128,8 +130,8 @@ function TiltCard({
       onMouseMove={handleMouse}
       onMouseLeave={handleLeave}
       style={{
-        rotateX,
-        rotateY,
+        rotateX: disabled ? 0 : rotateX,
+        rotateY: disabled ? 0 : rotateY,
         transformStyle: "preserve-3d",
         boxShadow: `0 20px 60px ${glowColor}`,
       }}
@@ -245,7 +247,7 @@ function ROICalculator() {
 }
 
 /* ================================================================
-   FEATURE CHECK
+   FEATURE CHECK — comparison table cell
    ================================================================ */
 
 function FeatureCheck({ value }: { value: boolean | string }) {
@@ -263,8 +265,186 @@ function FeatureCheck({ value }: { value: boolean | string }) {
       </span>
     );
   }
+  if (value === "Limité" || value === "Limited" || value === "basic") {
+    return <span className="text-[11px] font-semibold text-orange px-1.5 py-0.5 rounded-full bg-orange-light/70 whitespace-nowrap">{value}</span>;
+  }
+  if (value === "Bientôt" || value === "Soon") {
+    return <span className="text-[11px] font-semibold text-green px-1.5 py-0.5 rounded-full bg-green-light/70 whitespace-nowrap">{value}</span>;
+  }
+  return <span className="text-[11px] font-medium text-ink-light text-center">{value}</span>;
+}
+
+/* ================================================================
+   PLAN CARD
+   ================================================================ */
+
+type Plan = {
+  name: string;
+  tagline: string;
+  disclaimer: string | null;
+  price: string;
+  priceSuffix: string;
+  priceNote: string;
+  annualPrice: string;
+  annualPriceSuffix: string;
+  annualPriceNote: string;
+  users: string;
+  cta: string;
+  comingSoon: boolean;
+  features: string[];
+};
+
+function PlanCard({
+  plan,
+  index,
+  billing,
+  ctaHref,
+  locale,
+  popularBadge,
+  comingSoonBadge,
+}: {
+  plan: Plan;
+  index: number;
+  billing: "monthly" | "annual";
+  ctaHref: string;
+  locale: string;
+  popularBadge: string;
+  comingSoonBadge: string;
+}) {
+  const isRecommended = index === 1;
+  const isComingSoon = plan.comingSoon;
+  const isEnterprise = index === 3;
+
+  const displayPrice = billing === "annual" ? plan.annualPrice : plan.price;
+  const displaySuffix = billing === "annual" ? plan.annualPriceSuffix : plan.priceSuffix;
+  const displayNote = billing === "annual" ? plan.annualPriceNote : plan.priceNote;
+
+  const glowColor = isRecommended
+    ? "rgba(0,129,74,0.15)"
+    : isComingSoon
+    ? "rgba(232,117,42,0.10)"
+    : "rgba(27,58,45,0.05)";
+
+  const borderClass = isRecommended
+    ? "border-2 border-green"
+    : isComingSoon
+    ? "border-2 border-orange/40 border-dashed"
+    : "border border-line";
+
+  const bgClass = isComingSoon ? "bg-white/80" : "bg-white";
+
   return (
-    <span className="text-xs font-medium text-orange px-2 py-0.5 rounded-full bg-orange-light">{value}</span>
+    <TiltCard
+      glowColor={glowColor}
+      disabled={isComingSoon}
+      className={`relative rounded-2xl overflow-hidden transition-all duration-500 h-full ${borderClass} ${bgClass}`}
+    >
+      {/* Top badge */}
+      {isRecommended && (
+        <div className="bg-green text-white text-xs font-semibold text-center py-2 tracking-wider uppercase">
+          {popularBadge}
+        </div>
+      )}
+      {isComingSoon && (
+        <div className="bg-orange/10 text-orange text-xs font-semibold text-center py-2 tracking-wider uppercase border-b border-orange/20">
+          {comingSoonBadge}
+        </div>
+      )}
+
+      <div className={`p-7 md:p-8 flex flex-col h-full ${isComingSoon ? "opacity-85" : ""}`}>
+        {/* Header */}
+        <div className="mb-5">
+          <h3 className={`font-display text-xl mb-1 ${isRecommended ? "text-forest" : isComingSoon ? "text-ink" : "text-forest"}`}>
+            {plan.name}
+          </h3>
+          <p className="text-sm text-muted">{plan.tagline}</p>
+        </div>
+
+        {/* Users badge */}
+        <div className="mb-5">
+          <span className="inline-flex items-center gap-1.5 text-xs font-medium text-ink-light bg-sand rounded-full px-3 py-1.5 border border-line/60">
+            <svg className="w-3 h-3 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
+            {plan.users}
+          </span>
+        </div>
+
+        {/* Price */}
+        <div className="mb-6">
+          {isComingSoon ? (
+            <div className="py-2">
+              <div className="text-2xl font-display font-semibold text-orange">{displayPrice}</div>
+              <p className="text-xs text-muted mt-1">{displayNote}</p>
+            </div>
+          ) : (
+            <div>
+              <div className="flex items-baseline gap-1 flex-wrap">
+                <span className={`font-display text-4xl font-semibold ${isRecommended ? "text-forest" : "text-forest"}`}>
+                  {displayPrice}
+                </span>
+                {displaySuffix && (
+                  <span className="text-sm text-muted leading-tight">{displaySuffix}</span>
+                )}
+              </div>
+              <p className={`text-xs mt-1.5 ${isRecommended ? "text-green font-medium" : "text-muted"}`}>
+                {displayNote}
+              </p>
+              {/* Annual savings indicator for Starter */}
+              {isRecommended && billing === "annual" && (
+                <div className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-green bg-green-light/50 rounded-full px-2.5 py-1">
+                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33" /></svg>
+                  {locale === "fr" ? "Économie : 48 €/an" : "Save €48/year"}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* CTA */}
+        {isComingSoon ? (
+          <Link
+            href={`/${locale}/contact`}
+            className="block text-center font-medium text-sm py-3.5 rounded-full transition-all duration-300 mb-6 border-2 border-orange/30 text-orange hover:border-orange hover:bg-orange/5"
+          >
+            {plan.cta}
+          </Link>
+        ) : (
+          <Link
+            href={`/${locale}${ctaHref}`}
+            className={`block text-center font-medium text-sm py-3.5 rounded-full transition-all duration-300 mb-6 ${
+              isRecommended
+                ? "bg-green text-white shadow-[0_4px_20px_rgba(0,129,74,0.25)] hover:bg-forest hover:shadow-[0_8px_30px_rgba(0,129,74,0.35)]"
+                : isEnterprise
+                ? "bg-forest text-white hover:bg-forest/80"
+                : "border-2 border-green/20 text-ink hover:border-green hover:text-green hover:shadow-[0_4px_16px_rgba(0,129,74,0.08)]"
+            }`}
+          >
+            {plan.cta}
+          </Link>
+        )}
+
+        {/* Features */}
+        <div className="space-y-2.5 flex-1">
+          {plan.features.map((feature: string, fi: number) => (
+            <div key={fi} className="flex items-start gap-2.5 text-sm text-ink-light">
+              <svg className={`w-4 h-4 shrink-0 mt-0.5 ${isComingSoon ? "text-orange/60" : "text-green"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              {feature}
+            </div>
+          ))}
+        </div>
+
+        {/* Disclaimer */}
+        {plan.disclaimer && (
+          <div className={`mt-5 pt-4 border-t ${isComingSoon ? "border-orange/20" : "border-line/60"}`}>
+            <p className={`text-xs leading-relaxed ${isComingSoon ? "text-orange/70" : "text-muted/80"}`}>
+              <svg className="w-3 h-3 inline mr-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              {plan.disclaimer}
+            </p>
+          </div>
+        )}
+      </div>
+    </TiltCard>
   );
 }
 
@@ -274,32 +454,26 @@ function FeatureCheck({ value }: { value: boolean | string }) {
 
 export default function TarifsPage() {
   const { t, locale } = useDictionary();
-  const plans = t.pricing.plans;
+  const [billing, setBilling] = useState<"monthly" | "annual">("monthly");
+
+  const plans: Plan[] = t.pricing.plans;
   const comparisonCategories = t.pricing.comparison.categories;
   const faqs = t.pricing.faq.items;
-  const ctaHrefs = ["/essai-gratuit", "/contact", "/contact"];
+  const ctaHrefs = ["/essai-gratuit", "/demo", "/contact", "/contact"];
 
   return (
     <>
       {/* ─── HERO ──────────────────────────────────────────── */}
-      <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-        {/* Background — matching homepage hero style */}
+      <section className="relative pt-32 pb-16 md:pt-44 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Large sweeping arcs — creates depth and visual pull */}
           <svg className="absolute -right-[15%] -top-[10%] w-[80%] h-[120%] opacity-[0.05]" viewBox="0 0 800 800" fill="none">
             <circle cx="400" cy="400" r="380" stroke="#1B3A2D" strokeWidth="1.2" />
             <circle cx="400" cy="400" r="300" stroke="#1B3A2D" strokeWidth="0.8" />
             <circle cx="400" cy="400" r="220" stroke="#1B3A2D" strokeWidth="0.5" />
           </svg>
-          {/* Soft green ambient — top right */}
           <div className="absolute -top-[200px] -right-[200px] w-[700px] h-[700px] rounded-full bg-green/[0.05]" />
-          {/* Warm accent — bottom left */}
           <div className="absolute bottom-0 -left-[100px] w-[400px] h-[400px] rounded-full bg-orange/[0.05]" />
-          {/* Warm gradient towards bottom */}
-          <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-orange/[0.05] via-orange/[0.025] to-transparent" />
-          {/* Ambient blobs */}
-          <div className="absolute bottom-[5%] left-[25%] w-[500px] h-[500px] rounded-full bg-orange/[0.05] blur-[100px]" />
-          <div className="absolute bottom-[8%] right-[15%] w-[400px] h-[400px] rounded-full bg-green/[0.05] blur-[80px]" />
+          <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-orange/[0.04] via-orange/[0.02] to-transparent" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6">
@@ -311,7 +485,7 @@ export default function TarifsPage() {
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease }} className="font-display text-5xl sm:text-6xl md:text-7xl leading-[1.05] tracking-tight text-forest text-center max-w-4xl mx-auto">
-            {t.pricing.hero.title1}{" "}<span className="italic text-green">{t.pricing.hero.titleHighlight}</span><br className="hidden sm:block" />{t.pricing.hero.title2}
+            {t.pricing.hero.title1}{" "}<span className="italic text-green">{t.pricing.hero.titleHighlight}</span>
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.12, ease }} className="text-lg md:text-xl text-muted max-w-2xl mx-auto text-center mt-7 leading-relaxed">
@@ -326,44 +500,66 @@ export default function TarifsPage() {
         </div>
       </section>
 
-      {/* ─── PRICING CARDS ─────────────────────────────────── */}
-      <section className="relative -mt-4 pb-24 md:pb-36">
+      {/* ─── BILLING TOGGLE + DEPLOYMENT PHASE ─────────────── */}
+      <section className="pb-4">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-start" style={{ perspective: "1200px" }}>
-            {plans.map((plan: { name: string; tagline: string; price: string; priceSuffix: string; priceNote: string; cta: string; features: string[] }, i: number) => (
-              <motion.div key={plan.name} initial={{ opacity: 0, y: 48, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 + i * 0.12, ease }}>
-                <TiltCard glowColor={i === 1 ? "rgba(0,129,74,0.15)" : "rgba(27,58,45,0.06)"} className={`relative rounded-2xl overflow-hidden transition-all duration-500 ${i === 1 ? "border-2 border-green bg-white md:-mt-6 md:mb-6" : "border border-line bg-white"}`}>
-                  {i === 1 && (
-                    <div className="bg-green text-white text-xs font-semibold text-center py-2 tracking-wider uppercase">{t.pricing.popularBadge}</div>
-                  )}
-                  <div className="p-8 md:p-10">
-                    <div className="mb-6">
-                      <h3 className="font-display text-2xl text-forest mb-1">{plan.name}</h3>
-                      <p className="text-sm text-muted">{plan.tagline}</p>
-                    </div>
-                    <div className="mb-8">
-                      <div className="flex items-baseline gap-1">
-                        <span className="font-display text-5xl text-forest">{plan.price}</span>
-                        {plan.priceSuffix && <span className="text-muted text-lg">{plan.priceSuffix}</span>}
-                      </div>
-                      <p className="text-xs text-muted mt-1">{plan.priceNote}</p>
-                    </div>
-                    <Link href={`/${locale}${ctaHrefs[i]}`} className={`block text-center font-medium text-sm py-3.5 rounded-full transition-all duration-300 mb-8 ${i === 1 ? "bg-green text-white shadow-[0_4px_20px_rgba(0,129,74,0.25)] hover:bg-forest hover:shadow-[0_8px_30px_rgba(0,129,74,0.35)]" : "border-2 border-green/20 text-ink hover:border-green hover:text-green hover:shadow-[0_4px_16px_rgba(0,129,74,0.08)]"}`}>
-                      {plan.cta}<span className="ml-1.5 inline-block transition-transform group-hover:translate-x-0.5">→</span>
-                    </Link>
-                    <div className="space-y-3">
-                      {plan.features.map((feature: string, fi: number) => (
-                        <div key={fi} className="flex items-center gap-3 text-sm text-ink-light">
-                          <svg className="w-4 h-4 text-green shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </TiltCard>
+          {/* Billing toggle */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3, ease }}
+            className="flex justify-center mb-8"
+          >
+            <div className="flex items-center gap-1 bg-sand rounded-full p-1 border border-line shadow-sm">
+              <button
+                onClick={() => setBilling("monthly")}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${billing === "monthly" ? "bg-white text-forest shadow-sm" : "text-muted hover:text-ink"}`}
+              >
+                {t.pricing.billingToggle.monthly}
+              </button>
+              <button
+                onClick={() => setBilling("annual")}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-2 ${billing === "annual" ? "bg-white text-forest shadow-sm" : "text-muted hover:text-ink"}`}
+              >
+                {t.pricing.billingToggle.annual}
+                <span className="text-xs font-semibold text-green bg-green-light/70 px-2 py-0.5 rounded-full border border-green/10">
+                  {t.pricing.billingToggle.save}
+                </span>
+              </button>
+            </div>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* ─── PRICING CARDS ─────────────────────────────────── */}
+      <section className="pb-24 md:pb-36">
+        <div className="max-w-7xl mx-auto px-6">
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-6 items-start"
+            style={{ perspective: "1200px" }}
+          >
+            {plans.map((plan: Plan, i: number) => (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 48, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 + i * 0.1, ease }}
+                className={i === 1 ? "xl:-mt-4" : ""}
+              >
+                <PlanCard
+                  plan={plan}
+                  index={i}
+                  billing={billing}
+                  ctaHref={ctaHrefs[i]}
+                  locale={locale}
+                  popularBadge={t.pricing.popularBadge}
+                  comingSoonBadge={t.pricing.comingSoonBadge}
+                />
               </motion.div>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -406,34 +602,56 @@ export default function TarifsPage() {
 
           <FadeIn delay={0.15}>
             <div className="rounded-2xl border border-line overflow-hidden bg-white">
-              <div className="grid grid-cols-[1fr_100px_100px_100px] md:grid-cols-[1fr_140px_140px_140px] items-center bg-sand/50 border-b border-line">
-                <div className="px-6 py-5 text-sm font-semibold text-ink">{t.pricing.comparison.featureCol}</div>
-                <div className="px-4 py-5 text-sm font-semibold text-ink text-center">{t.pricing.comparison.freeCol}</div>
-                <div className="px-4 py-5 text-sm font-semibold text-green text-center">{t.pricing.comparison.proCol}</div>
-                <div className="px-4 py-5 text-sm font-semibold text-forest text-center">{t.pricing.comparison.enterpriseCol}</div>
-              </div>
-
-              {comparisonCategories.map((category: { category: string; items: { name: string; free: boolean | string; pro: boolean | string; enterprise: boolean | string }[] }) => (
-                <div key={category.category}>
-                  <div className="px-6 py-3.5 bg-green-light/20 border-b border-line">
-                    <span className="text-xs font-semibold tracking-wider uppercase text-forest/70">{category.category}</span>
+              {/* Scrollable wrapper on mobile */}
+              <div className="overflow-x-auto">
+                <div className="min-w-[680px]">
+                  {/* Header */}
+                  <div className="grid grid-cols-[1fr_90px_90px_90px_90px] md:grid-cols-[1fr_130px_130px_130px_130px] items-center bg-sand/50 border-b border-line">
+                    <div className="px-6 py-5 text-sm font-semibold text-ink">{t.pricing.comparison.featureCol}</div>
+                    <div className="px-3 py-5 text-xs font-semibold text-muted text-center">{t.pricing.comparison.freemiumCol}</div>
+                    <div className="px-3 py-5 text-xs font-semibold text-green text-center">{t.pricing.comparison.starterCol}</div>
+                    <div className="px-3 py-5 text-xs font-semibold text-orange text-center">{t.pricing.comparison.proCol}</div>
+                    <div className="px-3 py-5 text-xs font-semibold text-forest text-center">{t.pricing.comparison.enterpriseCol}</div>
                   </div>
-                  {category.items.map((item, idx) => (
-                    <div key={item.name} className={`grid grid-cols-[1fr_100px_100px_100px] md:grid-cols-[1fr_140px_140px_140px] items-center ${idx < category.items.length - 1 ? "border-b border-line/50" : "border-b border-line"} hover:bg-sand/30 transition-colors`}>
-                      <div className="px-6 py-4 text-sm text-ink-light">{item.name}</div>
-                      <div className="px-4 py-4 flex justify-center"><FeatureCheck value={item.free} /></div>
-                      <div className="px-4 py-4 flex justify-center"><FeatureCheck value={item.pro} /></div>
-                      <div className="px-4 py-4 flex justify-center"><FeatureCheck value={item.enterprise} /></div>
+
+                  {/* Rows */}
+                  {comparisonCategories.map((category: { category: string; items: { name: string; freemium: boolean | string; starter: boolean | string; pro: boolean | string; enterprise: boolean | string }[] }) => (
+                    <div key={category.category}>
+                      <div className="px-6 py-3.5 bg-green-light/20 border-b border-line">
+                        <span className="text-xs font-semibold tracking-wider uppercase text-forest/70">{category.category}</span>
+                      </div>
+                      {category.items.map((item, idx) => (
+                        <div
+                          key={item.name}
+                          className={`grid grid-cols-[1fr_90px_90px_90px_90px] md:grid-cols-[1fr_130px_130px_130px_130px] items-center ${idx < category.items.length - 1 ? "border-b border-line/50" : "border-b border-line"} hover:bg-sand/30 transition-colors`}
+                        >
+                          <div className="px-6 py-4 text-sm text-ink-light">{item.name}</div>
+                          <div className="px-3 py-4 flex justify-center"><FeatureCheck value={item.freemium} /></div>
+                          <div className="px-3 py-4 flex justify-center"><FeatureCheck value={item.starter} /></div>
+                          <div className="px-3 py-4 flex justify-center"><FeatureCheck value={item.pro} /></div>
+                          <div className="px-3 py-4 flex justify-center"><FeatureCheck value={item.enterprise} /></div>
+                        </div>
+                      ))}
                     </div>
                   ))}
-                </div>
-              ))}
 
-              <div className="grid grid-cols-[1fr_100px_100px_100px] md:grid-cols-[1fr_140px_140px_140px] items-center bg-sand/30 border-t border-line">
-                <div className="px-6 py-5" />
-                <div className="px-4 py-5 flex justify-center"><Link href={`/${locale}/essai-gratuit`} className="text-xs font-medium text-green hover:text-forest transition-colors">{t.pricing.comparison.startCta}</Link></div>
-                <div className="px-4 py-5 flex justify-center"><Link href={`/${locale}/contact`} className="text-xs font-medium text-green hover:text-forest transition-colors">{t.pricing.comparison.quoteCta}</Link></div>
-                <div className="px-4 py-5 flex justify-center"><Link href={`/${locale}/contact`} className="text-xs font-medium text-green hover:text-forest transition-colors">{t.pricing.comparison.contactCta}</Link></div>
+                  {/* Footer CTAs */}
+                  <div className="grid grid-cols-[1fr_90px_90px_90px_90px] md:grid-cols-[1fr_130px_130px_130px_130px] items-center bg-sand/30 border-t border-line">
+                    <div className="px-6 py-5" />
+                    <div className="px-3 py-4 flex justify-center">
+                      <Link href={`/${locale}/essai-gratuit`} className="text-[11px] font-semibold px-3 py-1.5 rounded-full border border-line text-ink hover:border-green hover:text-green transition-all whitespace-nowrap">{t.pricing.comparison.startCta}</Link>
+                    </div>
+                    <div className="px-3 py-4 flex justify-center">
+                      <Link href={`/${locale}/demo`} className="text-[11px] font-semibold px-3 py-1.5 rounded-full bg-green text-white hover:bg-forest transition-all shadow-sm whitespace-nowrap">{t.pricing.comparison.starterCta}</Link>
+                    </div>
+                    <div className="px-3 py-4 flex justify-center">
+                      <Link href={`/${locale}/contact`} className="text-[11px] font-semibold px-3 py-1.5 rounded-full border border-orange/40 text-orange hover:border-orange hover:bg-orange/5 transition-all whitespace-nowrap">{t.pricing.comparison.notifyCta}</Link>
+                    </div>
+                    <div className="px-3 py-4 flex justify-center">
+                      <Link href={`/${locale}/contact`} className="text-[11px] font-semibold px-3 py-1.5 rounded-full border border-forest/20 text-forest hover:border-forest hover:bg-forest/5 transition-all whitespace-nowrap">{t.pricing.comparison.contactCta}</Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </FadeIn>

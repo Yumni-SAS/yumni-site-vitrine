@@ -385,7 +385,7 @@ function RisquesVisual() {
                     <div className="text-[9px] text-muted">Probabilité: 4 · Impact: 5</div>
                     <div className="text-[11px] font-bold text-forest mt-0.5">Risque(s) total : 3</div>
                     <div className="mt-1.5 space-y-1 border-t border-line/40 pt-1.5">
-                      <div className="text-[8px] text-forest/80">• Arrêt production — Panne équipement</div>
+                      <div className="text-[8px] text-forest/80">• Arrêt production : Panne équipement</div>
                       <div className="text-[8px] text-forest/80">• Perte client majeur (&gt;30% CA)</div>
                       <div className="text-[8px] text-forest/80">• Non-conformité CSRD</div>
                     </div>
@@ -428,7 +428,7 @@ function ReportingVisual() {
             <span className="col-span-2 text-[7px] text-muted/70 font-medium uppercase tracking-wider">Période</span>
             <span className="col-span-2 text-[7px] text-muted/70 font-medium uppercase tracking-wider">Statut</span>
           </div>
-          {[{ title: "Rapport Q2", author: "Thomas D.", date: "2 avr. 2026", period: "Trimestre", status: "En attente", sc: "text-amber-500 bg-amber-50 border-amber-200/50" }, { title: "Rapport Q1 — Final", author: "Marie L.", date: "15 jan. 2026", period: "Trimestre", status: "Terminé", sc: "text-green bg-green/5 border-green/20" }, { title: "Bilan annuel 2025", author: "Thomas D.", date: "8 jan. 2026", period: "Annuel", status: "Terminé", sc: "text-green bg-green/5 border-green/20" }].map((row, i) => (
+          {[{ title: "Rapport Q2", author: "Thomas D.", date: "2 avr. 2026", period: "Trimestre", status: "En attente", sc: "text-amber-500 bg-amber-50 border-amber-200/50" }, { title: "Rapport Q1 Final", author: "Marie L.", date: "15 jan. 2026", period: "Trimestre", status: "Terminé", sc: "text-green bg-green/5 border-green/20" }, { title: "Bilan annuel 2025", author: "Thomas D.", date: "8 jan. 2026", period: "Annuel", status: "Terminé", sc: "text-green bg-green/5 border-green/20" }].map((row, i) => (
             <motion.div key={i} className="grid grid-cols-12 gap-1 px-2.5 py-2 border-b border-line/25 items-center" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.4 + i * 0.1 }}>
               <span className="col-span-4 text-[9px] font-medium text-forest truncate">{row.title}</span>
               <span className="col-span-2 text-[8px] text-muted">{row.author}</span>
@@ -587,7 +587,7 @@ function CollaborationVisual() {
             <span className="text-[9px] font-medium text-ink">Antoine Moreau</span>
             <span className="text-[8px] text-muted">il y a 2h</span>
           </div>
-          <div className="text-[9px] text-muted leading-relaxed">&ldquo;Données Caen toujours manquantes — <span className="text-green font-medium">@Sophie</span> relancé Fabrice 3 fois.&rdquo;</div>
+          <div className="text-[9px] text-muted leading-relaxed">&ldquo;Données Caen toujours manquantes, <span className="text-green font-medium">@Sophie</span> relancé Fabrice 3 fois.&rdquo;</div>
         </motion.div>
       </div>
     </div>
@@ -1101,6 +1101,11 @@ function ProductCTA() {
    ================================================================ */
 
 export default function ProductPage() {
+  // Scroll to top on page mount
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
+
   return (
     <>
       <ProductHero />
