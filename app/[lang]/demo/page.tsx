@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { useDictionary } from "../dictionary-provider";
+import { track } from "../../lib/analytics";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -36,6 +37,16 @@ export default function DemoPage() {
   useEffect(() => {
     document.body.classList.add("demo-tunnel");
     return () => document.body.classList.remove("demo-tunnel");
+  }, []);
+
+  useEffect(() => {
+    function onCalendlyMessage(e: MessageEvent) {
+      if (e.data?.event === "calendly.event_scheduled") {
+        track("calendly_booked");
+      }
+    }
+    window.addEventListener("message", onCalendlyMessage);
+    return () => window.removeEventListener("message", onCalendlyMessage);
   }, []);
 
   return (

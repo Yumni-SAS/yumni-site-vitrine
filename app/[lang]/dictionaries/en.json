@@ -197,7 +197,7 @@
             "ESRS compliance guided standard by standard"
           ],
           "cta": "Start for free →",
-          "href": "/essai-gratuit"
+          "href": "https://freemium-app.yumni.fr/fr/auth/login"
         },
         {
           "tag": "Mid-caps & Groups",
@@ -553,7 +553,7 @@
           "q": "Can I try without a credit card?",
           "a": "Yes. Freemium requires no credit card. Sign up in 60 seconds and start immediately.",
           "linkLabel": "Try free →",
-          "linkHref": "/essai-gratuit"
+          "linkHref": "https://freemium-app.yumni.fr/fr/auth/login"
         }
       ]
     },

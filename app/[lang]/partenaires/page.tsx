@@ -11,6 +11,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { useDictionary } from "../dictionary-provider";
+import { track } from "../../lib/analytics";
 
 /* ================================================================
    CONSTANTS
@@ -502,6 +503,7 @@ function PartnerForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus("sending");
+    track("partners_form_submit");
 
     try {
       const res = await fetch("/api/contact", {
@@ -521,6 +523,7 @@ function PartnerForm() {
         return;
       }
       setStatus("success");
+      track("partners_form_success");
     } catch {
       setStatus("error");
     }
@@ -780,6 +783,7 @@ export default function PartenairesPage() {
           >
             <a
               href="#candidater"
+              onClick={() => track("partners_apply_cta")}
               className="group bg-green text-white font-medium px-8 py-3.5 rounded-full text-sm shadow-[0_4px_20px_rgba(0,129,74,0.25)] hover:bg-forest hover:shadow-[0_8px_30px_rgba(0,129,74,0.35)] transition-all duration-300 inline-flex items-center gap-2"
             >
               {t.partners.cta.form.submit}
@@ -787,6 +791,7 @@ export default function PartenairesPage() {
             </a>
             <Link
               href={`/${locale}/contact`}
+              onClick={() => track("cta_click", { source: "partners_hero", action: "contact" })}
               className="border-2 border-green/20 text-ink px-8 py-3.5 rounded-full text-sm hover:border-green hover:text-green hover:shadow-[0_4px_16px_rgba(0,129,74,0.08)] transition-all duration-300"
             >
               {t.common.requestDemo}
@@ -1037,7 +1042,10 @@ export default function PartenairesPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
                   <Link
-                    href={`/${locale}/essai-gratuit`}
+                    href="https://freemium-app.yumni.fr/fr/auth/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => track("cta_click", { source: "partners_footer", action: "trial" })}
                     className="group bg-white text-forest font-semibold px-10 py-4 rounded-full text-sm shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:bg-green-light hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)] transition-all duration-300 inline-flex items-center gap-2"
                   >
                     {t.partners.finalCta.cta1}
@@ -1045,6 +1053,7 @@ export default function PartenairesPage() {
                   </Link>
                   <Link
                     href={`/${locale}/tarifs`}
+                    onClick={() => track("cta_click", { source: "partners_footer", action: "pricing" })}
                     className="border border-white/20 text-white px-10 py-4 rounded-full text-sm hover:bg-white/10 hover:border-white/40 transition-all"
                   >
                     {t.partners.finalCta.cta2}

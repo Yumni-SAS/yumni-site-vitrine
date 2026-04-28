@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useDictionary } from "../dictionary-provider";
+import { track } from "../../lib/analytics";
 
 /* ================================================================
    CONSTANTS
@@ -134,7 +135,7 @@ function SuccessState() {
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.8, ease }} className="flex flex-col sm:flex-row items-center justify-center gap-3">
         <Link href={`/${locale}`} className="text-sm text-green font-medium hover:text-forest transition-colors">{t.common.back}</Link>
         <span className="text-line hidden sm:inline">|</span>
-        <Link href={`/${locale}/essai-gratuit`} className="bg-green text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-forest transition-colors shadow-[0_4px_20px_rgba(0,129,74,0.25)]">{t.common.startFree}</Link>
+        <Link href="https://freemium-app.yumni.fr/fr/auth/login" target="_blank" rel="noopener noreferrer" className="bg-green text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-forest transition-colors shadow-[0_4px_20px_rgba(0,129,74,0.25)]">{t.common.startFree}</Link>
       </motion.div>
     </motion.div>
   );
@@ -165,6 +166,7 @@ export default function ContactPage() {
     e.preventDefault();
     setStatus("sending");
     setErrorMsg("");
+    track("contact_form_submit", { type: formData.type });
 
     try {
       const res = await fetch("/api/contact", {
@@ -178,13 +180,16 @@ export default function ContactPage() {
       if (!res.ok) {
         setStatus("error");
         setErrorMsg(data.error || t.contact.errors.generic);
+        track("contact_form_error", { type: formData.type });
         return;
       }
 
       setStatus("success");
+      track("contact_form_success", { type: formData.type });
     } catch {
       setStatus("error");
       setErrorMsg(t.contact.errors.network);
+      track("contact_form_error", { type: formData.type });
     }
   }
 
@@ -283,7 +288,7 @@ export default function ContactPage() {
                           <label htmlFor="type" className="block text-sm font-medium text-ink mb-2">{t.contact.form.requestType} <span className="text-orange">{t.contact.form.required}</span></label>
                           <div className="flex flex-wrap gap-2">
                             {requestTypes.map((type: string) => (
-                              <button key={type} type="button" onClick={() => setFormData((prev) => ({ ...prev, type }))} className={`px-4 py-2.5 rounded-full text-sm transition-all duration-300 border cursor-pointer ${formData.type === type ? "bg-green text-white border-green shadow-[0_4px_16px_rgba(0,129,74,0.2)]" : "bg-white text-ink-light border-line hover:border-green/30 hover:bg-green-light/20"}`}>
+                              <button key={type} type="button" onClick={() => { setFormData((prev) => ({ ...prev, type })); track("contact_type_selected", { type }); }} className={`px-4 py-2.5 rounded-full text-sm transition-all duration-300 border cursor-pointer ${formData.type === type ? "bg-green text-white border-green shadow-[0_4px_16px_rgba(0,129,74,0.2)]" : "bg-white text-ink-light border-line hover:border-green/30 hover:bg-green-light/20"}`}>
                                 {type}
                               </button>
                             ))}
@@ -341,7 +346,7 @@ export default function ContactPage() {
 
               <div className="space-y-4">
                 <FadeIn delay={0.4}>
-                  <a href="mailto:contact@yumni.fr" className="group flex items-center gap-4 p-5 rounded-xl border border-line bg-white hover:border-green/20 hover:shadow-[0_4px_16px_rgba(0,129,74,0.06)] transition-all duration-300">
+                  <a href="mailto:contact@yumni.fr" onClick={() => track("contact_email_click")} className="group flex items-center gap-4 p-5 rounded-xl border border-line bg-white hover:border-green/20 hover:shadow-[0_4px_16px_rgba(0,129,74,0.06)] transition-all duration-300">
                     <div className="w-12 h-12 shrink-0 rounded-xl bg-green-light/50 flex items-center justify-center group-hover:bg-green-light transition-colors">
                       <svg className="w-5 h-5 text-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
                     </div>
@@ -354,7 +359,7 @@ export default function ContactPage() {
                 </FadeIn>
 
                 <FadeIn delay={0.5}>
-                  <a href="https://www.linkedin.com/company/yumni" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-5 rounded-xl border border-line bg-white hover:border-green/20 hover:shadow-[0_4px_16px_rgba(0,129,74,0.06)] transition-all duration-300">
+                  <a href="https://www.linkedin.com/company/yumni" target="_blank" rel="noopener noreferrer" onClick={() => track("contact_linkedin_click")} className="group flex items-center gap-4 p-5 rounded-xl border border-line bg-white hover:border-green/20 hover:shadow-[0_4px_16px_rgba(0,129,74,0.06)] transition-all duration-300">
                     <div className="w-12 h-12 shrink-0 rounded-xl bg-green-light/50 flex items-center justify-center group-hover:bg-green-light transition-colors">
                       <svg className="w-5 h-5 text-green" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
                     </div>
@@ -439,7 +444,7 @@ export default function ContactPage() {
               </h2>
               <p className="text-lg text-white/50 max-w-xl mx-auto mt-6 leading-relaxed">{t.contact.finalCta.description}</p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-                <Link href={`/${locale}/essai-gratuit`} className="group bg-white text-forest font-semibold px-10 py-4 rounded-full hover:bg-green-light transition-all text-sm shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
+                <Link href="https://freemium-app.yumni.fr/fr/auth/login" target="_blank" rel="noopener noreferrer" className="group bg-white text-forest font-semibold px-10 py-4 rounded-full hover:bg-green-light transition-all text-sm shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
                   {t.contact.finalCta.cta1}<span className="ml-2 inline-block group-hover:translate-x-0.5 transition-transform">→</span>
                 </Link>
                 <Link href={`/${locale}/demo`} className="border border-white/20 text-white hover:bg-white/10 hover:border-white/40 px-10 py-4 rounded-full transition-all text-sm">

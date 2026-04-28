@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { useDictionary } from "../dictionary-provider";
+import { track } from "../../lib/analytics";
 
 /* ================================================================
    CONSTANTS
@@ -99,7 +100,7 @@ function CockpitVisual() {
         </div>
         <div className="flex gap-1 p-0.5 bg-sand/80 rounded-lg w-fit">
           {["Vue d'ensemble", "Portefeuille RSE"].map((l, i) => (
-            <button key={l} onClick={() => setActiveTab(i)} className={`px-3 py-1.5 rounded-md text-[12px] font-medium transition-all duration-300 ${activeTab === i ? "bg-white text-ink shadow-sm" : "text-muted hover:text-ink-light"}`}>{l}</button>
+            <button key={l} onClick={() => { setActiveTab(i); track("product_cockpit_tab", { tab: l }); }} className={`px-3 py-1.5 rounded-md text-[12px] font-medium transition-all duration-300 ${activeTab === i ? "bg-white text-ink shadow-sm" : "text-muted hover:text-ink-light"}`}>{l}</button>
           ))}
         </div>
       </div>
@@ -224,7 +225,7 @@ function KPIVisual() {
           ))}
         </div>
         <div className="flex gap-1 p-0.5 bg-sand/80 rounded-lg w-fit">
-          {["Tableau", "Cartes"].map((l, i) => (<button key={l} onClick={() => setActiveView(i)} className={`px-3 py-1.5 rounded-md text-[12px] font-medium transition-all duration-300 ${activeView === i ? "bg-white text-ink shadow-sm" : "text-muted"}`}>{l}</button>))}
+          {["Tableau", "Cartes"].map((l, i) => (<button key={l} onClick={() => { setActiveView(i); track("product_kpi_view", { view: l }); }} className={`px-3 py-1.5 rounded-md text-[12px] font-medium transition-all duration-300 ${activeView === i ? "bg-white text-ink shadow-sm" : "text-muted"}`}>{l}</button>))}
         </div>
       </div>
       <div className="px-5 pb-5 flex-1 relative overflow-hidden">
@@ -756,10 +757,10 @@ function ProductHero() {
           </motion.div>
 
           <motion.div className="flex flex-col sm:flex-row items-center justify-center gap-4" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.36, ease }}>
-            <Link href={`/${locale}/essai-gratuit`} className="group bg-green text-white font-medium px-8 py-3.5 rounded-full hover:bg-forest transition-all duration-300 text-sm text-center shadow-[0_4px_20px_rgba(0,129,74,0.25)] hover:shadow-[0_8px_30px_rgba(0,129,74,0.35)]">
+            <Link href="https://freemium-app.yumni.fr/fr/auth/login" target="_blank" rel="noopener noreferrer" onClick={() => track("cta_click", { source: "product_hero", action: "trial" })} className="group bg-green text-white font-medium px-8 py-3.5 rounded-full hover:bg-forest transition-all duration-300 text-sm text-center shadow-[0_4px_20px_rgba(0,129,74,0.25)] hover:shadow-[0_8px_30px_rgba(0,129,74,0.35)]">
               {t.common.freeTrialStart}<span className="ml-2 inline-block group-hover:translate-x-0.5 transition-transform">→</span>
             </Link>
-            <Link href={`/${locale}/demo`} className="border-2 border-green/20 text-ink hover:border-green hover:text-green px-8 py-3.5 rounded-full transition-all duration-300 text-sm text-center hover:shadow-[0_4px_16px_rgba(0,129,74,0.08)]">
+            <Link href={`/${locale}/demo`} onClick={() => track("cta_click", { source: "product_hero", action: "demo" })} className="border-2 border-green/20 text-ink hover:border-green hover:text-green px-8 py-3.5 rounded-full transition-all duration-300 text-sm text-center hover:shadow-[0_4px_16px_rgba(0,129,74,0.08)]">
               {t.common.requestDemo}
             </Link>
           </motion.div>
@@ -1082,10 +1083,10 @@ function ProductCTA() {
             </h2>
             <p className="text-lg text-white/50 max-w-xl mx-auto mb-12 leading-relaxed">{cta.subtitle}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href={`/${locale}/essai-gratuit`} className="group bg-white text-forest font-semibold px-10 py-4 rounded-full hover:bg-green-light transition-all text-sm shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
+              <Link href="https://freemium-app.yumni.fr/fr/auth/login" target="_blank" rel="noopener noreferrer" onClick={() => track("cta_click", { source: "product_footer", action: "trial" })} className="group bg-white text-forest font-semibold px-10 py-4 rounded-full hover:bg-green-light transition-all text-sm shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
                 {cta.cta1}<span className="ml-2 inline-block group-hover:translate-x-0.5 transition-transform">→</span>
               </Link>
-              <Link href={`/${locale}/demo`} className="border border-white/20 text-white hover:bg-white/10 hover:border-white/40 px-10 py-4 rounded-full transition-all text-sm">
+              <Link href={`/${locale}/demo`} onClick={() => track("cta_click", { source: "product_footer", action: "demo" })} className="border border-white/20 text-white hover:bg-white/10 hover:border-white/40 px-10 py-4 rounded-full transition-all text-sm">
                 {cta.cta2}
               </Link>
             </div>

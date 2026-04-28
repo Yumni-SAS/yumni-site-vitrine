@@ -151,11 +151,11 @@ function FichierCard({ fichier, lang }: { fichier: Fichier; lang: string }) {
   const label = CATEGORY_LABELS[fichier.categorie]?.[lang as "fr" | "en"] ?? fichier.categorie;
 
   const formatColors: Record<string, string> = {
-    PDF:  "bg-red-50 text-red-600 border-red-100",
-    XLSX: "bg-emerald-50 text-emerald-700 border-emerald-100",
-    PPTX: "bg-orange-50 text-orange-600 border-orange-100",
-    MP4:  "bg-violet-50 text-violet-600 border-violet-100",
-    ZIP:  "bg-sky-50 text-sky-600 border-sky-100",
+    PDF:  "bg-orange-light text-orange border-orange/20",
+    XLSX: "bg-green-light text-green border-green/20",
+    PPTX: "bg-forest/10 text-forest border-forest/15",
+    MP4:  "bg-sand text-ink border-line",
+    ZIP:  "bg-sand text-ink-light border-line",
   };
   const fmtColor = formatColors[fichier.format] ?? "bg-sand text-ink-light border-line";
 
@@ -285,7 +285,7 @@ export default async function RessourcesPage({
         {/* ── Articles ───────────────────────────────────────────── */}
         <section>
           <div className="mb-10">
-            <h2 className="font-display text-3xl lg:text-4xl font-bold text-ink mb-2">
+            <h2 className="font-display text-3xl lg:text-4xl font-bold text-forest mb-2">
               {copy.articlesTitle}
             </h2>
             <p className="text-muted text-base">{copy.articlesSubtitle}</p>
@@ -330,7 +330,7 @@ export default async function RessourcesPage({
         {/* ── Fichiers ───────────────────────────────────────────── */}
         <section>
           <div className="mb-10">
-            <h2 className="font-display text-3xl lg:text-4xl font-bold text-ink mb-2">
+            <h2 className="font-display text-3xl lg:text-4xl font-bold text-forest mb-2">
               {copy.fichiersTitle}
             </h2>
             <p className="text-muted text-base">{copy.fichiersSubtitle}</p>

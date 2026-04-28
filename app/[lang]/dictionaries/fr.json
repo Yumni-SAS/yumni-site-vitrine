@@ -553,7 +553,7 @@
           "q": "Puis-je tester sans carte bancaire ?",
           "a": "Oui. Le Freemium n'exige aucune carte bancaire. Inscrivez-vous en 60 secondes et commencez immédiatement.",
           "linkLabel": "Essayer gratuitement →",
-          "linkHref": "/essai-gratuit"
+          "linkHref": "https://freemium-app.yumni.fr/fr/auth/login"
         }
       ]
     },

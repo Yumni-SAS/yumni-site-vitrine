@@ -11,6 +11,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { useDictionary } from "../dictionary-provider";
+import { track } from "../../lib/analytics";
 
 /* ================================================================
    CONSTANTS
@@ -152,7 +153,7 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
   return (
     <FadeIn delay={index * 0.06}>
       <div className={`border-b border-line/80 transition-colors duration-300 ${open ? "bg-green-light/20" : ""}`}>
-        <button onClick={() => setOpen(!open)} className="w-full flex items-center justify-between py-6 px-6 md:px-8 text-left group cursor-pointer">
+        <button onClick={() => { if (!open) track("pricing_faq_open", { question: q }); setOpen(!open); }} className="w-full flex items-center justify-between py-6 px-6 md:px-8 text-left group cursor-pointer">
           <span className="text-base font-semibold text-ink pr-8 group-hover:text-green transition-colors">{q}</span>
           <motion.span animate={{ rotate: open ? 45 : 0 }} transition={{ duration: 0.3, ease }} className="text-2xl text-green shrink-0 leading-none">+</motion.span>
         </button>
@@ -203,7 +204,7 @@ function ROICalculator() {
                 <label className="text-sm font-medium text-ink">{t.pricing.roi.etpLabel}</label>
                 <span className="text-lg font-display font-semibold text-forest">{etp}</span>
               </div>
-              <input type="range" min={1} max={15} value={etp} onChange={(e) => setEtp(Number(e.target.value))} className="w-full h-2 rounded-full appearance-none cursor-pointer bg-line accent-green [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-green [&::-webkit-slider-thumb]:shadow-[0_2px_8px_rgba(0,129,74,0.3)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white" />
+              <input type="range" min={1} max={15} value={etp} onChange={(e) => setEtp(Number(e.target.value))} onMouseUp={(e) => track("roi_slider_change", { slider: "etp", value: (e.target as HTMLInputElement).value })} onTouchEnd={(e) => track("roi_slider_change", { slider: "etp", value: (e.target as HTMLInputElement).value })} className="w-full h-2 rounded-full appearance-none cursor-pointer bg-line accent-green [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-green [&::-webkit-slider-thumb]:shadow-[0_2px_8px_rgba(0,129,74,0.3)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white" />
               <div className="flex justify-between text-xs text-muted mt-1"><span>1</span><span>15</span></div>
             </div>
             <div>
@@ -211,7 +212,7 @@ function ROICalculator() {
                 <label className="text-sm font-medium text-ink">{t.pricing.roi.daysLabel}</label>
                 <span className="text-lg font-display font-semibold text-forest">{daysPerMonth}</span>
               </div>
-              <input type="range" min={1} max={15} value={daysPerMonth} onChange={(e) => setDaysPerMonth(Number(e.target.value))} className="w-full h-2 rounded-full appearance-none cursor-pointer bg-line accent-green [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-green [&::-webkit-slider-thumb]:shadow-[0_2px_8px_rgba(0,129,74,0.3)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white" />
+              <input type="range" min={1} max={15} value={daysPerMonth} onChange={(e) => setDaysPerMonth(Number(e.target.value))} onMouseUp={(e) => track("roi_slider_change", { slider: "days", value: (e.target as HTMLInputElement).value })} onTouchEnd={(e) => track("roi_slider_change", { slider: "days", value: (e.target as HTMLInputElement).value })} className="w-full h-2 rounded-full appearance-none cursor-pointer bg-line accent-green [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-green [&::-webkit-slider-thumb]:shadow-[0_2px_8px_rgba(0,129,74,0.3)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white" />
               <div className="flex justify-between text-xs text-muted mt-1"><span>1</span><span>15</span></div>
             </div>
           </div>
@@ -403,6 +404,7 @@ function PlanCard({
         {isComingSoon ? (
           <Link
             href={`/${locale}/contact`}
+            onClick={() => track("pricing_plan_cta", { plan: plan.name, action: "contact", source: "card" })}
             className="block text-center font-medium text-sm py-3.5 rounded-full transition-all duration-300 mb-6 border-2 border-orange/30 text-orange hover:border-orange hover:bg-orange/5"
           >
             {plan.cta}
@@ -410,6 +412,7 @@ function PlanCard({
         ) : (
           <Link
             href={`/${locale}${ctaHref}`}
+            onClick={() => track("pricing_plan_cta", { plan: plan.name, action: ctaHref.replace("/", ""), source: "card" })}
             className={`block text-center font-medium text-sm py-3.5 rounded-full transition-all duration-300 mb-6 ${
               isRecommended
                 ? "bg-green text-white shadow-[0_4px_20px_rgba(0,129,74,0.25)] hover:bg-forest hover:shadow-[0_8px_30px_rgba(0,129,74,0.35)]"
@@ -459,7 +462,7 @@ export default function TarifsPage() {
   const plans: Plan[] = t.pricing.plans;
   const comparisonCategories = t.pricing.comparison.categories;
   const faqs = t.pricing.faq.items;
-  const ctaHrefs = ["/essai-gratuit", "/demo", "/contact", "/contact"];
+  const ctaHrefs = ["https://freemium-app.yumni.fr/fr/auth/login", "/demo", "/contact", "/contact"];
 
   return (
     <>
@@ -512,13 +515,13 @@ export default function TarifsPage() {
           >
             <div className="flex items-center gap-1 bg-sand rounded-full p-1 border border-line shadow-sm">
               <button
-                onClick={() => setBilling("monthly")}
+                onClick={() => { setBilling("monthly"); track("pricing_billing_toggle", { billing: "monthly" }); }}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${billing === "monthly" ? "bg-white text-forest shadow-sm" : "text-muted hover:text-ink"}`}
               >
                 {t.pricing.billingToggle.monthly}
               </button>
               <button
-                onClick={() => setBilling("annual")}
+                onClick={() => { setBilling("annual"); track("pricing_billing_toggle", { billing: "annual" }); }}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-2 ${billing === "annual" ? "bg-white text-forest shadow-sm" : "text-muted hover:text-ink"}`}
               >
                 {t.pricing.billingToggle.annual}
@@ -639,16 +642,16 @@ export default function TarifsPage() {
                   <div className="grid grid-cols-[1fr_90px_90px_90px_90px] md:grid-cols-[1fr_130px_130px_130px_130px] items-center bg-sand/30 border-t border-line">
                     <div className="px-6 py-5" />
                     <div className="px-3 py-4 flex justify-center">
-                      <Link href={`/${locale}/essai-gratuit`} className="text-[11px] font-semibold px-3 py-1.5 rounded-full border border-line text-ink hover:border-green hover:text-green transition-all whitespace-nowrap">{t.pricing.comparison.startCta}</Link>
+                      <Link href="https://freemium-app.yumni.fr/fr/auth/login" target="_blank" rel="noopener noreferrer" onClick={() => track("pricing_plan_cta", { plan: "Freemium", action: "essai-gratuit", source: "table" })} className="text-[11px] font-semibold px-3 py-1.5 rounded-full border border-line text-ink hover:border-green hover:text-green transition-all whitespace-nowrap">{t.pricing.comparison.startCta}</Link>
                     </div>
                     <div className="px-3 py-4 flex justify-center">
-                      <Link href={`/${locale}/demo`} className="text-[11px] font-semibold px-3 py-1.5 rounded-full bg-green text-white hover:bg-forest transition-all shadow-sm whitespace-nowrap">{t.pricing.comparison.starterCta}</Link>
+                      <Link href={`/${locale}/demo`} onClick={() => track("pricing_plan_cta", { plan: "Starter", action: "demo", source: "table" })} className="text-[11px] font-semibold px-3 py-1.5 rounded-full bg-green text-white hover:bg-forest transition-all shadow-sm whitespace-nowrap">{t.pricing.comparison.starterCta}</Link>
                     </div>
                     <div className="px-3 py-4 flex justify-center">
-                      <Link href={`/${locale}/contact`} className="text-[11px] font-semibold px-3 py-1.5 rounded-full border border-orange/40 text-orange hover:border-orange hover:bg-orange/5 transition-all whitespace-nowrap">{t.pricing.comparison.notifyCta}</Link>
+                      <Link href={`/${locale}/contact`} onClick={() => track("pricing_plan_cta", { plan: "Pro + IA", action: "contact", source: "table" })} className="text-[11px] font-semibold px-3 py-1.5 rounded-full border border-orange/40 text-orange hover:border-orange hover:bg-orange/5 transition-all whitespace-nowrap">{t.pricing.comparison.notifyCta}</Link>
                     </div>
                     <div className="px-3 py-4 flex justify-center">
-                      <Link href={`/${locale}/contact`} className="text-[11px] font-semibold px-3 py-1.5 rounded-full border border-forest/20 text-forest hover:border-forest hover:bg-forest/5 transition-all whitespace-nowrap">{t.pricing.comparison.contactCta}</Link>
+                      <Link href={`/${locale}/contact`} onClick={() => track("pricing_plan_cta", { plan: "Enterprise", action: "contact", source: "table" })} className="text-[11px] font-semibold px-3 py-1.5 rounded-full border border-forest/20 text-forest hover:border-forest hover:bg-forest/5 transition-all whitespace-nowrap">{t.pricing.comparison.contactCta}</Link>
                     </div>
                   </div>
                 </div>
@@ -726,10 +729,10 @@ export default function TarifsPage() {
               </h2>
               <p className="text-lg text-white/50 max-w-xl mx-auto mt-6 leading-relaxed">{t.pricing.finalCta.description}</p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-                <Link href={`/${locale}/essai-gratuit`} className="group bg-white text-forest font-semibold px-10 py-4 rounded-full hover:bg-green-light transition-all text-sm shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
+                <Link href="https://freemium-app.yumni.fr/fr/auth/login" target="_blank" rel="noopener noreferrer" onClick={() => track("cta_click", { source: "pricing_footer", action: "trial" })} className="group bg-white text-forest font-semibold px-10 py-4 rounded-full hover:bg-green-light transition-all text-sm shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
                   {t.common.freeTrial}<span className="ml-2 inline-block group-hover:translate-x-0.5 transition-transform">→</span>
                 </Link>
-                <Link href={`/${locale}/demo`} className="border border-white/20 text-white hover:bg-white/10 hover:border-white/40 px-10 py-4 rounded-full transition-all text-sm">
+                <Link href={`/${locale}/demo`} onClick={() => track("cta_click", { source: "pricing_footer", action: "demo" })} className="border border-white/20 text-white hover:bg-white/10 hover:border-white/40 px-10 py-4 rounded-full transition-all text-sm">
                   {t.common.requestDemo}
                 </Link>
               </div>

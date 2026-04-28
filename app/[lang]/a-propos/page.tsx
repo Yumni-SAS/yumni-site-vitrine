@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { useDictionary } from "../dictionary-provider";
+import { track } from "../../lib/analytics";
 
 /* ================================================================
    CONSTANTS
@@ -307,7 +308,10 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.24, ease }}
           >
             <Link
-              href={`/${locale}/essai-gratuit`}
+              href="https://freemium-app.yumni.fr/fr/auth/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("cta_click", { source: "about_hero", action: "trial" })}
               className="bg-green text-white font-medium px-8 py-3.5 rounded-full text-sm text-center shadow-[0_4px_20px_rgba(0,129,74,0.25)]"
             >
               {t.common.freeTrial}
@@ -315,6 +319,7 @@ export default function AboutPage() {
             </Link>
             <Link
               href={`/${locale}/contact`}
+              onClick={() => track("cta_click", { source: "about_hero", action: "contact" })}
               className="border-2 border-green/20 text-ink px-8 py-3.5 rounded-full text-sm text-center"
             >
               {locale === "fr" ? "Nous contacter" : "Contact us"}
@@ -556,13 +561,17 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
             <Link
               href={`/${locale}/contact`}
+              onClick={() => track("cta_click", { source: "about_footer", action: "contact" })}
               className="bg-green text-white font-medium px-10 py-4 rounded-full text-sm shadow-[0_4px_20px_rgba(0,129,74,0.25)]"
             >
               {a.cta.secondaryButton}
               <span className="ml-2">→</span>
             </Link>
             <Link
-              href={`/${locale}/essai-gratuit`}
+              href="https://freemium-app.yumni.fr/fr/auth/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("cta_click", { source: "about_footer", action: "trial" })}
               className="border-2 border-green/20 text-ink px-10 py-4 rounded-full text-sm"
             >
               {t.common.freeTrial}

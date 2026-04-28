@@ -40,6 +40,10 @@ export async function generateMetadata({
     title: dict.meta.home.title,
     description: dict.meta.home.description,
     metadataBase: new URL(SITE_URL),
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+    },
     alternates: {
       canonical: `${SITE_URL}/${lang}`,
       languages: {

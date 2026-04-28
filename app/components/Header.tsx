@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useDictionary } from "../[lang]/dictionary-provider";
+import { track } from "../lib/analytics";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,6 +23,7 @@ export default function Header() {
   ];
 
   function switchLocale(newLocale: string) {
+    track("language_switch", { locale: newLocale });
     const segments = pathname.split("/");
     segments[1] = newLocale;
     const newPath = segments.join("/");
@@ -104,12 +106,16 @@ export default function Header() {
 
             <Link
               href={`/${locale}/demo`}
+              onClick={() => track("cta_click", { source: "header", action: "demo" })}
               className="hidden sm:block text-sm text-muted hover:text-ink transition-colors"
             >
               {t.common.demo}
             </Link>
             <Link
-              href={`/${locale}/essai-gratuit`}
+              href="https://freemium-app.yumni.fr/fr/auth/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("cta_click", { source: "header", action: "trial" })}
               className="bg-green text-white text-sm font-medium px-5 py-2 rounded-xl hover:bg-forest transition-colors"
             >
               {t.common.freeTrial}

@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
+import { track } from "../../lib/analytics";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -183,7 +184,7 @@ function PMEVisual() {
           return (
             <motion.div
               key={s.num}
-              onClick={() => setActiveStep(i)}
+              onClick={() => { setActiveStep(i); track("solutions_step_click", { step: s.num }); }}
               animate={{
                 opacity: isDone ? 0.55 : 1,
                 scale: isActive ? 1 : 0.99,
@@ -429,7 +430,7 @@ function Hero() {
             ].map((p) => (
               <button
                 key={p.id}
-                onClick={() => scrollTo(p.id)}
+                onClick={() => { scrollTo(p.id); track("solutions_audience_scroll", { audience: p.id }); }}
                 className="group flex items-center gap-2 px-5 py-2.5 rounded-full border border-line bg-white/70 backdrop-blur-sm text-sm font-medium text-forest hover:border-green hover:text-green transition-all duration-200 shadow-sm"
               >
                 {p.label}
@@ -447,7 +448,10 @@ function Hero() {
             transition={{ duration: 0.7, delay: 0.32, ease }}
           >
             <Link
-              href="/essai-gratuit"
+              href="https://freemium-app.yumni.fr/fr/auth/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("cta_click", { source: "solutions_hero", action: "trial" })}
               className="group bg-green text-white font-medium px-8 py-3.5 rounded-full hover:bg-forest transition-all duration-300 text-sm shadow-[0_4px_20px_rgba(0,129,74,0.25)] hover:shadow-[0_8px_30px_rgba(0,129,74,0.35)]"
             >
               Commencer gratuitement
@@ -455,6 +459,7 @@ function Hero() {
             </Link>
             <Link
               href="/contact"
+              onClick={() => track("cta_click", { source: "solutions_hero", action: "contact" })}
               className="border-2 border-green/20 text-ink hover:border-green hover:text-green px-8 py-3.5 rounded-full transition-all duration-300 text-sm"
             >
               Demander une démo
@@ -645,13 +650,13 @@ function FinalCTA() {
           </FadeIn>
           <FadeIn delay={0.2}>
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
-              <Link href="/contact" className="group inline-flex items-center gap-2 px-9 py-4 bg-white text-forest font-semibold rounded-full text-sm shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:bg-green-light transition-all duration-300">
+              <Link href="/contact" onClick={() => track("cta_click", { source: "solutions_footer", action: "contact" })} className="group inline-flex items-center gap-2 px-9 py-4 bg-white text-forest font-semibold rounded-full text-sm shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:bg-green-light transition-all duration-300">
                 Demander une démo
                 <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </Link>
-              <Link href="/essai-gratuit" className="inline-flex items-center px-9 py-4 border border-white/25 text-white font-medium rounded-full text-sm hover:bg-white/10 hover:border-white/40 transition-all">
+              <Link href="https://freemium-app.yumni.fr/fr/auth/login" target="_blank" rel="noopener noreferrer" onClick={() => track("cta_click", { source: "solutions_footer", action: "trial" })} className="inline-flex items-center px-9 py-4 border border-white/25 text-white font-medium rounded-full text-sm hover:bg-white/10 hover:border-white/40 transition-all">
                 Commencer gratuitement
               </Link>
             </div>
@@ -714,7 +719,7 @@ export default function SolutionsPage() {
         nudgeStat="−40j/an"
         nudgeLabel="économisés sur le reporting"
         ctaLabel="Commencer gratuitement"
-        ctaHref="/essai-gratuit"
+        ctaHref="https://freemium-app.yumni.fr/fr/auth/login"
         ctaSecondaryLabel="Voir les tarifs"
         ctaSecondaryHref="/tarifs"
         Visual={PMEVisual}

@@ -1134,7 +1134,9 @@ export default function SecuritePage() {
                     <span className="group-hover:translate-x-0.5 transition-transform">→</span>
                   </a>
                   <Link
-                    href={`/${locale}/essai-gratuit`}
+                    href="https://freemium-app.yumni.fr/fr/auth/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="border border-white/20 text-white px-10 py-4 rounded-full text-sm hover:bg-white/10 hover:border-white/40 transition-all"
                   >
                     {s.cta.trialButton}

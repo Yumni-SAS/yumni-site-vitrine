@@ -11,6 +11,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { useDictionary } from "./dictionary-provider";
+import { track } from "../lib/analytics";
 
 /* ================================================================
    UTILITY — Fade in on scroll
@@ -195,7 +196,7 @@ function CockpitVisual() {
           {tabLabels.map((label, i) => (
             <button
               key={label}
-              onClick={() => setActiveTab(i)}
+              onClick={() => { setActiveTab(i); track("home_demo_cockpit_tab", { tab: label }); }}
               className={`px-3 py-1.5 rounded-md text-[12px] font-medium transition-all duration-300 ${
                 activeTab === i
                   ? "bg-white text-ink shadow-sm"
@@ -589,7 +590,7 @@ function KPIVisual() {
           {viewLabels.map((label, i) => (
             <button
               key={label}
-              onClick={() => setActiveView(i)}
+              onClick={() => { setActiveView(i); track("home_demo_kpi_view", { view: label }); }}
               className={`px-3 py-1.5 rounded-md text-[12px] font-medium transition-all duration-300 flex items-center gap-1.5 ${
                 activeView === i
                   ? "bg-white text-ink shadow-sm"
@@ -1866,7 +1867,10 @@ function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
-                href={`/${locale}/essai-gratuit`}
+                href="https://freemium-app.yumni.fr/fr/auth/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => track("cta_click", { source: "home_hero", action: "trial" })}
                 className="group bg-green text-white font-medium px-6 sm:px-8 py-3 sm:py-3.5 rounded-full hover:bg-forest transition-colors duration-200 text-sm text-center"
               >
                 {t.common.freeTrial}
@@ -1874,6 +1878,7 @@ function HeroSection() {
               </Link>
               <Link
                 href={`/${locale}/demo`}
+                onClick={() => track("cta_click", { source: "home_hero", action: "demo" })}
                 className="border border-line-dark text-ink hover:border-green hover:text-green px-6 sm:px-8 py-3 sm:py-3.5 rounded-full transition-colors duration-200 text-sm text-center"
               >
                 {t.common.requestDemo}
@@ -2037,9 +2042,11 @@ function SolutionSection() {
       if (video.paused) {
         await video.play();
         setIsPlaying(true);
+        track("home_video_play");
       } else {
         video.pause();
         setIsPlaying(false);
+        track("home_video_pause");
       }
     } catch {
       // If the browser blocks playback for any reason, we simply keep the overlay.
@@ -2269,14 +2276,14 @@ function AudienceSection() {
                       <li key={j} className="flex items-start gap-2.5 text-white/85 text-sm leading-relaxed"><span className="text-orange mt-0.5 shrink-0">✓</span>{pt}</li>
                     ))}
                   </ul>
-                  <Link href={`/${locale}${a.href}`} className="inline-flex items-center gap-1.5 text-white text-sm font-semibold bg-white/15 hover:bg-white/25 px-5 py-2.5 rounded-xl transition-colors">{a.cta}</Link>
+                  <Link href={`/${locale}${a.href}`} onClick={() => track("home_audience_cta", { audience: a.tag })} className="inline-flex items-center gap-1.5 text-white text-sm font-semibold bg-white/15 hover:bg-white/25 px-5 py-2.5 rounded-xl transition-colors">{a.cta}</Link>
                 </motion.div>
               </div>
             </div>
           </FadeIn>
           <div className="flex flex-col gap-3">
             {audiences.map((item: { tag: string; title: string }, i: number) => (
-              <button key={i} onClick={() => setActive(i)} className={`text-left px-6 py-5 rounded-xl transition-all duration-300 border cursor-pointer ${i === active ? "bg-green-light/40 border-green/20 shadow-[0_2px_12px_rgba(0,129,74,0.08)]" : "bg-white border-line hover:border-green/15 hover:bg-sand/40"}`}>
+              <button key={i} onClick={() => { setActive(i); track("home_audience_click", { audience: item.tag }); }} className={`text-left px-6 py-5 rounded-xl transition-all duration-300 border cursor-pointer ${i === active ? "bg-green-light/40 border-green/20 shadow-[0_2px_12px_rgba(0,129,74,0.08)]" : "bg-white border-line hover:border-green/15 hover:bg-sand/40"}`}>
                 <div className="flex items-center gap-3 mb-1.5">
                   <span className={`w-2.5 h-2.5 rounded-full transition-colors ${i === active ? "bg-green" : "bg-line-dark"}`} />
                   <span className={`text-sm font-bold transition-colors ${i === active ? "text-forest" : "text-muted"}`}>{item.tag}</span>
@@ -2415,10 +2422,10 @@ function FinalCTA() {
             </h2>
             <p className="text-lg text-white/50 max-w-xl mx-auto mb-12 leading-relaxed">{t.home.cta.description}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-              <Link href={`/${locale}/demo`} className="group bg-white text-forest font-semibold px-10 py-4 rounded-xl hover:bg-green-light transition-colors duration-200 text-sm">
+              <Link href={`/${locale}/demo`} onClick={() => track("cta_click", { source: "home_footer", action: "demo" })} className="group bg-white text-forest font-semibold px-10 py-4 rounded-xl hover:bg-green-light transition-colors duration-200 text-sm">
                 {t.common.requestDemo}<span className="ml-2 inline-block group-hover:translate-x-0.5 transition-transform">→</span>
               </Link>
-              <Link href={`/${locale}/essai-gratuit`} className="border border-white/20 text-white hover:bg-white/10 hover:border-white/30 px-10 py-4 rounded-xl transition-colors duration-200 text-sm">
+              <Link href="https://freemium-app.yumni.fr/fr/auth/login" target="_blank" rel="noopener noreferrer" onClick={() => track("cta_click", { source: "home_footer", action: "trial" })} className="border border-white/20 text-white hover:bg-white/10 hover:border-white/30 px-10 py-4 rounded-xl transition-colors duration-200 text-sm">
                 {t.common.freeTrial}
               </Link>
             </div>
