@@ -62,14 +62,18 @@ function websiteSchema(locale: Locale) {
       { "@type": "Language", name: "French", alternateName: "fr" },
       { "@type": "Language", name: "English", alternateName: "en" },
     ],
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${SITE_URL}/${locale}/contact`,
+    potentialAction: [
+      {
+        "@type": "ViewAction",
+        target: `${SITE_URL}/${locale}/demo`,
+        name: locale === "fr" ? "Demander une démo" : "Request a demo",
       },
-      "query-input": "required name=search_term_string",
-    },
+      {
+        "@type": "ViewAction",
+        target: `${SITE_URL}/${locale}/tarifs`,
+        name: locale === "fr" ? "Voir les tarifs" : "View pricing",
+      },
+    ],
   };
 }
 
@@ -147,7 +151,7 @@ function softwareApplicationSchema(locale: Locale) {
             "GDPR by design",
             "TLS 1.3 / AES-256 Encryption",
           ],
-    screenshot: `${SITE_URL}/screenshot-dashboard.png`,
+    screenshot: `${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`,
     author: {
       "@id": `${SITE_URL}/#organization`,
     },

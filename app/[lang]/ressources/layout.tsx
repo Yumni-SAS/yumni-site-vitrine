@@ -9,6 +9,13 @@ export const metadata: Metadata = {
     description:
       "Guides, articles et outils pour piloter votre conformité RSE & CSRD.",
     type: "website",
+    images: [{ url: "https://yumni.fr/Screen/01-hero-cockpit-ensemble.png", width: 1200, height: 630, alt: "Ressources RSE Yumni" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ressources RSE | Yumni",
+    description: "Guides, articles et outils pour piloter votre conformité RSE & CSRD.",
+    images: ["https://yumni.fr/Screen/01-hero-cockpit-ensemble.png"],
   },
 };
 

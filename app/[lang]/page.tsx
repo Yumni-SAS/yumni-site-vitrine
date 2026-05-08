@@ -1540,11 +1540,14 @@ function ScrollFeatures() {
   const featureItems = t.home.features.items;
   const visuals = [<CockpitVisual key="c" />, <KPIVisual key="k" />, <WSJFVisual key="w" />, <RisquesVisual key="ri" />, <ReportingVisual key="r" />];
 
+  const [showScrollHint, setShowScrollHint] = useState(true);
+
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end end"] });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     const idx = Math.min(visuals.length - 1, Math.floor(latest * visuals.length));
     setActiveIndex(idx);
+    setShowScrollHint(latest < 0.88);
   });
 
   return (
@@ -1581,6 +1584,31 @@ function ScrollFeatures() {
             </div>
           </div>
         </div>
+
+        {/* Scroll hint — bouncing arrow, fades once user starts scrolling */}
+        <AnimatePresence>
+          {showScrollHint && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 4 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 pointer-events-none select-none"
+            >
+              <span className="text-[11px] font-medium text-muted/70 tracking-wider uppercase">
+                {locale === "fr" ? "Défiler" : "Scroll"}
+              </span>
+              <motion.div
+                animate={{ y: [0, 7, 0] }}
+                transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <svg className="w-5 h-5 text-muted/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
@@ -2009,7 +2037,7 @@ function ProblemSection() {
           {t.home.problem.items.map((p: { num: string; stat: string; detail: string }, i: number) => (
             <FadeIn key={i} delay={i * 0.15}>
               <div className={`relative py-4 md:py-0 group ${i === 0 ? "md:pr-10" : i === 1 ? "md:px-10" : "md:pl-10"} ${i < 2 ? "border-b md:border-b-0 border-line" : ""}`}>
-                <div className="font-display text-[4rem] md:text-[5rem] leading-none text-forest/[0.05] select-none mb-2">{p.num}</div>
+                <div className="font-display text-[4rem] md:text-[5rem] leading-none text-forest/[0.38] select-none mb-2">{p.num}</div>
                 <div className="text-orange mb-5">{problemIcons[i]}</div>
                 <h3 className="text-xl font-bold text-ink mb-3 leading-snug">{p.stat}</h3>
                 <p className="text-muted leading-relaxed text-[15px]">{p.detail}</p>
@@ -2111,7 +2139,7 @@ function SolutionSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
           <FadeIn className="lg:col-span-3">
-            <div className="relative w-full max-w-[520px] rounded-2xl border border-line overflow-hidden bg-white aspect-[1/1] shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer flex items-center justify-center">
+            <div className="relative w-full max-w-[520px] rounded-2xl border border-line overflow-hidden bg-forest/5 aspect-[1/1] shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer flex items-center justify-center">
               <video
                 ref={videoRef}
                 className="absolute inset-0 w-full h-full object-cover"
@@ -2133,7 +2161,7 @@ function SolutionSection() {
                 type="button"
                 onClick={toggleVideo}
                 aria-label={isPlaying ? "Pause" : "Lire la vidéo"}
-                className="relative z-10 w-20 h-20 rounded-full bg-green/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:scale-110 transition-all duration-300 shadow-lg"
+                className="relative z-10 w-20 h-20 rounded-full bg-green/70 backdrop-blur-sm flex items-center justify-center opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 shadow-lg cursor-pointer"
               >
                 {isPlaying ? (
                   <svg width="26" height="24" viewBox="0 0 26 24" fill="none" aria-hidden="true">
@@ -2155,7 +2183,7 @@ function SolutionSection() {
                     type="button"
                     aria-label="Reculer"
                     onClick={() => seekBy(-5)}
-                    className="pointer-events-auto w-10 h-10 rounded-full bg-ink/30 hover:bg-ink/45 backdrop-blur-sm flex items-center justify-center transition-colors"
+                    className="pointer-events-auto cursor-pointer w-10 h-10 rounded-full bg-ink/30 hover:bg-ink/45 backdrop-blur-sm flex items-center justify-center transition-colors"
                   >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                       <path d="M12 6L6 12L12 18V6Z" fill="white" />
@@ -2166,7 +2194,7 @@ function SolutionSection() {
                     type="button"
                     aria-label="Avancer"
                     onClick={() => seekBy(5)}
-                    className="pointer-events-auto w-10 h-10 rounded-full bg-ink/30 hover:bg-ink/45 backdrop-blur-sm flex items-center justify-center transition-colors"
+                    className="pointer-events-auto cursor-pointer w-10 h-10 rounded-full bg-ink/30 hover:bg-ink/45 backdrop-blur-sm flex items-center justify-center transition-colors"
                   >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                       <path d="M12 6L18 12L12 18V6Z" fill="white" />
@@ -2282,11 +2310,42 @@ function AudienceSection() {
             </div>
           </FadeIn>
           <div className="flex flex-col gap-3">
+            {/* Selector label — communicates "pick your profile" */}
+            <div className="flex items-center justify-between mb-2 px-1">
+              <span className="text-xs font-semibold text-forest/60 tracking-widest uppercase">
+                {locale === "fr" ? "Quel est votre profil ?" : "What's your profile?"}
+              </span>
+              <span className="text-[11px] text-muted/50">{active + 1} / {audiences.length}</span>
+            </div>
             {audiences.map((item: { tag: string; title: string }, i: number) => (
-              <button key={i} onClick={() => { setActive(i); track("home_audience_click", { audience: item.tag }); }} className={`text-left px-6 py-5 rounded-xl transition-all duration-300 border cursor-pointer ${i === active ? "bg-green-light/40 border-green/20 shadow-[0_2px_12px_rgba(0,129,74,0.08)]" : "bg-white border-line hover:border-green/15 hover:bg-sand/40"}`}>
-                <div className="flex items-center gap-3 mb-1.5">
-                  <span className={`w-2.5 h-2.5 rounded-full transition-colors ${i === active ? "bg-green" : "bg-line-dark"}`} />
-                  <span className={`text-sm font-bold transition-colors ${i === active ? "text-forest" : "text-muted"}`}>{item.tag}</span>
+              <button key={i} onClick={() => { setActive(i); track("home_audience_click", { audience: item.tag }); }} className={`relative overflow-hidden text-left px-6 py-5 rounded-xl transition-all duration-300 border cursor-pointer ${i === active ? "bg-green-light/40 border-green/20 shadow-[0_2px_12px_rgba(0,129,74,0.08)]" : "bg-white border-line hover:border-green/15 hover:bg-sand/40"}`}>
+                {/* Shimmer spotlight sweep on inactive cards */}
+                {i !== active && (
+                  <motion.div
+                    className="absolute inset-0 pointer-events-none rounded-xl"
+                    animate={{ x: ["-110%", "210%"] }}
+                    transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", delay: i * 0.9, repeatDelay: 3.5 }}
+                    style={{ background: "linear-gradient(110deg, transparent 30%, rgba(0,129,74,0.09) 48%, rgba(0,129,74,0.05) 55%, transparent 70%)" }}
+                  />
+                )}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3 mb-1.5">
+                    {/* Pulsing dot on inactive cards to invite interaction */}
+                    {i !== active ? (
+                      <span className="relative flex h-2.5 w-2.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green/30 opacity-75" />
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-line-dark" />
+                      </span>
+                    ) : (
+                      <span className="w-2.5 h-2.5 rounded-full bg-green" />
+                    )}
+                    <span className={`text-sm font-bold transition-colors ${i === active ? "text-forest" : "text-muted"}`}>{item.tag}</span>
+                  </div>
+                  {i !== active && (
+                    <svg className="w-4 h-4 text-muted/40 shrink-0 group-hover:text-green transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  )}
                 </div>
                 <p className={`text-sm leading-relaxed ml-[22px] transition-colors ${i === active ? "text-ink" : "text-subtle"}`}>{item.title}</p>
                 {i === active && <motion.div className="mt-3 ml-[22px] h-0.5 bg-green rounded-full" initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ duration: 0.4, ease: "easeOut" }} />}

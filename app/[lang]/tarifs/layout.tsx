@@ -22,6 +22,7 @@ export async function generateMetadata({
       languages: {
         fr: `${SITE_URL}/fr/tarifs`,
         en: `${SITE_URL}/en/tarifs`,
+        "x-default": `${SITE_URL}/fr/tarifs`,
       },
     },
     openGraph: {
@@ -32,11 +33,13 @@ export async function generateMetadata({
       alternateLocale: lang === "fr" ? "en_US" : "fr_FR",
       siteName: "Yumni",
       url: `${SITE_URL}/${lang}/tarifs`,
+      images: [{ url: `${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`, width: 1200, height: 630, alt: "Tarifs Yumni RSE" }],
     },
     twitter: {
       card: "summary_large_image",
       title: dict.meta.pricing.ogTitle,
       description: dict.meta.pricing.ogDescription,
+      images: [`${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`],
     },
   };
 }

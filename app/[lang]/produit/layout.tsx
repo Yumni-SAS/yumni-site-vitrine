@@ -22,6 +22,7 @@ export async function generateMetadata({
       languages: {
         fr: `${SITE_URL}/fr/produit`,
         en: `${SITE_URL}/en/produit`,
+        "x-default": `${SITE_URL}/fr/produit`,
       },
     },
     openGraph: {
@@ -32,11 +33,13 @@ export async function generateMetadata({
       alternateLocale: lang === "fr" ? "en_US" : "fr_FR",
       siteName: "Yumni",
       url: `${SITE_URL}/${lang}/produit`,
+      images: [{ url: `${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`, width: 1200, height: 630, alt: "Yumni Produit — Logiciel RSE" }],
     },
     twitter: {
       card: "summary_large_image",
       title: dict.meta.product.ogTitle,
       description: dict.meta.product.ogDescription,
+      images: [`${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`],
     },
   };
 }

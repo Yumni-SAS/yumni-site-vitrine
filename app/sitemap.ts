@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           languages: {
             fr: `${SITE_URL}/fr${route.path}`,
             en: `${SITE_URL}/en${route.path}`,
+            "x-default": `${SITE_URL}/fr${route.path}`,
           },
         },
       });

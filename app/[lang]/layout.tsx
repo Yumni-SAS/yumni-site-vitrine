@@ -44,11 +44,15 @@ export async function generateMetadata({
       icon: "/favicon.ico",
       shortcut: "/favicon.ico",
     },
+    keywords: lang === "fr"
+      ? ["Yumni", "plateforme RSE", "pilotage RSE", "logiciel RSE", "CSRD", "ESRS", "conformité CSRD", "pilotage projet RSE", "logiciel RSE SaaS", "tableau de bord RSE", "reporting RSE", "gestion risques RSE", "KPI RSE", "double matérialité"]
+      : ["Yumni", "CSR platform", "CSR management", "CSR software", "CSRD", "ESRS", "CSRD compliance", "CSR project management", "ESG dashboard", "sustainability reporting", "CSR risk management"],
     alternates: {
       canonical: `${SITE_URL}/${lang}`,
       languages: {
         fr: `${SITE_URL}/fr`,
         en: `${SITE_URL}/en`,
+        "x-default": `${SITE_URL}/fr`,
       },
     },
     openGraph: {
@@ -59,11 +63,20 @@ export async function generateMetadata({
       alternateLocale: lang === "fr" ? "en_US" : "fr_FR",
       siteName: "Yumni",
       url: `${SITE_URL}/${lang}`,
+      images: [
+        {
+          url: `${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`,
+          width: 1200,
+          height: 630,
+          alt: lang === "fr" ? "Yumni — Plateforme de pilotage RSE" : "Yumni — CSR Management Platform",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: dict.meta.home.ogTitle,
       description: dict.meta.home.ogDescription,
+      images: [`${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`],
     },
     robots: {
       index: true,

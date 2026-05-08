@@ -31,11 +31,13 @@ export async function generateMetadata({
       alternateLocale: lang === "fr" ? "en_US" : "fr_FR",
       siteName: "Yumni",
       url: `${SITE_URL}/${lang}/partenaires`,
+      images: [{ url: `${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`, width: 1200, height: 630, alt: "Yumni Partenaires RSE" }],
     },
     twitter: {
       card: "summary_large_image",
       title: dict.meta.partners.ogTitle,
       description: dict.meta.partners.ogDescription,
+      images: [`${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`],
     },
   };
 }
