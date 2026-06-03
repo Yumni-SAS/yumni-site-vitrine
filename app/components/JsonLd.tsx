@@ -20,7 +20,7 @@ function organizationSchema(locale: Locale) {
       locale === "fr"
         ? "Yumni est la plateforme SaaS de pilotage de projet RSE tout-en-un. Dashboard, KPIs, WSJF, gestion des risques, reporting COMEX et conformité ESRS/CSRD."
         : "Yumni is the all-in-one CSR project management SaaS platform. Dashboard, KPIs, WSJF, risk management, board reporting and ESRS/CSRD compliance.",
-    foundingDate: "2024",
+    foundingDate: "2026",
     areaServed: {
       "@type": "GeoShape",
       name: locale === "fr" ? "Europe" : "Europe",
@@ -41,7 +41,7 @@ function organizationSchema(locale: Locale) {
       "Reporting COMEX",
       "Board Reporting",
     ],
-    sameAs: ["https://www.linkedin.com/company/yumni"],
+    sameAs: ["https://www.linkedin.com/company/yumnisas"],
   };
 }
 
@@ -100,25 +100,38 @@ function softwareApplicationSchema(locale: Locale) {
         priceCurrency: "EUR",
         description:
           locale === "fr"
-            ? "Plan gratuit : 1 organisation, 5 utilisateurs, 20 projets. Toutes les features core incluses."
-            : "Free plan: 1 organization, 5 users, 20 projects. All core features included.",
+            ? "Plan gratuit : 1 utilisateur, 1 organisation. Toutes les fonctionnalités core incluses."
+            : "Free plan: 1 user, 1 organization. All core features included.",
         availability: "https://schema.org/InStock",
       },
       {
         "@type": "Offer",
-        name: "Pro",
-        price: "0",
+        name: "Starter",
+        price: "19",
         priceCurrency: "EUR",
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "EUR",
-          price: "0",
-          description: locale === "fr" ? "Sur devis" : "Custom pricing",
-        },
         description:
           locale === "fr"
-            ? "Plan Pro : organisations, utilisateurs et projets illimités. API REST, multi-org, support prioritaire."
-            : "Pro plan: unlimited organizations, users and projects. REST API, multi-org, priority support.",
+            ? "Plan Starter à 19 €/utilisateur/mois (15 € en annuel). Jusqu'à 5 utilisateurs, 1 organisation."
+            : "Starter plan at €19/user/month (€15 billed annually). Up to 5 users, 1 organization.",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Pro + IA",
+        description:
+          locale === "fr"
+            ? "Plan Pro + IA (à venir fin 2026) : multi-organisations, fonctionnalités IA avancées."
+            : "Pro + AI plan (coming late 2026): multi-organization, advanced AI features.",
+        availability: "https://schema.org/PreOrder",
+      },
+      {
+        "@type": "Offer",
+        name: "Enterprise",
+        description:
+          locale === "fr"
+            ? "Plan Enterprise sur devis : utilisateurs et organisations illimités, support dédié."
+            : "Enterprise plan with custom pricing: unlimited users and organizations, dedicated support.",
+        availability: "https://schema.org/InStock",
       },
     ],
     featureList:
@@ -154,12 +167,6 @@ function softwareApplicationSchema(locale: Locale) {
     screenshot: `${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`,
     author: {
       "@id": `${SITE_URL}/#organization`,
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      ratingCount: "52",
-      bestRating: "5",
     },
   };
 }
