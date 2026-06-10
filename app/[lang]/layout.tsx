@@ -68,7 +68,7 @@ export async function generateMetadata({
           url: `${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`,
           width: 1200,
           height: 630,
-          alt: lang === "fr" ? "Yumni — Plateforme de pilotage RSE" : "Yumni — CSR Management Platform",
+          alt: lang === "fr" ? "Yumni - Plateforme de pilotage RSE" : "Yumni - CSR Management Platform",
         },
       ],
     },

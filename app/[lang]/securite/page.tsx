@@ -16,7 +16,7 @@ import { useDictionary } from "../dictionary-provider";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 /* ================================================================
-   UTILITY — Fade in on scroll
+   UTILITY - Fade in on scroll
    ================================================================ */
 
 function FadeIn({
@@ -44,7 +44,7 @@ function FadeIn({
 }
 
 /* ================================================================
-   SHIELD VISUAL — Hero visual with animated layers
+   SHIELD VISUAL - Hero visual with animated layers
    ================================================================ */
 
 function ShieldVisual() {
@@ -156,7 +156,7 @@ function ShieldVisual() {
 }
 
 /* ================================================================
-   ENCRYPTION PROTOCOL — Visual display
+   ENCRYPTION PROTOCOL - Visual display
    ================================================================ */
 
 function EncryptionProtocol({ item }: { item: { label: string; protocol: string; description: string } }) {
@@ -208,7 +208,7 @@ function EncryptionProtocol({ item }: { item: { label: string; protocol: string;
 }
 
 /* ================================================================
-   TLS DATA FLOW — Improved animation
+   TLS DATA FLOW - Improved animation
    ================================================================ */
 
 function TLSDataFlow() {
@@ -300,7 +300,7 @@ function TLSDataFlow() {
             </div>
             <div>
               <span className="text-sm font-semibold text-ink block">Serveur Yumni</span>
-              <span className="text-xs text-muted">Scaleway fr-par · France 🇫🇷</span>
+              <span className="text-xs text-muted">Scaleway fr-par · France </span>
             </div>
           </div>
         </div>
@@ -330,7 +330,7 @@ function TLSDataFlow() {
 }
 
 /* ================================================================
-   RBAC VISUAL — Permission hierarchy with horizontal layers
+   RBAC VISUAL - Permission hierarchy with horizontal layers
    ================================================================ */
 
 function RBACPyramid({ levels }: { levels: { role: string; description: string; color: string }[] }) {
@@ -431,7 +431,7 @@ function RBACPyramid({ levels }: { levels: { role: string; description: string; 
 }
 
 /* ================================================================
-   GDPR RIGHT PILL — expandable
+   GDPR RIGHT PILL - expandable
    ================================================================ */
 
 function GDPRRight({ title, description, index }: { title: string; description: string; index: number }) {
@@ -493,7 +493,7 @@ function GDPRRight({ title, description, index }: { title: string; description: 
 }
 
 /* ================================================================
-   CERTIFICATION BADGE — timeline item
+   CERTIFICATION BADGE - timeline item
    ================================================================ */
 
 function CertBadge({
@@ -572,7 +572,7 @@ function CertBadge({
 }
 
 /* ================================================================
-   AUTH ITEM — stacked list
+   AUTH ITEM - stacked list
    ================================================================ */
 
 function AuthItem({
@@ -618,7 +618,7 @@ function AuthItem({
 }
 
 /* ================================================================
-   HOSTING STAT LIGHT — metric display for light backgrounds
+   HOSTING STAT LIGHT - metric display for light backgrounds
    ================================================================ */
 
 function HostingStatLight({ label, value, detail, index }: { label: string; value: string; detail: string; index: number }) {
@@ -659,19 +659,19 @@ export default function SecuritePage() {
 
   return (
     <>
-      {/* ─── HERO — Centered style matching /tarifs ─────────────────────────── */}
+      {/* ─── HERO - Centered style matching /tarifs ─────────────────────────── */}
       <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-        {/* Background — matching homepage hero style */}
+        {/* Background - matching homepage hero style */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Large sweeping arcs — creates depth and visual pull */}
+          {/* Large sweeping arcs - creates depth and visual pull */}
           <svg className="absolute -right-[15%] -top-[10%] w-[80%] h-[120%] opacity-[0.05]" viewBox="0 0 800 800" fill="none">
             <circle cx="400" cy="400" r="380" stroke="#1B3A2D" strokeWidth="1.2" />
             <circle cx="400" cy="400" r="300" stroke="#1B3A2D" strokeWidth="0.8" />
             <circle cx="400" cy="400" r="220" stroke="#1B3A2D" strokeWidth="0.5" />
           </svg>
-          {/* Soft green ambient — top right */}
+          {/* Soft green ambient - top right */}
           <div className="absolute -top-[200px] -right-[200px] w-[700px] h-[700px] rounded-full bg-green/[0.05]" />
-          {/* Warm accent — bottom left */}
+          {/* Warm accent - bottom left */}
           <div className="absolute bottom-0 -left-[100px] w-[400px] h-[400px] rounded-full bg-orange/[0.05]" />
           {/* Warm gradient towards bottom */}
           <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-orange/[0.05] via-orange/[0.025] to-transparent" />
@@ -719,7 +719,7 @@ export default function SecuritePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.24, ease }}
           >
-            {["TLS 1.3", "AES-256", "MFA", "RGPD", "🇫🇷 France"].map((pill, i) => (
+            {["TLS 1.3", "AES-256", "MFA", "RGPD", " France"].map((pill, i) => (
               <span
                 key={i}
                 className="text-xs font-semibold tracking-wider uppercase text-green border border-green/20 bg-green-light/50 px-3 py-1.5 rounded-full"
@@ -731,7 +731,7 @@ export default function SecuritePage() {
         </div>
       </section>
 
-      {/* ─── Trust Strip — matching homepage style ─────────────────── */}
+      {/* ─── Trust Strip - matching homepage style ─────────────────── */}
       <section className="relative py-7 md:py-8 bg-forest overflow-hidden">
         <div className="relative max-w-6xl mx-auto px-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16">
@@ -763,7 +763,7 @@ export default function SecuritePage() {
 
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left — text */}
+            {/* Left - text */}
             <div>
               <FadeIn>
                 <span className="text-sm font-semibold tracking-widest uppercase text-orange">
@@ -780,7 +780,7 @@ export default function SecuritePage() {
               </FadeIn>
             </div>
 
-            {/* Right — hosting stats grid */}
+            {/* Right - hosting stats grid */}
             <div className="grid grid-cols-2 gap-4">
               {s.hosting.items.map(
                 (item: { label: string; value: string; detail: string }, i: number) => (
@@ -831,7 +831,7 @@ export default function SecuritePage() {
       <section className="py-24 md:py-36 bg-sand/40">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Left — sticky heading */}
+            {/* Left - sticky heading */}
             <div className="lg:sticky lg:top-32">
               <FadeIn>
                 <span className="text-sm font-semibold tracking-widest uppercase text-green">
@@ -873,7 +873,7 @@ export default function SecuritePage() {
               </FadeIn>
             </div>
 
-            {/* Right — auth items list */}
+            {/* Right - auth items list */}
             <div className="mt-4">
               {s.auth.items.map(
                 (item: { title: string; description: string }, i: number) => (
@@ -894,7 +894,7 @@ export default function SecuritePage() {
       <section className="py-24 md:py-36">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Left — pyramid */}
+            {/* Left - pyramid */}
             <div>
               <FadeIn className="mb-10">
                 <span className="text-sm font-semibold tracking-widest uppercase text-green">
@@ -913,7 +913,7 @@ export default function SecuritePage() {
               <RBACPyramid levels={s.rbac.levels} />
             </div>
 
-            {/* Right — isolation callout */}
+            {/* Right - isolation callout */}
             <FadeIn delay={0.2} className="lg:mt-32">
               <div className="relative rounded-3xl bg-forest overflow-hidden">
                 {/* background effects */}
@@ -982,7 +982,7 @@ export default function SecuritePage() {
       <section className="py-24 md:py-36 bg-sand/40">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Left — rights accordeon */}
+            {/* Left - rights accordeon */}
             <div>
               <FadeIn className="mb-10">
                 <span className="text-sm font-semibold tracking-widest uppercase text-green">
@@ -1012,7 +1012,7 @@ export default function SecuritePage() {
               </div>
             </div>
 
-            {/* Right — DPO contact callout */}
+            {/* Right - DPO contact callout */}
             <FadeIn delay={0.15} className="lg:mt-40">
               {/* Retention notice */}
               <div className="mb-6 flex items-start gap-3 text-sm text-muted">
@@ -1061,7 +1061,7 @@ export default function SecuritePage() {
       </section>
 
       {/* ─── CERTIFICATIONS ────────────────────────────────── */}
-      <section className="py-24 md:py-36">
+      {/* <section className="py-24 md:py-36">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn className="text-center mb-16">
             <span className="text-sm font-semibold tracking-widest uppercase text-orange">
@@ -1077,7 +1077,6 @@ export default function SecuritePage() {
           </FadeIn>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative">
-            {/* Timeline connector (desktop) */}
             <div className="hidden lg:block absolute top-7 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-green/40 via-line to-line pointer-events-none" />
 
             {s.certifications.items.map(
@@ -1094,7 +1093,7 @@ export default function SecuritePage() {
             )}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ─── FINAL CTA ────────────────────────────────────────── */}
       <section className="my-12 md:my-20 mx-4 md:mx-8 lg:mx-12">

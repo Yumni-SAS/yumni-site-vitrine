@@ -1,5 +1,5 @@
 /**
- * Fichiers téléchargeables — auto-découverte depuis Cloudflare R2
+ * Fichiers téléchargeables - auto-découverte depuis Cloudflare R2
  *
  * Structure R2 :
  *   fichiers/<categorie>/<nom-du-fichier.ext>
@@ -10,7 +10,7 @@
  * Titre auto-dérivé du nom de fichier :
  *   csrd-guide-pme-2025.pdf  →  "CSRD Guide PME 2025"
  *
- * Zéro config manuelle — déposer le fichier dans le bon dossier R2, c'est tout.
+ * Zéro config manuelle - déposer le fichier dans le bon dossier R2, c'est tout.
  */
 
 import { listObjects, publicUrl } from "./r2";

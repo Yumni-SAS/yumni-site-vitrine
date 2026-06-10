@@ -91,7 +91,7 @@ Yumni centralise vos axes, objectifs, KPIs et risques RSE dans une plateforme si
 
 ### Section Barre de confiance
 
-> Hébergé en France 🇫🇷 par Scaleway · CSRD Ready · 12 standards ESRS couverts · RGPD by design · MFA inclus
+> Hébergé en France  par Scaleway · CSRD Ready · 12 standards ESRS couverts · RGPD by design · MFA inclus
 > 
 
 *(Remplacer par logos clients dès qu'ils sont disponibles)*
@@ -777,7 +777,7 @@ Direction Groupe RSE
 | API | — | ✅ | ✅ + webhooks |
 | SSO / SAML | — | — | ✅ Roadmap |
 | Support | Email | Prioritaire | Account manager dédié |
-| Hébergement | France 🇫🇷 | France 🇫🇷 | France 🇫🇷 + on-premise option |
+| Hébergement | France  | France  | France  + on-premise option |
 | **CTA** | `Commencer maintenant` | `Demander un devis` | `Contacter les ventes` |
 
 ---
@@ -914,7 +914,7 @@ Nom de l'entreprise *
 
 | ✅ | ✅ | ✅ |
 | --- | --- | --- |
-| Gratuit · sans carte bancaire | Hébergé en France 🇫🇷 | Prêt en 2 minutes |
+| Gratuit · sans carte bancaire | Hébergé en France  | Prêt en 2 minutes |
 
 **Social proof**
 
@@ -1031,7 +1031,7 @@ Message *
 
 > 📧 [contact@yumni.fr](mailto:contact@yumni.fr)
 💼 [LinkedIn Yumni](https://www.notion.so/Sitemap-NZA-330f56fb16e4809492b2c8ef9c2f0cc7?pvs=21)
-🇫🇷 France — équipe disponible en horaires européens
+ France — équipe disponible en horaires européens
 > 
 
 **Temps de réponse**
@@ -1264,7 +1264,7 @@ Aucun utilisateur ne peut accéder aux données d'une autre organisation
 > • Droit d'accès, rectification et suppression implémentés
 • Export complet de vos données sur demande
 • Pas de revente de données, jamais
-• Contact DPO : [rgpd@yumni.fr](mailto:rgpd@yumni.fr)
+• Contact DPO : [dpo@yumni.fr](mailto:dpo@yumni.fr)
 • Conservation : données supprimées dans les 30 jours suivant résiliation
 > 
 
@@ -1289,7 +1289,7 @@ Aucun utilisateur ne peut accéder aux données d'une autre organisation
 ### Footer enrichi
 
 ```
-Yumni — Pilotage RSE souverain 🇫🇷
+Yumni — Pilotage RSE souverain 
 
 Produit                Solutions              Ressources             Légal
 ├── Cockpit            ├── Cabinets RSE       ├── Blog               ├── Mentions légales
@@ -1303,7 +1303,7 @@ Produit                Solutions              Ressources             Légal
 
 Newsletter : [Email pro ...] [S'abonner]
 
-Hébergé en France 🇫🇷 · RGPD · MFA · TLS 1.3 · Scaleway
+Hébergé en France  · RGPD · MFA · TLS 1.3 · Scaleway
 © 2026 Yumni — Tous droits réservés
 ```
 
@@ -1399,7 +1399,7 @@ Ces assets sont le nerf de la guerre : sans visuels du vrai produit, aucune page
 | **Schéma multi-org (cabinets)** | `/produit/multi-org`, `/solutions/cabinets` | P2 | S | 1 compte cabinet → N clients isolés → vue consolidée. |
 | **Schéma formule WSJF** | `/produit/wsjf` | P2 | S | (Valeur + Urgence + Réduction risque) ÷ Effort = Score. Visuel stylisé, pas juste du texte. |
 | **Photos équipe** | `/a-propos` | P2 | M | Photos professionnelles ou semi-pro sur fond neutre. LinkedIn-ready. |
-| **Badge "Hébergé en France 🇫🇷"** | Footer, `/securite`, homepage | P1 | S | SVG simple — drapeau + mention Scaleway. |
+| **Badge "Hébergé en France "** | Footer, `/securite`, homepage | P1 | S | SVG simple — drapeau + mention Scaleway. |
 | **Badges confiance** | Footer, `/essai-gratuit`, `/securite` | P1 | S | CSRD Ready · ESRS Compliant · RGPD · MFA · TLS 1.3. Style shield/badge. |
 
 ---

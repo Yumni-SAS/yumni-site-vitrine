@@ -14,7 +14,7 @@ import { useDictionary } from "./dictionary-provider";
 import { track } from "../lib/analytics";
 
 /* ================================================================
-   UTILITY — Fade in on scroll
+   UTILITY - Fade in on scroll
    ================================================================ */
 
 function FadeIn({
@@ -42,7 +42,7 @@ function FadeIn({
 }
 
 /* ================================================================
-   UTILITY — Animated counter
+   UTILITY - Animated counter
    ================================================================ */
 
 function CountUp({
@@ -81,7 +81,7 @@ function CountUp({
 }
 
 /* ================================================================
-   MOCK DASHBOARD — placeholder UI animation
+   MOCK DASHBOARD - placeholder UI animation
    ================================================================ */
 
 function DashboardMock() {
@@ -146,7 +146,7 @@ function DashboardMock() {
 }
 
 /* ================================================================
-   MINI UI VISUALS — for scroll-driven features
+   MINI UI VISUALS - for scroll-driven features
    ================================================================ */
 
 function CockpitVisual() {
@@ -668,8 +668,8 @@ function KPIVisual() {
             <div className="mt-2 space-y-1">
               {[
                 { name: "Réduction consommation eau", obj: "Réduire émissions CO2 de 50%", val: "18 / 30 %", pct: "60%", trend: "↗6%" },
-                { name: "Part énergie renouvelable", obj: "100% énergie renouvelable", val: "65 / 100 %", pct: "65%", trend: "—" },
-                { name: "Parité comité direction", obj: "40% femmes direction", val: "33 / 50 %", pct: "66%", trend: "—" },
+                { name: "Part énergie renouvelable", obj: "100% énergie renouvelable", val: "65 / 100 %", pct: "65%", trend: "-" },
+                { name: "Parité comité direction", obj: "40% femmes direction", val: "33 / 50 %", pct: "66%", trend: "-" },
               ].map((kpi, i) => (
                 <motion.div
                   key={kpi.name}
@@ -1243,7 +1243,7 @@ function RisquesVisual() {
                     <div className="text-[9px] text-muted">Probabilité: 4 · Impact: 5</div>
                     <div className="text-[11px] font-bold text-forest mt-0.5">Risque(s) total : 3</div>
                     <div className="mt-1.5 space-y-1 border-t border-line/40 pt-1.5">
-                      <div className="text-[8px] text-forest/80 leading-snug">• Arrêt production — Panne équipement</div>
+                      <div className="text-[8px] text-forest/80 leading-snug">• Arrêt production - Panne équipement</div>
                       <div className="text-[8px] text-forest/80 leading-snug">• Perte client majeur (&gt;30% CA)</div>
                       <div className="text-[8px] text-forest/80 leading-snug">• Non-conformité CSRD</div>
                     </div>
@@ -1363,7 +1363,7 @@ function ReportingVisual() {
           {/* Table rows */}
           {[
             { title: "Rapport Q2", author: "Thomas D.", date: "2 avr. 2026", format: "PPTX", period: "Trimestre", status: "En attente", statusColor: "text-amber-500 bg-amber-50 border-amber-200/50" },
-            { title: "Rapport Q1 — Final", author: "Marie L.", date: "15 jan. 2026", format: "PPTX", period: "Trimestre", status: "Terminé", statusColor: "text-green bg-green/5 border-green/20" },
+            { title: "Rapport Q1 - Final", author: "Marie L.", date: "15 jan. 2026", format: "PPTX", period: "Trimestre", status: "Terminé", statusColor: "text-green bg-green/5 border-green/20" },
             { title: "Bilan annuel 2025", author: "Thomas D.", date: "8 jan. 2026", format: "PPTX", period: "Annuel", status: "Terminé", statusColor: "text-green bg-green/5 border-green/20" },
           ].map((row, i) => (
             <motion.div
@@ -1547,12 +1547,12 @@ function ScrollFeatures() {
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     const idx = Math.min(visuals.length - 1, Math.floor(latest * visuals.length));
     setActiveIndex(idx);
-    setShowScrollHint(latest < 0.88);
+    setShowScrollHint(idx < visuals.length - 1);
   });
 
   return (
     <section ref={containerRef} className="relative bg-sand/50" style={{ height: `${visuals.length * 100}vh` }}>
-      {/* Left edge accent — visible vertical rail with green tint */}
+      {/* Left edge accent - visible vertical rail with green tint */}
       <div className="absolute top-0 left-[6%] w-[2px] h-full bg-gradient-to-b from-green/8 via-green/12 to-green/4 pointer-events-none hidden lg:block" />
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 w-full">
@@ -1564,10 +1564,17 @@ function ScrollFeatures() {
                 <span className="text-lg text-muted font-light">/</span>
                 <span className="text-lg text-muted font-light">{visuals.length}</span>
               </div>
-              <div className="flex items-center gap-2 mb-10">
-                {visuals.map((_, i) => (
-                  <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === activeIndex ? "w-8 bg-green" : i < activeIndex ? "w-3 bg-green/30" : "w-3 bg-line"}`} />
-                ))}
+              <div className="flex flex-col gap-2 mb-10">
+                <div className="flex items-center gap-2">
+                  {visuals.map((_, i) => (
+                    <div key={i} className={`h-1.5 rounded-full transition-all duration-500 ${i === activeIndex ? "w-8 bg-green" : i < activeIndex ? "w-3 bg-green/35" : "w-3 bg-line"}`} />
+                  ))}
+                </div>
+                <p className="text-[11px] text-muted/60 tracking-wide">
+                  {locale === "fr"
+                    ? `Fonctionnalité ${activeIndex + 1} sur ${visuals.length} - défilez pour explorer`
+                    : `Feature ${activeIndex + 1} of ${visuals.length} - scroll to explore`}
+                </p>
               </div>
               <motion.div key={activeIndex} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}>
                 <h3 className="font-display text-3xl md:text-4xl text-green mb-4 leading-tight">{featureItems[activeIndex]?.title}</h3>
@@ -1585,27 +1592,128 @@ function ScrollFeatures() {
           </div>
         </div>
 
-        {/* Scroll hint — bouncing arrow, fades once user starts scrolling */}
+        {/* Bottom gradient - visual cue that more content exists below */}
+        <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-sand/80 via-sand/40 to-transparent pointer-events-none" />
+
+        {/* Scroll hint - prominent pill + animated arrows */}
         <AnimatePresence>
           {showScrollHint && (
             <motion.div
-              initial={{ opacity: 0, y: 8 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 4 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 pointer-events-none select-none"
+              exit={{ opacity: 0, y: 8, transition: { duration: 0.3 } }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2.5 pointer-events-none select-none z-10"
             >
-              <span className="text-[11px] font-medium text-muted/70 tracking-wider uppercase">
-                {locale === "fr" ? "Défiler" : "Scroll"}
-              </span>
+              {/* Pill */}
               <motion.div
-                animate={{ y: [0, 7, 0] }}
-                transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/95 border border-line/60 shadow-[0_2px_16px_rgba(0,0,0,0.08)]"
+                animate={{
+                  y: [0, -3, 0],
+                  boxShadow: [
+                    "0 2px 16px rgba(0,0,0,0.06)",
+                    "0 6px 24px rgba(0,129,74,0.14)",
+                    "0 2px 16px rgba(0,0,0,0.06)",
+                  ],
+                }}
+                transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
               >
-                <svg className="w-5 h-5 text-muted/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
+                {/* Mouse icon */}
+                <div className="relative w-3.5 h-5 rounded-full border-[1.5px] border-green/70 flex justify-center shrink-0">
+                  <motion.div
+                    className="absolute top-1 w-0.5 h-1.5 bg-green rounded-full"
+                    animate={{ y: [0, 6, 0], opacity: [1, 0.2, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                </div>
+
+                <span className="w-px h-3.5 bg-line/80 shrink-0" />
+
+                <span className="text-[12px] font-medium text-ink/80 whitespace-nowrap">
+                  {locale === "fr"
+                    ? `${visuals.length - activeIndex - 1} fonctionnalité${visuals.length - activeIndex - 1 > 1 ? "s" : ""} restante${visuals.length - activeIndex - 1 > 1 ? "s" : ""}`
+                    : `${visuals.length - activeIndex - 1} feature${visuals.length - activeIndex - 1 > 1 ? "s" : ""} remaining`}
+                </span>
+
+                <span className="w-px h-3.5 bg-line/80 shrink-0" />
+
+                <span className="text-[12px] text-muted/70 whitespace-nowrap">
+                  {locale === "fr" ? "Défilez" : "Scroll"}
+                </span>
               </motion.div>
+
+              {/* Cascading chevrons */}
+              <div className="flex flex-col items-center gap-0.5">
+                {[0, 1, 2].map((i) => (
+                  <motion.svg
+                    key={i}
+                    width="16"
+                    height="9"
+                    viewBox="0 0 16 9"
+                    fill="none"
+                    className="text-green/60"
+                    animate={{ opacity: [0.2, 0.9, 0.2], y: [0, 3, 0] }}
+                    transition={{ duration: 1.3, repeat: Infinity, ease: "easeInOut", delay: i * 0.18 }}
+                  >
+                    <path d="M1 1L8 7.5L15 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </motion.svg>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Last feature - "continue" hint for the rest of the page */}
+        <AnimatePresence>
+          {activeIndex === visuals.length - 1 && (
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 8, transition: { duration: 0.3 } }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2.5 pointer-events-none select-none z-10"
+            >
+              <motion.div
+                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/95 border border-line/60 shadow-[0_2px_16px_rgba(0,0,0,0.08)]"
+                animate={{
+                  y: [0, -3, 0],
+                  boxShadow: [
+                    "0 2px 16px rgba(0,0,0,0.06)",
+                    "0 6px 24px rgba(0,129,74,0.14)",
+                    "0 2px 16px rgba(0,0,0,0.06)",
+                  ],
+                }}
+                transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="relative w-3.5 h-5 rounded-full border-[1.5px] border-green/70 flex justify-center shrink-0">
+                  <motion.div
+                    className="absolute top-1 w-0.5 h-1.5 bg-green rounded-full"
+                    animate={{ y: [0, 6, 0], opacity: [1, 0.2, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                </div>
+                <span className="w-px h-3.5 bg-line/80 shrink-0" />
+                <span className="text-[12px] font-medium text-ink/80 whitespace-nowrap">
+                  {locale === "fr" ? "Continuer" : "Continue"}
+                </span>
+                <span className="w-px h-3.5 bg-line/80 shrink-0" />
+                <span className="text-[12px] text-muted/70 whitespace-nowrap">
+                  {locale === "fr" ? "Défilez" : "Scroll"}
+                </span>
+              </motion.div>
+              <div className="flex flex-col items-center gap-0.5">
+                {[0, 1, 2].map((i) => (
+                  <motion.svg
+                    key={i}
+                    width="16" height="9" viewBox="0 0 16 9" fill="none"
+                    className="text-green/60"
+                    animate={{ opacity: [0.2, 0.9, 0.2], y: [0, 3, 0] }}
+                    transition={{ duration: 1.3, repeat: Infinity, ease: "easeInOut", delay: i * 0.18 }}
+                  >
+                    <path d="M1 1L8 7.5L15 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </motion.svg>
+                ))}
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -1619,7 +1727,7 @@ function ScrollFeatures() {
    ================================================================ */
 
 function HeroDashboardVisual() {
-  /* ── Lightweight animated dashboard for the hero — clean looping anims ── */
+  /* ── Lightweight animated dashboard for the hero - clean looping anims ── */
   const barHeights = [38, 58, 44, 72, 52, 68, 82, 48, 74, 64, 42, 88, 56, 78, 46, 62];
   const barHeights2 = [62, 42, 78, 48, 82, 54, 38, 72, 58, 68, 86, 44, 74, 50, 66, 40];
 
@@ -1639,7 +1747,7 @@ function HeroDashboardVisual() {
 
       {/* ─ Dashboard body ─ */}
       <div className="flex">
-        {/* Sidebar — hidden on mobile */}
+        {/* Sidebar - hidden on mobile */}
         <div className="hidden md:flex flex-col w-44 lg:w-48 border-r border-line/50 bg-sand/20 py-4 px-3 shrink-0">
           <div className="flex items-center gap-2 mb-6 px-1">
             <div className="w-6 h-6 rounded-lg bg-green/15 flex items-center justify-center">
@@ -1757,7 +1865,7 @@ function HeroDashboardVisual() {
               </div>
             </div>
 
-            {/* Side panel — Alertes + Score gauge */}
+            {/* Side panel - Alertes + Score gauge */}
             <div className="sm:col-span-2 space-y-3 sm:space-y-4">
               {/* Score gauge */}
               <div className="rounded-xl border border-line/40 bg-white p-3 flex items-center gap-3">
@@ -1839,15 +1947,15 @@ function HeroSection() {
     <section className="relative -mt-16 pt-40 md:pt-48 overflow-hidden">
       {/* ─ Background decorative shapes ─ */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Large sweeping arcs — creates depth and visual pull */}
+        {/* Large sweeping arcs - creates depth and visual pull */}
         <svg className="absolute -right-[15%] -top-[10%] w-[80%] h-[120%] opacity-[0.05]" viewBox="0 0 800 800" fill="none">
           <circle cx="400" cy="400" r="380" stroke="#1B3A2D" strokeWidth="1.2" />
           <circle cx="400" cy="400" r="300" stroke="#1B3A2D" strokeWidth="0.8" />
           <circle cx="400" cy="400" r="220" stroke="#1B3A2D" strokeWidth="0.5" />
         </svg>
-        {/* Soft green ambient — top right */}
+        {/* Soft green ambient - top right */}
         <div className="absolute -top-[200px] -right-[200px] w-[700px] h-[700px] rounded-full bg-green/[0.05]" />
-        {/* Warm accent — bottom left */}
+        {/* Warm accent - bottom left */}
         <div className="absolute bottom-0 -left-[100px] w-[400px] h-[400px] rounded-full bg-orange/[0.05]" />
         {/* Warm gradient towards bottom */}
         <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-orange/[0.05] via-orange/[0.025] to-transparent" />
@@ -1861,7 +1969,7 @@ function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {/* ─ Split hero: headline left, subtitle + CTA right ─ */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-16 mb-10 md:mb-16">
-          {/* LEFT — Headline */}
+          {/* LEFT - Headline */}
           <div className="lg:max-w-[58%] flex-shrink-0">
             <motion.p
               className="text-green text-xs sm:text-sm font-semibold tracking-widest uppercase mb-5 sm:mb-6"
@@ -1883,7 +1991,7 @@ function HeroSection() {
             </motion.h1>
           </div>
 
-          {/* RIGHT — Subtitle + CTA, bottom-aligned with headline */}
+          {/* RIGHT - Subtitle + CTA, bottom-aligned with headline */}
           <motion.div
             className="lg:max-w-[38%] lg:pb-1"
             initial={{ opacity: 0, y: 16 }}
@@ -1924,7 +2032,7 @@ function HeroSection() {
         >
           <HeroDashboardVisual />
 
-          {/* Bottom fade — warm gradient to blend with page */}
+          {/* Bottom fade - warm gradient to blend with page */}
           <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
         </motion.div>
       </div>
@@ -1953,7 +2061,7 @@ function TrustStrip() {
     {
       icon: <svg width="26" height="26" viewBox="0 0 120 120" fill="currentColor"><path d="M60 0C26.86 0 0 26.86 0 60s26.86 60 60 60 60-26.86 60-60S93.14 0 60 0zm0 10c27.61 0 50 22.39 50 50S87.61 110 60 110 10 87.61 10 60 32.39 10 60 10zm-8 25v50l40-25-40-25z"/></svg>,
       label: locale === "fr" ? "Hébergé Scaleway" : "Hosted on Scaleway",
-      sub: locale === "fr" ? "Souveraineté des données 🇫🇷" : "Data sovereignty 🇫🇷",
+      sub: locale === "fr" ? "Souveraineté des données " : "Data sovereignty ",
     },
   ];
   return (
@@ -2019,7 +2127,7 @@ function ProblemSection() {
   return (
     <section className="py-24 md:py-36 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-line" />
-      {/* Large atmospheric arc — right side */}
+      {/* Large atmospheric arc - right side */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <svg className="absolute -right-[25%] top-[10%] w-[70%] h-[90%] opacity-[0.025]" viewBox="0 0 600 600" fill="none">
           <circle cx="300" cy="300" r="280" stroke="#E8752A" strokeWidth="1" />
@@ -2134,7 +2242,7 @@ function SolutionSection() {
 
   return (
     <section className="py-24 md:py-36 bg-sand/40 relative overflow-hidden">
-      {/* Large soft circle — creates spatial depth */}
+      {/* Large soft circle - creates spatial depth */}
       <div className="absolute -left-[15%] top-[20%] w-[500px] h-[500px] rounded-full bg-green/[0.02] pointer-events-none" />
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
@@ -2245,12 +2353,12 @@ function StatsSection() {
   return (
     <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Bold sweeping arc — premium feel */}
+        {/* Bold sweeping arc - premium feel */}
         <svg className="absolute -left-[20%] -top-[30%] w-[90%] h-[160%] opacity-[0.06]" viewBox="0 0 800 800" fill="none">
           <circle cx="400" cy="400" r="380" stroke="white" strokeWidth="0.8" />
           <circle cx="400" cy="400" r="320" stroke="white" strokeWidth="0.5" />
         </svg>
-        {/* Subtle green glow — top right */}
+        {/* Subtle green glow - top right */}
         <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-green/8 blur-[100px]" />
       </div>
       <div className="relative max-w-6xl mx-auto px-6">
@@ -2279,7 +2387,7 @@ function AudienceSection() {
 
   return (
     <section className="py-24 md:py-36 relative overflow-hidden">
-      {/* Large atmospheric circle — top right, creates spatial depth */}
+      {/* Large atmospheric circle - top right, creates spatial depth */}
       <div className="absolute -top-[15%] -right-[10%] w-[600px] h-[600px] rounded-full bg-sand/70 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-6">
         <FadeIn className="max-w-2xl mb-16">
@@ -2310,7 +2418,7 @@ function AudienceSection() {
             </div>
           </FadeIn>
           <div className="flex flex-col gap-3">
-            {/* Selector label — communicates "pick your profile" */}
+            {/* Selector label - communicates "pick your profile" */}
             <div className="flex items-center justify-between mb-2 px-1">
               <span className="text-xs font-semibold text-forest/60 tracking-widest uppercase">
                 {locale === "fr" ? "Quel est votre profil ?" : "What's your profile?"}
@@ -2418,7 +2526,7 @@ function FinalCTA() {
       <div className="absolute inset-0 bg-forest" />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-[20%] -right-[5%] w-[60%] h-[140%] bg-gradient-to-br from-green/15 to-transparent rotate-[12deg] origin-top-right" />
-        {/* Large concentric arcs — premium, confident */}
+        {/* Large concentric arcs - premium, confident */}
         <svg className="absolute -bottom-[30%] -left-[15%] w-[80%] h-[130%] opacity-[0.05]" viewBox="0 0 800 800" fill="none">
           <circle cx="400" cy="400" r="380" stroke="white" strokeWidth="0.8" />
           <circle cx="400" cy="400" r="310" stroke="white" strokeWidth="0.5" />

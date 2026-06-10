@@ -43,7 +43,7 @@ const icons = {
 };
 
 /* ================================================================
-   HERO VISUAL — Floating legal documents
+   HERO VISUAL - Floating legal documents
    ================================================================ */
 
 function HeroVisual() {
@@ -157,10 +157,410 @@ function SectionContent({
 }
 
 /* ================================================================
+   PRIVACY CONTENT - rich renderer
+   ================================================================ */
+
+function renderText(text: string): React.ReactNode {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  if (parts.length === 1) return text;
+  return (
+    <>
+      {parts.map((part, i) =>
+        i % 2 === 1 ? (
+          <strong key={i} className="font-semibold text-forest">
+            {part}
+          </strong>
+        ) : (
+          part
+        )
+      )}
+    </>
+  );
+}
+
+function PrivacyTable({ headers, rows }: { headers: string[]; rows: string[][] }) {
+  return (
+    <div className="overflow-x-auto mt-4 rounded-xl border border-line">
+      <table className="w-full text-sm border-collapse">
+        <thead>
+          <tr className="bg-green/5">
+            {headers.map((h, i) => (
+              <th key={i} className="text-left px-4 py-3 font-semibold text-forest border-b border-line">
+                {renderText(h)}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, ri) => (
+            <tr key={ri} className={ri % 2 === 0 ? "bg-white" : "bg-sand/30"}>
+              {row.map((cell, ci) => (
+                <td key={ci} className="px-4 py-3 text-muted border-b border-line/50 align-top leading-relaxed">
+                  {renderText(cell)}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function PrivacyNote({ text }: { text: string }) {
+  return (
+    <div className="mt-4 p-4 rounded-xl bg-green-light/30 border-l-4 border-green/40">
+      <p className="text-sm text-forest leading-relaxed">{renderText(text)}</p>
+    </div>
+  );
+}
+
+function PrivacyInfoCard({ lines }: { lines: string[] }) {
+  return (
+    <div className="my-4 p-4 rounded-xl bg-sand/60 border border-line space-y-1">
+      {lines.map((line, i) => (
+        <p key={i} className={`text-sm leading-relaxed ${i === 0 ? "font-semibold text-forest" : "text-muted"}`}>
+          {renderText(line)}
+        </p>
+      ))}
+    </div>
+  );
+}
+
+type PrivacySubsectionData = {
+  title: string;
+  intro?: string;
+  paragraphs?: string[];
+  list?: string[];
+  table?: { headers: string[]; rows: string[][] };
+  note?: string;
+  subgroups?: { label: string; list: string[] }[];
+  contactCard?: string[];
+  paragraphsAfter?: string[];
+  labeledParagraphs?: { label: string; text: string }[];
+};
+
+/* ── Legal Notice types ─────────────────────────────────────────── */
+
+type LegalSubsectionData = {
+  title?: string;
+  intro?: string;
+  paragraphs?: string[];
+  list?: string[];
+  numberedList?: string[];
+  subgroups?: { label: string; list: string[] }[];
+  labeledBlocks?: { label: string; text: string }[];
+  table?: { headers: string[]; rows: string[][] };
+  note?: string;
+  warning?: string;
+  infoCard?: string[];
+  contactCard?: string[];
+  paragraphsAfter?: string[];
+};
+
+type LegalArticleData = {
+  title: string;
+  intro?: string;
+  paragraphs?: string[];
+  list?: string[];
+  note?: string;
+  warning?: string;
+  infoCard?: string[];
+  table?: { headers: string[]; rows: string[][] };
+  subsections?: LegalSubsectionData[];
+  paragraphsAfter?: string[];
+  labeledBlocks?: { label: string; text: string }[];
+  footer?: string;
+};
+
+type PrivacySectionData = {
+  title: string;
+  intro?: string;
+  paragraphs?: string[];
+  responsibleLabel?: string;
+  responsibleCard?: string[];
+  paragraphsAfter?: string[];
+  subsections?: PrivacySubsectionData[];
+  note?: string;
+  table?: { headers: string[]; rows: string[][] };
+  contactBlocks?: { label: string; intro?: string; card?: string[]; outro?: string }[];
+};
+
+function PrivacySectionBlock({ section }: { section: PrivacySectionData }) {
+  return (
+    <div className="relative pl-6 border-l-2 border-green/20">
+      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-green-light border-2 border-green/30" />
+      <h3 className="font-display text-xl text-forest mb-4">{section.title}</h3>
+
+      {section.intro && (
+        <p className="text-sm text-muted leading-relaxed mb-4">{renderText(section.intro)}</p>
+      )}
+
+      {section.paragraphs?.map((p, i) => (
+        <p key={i} className="text-sm text-muted leading-relaxed mb-3">{renderText(p)}</p>
+      ))}
+
+      {section.responsibleLabel && (
+        <p className="text-sm font-semibold text-forest mt-4 mb-1">{section.responsibleLabel}</p>
+      )}
+      {section.responsibleCard && <PrivacyInfoCard lines={section.responsibleCard} />}
+
+      {section.paragraphsAfter?.map((p, i) => (
+        <p key={i} className="text-sm text-muted leading-relaxed mt-3">{renderText(p)}</p>
+      ))}
+
+      {section.table && (
+        <PrivacyTable headers={section.table.headers} rows={section.table.rows} />
+      )}
+
+      {section.subsections && section.subsections.length > 0 && (
+        <div className="mt-4 space-y-5">
+          {section.subsections.map((sub, i) => (
+            <div key={i} className="bg-sand/30 rounded-xl p-5">
+              <h4 className="font-display text-base font-semibold text-forest mb-3">{sub.title}</h4>
+
+              {sub.intro && (
+                <p className="text-sm text-muted leading-relaxed mb-3">{renderText(sub.intro)}</p>
+              )}
+
+              {sub.paragraphs?.map((p, j) => (
+                <p key={j} className="text-sm text-muted leading-relaxed mb-2">{renderText(p)}</p>
+              ))}
+
+              {sub.list && (
+                <ul className="space-y-2 mt-2">
+                  {sub.list.map((item, j) => (
+                    <li key={j} className="flex items-start gap-2.5 text-sm text-muted">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-green shrink-0" />
+                      <span className="leading-relaxed">{renderText(item)}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {sub.subgroups?.map((sg, j) => (
+                <div key={j} className="mt-4">
+                  <p className="text-sm font-semibold text-forest mb-2">{sg.label}</p>
+                  <ul className="space-y-2">
+                    {sg.list.map((item, k) => (
+                      <li key={k} className="flex items-start gap-2.5 text-sm text-muted">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-green shrink-0" />
+                        <span className="leading-relaxed">{renderText(item)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+
+              {sub.table && (
+                <PrivacyTable headers={sub.table.headers} rows={sub.table.rows} />
+              )}
+
+              {sub.note && <PrivacyNote text={sub.note} />}
+
+              {sub.labeledParagraphs?.map((lp, j) => (
+                <div key={j} className="mt-3">
+                  <p className="text-sm font-semibold text-forest mb-1">{lp.label}</p>
+                  <p className="text-sm text-muted leading-relaxed">{renderText(lp.text)}</p>
+                </div>
+              ))}
+
+              {sub.contactCard && <PrivacyInfoCard lines={sub.contactCard} />}
+
+              {sub.paragraphsAfter?.map((p, j) => (
+                <p key={j} className="text-sm text-muted leading-relaxed mt-3">{renderText(p)}</p>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {section.note && <PrivacyNote text={section.note} />}
+
+      {section.contactBlocks?.map((cb, i) => (
+        <div key={i} className="mt-6">
+          <p className="text-sm font-semibold text-forest mb-2">{cb.label}</p>
+          {cb.intro && (
+            <p className="text-sm text-muted leading-relaxed mb-3">{renderText(cb.intro)}</p>
+          )}
+          {cb.card && <PrivacyInfoCard lines={cb.card} />}
+          {cb.outro && (
+            <p className="text-sm text-muted leading-relaxed mt-3">{renderText(cb.outro)}</p>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ================================================================
+   LEGAL NOTICE COMPONENTS
+   ================================================================ */
+
+function LegalWarning({ text }: { text: string }) {
+  return (
+    <div className="mt-4 p-4 rounded-xl bg-orange/5 border-l-4 border-orange/40">
+      <div className="flex items-start gap-2.5">
+        <svg className="w-4 h-4 text-orange mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+        </svg>
+        <p className="text-sm text-forest leading-relaxed">{renderText(text)}</p>
+      </div>
+    </div>
+  );
+}
+
+function LegalInfoCard({ lines }: { lines: string[] }) {
+  return (
+    <div className="my-4 p-4 rounded-xl bg-sand/60 border border-line space-y-1">
+      {lines.map((line, i) => (
+        <p key={i} className={`text-sm leading-relaxed ${i === 0 ? "font-semibold text-forest" : "text-muted"}`}>
+          {renderText(line)}
+        </p>
+      ))}
+    </div>
+  );
+}
+
+function LegalSubsectionBlock({ sub }: { sub: LegalSubsectionData }) {
+  return (
+    <div className="bg-sand/30 rounded-xl p-5">
+      {sub.title && (
+        <h4 className="font-display text-base font-semibold text-forest mb-3">{sub.title}</h4>
+      )}
+
+      {sub.intro && (
+        <p className="text-sm text-muted leading-relaxed mb-3">{renderText(sub.intro)}</p>
+      )}
+
+      {sub.paragraphs?.map((p, j) => (
+        <p key={j} className="text-sm text-muted leading-relaxed mb-2">{renderText(p)}</p>
+      ))}
+
+      {sub.list && (
+        <ul className="space-y-2 mt-2">
+          {sub.list.map((item, j) => (
+            <li key={j} className="flex items-start gap-2.5 text-sm text-muted">
+              <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-green shrink-0" />
+              <span className="leading-relaxed">{renderText(item)}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {sub.numberedList && (
+        <ol className="space-y-2 mt-2 list-none">
+          {sub.numberedList.map((item, j) => (
+            <li key={j} className="flex items-start gap-2.5 text-sm text-muted">
+              <span className="mt-0.5 font-semibold text-forest shrink-0 min-w-[1.25rem]">{j + 1}.</span>
+              <span className="leading-relaxed">{renderText(item)}</span>
+            </li>
+          ))}
+        </ol>
+      )}
+
+      {sub.subgroups?.map((sg, j) => (
+        <div key={j} className="mt-4">
+          <p className="text-sm font-semibold text-forest mb-2">{sg.label}</p>
+          <ul className="space-y-2">
+            {sg.list.map((item, k) => (
+              <li key={k} className="flex items-start gap-2.5 text-sm text-muted">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-green shrink-0" />
+                <span className="leading-relaxed">{renderText(item)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      {sub.labeledBlocks?.map((lb, j) => (
+        <div key={j} className="mt-3">
+          <p className="text-sm font-semibold text-forest mb-1">{renderText(lb.label)}</p>
+          <p className="text-sm text-muted leading-relaxed whitespace-pre-line">{renderText(lb.text)}</p>
+        </div>
+      ))}
+
+      {sub.table && (
+        <PrivacyTable headers={sub.table.headers} rows={sub.table.rows} />
+      )}
+
+      {sub.note && <PrivacyNote text={sub.note} />}
+      {sub.warning && <LegalWarning text={sub.warning} />}
+
+      {sub.infoCard && <LegalInfoCard lines={sub.infoCard} />}
+      {sub.contactCard && <PrivacyInfoCard lines={sub.contactCard} />}
+
+      {sub.paragraphsAfter?.map((p, j) => (
+        <p key={j} className="text-sm text-muted leading-relaxed mt-3">{renderText(p)}</p>
+      ))}
+    </div>
+  );
+}
+
+function LegalArticleBlock({ article }: { article: LegalArticleData }) {
+  return (
+    <div className="relative pl-6 border-l-2 border-green/20">
+      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-green-light border-2 border-green/30" />
+      <h3 className="font-display text-xl text-forest mb-4">{article.title}</h3>
+
+      {article.intro && (
+        <p className="text-sm text-muted leading-relaxed mb-4">{renderText(article.intro)}</p>
+      )}
+
+      {article.paragraphs?.map((p, i) => (
+        <p key={i} className="text-sm text-muted leading-relaxed mb-3">{renderText(p)}</p>
+      ))}
+
+      {article.list && (
+        <ul className="space-y-2 mt-2 mb-4">
+          {article.list.map((item, i) => (
+            <li key={i} className="flex items-start gap-2.5 text-sm text-muted">
+              <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-green shrink-0" />
+              <span className="leading-relaxed">{renderText(item)}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {article.table && (
+        <PrivacyTable headers={article.table.headers} rows={article.table.rows} />
+      )}
+
+      {article.note && <PrivacyNote text={article.note} />}
+      {article.warning && <LegalWarning text={article.warning} />}
+      {article.infoCard && <LegalInfoCard lines={article.infoCard} />}
+
+      {article.subsections && article.subsections.length > 0 && (
+        <div className="mt-4 space-y-5">
+          {article.subsections.map((sub, i) => (
+            <LegalSubsectionBlock key={i} sub={sub} />
+          ))}
+        </div>
+      )}
+
+      {article.labeledBlocks?.map((lb, i) => (
+        <div key={i} className="mt-3">
+          <p className="text-sm font-semibold text-forest mb-1">{renderText(lb.label)}</p>
+          <p className="text-sm text-muted leading-relaxed whitespace-pre-line">{renderText(lb.text)}</p>
+        </div>
+      ))}
+
+      {article.paragraphsAfter?.map((p, i) => (
+        <p key={i} className="text-sm text-muted leading-relaxed mt-3">{renderText(p)}</p>
+      ))}
+
+      {article.footer && (
+        <p className="mt-8 text-xs text-muted/70 leading-relaxed italic border-t border-line pt-4">{article.footer}</p>
+      )}
+    </div>
+  );
+}
+
+/* ================================================================
    MAIN PAGE
    ================================================================ */
 
-type SectionKey = "legalNotice" | "terms" | "sales" | "privacy" | "cookies";
+type SectionKey = "legalNotice" | "terms" | "privacy" | "cookies";
 
 export default function LegalPage() {
   const { t, locale } = useDictionary();
@@ -170,7 +570,7 @@ export default function LegalPage() {
   const sections: { key: SectionKey; label: string; icon: keyof typeof icons }[] = [
     { key: "legalNotice", label: l.nav.legalNotice, icon: "legal" },
     { key: "terms", label: l.nav.terms, icon: "terms" },
-    { key: "sales", label: l.nav.sales, icon: "sales" },
+    // { key: "sales", label: l.nav.sales, icon: "sales" }, // CGV - désactivé temporairement
     { key: "privacy", label: l.nav.privacy, icon: "privacy" },
     { key: "cookies", label: l.nav.cookies, icon: "cookies" },
   ];
@@ -179,17 +579,17 @@ export default function LegalPage() {
     <>
       {/* ─── HERO ─────────────────────────────────────────────── */}
       <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-        {/* Background — matching homepage hero style */}
+        {/* Background - matching homepage hero style */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Large sweeping arcs — creates depth and visual pull */}
+          {/* Large sweeping arcs - creates depth and visual pull */}
           <svg className="absolute -right-[15%] -top-[10%] w-[80%] h-[120%] opacity-[0.05]" viewBox="0 0 800 800" fill="none">
             <circle cx="400" cy="400" r="380" stroke="#1B3A2D" strokeWidth="1.2" />
             <circle cx="400" cy="400" r="300" stroke="#1B3A2D" strokeWidth="0.8" />
             <circle cx="400" cy="400" r="220" stroke="#1B3A2D" strokeWidth="0.5" />
           </svg>
-          {/* Soft green ambient — top right */}
+          {/* Soft green ambient - top right */}
           <div className="absolute -top-[200px] -right-[200px] w-[700px] h-[700px] rounded-full bg-green/[0.05]" />
-          {/* Warm accent — bottom left */}
+          {/* Warm accent - bottom left */}
           <div className="absolute bottom-0 -left-[100px] w-[400px] h-[400px] rounded-full bg-orange/[0.05]" />
           {/* Warm gradient towards bottom */}
           <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-orange/[0.05] via-orange/[0.025] to-transparent" />
@@ -241,7 +641,7 @@ export default function LegalPage() {
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            {l.lastUpdate}: 30 mars 2026
+            {l.lastUpdate}: {l.lastUpdateDate}
           </motion.div>
         </div>
       </section>
@@ -284,72 +684,17 @@ export default function LegalPage() {
               transition={{ duration: 0.5 }}
             >
               <SectionContent title={l.legalNotice.title}>
-                {/* Editor */}
-                <div className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-green-light/30 to-white border border-green/10">
-                  <h3 className="font-display text-xl text-forest mb-6 flex items-center gap-3">
-                    <span className="w-10 h-10 rounded-full bg-green/10 flex items-center justify-center">
-                      <svg className="w-5 h-5 text-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
-                      </svg>
-                    </span>
-                    {l.legalNotice.editor.title}
-                  </h3>
-                  <div className="grid gap-3 text-sm text-muted">
-                    <p className="font-semibold text-forest text-base">{l.legalNotice.editor.company}</p>
-                    <p>{l.legalNotice.editor.capital}</p>
-                    <p>{l.legalNotice.editor.rcs}</p>
-                    <p>{l.legalNotice.editor.siret}</p>
-                    <p>{l.legalNotice.editor.vat}</p>
-                    <p>{l.legalNotice.editor.address}</p>
-                    <p>{l.legalNotice.editor.phone}</p>
-                    <p>{l.legalNotice.editor.email}</p>
-                    <p>{l.legalNotice.editor.director}</p>
-                  </div>
-                </div>
-
-                {/* Hosting */}
-                <div className="mb-12 p-8 rounded-2xl bg-sand/50 border border-line">
-                  <h3 className="font-display text-xl text-forest mb-6 flex items-center gap-3">
-                    <span className="w-10 h-10 rounded-full bg-orange/10 flex items-center justify-center">
-                      <svg className="w-5 h-5 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 17.25v-.228a4.5 4.5 0 00-.12-1.03l-2.268-9.64a3.375 3.375 0 00-3.285-2.602H7.923a3.375 3.375 0 00-3.285 2.602l-2.268 9.64a4.5 4.5 0 00-.12 1.03v.228m19.5 0a3 3 0 01-3 3H5.25a3 3 0 01-3-3m19.5 0a3 3 0 00-3-3H5.25a3 3 0 00-3 3m16.5 0h.008v.008h-.008v-.008zm-3 0h.008v.008h-.008v-.008z" />
-                      </svg>
-                    </span>
-                    {l.legalNotice.hosting.title}
-                  </h3>
-                  <div className="grid gap-3 text-sm text-muted">
-                    <p className="font-semibold text-forest text-base">{l.legalNotice.hosting.company}</p>
-                    <p>{l.legalNotice.hosting.address}</p>
-                    <p className="flex items-center gap-2">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-light text-green text-xs font-semibold">
-                        🇫🇷 {l.legalNotice.hosting.location}
-                      </span>
-                    </p>
-                    <p className="mt-4 p-4 rounded-xl bg-green-light/40 text-forest text-sm leading-relaxed">
-                      {l.legalNotice.hosting.note}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Intellectual Property */}
-                <div className="p-8 rounded-2xl bg-white border border-line shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
-                  <h3 className="font-display text-xl text-forest mb-6 flex items-center gap-3">
-                    <span className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center">
-                      <svg className="w-5 h-5 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                      </svg>
-                    </span>
-                    {l.legalNotice.intellectual.title}
-                  </h3>
-                  <p className="text-sm text-muted leading-relaxed">
-                    {l.legalNotice.intellectual.content}
-                  </p>
+                {/* Articles */}
+                <div className="space-y-10">
+                  {l.legalNotice.articles.map((article: LegalArticleData, i: number) => (
+                    <LegalArticleBlock key={i} article={article} />
+                  ))}
                 </div>
               </SectionContent>
             </motion.div>
           )}
 
-          {/* Terms Section */}
+          {/* Terms (CGU) Section */}
           {activeSection === "terms" && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -357,23 +702,36 @@ export default function LegalPage() {
               transition={{ duration: 0.5 }}
             >
               <SectionContent title={l.terms.title}>
-                <div className="space-y-8">
-                  {l.terms.sections.map((section: { title: string; content: string }, i: number) => (
-                    <div
-                      key={i}
-                      className="relative pl-6 border-l-2 border-green/20"
-                    >
-                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-green-light border-2 border-green/30" />
-                      <h3 className="font-display text-lg text-forest mb-3">{section.title}</h3>
-                      <p className="text-sm text-muted leading-relaxed">{section.content}</p>
-                    </div>
+
+                {/* Articles */}
+                <div className="space-y-10">
+                  {l.terms.articles.map((article: LegalArticleData, i: number) => (
+                    <LegalArticleBlock key={i} article={article} />
                   ))}
                 </div>
+
+                {/* Documents connexes */}
+                {l.terms.relatedDocs && (
+                  <div className="mt-14 p-6 rounded-2xl bg-sand/40 border border-line">
+                    <h3 className="font-display text-lg text-forest mb-4">{l.terms.relatedDocs.title}</h3>
+                    <PrivacyTable
+                      headers={l.terms.relatedDocs.headers}
+                      rows={l.terms.relatedDocs.rows}
+                    />
+                  </div>
+                )}
+
+                {/* Footer note */}
+                {l.terms.footerNote && (
+                  <p className="mt-6 text-xs text-muted/70 leading-relaxed italic whitespace-pre-line">{renderText(l.terms.footerNote)}</p>
+                )}
+
               </SectionContent>
             </motion.div>
           )}
 
-          {/* Sales Section */}
+          {/* Sales (CGV) Section - commenté, pas encore disponible */}
+          {/*
           {activeSection === "sales" && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -383,10 +741,7 @@ export default function LegalPage() {
               <SectionContent title={l.sales.title}>
                 <div className="space-y-8">
                   {l.sales.sections.map((section: { title: string; content: string }, i: number) => (
-                    <div
-                      key={i}
-                      className="relative pl-6 border-l-2 border-orange/20"
-                    >
+                    <div key={i} className="relative pl-6 border-l-2 border-orange/20">
                       <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-orange-light border-2 border-orange/30" />
                       <h3 className="font-display text-lg text-forest mb-3">{section.title}</h3>
                       <p className="text-sm text-muted leading-relaxed">{section.content}</p>
@@ -396,6 +751,7 @@ export default function LegalPage() {
               </SectionContent>
             </motion.div>
           )}
+          */}
 
           {/* Privacy Section */}
           {activeSection === "privacy" && (
@@ -405,33 +761,28 @@ export default function LegalPage() {
               transition={{ duration: 0.5 }}
             >
               <SectionContent title={l.privacy.title}>
-                {/* Intro box */}
-                <div className="mb-10 p-6 rounded-2xl bg-gradient-to-br from-green-light/40 to-green-light/10 border border-green/10">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-green flex items-center justify-center shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-forest mb-1">RGPD Compliant</p>
-                      <p className="text-sm text-muted leading-relaxed">{l.privacy.intro}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-8">
-                  {l.privacy.sections.map((section: { title: string; content: string }, i: number) => (
-                    <div
-                      key={i}
-                      className="relative pl-6 border-l-2 border-green/20"
-                    >
-                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-green-light border-2 border-green/30" />
-                      <h3 className="font-display text-lg text-forest mb-3">{section.title}</h3>
-                      <p className="text-sm text-muted leading-relaxed">{section.content}</p>
-                    </div>
+                {/* Rich sections */}
+                <div className="space-y-10">
+                  {l.privacy.sections.map((section: PrivacySectionData, i: number) => (
+                    <PrivacySectionBlock key={i} section={section} />
                   ))}
                 </div>
+
+                {/* Documents connexes */}
+                {l.privacy.relatedDocs && (
+                  <div className="mt-14 p-6 rounded-2xl bg-sand/40 border border-line">
+                    <h3 className="font-display text-lg text-forest mb-4">{l.privacy.relatedDocs.title}</h3>
+                    <PrivacyTable
+                      headers={l.privacy.relatedDocs.headers}
+                      rows={l.privacy.relatedDocs.rows}
+                    />
+                  </div>
+                )}
+
+                {/* Footer note */}
+                {l.privacy.footerNote && (
+                  <p className="mt-6 text-xs text-muted/70 leading-relaxed italic">{l.privacy.footerNote}</p>
+                )}
 
                 {/* DPO Contact */}
                 <div className="mt-10 p-6 rounded-2xl bg-forest text-white">
@@ -443,7 +794,7 @@ export default function LegalPage() {
                     </div>
                     <div>
                       <p className="font-semibold">{l.privacy.dpoContact}</p>
-                      <p className="text-sm text-white/60">{locale === "fr" ? "Réponse sous 24h ouvrées" : "Response within 24 business hours"}</p>
+                      <p className="text-sm text-white/60">{locale === "fr" ? "Réponse sous 30 jours (Art. 12 RGPD)" : "Response within 30 days (Art. 12 GDPR)"}</p>
                     </div>
                   </div>
                 </div>
@@ -541,7 +892,7 @@ export default function LegalPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:rgpd@yumni.fr"
+                href="mailto:dpo@yumni.fr"
                 className="inline-flex items-center justify-center gap-2 bg-green text-white font-medium px-8 py-3.5 rounded-full text-sm shadow-[0_4px_20px_rgba(0,129,74,0.25)]"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

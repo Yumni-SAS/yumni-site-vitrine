@@ -2,11 +2,11 @@
  * Client R2 (S3-compatible) pour Cloudflare R2.
  *
  * Variables d'environnement requises (.env.local) :
- *   R2_ACCOUNT_ID        — ID de compte Cloudflare
- *   R2_ACCESS_KEY_ID     — Clé d'accès R2
- *   R2_SECRET_ACCESS_KEY — Clé secrète R2
- *   R2_BUCKET            — Nom du bucket
- *   R2_PUBLIC_URL        — URL publique du bucket (ex: https://assets.yumni.fr)
+ *   R2_ACCOUNT_ID        - ID de compte Cloudflare
+ *   R2_ACCESS_KEY_ID     - Clé d'accès R2
+ *   R2_SECRET_ACCESS_KEY - Clé secrète R2
+ *   R2_BUCKET            - Nom du bucket
+ *   R2_PUBLIC_URL        - URL publique du bucket (ex: https://assets.yumni.fr)
  *
  * Structure du bucket :
  *   articles/fr/<slug>.md       ← articles en français

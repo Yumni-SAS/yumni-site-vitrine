@@ -66,11 +66,11 @@ export async function POST(request: Request) {
       from: "Yumni Contact <onboarding@resend.dev>",
       to: ["contact@yumni.fr"],
       replyTo: email,
-      subject: `[Yumni Contact] ${type} — ${company}`,
+      subject: `[Yumni Contact] ${type} - ${company}`,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: #1B3A2D; padding: 32px; border-radius: 12px 12px 0 0;">
-            <h1 style="color: #fff; font-size: 20px; margin: 0;">Nouveau message — ${type}</h1>
+            <h1 style="color: #fff; font-size: 20px; margin: 0;">Nouveau message - ${type}</h1>
           </div>
           <div style="background: #fff; padding: 32px; border: 1px solid #E8E8E8; border-top: none; border-radius: 0 0 12px 12px;">
             <table style="width: 100%; border-collapse: collapse;">

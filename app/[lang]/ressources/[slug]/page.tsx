@@ -166,7 +166,7 @@ export default async function ArticleDetailPage({
               dangerouslySetInnerHTML={{ __html: article.contentHtml }}
             />
 
-            {/* Sidebar — sticky */}
+            {/* Sidebar - sticky */}
             <aside className="hidden lg:block">
               <div className="sticky top-24 space-y-6">
                 {/* Tags */}

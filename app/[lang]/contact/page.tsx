@@ -13,7 +13,7 @@ import { track } from "../../lib/analytics";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 /* ================================================================
-   UTILITY — Fade in on scroll
+   UTILITY - Fade in on scroll
    ================================================================ */
 
 function FadeIn({
@@ -60,7 +60,7 @@ function GlobeVisual() {
         <div className="w-32 h-32 bg-green/10 rounded-full blur-3xl" />
       </div>
 
-      {/* France dot — pulsing */}
+      {/* France dot - pulsing */}
       <div className="absolute top-[38%] left-[48%]">
         <div className="relative">
           <div className="w-3 h-3 bg-green rounded-full relative z-10" />
@@ -199,17 +199,17 @@ export default function ContactPage() {
     <>
       {/* ─── HERO ──────────────────────────────────────────── */}
       <section className="relative pt-32 pb-8 md:pt-44 md:pb-16 overflow-hidden">
-        {/* Background — matching homepage hero style */}
+        {/* Background - matching homepage hero style */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Large sweeping arcs — creates depth and visual pull */}
+          {/* Large sweeping arcs - creates depth and visual pull */}
           <svg className="absolute -right-[15%] -top-[10%] w-[80%] h-[120%] opacity-[0.05]" viewBox="0 0 800 800" fill="none">
             <circle cx="400" cy="400" r="380" stroke="#1B3A2D" strokeWidth="1.2" />
             <circle cx="400" cy="400" r="300" stroke="#1B3A2D" strokeWidth="0.8" />
             <circle cx="400" cy="400" r="220" stroke="#1B3A2D" strokeWidth="0.5" />
           </svg>
-          {/* Soft green ambient — top right */}
+          {/* Soft green ambient - top right */}
           <div className="absolute -top-[200px] -right-[200px] w-[700px] h-[700px] rounded-full bg-green/[0.05]" />
-          {/* Warm accent — bottom left */}
+          {/* Warm accent - bottom left */}
           <div className="absolute bottom-0 -left-[100px] w-[400px] h-[400px] rounded-full bg-orange/[0.05]" />
           {/* Warm gradient towards bottom */}
           <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-orange/[0.05] via-orange/[0.025] to-transparent" />

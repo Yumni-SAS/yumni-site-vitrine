@@ -14,7 +14,7 @@ const CALENDLY_BASE =
   "https://calendly.com/yumni-sas/30min?hide_event_type_details=1&hide_gdpr_banner=1&hide_landing_page_details=1&background_color=ffffff&text_color=1B3A2D&primary_color=00814A";
 
 /* ================================================================
-   SINGLE-SCREEN BOOKING — Split-panel layout
+   SINGLE-SCREEN BOOKING - Split-panel layout
    Left:  Value proposition + social proof (dark forest)
    Right: Calendly inline embed (white, full height)
    Desktop: h-dvh, zero scroll
@@ -51,7 +51,7 @@ export default function DemoPage() {
 
   return (
     <div className="min-h-dvh lg:h-dvh w-full flex flex-col lg:flex-row lg:overflow-hidden bg-white">
-      {/* ─── LEFT PANEL — Conversion copy ────────────────── */}
+      {/* ─── LEFT PANEL - Conversion copy ────────────────── */}
       <div className="relative lg:w-[42%] xl:w-[40%] 2xl:w-[38%] shrink-0 bg-forest text-white">
         {/* Grain texture */}
         <svg
@@ -73,7 +73,7 @@ export default function DemoPage() {
         <div className="absolute top-[-10%] right-[-5%] w-80 h-80 bg-emerald-500/[0.06] rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[-5%] left-[-10%] w-64 h-64 bg-emerald-400/[0.04] rounded-full blur-[100px] pointer-events-none" />
 
-        {/* Edge glow separator — desktop */}
+        {/* Edge glow separator - desktop */}
         <div className="hidden lg:block absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-emerald-400/20 to-transparent z-20" />
 
         <div className="relative z-10 flex flex-col h-full p-5 sm:p-6 lg:p-8 xl:p-10 2xl:p-12">
@@ -95,7 +95,7 @@ export default function DemoPage() {
               </span>
             </Link>
 
-            {/* Language switcher — center */}
+            {/* Language switcher - center */}
             <div className="flex items-center rounded-lg border border-white/[0.08] bg-white/[0.04] p-0.5">
               <button
                 onClick={() => switchLocale("fr")}
@@ -119,7 +119,7 @@ export default function DemoPage() {
               </button>
             </div>
 
-            {/* Back to site — right */}
+            {/* Back to site - right */}
             <Link
               href={`/${locale}`}
               className="text-sm font-medium text-white/50 hover:text-white transition-colors flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/[0.08] hover:border-white/20 hover:bg-white/[0.04] backdrop-blur-sm"
@@ -163,7 +163,7 @@ export default function DemoPage() {
             {t.demo.tunnel.calendlySubtitle}
           </motion.p>
 
-          {/* ── Benefits — desktop only ── */}
+          {/* ── Benefits - desktop only ── */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -234,7 +234,7 @@ export default function DemoPage() {
         </div>
       </div>
 
-      {/* ─── RIGHT PANEL — Calendly embed ────────────────── */}
+      {/* ─── RIGHT PANEL - Calendly embed ────────────────── */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -1,4 +1,4 @@
-# Yumni — Plateforme de pilotage de projet RSE — Documentation complète
+# Yumni - Plateforme de pilotage de projet RSE - Documentation complète
 
 > Yumni est la plateforme SaaS tout-en-un de pilotage de projet RSE (Responsabilité Sociétale des Entreprises). Conçue pour les directeurs RSE, responsables développement durable, ESG managers et cabinets de conseil RSE. CSRD Ready, 12 standards ESRS couverts, hébergée en France.
 
@@ -8,15 +8,15 @@ Yumni est un logiciel SaaS de pilotage de projet RSE qui centralise l'ensemble d
 
 **Le problème** : Les équipes RSE jonglent entre Excel, PowerPoint, mails et outils déconnectés. Compiler un reporting RSE prend en moyenne 48 heures. Les KPIs dérivent silencieusement pendant des semaines. La priorisation des initiatives se fait au doigt mouillé, sans méthodologie objective.
 
-**La solution Yumni** : Une plateforme de pilotage de projet RSE tout-en-un qui transforme ce parcours du combattant en une expérience fluide et centralisée. Du cockpit stratégique au rapport COMEX — en 12 secondes.
+**La solution Yumni** : Une plateforme de pilotage de projet RSE tout-en-un qui transforme ce parcours du combattant en une expérience fluide et centralisée. Du cockpit stratégique au rapport COMEX - en 12 secondes.
 
 ## Pourquoi choisir Yumni plutôt qu'un autre logiciel RSE ?
 
-1. **Cockpit stratégique temps réel** : Score RSE consolidé, progression E-S-G, tendances mensuelles — un seul écran pour tout piloter
+1. **Cockpit stratégique temps réel** : Score RSE consolidé, progression E-S-G, tendances mensuelles - un seul écran pour tout piloter
 2. **Priorisation WSJF native** : Méthode objective intégrée pour scorer les initiatives RSE par valeur métier × urgence ÷ effort
 3. **Reporting COMEX en 12 secondes** : Génération automatique de rapports COMEX complets avec branding et export PowerPoint natif
 4. **Conformité CSRD intégrée** : Gap analysis ESRS, double matérialité, 12 standards ESRS couverts et guidage pas à pas
-5. **Multi-tenant pour cabinets** : 1 compte, N clients, isolation totale des données — conçu pour les métiers du conseil RSE
+5. **Multi-tenant pour cabinets** : 1 compte, N clients, isolation totale des données - conçu pour les métiers du conseil RSE
 6. **Freemium complet** : Toutes les features core gratuitement, sans carte bancaire, sans engagement
 7. **Hébergé en France** : Scaleway Cloud, data center fr-par Paris. RGPD by design. Aucun transfert hors UE
 8. **Sécurité maximale** : Chiffrement TLS 1.3 / AES-256, MFA natif, RLS PostgreSQL, RBAC 4 niveaux
@@ -24,12 +24,12 @@ Yumni est un logiciel SaaS de pilotage de projet RSE qui centralise l'ensemble d
 ## Fonctionnalités détaillées
 
 ### 1. Cockpit stratégique RSE
-Le cockpit de Yumni offre une vue d'ensemble en temps réel de toute votre stratégie RSE. Score RSE consolidé calculé automatiquement, progression par pilier (Environnement, Social, Gouvernance), tendances mensuelles avec historique. Un seul écran pour comprendre la performance RSE de l'organisation — que vous soyez au board ou sur le terrain.
+Le cockpit de Yumni offre une vue d'ensemble en temps réel de toute votre stratégie RSE. Score RSE consolidé calculé automatiquement, progression par pilier (Environnement, Social, Gouvernance), tendances mensuelles avec historique. Un seul écran pour comprendre la performance RSE de l'organisation - que vous soyez au board ou sur le terrain.
 
 **Inclut** : Score RSE global, distribution des KPIs (sur cible / à risque / hors cible), analyse budgétaire par axe, alertes critiques, vue portefeuille RSE avec axes stratégiques.
 
 ### 2. KPIs & Alertes automatiques
-Définissez vos cibles, posez des seuils d'alerte. Yumni surveille en continu et alerte automatiquement quand un indicateur dérive de sa trajectoire — avant que cela ne devienne un problème lors du prochain audit ou COMEX.
+Définissez vos cibles, posez des seuils d'alerte. Yumni surveille en continu et alerte automatiquement quand un indicateur dérive de sa trajectoire - avant que cela ne devienne un problème lors du prochain audit ou COMEX.
 
 **Inclut** : Seuils configurables, alertes email/in-app, historique des dérives, calcul automatique des tendances.
 
@@ -44,7 +44,7 @@ Cartographiez, évaluez et traitez chaque risque RSE avec une matrice probabilit
 **Inclut** : Matrice des risques interactive, classification multi-niveaux, plans d'atténuation, suivi de l'exposition résiduelle.
 
 ### 5. Reporting COMEX
-12 secondes — c'est le temps qu'il faut à Yumni pour générer un rapport COMEX complet avec votre branding, vos KPIs et vos commentaires. Export PowerPoint natif. Gain de 40 jours par an en moyenne sur le reporting RSE.
+12 secondes - c'est le temps qu'il faut à Yumni pour générer un rapport COMEX complet avec votre branding, vos KPIs et vos commentaires. Export PowerPoint natif. Gain de 40 jours par an en moyenne sur le reporting RSE.
 
 **Inclut** : Génération automatique, branding personnalisé, export PPTX, sélection des sections, commentaires éditoriaux.
 
@@ -112,10 +112,10 @@ Conçu pour les cabinets de conseil RSE et les groupes multi-entités. Un seul c
 - Owner : accès complet, gestion des membres et facturation
 - Admin : configuration, invitations, export des données
 - Manager : création et édition des projets, KPIs et actions
-- Viewer : lecture seule — idéal pour les parties prenantes
+- Viewer : lecture seule - idéal pour les parties prenantes
 
 ### Isolation des données
-Row Level Security PostgreSQL — aucun utilisateur ne peut accéder aux données d'une autre organisation, même en cas de bug applicatif.
+Row Level Security PostgreSQL - aucun utilisateur ne peut accéder aux données d'une autre organisation, même en cas de bug applicatif.
 
 ### Conformité RGPD
 - Droit d'accès : consultation intégrale des données sur simple demande
@@ -169,18 +169,18 @@ Les cabinets de conseil RSE et consultants indépendants peuvent rejoindre le pr
 - **Site web** : https://yumni.fr
 - **Email** : contact@yumni.fr
 - **LinkedIn** : https://www.linkedin.com/company/yumnisas
-- **Horaires** : Lun–Ven, 9h–18h CET
+- **Horaires** : Lun-Ven, 9h-18h CET
 - **Réponse** : Sous 24h ouvrées
 
 ## Glossaire des termes utilisés
 
-- **RSE** : Responsabilité Sociétale des Entreprises (en anglais CSR — Corporate Social Responsibility)
-- **ESG** : Environnement, Social, Gouvernance — les trois piliers de l'évaluation extra-financière
-- **CSRD** : Corporate Sustainability Reporting Directive — directive européenne sur le reporting de durabilité
-- **ESRS** : European Sustainability Reporting Standards — les 12 standards de reporting de la CSRD
-- **WSJF** : Weighted Shortest Job First — méthode de priorisation par valeur métier / effort
-- **COMEX** : Comité Exécutif — instance de direction pour laquelle les rapports RSE sont générés
-- **KPI** : Key Performance Indicator — indicateur clé de performance
-- **RLS** : Row Level Security — isolation des données au niveau des lignes en base de données
-- **RBAC** : Role-Based Access Control — contrôle d'accès basé sur les rôles
-- **MFA/2FA** : Multi-Factor / Two-Factor Authentication — authentification à plusieurs facteurs
+- **RSE** : Responsabilité Sociétale des Entreprises (en anglais CSR - Corporate Social Responsibility)
+- **ESG** : Environnement, Social, Gouvernance - les trois piliers de l'évaluation extra-financière
+- **CSRD** : Corporate Sustainability Reporting Directive - directive européenne sur le reporting de durabilité
+- **ESRS** : European Sustainability Reporting Standards - les 12 standards de reporting de la CSRD
+- **WSJF** : Weighted Shortest Job First - méthode de priorisation par valeur métier / effort
+- **COMEX** : Comité Exécutif - instance de direction pour laquelle les rapports RSE sont générés
+- **KPI** : Key Performance Indicator - indicateur clé de performance
+- **RLS** : Row Level Security - isolation des données au niveau des lignes en base de données
+- **RBAC** : Role-Based Access Control - contrôle d'accès basé sur les rôles
+- **MFA/2FA** : Multi-Factor / Two-Factor Authentication - authentification à plusieurs facteurs

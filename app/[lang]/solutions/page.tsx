@@ -32,7 +32,7 @@ function FadeIn({
 }
 
 /* ================================================================
-   VISUAL — Cabinet
+   VISUAL - Cabinet
    Story : 1 consultant, N clients, chaque rapport en moins de 12 secondes
    ================================================================ */
 
@@ -61,7 +61,7 @@ function CabinetVisual() {
 
   return (
     <div className="w-full h-full flex flex-col gap-3 select-none">
-      {/* Top — stat */}
+      {/* Top - stat */}
       <div className="rounded-2xl bg-forest px-5 py-4 flex items-center justify-between">
         <div>
           <div className="text-[10px] font-bold tracking-widest uppercase text-white/40 mb-0.5">Rapports générés</div>
@@ -78,7 +78,7 @@ function CabinetVisual() {
         </div>
       </div>
 
-      {/* Client rows — reports being sent */}
+      {/* Client rows - reports being sent */}
       <div className="flex-1 rounded-2xl border border-line bg-white overflow-hidden divide-y divide-line/50">
         <div className="px-4 py-2.5 flex items-center justify-between bg-sand/40">
           <span className="text-[10px] font-bold text-muted uppercase tracking-wider">Clients</span>
@@ -131,7 +131,7 @@ function CabinetVisual() {
 }
 
 /* ================================================================
-   VISUAL — PME
+   VISUAL - PME
    Story : parcours de 0 à CSRD Ready en 4 étapes simples
    ================================================================ */
 
@@ -264,7 +264,7 @@ function PMEVisual() {
 }
 
 /* ================================================================
-   VISUAL — ETI
+   VISUAL - ETI
    Story : 1 direction, N filiales, données cloisonnées
    Org-tree illustrant la structure multi-entités
    ================================================================ */
@@ -413,7 +413,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.12, ease }}
           >
-            La CSRD s&rsquo;impose. Les obligations réglementaires s&rsquo;accumulent. Yumni structure votre pilotage RSE — quel que soit votre périmètre.
+            La CSRD s&rsquo;impose. Les obligations réglementaires s&rsquo;accumulent. Yumni structure votre pilotage RSE - quel que soit votre périmètre.
           </motion.p>
 
           {/* Persona anchors */}
@@ -472,7 +472,7 @@ function Hero() {
 }
 
 /* ================================================================
-   PERSONA ROW — alternating 2-col layout, inspired by produit
+   PERSONA ROW - alternating 2-col layout, inspired by produit
    ================================================================ */
 
 function PersonaRow({
@@ -512,10 +512,10 @@ function PersonaRow({
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div id={id} ref={ref} className={`${bg} relative overflow-hidden`}>
+    <div id={id} ref={ref} className={`${bg} relative overflow-hidden scroll-mt-24`}>
       <div className="relative max-w-7xl mx-auto px-6 pt-14 pb-16 md:pt-20 md:pb-24">
 
-        {/* Audience section header — full width */}
+        {/* Audience section header - full width */}
         <motion.div
           className="mb-12 md:mb-16"
           initial={{ opacity: 0, y: -12 }}
@@ -672,9 +672,15 @@ function FinalCTA() {
    ================================================================ */
 
 export default function SolutionsPage() {
-  // Scroll to top on page mount
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      setTimeout(() => {
+        document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    } else {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
   }, []);
 
   return (
@@ -688,9 +694,9 @@ export default function SolutionsPage() {
         eyebrow="Cabinets de conseil RSE"
         headline="Démultipliez l'impact de votre cabinet."
         headlineAccent=""
-        subtitle="Yumni est la plateforme de pilotage RSE que vous proposez à vos clients. Vous gardez le conseil et la relation — on vous donne l'outil. Vous passez de mission ponctuelle à partenariat technologique continu : la valeur perçue augmente, la récurrence aussi."
+        subtitle="Yumni est la plateforme de pilotage RSE que vous proposez à vos clients. Vous gardez le conseil et la relation - on vous donne l'outil. Vous passez de mission ponctuelle à partenariat technologique continu : la valeur perçue augmente, la récurrence aussi."
         bullets={[
-          "Un rapport généré en moins de 12 secondes — contre 2 jours de compilation Excel.",
+          "Un rapport généré en moins de 12 secondes - contre 2 jours de compilation Excel.",
           "Onboarding d'un nouveau client en moins de 5 minutes avec des templates pré-configurés.",
           "WSJF intégré : votre méthodologie devient un avantage concurrentiel que vous valorisez auprès de vos clients.",
         ]}
@@ -712,8 +718,8 @@ export default function SolutionsPage() {
         headlineAccent="Pilotée depuis votre direction."
         subtitle="La CSRD vous oblige à reporter. Structurez votre pilotage RSE sans projet long, sans recrutement dédié, et sans dépendre d'Excel. Yumni s'intègre à votre organisation existante."
         bullets={[
-          "Démarrez gratuitement. Montez en puissance à votre rythme — votre cabinet RSE reste votre allié stratégique.",
-          "Templates sectoriels pré-configurés — axes, objectifs, KPIs recommandés. Opérationnel en 2 minutes.",
+          "Démarrez gratuitement. Montez en puissance à votre rythme - votre cabinet RSE reste votre allié stratégique.",
+          "Templates sectoriels pré-configurés - axes, objectifs, KPIs recommandés. Opérationnel en 2 minutes.",
           "12 standards ESRS mappés automatiquement. Vos gaps identifiés en un écran avant votre audit.",
         ]}
         nudgeStat="−40j/an"
@@ -734,7 +740,7 @@ export default function SolutionsPage() {
         headlineAccent="Chaque filiale, chaque KPI, un seul cockpit."
         subtitle="Multi-sites, multi-filiales, multi-réglementations. Yumni consolide tout en temps réel, sécurise l'accès par entité, et génère votre rapport groupe en 1 clic."
         bullets={[
-          "Consolidation groupe en temps réel. Rapport COMEX groupe en 1 clic — format PowerPoint natif.",
+          "Consolidation groupe en temps réel. Rapport COMEX groupe en 1 clic - format PowerPoint natif.",
           "RBAC 4 niveaux : chaque entité accède uniquement à son périmètre. Isolation RLS PostgreSQL.",
           "MFA natif, hébergement Scaleway France, RGPD by design. Conformité non négociable pour vos DSI et DPO.",
         ]}

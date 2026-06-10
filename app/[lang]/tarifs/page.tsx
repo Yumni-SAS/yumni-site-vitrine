@@ -20,7 +20,7 @@ import { track } from "../../lib/analytics";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 /* ================================================================
-   UTILITY — Fade in on scroll
+   UTILITY - Fade in on scroll
    ================================================================ */
 
 function FadeIn({
@@ -48,7 +48,7 @@ function FadeIn({
 }
 
 /* ================================================================
-   UTILITY — Animated counter
+   UTILITY - Animated counter
    ================================================================ */
 
 function CountUp({
@@ -87,7 +87,7 @@ function CountUp({
 }
 
 /* ================================================================
-   TILT CARD — 3D perspective on hover
+   TILT CARD - 3D perspective on hover
    ================================================================ */
 
 function TiltCard({
@@ -248,7 +248,7 @@ function ROICalculator() {
 }
 
 /* ================================================================
-   FEATURE CHECK — comparison table cell
+   FEATURE CHECK - comparison table cell
    ================================================================ */
 
 function FeatureCheck({ value }: { value: boolean | string }) {

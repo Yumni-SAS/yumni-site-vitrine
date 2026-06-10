@@ -13,7 +13,7 @@ import { track } from "../../lib/analytics";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 /* ================================================================
-   HERO VISUAL — Trust constellation network
+   HERO VISUAL - Trust constellation network
    ================================================================ */
 
 function HeroVisual() {
@@ -247,17 +247,17 @@ export default function AboutPage() {
     <>
       {/* ─── HERO ─────────────────────────────────────────────── */}
       <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-        {/* Background — matching homepage hero style */}
+        {/* Background - matching homepage hero style */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Large sweeping arcs — creates depth and visual pull */}
+          {/* Large sweeping arcs - creates depth and visual pull */}
           <svg className="absolute -right-[15%] -top-[10%] w-[80%] h-[120%] opacity-[0.05]" viewBox="0 0 800 800" fill="none">
             <circle cx="400" cy="400" r="380" stroke="#1B3A2D" strokeWidth="1.2" />
             <circle cx="400" cy="400" r="300" stroke="#1B3A2D" strokeWidth="0.8" />
             <circle cx="400" cy="400" r="220" stroke="#1B3A2D" strokeWidth="0.5" />
           </svg>
-          {/* Soft green ambient — top right */}
+          {/* Soft green ambient - top right */}
           <div className="absolute -top-[200px] -right-[200px] w-[700px] h-[700px] rounded-full bg-green/[0.05]" />
-          {/* Warm accent — bottom left */}
+          {/* Warm accent - bottom left */}
           <div className="absolute bottom-0 -left-[100px] w-[400px] h-[400px] rounded-full bg-orange/[0.05]" />
           {/* Warm gradient towards bottom */}
           <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-orange/[0.05] via-orange/[0.025] to-transparent" />
@@ -447,7 +447,7 @@ export default function AboutPage() {
 
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Left — Header */}
+            {/* Left - Header */}
             <div className="lg:sticky lg:top-32">
               <span className="text-sm font-semibold tracking-widest uppercase text-green-muted">
                 {a.timeline.eyebrow}
@@ -459,7 +459,7 @@ export default function AboutPage() {
               </h2>
             </div>
 
-            {/* Right — Timeline */}
+            {/* Right - Timeline */}
             <div className="pt-4">
               {a.timeline.events.map(
                 (event: { date: string; title: string; description: string }, i: number) => (
@@ -508,7 +508,7 @@ export default function AboutPage() {
             {a.team.description}
           </p>
 
-          {/* Team avatars — 2 members */}
+          {/* Team avatars - 2 members */}
           <div className="flex justify-center items-center gap-8 mt-12">
             {[0, 1].map((i) => (
               <div key={i} className="relative">

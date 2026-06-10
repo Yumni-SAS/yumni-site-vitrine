@@ -53,8 +53,8 @@ function websiteSchema(locale: Locale) {
     name: "Yumni",
     description:
       locale === "fr"
-        ? "Plateforme de pilotage de projet RSE — CSRD Ready"
-        : "CSR Project Management Platform — CSRD Ready",
+        ? "Plateforme de pilotage de projet RSE - CSRD Ready"
+        : "CSR Project Management Platform - CSRD Ready",
     publisher: {
       "@id": `${SITE_URL}/#organization`,
     },
@@ -188,8 +188,8 @@ export function generateJsonLd(locale: Locale, page: string = "home") {
       url: `${SITE_URL}/${locale}`,
       name:
         locale === "fr"
-          ? "Yumni — Plateforme de pilotage de projet RSE | CSRD Ready"
-          : "Yumni — CSR Project Management Platform | CSRD Ready",
+          ? "Yumni - Plateforme de pilotage de projet RSE | CSRD Ready"
+          : "Yumni - CSR Project Management Platform | CSRD Ready",
       description:
         locale === "fr"
           ? "Yumni est la plateforme de pilotage de projet RSE tout-en-un. Dashboard temps réel, KPIs, WSJF, gestion des risques, reporting COMEX et conformité ESRS/CSRD."

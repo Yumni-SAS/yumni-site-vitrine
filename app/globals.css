@@ -78,7 +78,7 @@ html {
 .animate-float-fast { animation: float-fast 4s ease-in-out infinite; }
 .animate-pulse-ring { animation: pulse-ring 4s ease-in-out infinite; }
 
-/* ── Demo conversion tunnel — immersive mode ── */
+/* ── Demo conversion tunnel - immersive mode ── */
 body.demo-tunnel {
   background-color: #FFFFFF !important;
 }

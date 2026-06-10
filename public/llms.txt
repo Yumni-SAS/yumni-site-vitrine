@@ -1,4 +1,4 @@
-# Yumni — Plateforme de pilotage de projet RSE
+# Yumni - Plateforme de pilotage de projet RSE
 
 > Yumni est la plateforme SaaS tout-en-un de pilotage de projet RSE (Responsabilité Sociétale des Entreprises). Elle permet aux directeurs RSE, responsables développement durable et ESG managers de piloter leur stratégie RSE en temps réel, du cockpit stratégique au rapport COMEX.
 
@@ -8,7 +8,7 @@
 - **Type** : Plateforme SaaS B2B de pilotage RSE
 - **Cible** : Directeurs RSE, Responsables Développement Durable, ESG Managers, Cabinets de conseil RSE
 - **Secteur** : RSE, ESG, CSRD, Développement Durable, Sustainability
-- **Hébergement** : France (Scaleway, fr-par) — Aucun transfert hors UE
+- **Hébergement** : France (Scaleway, fr-par) - Aucun transfert hors UE
 - **Conformité** : RGPD by design, CSRD Ready, 12 standards ESRS couverts
 - **Tarif** : Freemium gratuit (sans carte bancaire), Pro sur devis, Enterprise sur mesure
 
@@ -22,7 +22,7 @@ Les équipes RSE jonglent entre Excel, PowerPoint, mails et outils déconnectés
 Score RSE consolidé, progression par pilier (Environnement, Social, Gouvernance), tendances mensuelles. Vue d'ensemble en temps réel du board au terrain.
 
 ### KPIs & Alertes automatiques
-Définition de cibles et seuils. Surveillance continue avec alertes automatiques quand un indicateur dérive — avant que cela ne devienne un problème.
+Définition de cibles et seuils. Surveillance continue avec alertes automatiques quand un indicateur dérive - avant que cela ne devienne un problème.
 
 ### Priorisation WSJF
 Chaque initiative RSE est scorée objectivement selon la valeur métier, l'urgence et l'effort. Méthode POC-Ready pour une priorisation par l'impact, pas par l'intuition.
@@ -31,7 +31,7 @@ Chaque initiative RSE est scorée objectivement selon la valeur métier, l'urgen
 Matrice probabilité × impact. Cartographie, évaluation et traitement de chaque risque avec plan d'atténuation prêt.
 
 ### Reporting COMEX
-Génération d'un rapport COMEX complet en 12 secondes — avec branding, KPIs et commentaires. Export PowerPoint natif.
+Génération d'un rapport COMEX complet en 12 secondes - avec branding, KPIs et commentaires. Export PowerPoint natif.
 
 ### Conformité ESRS / CSRD
 Gap analysis, double matérialité, couverture ESRS en temps réel. 12 standards ESRS couverts. Guide pas à pas vers la conformité CSRD.
@@ -63,7 +63,7 @@ Vue consolidée multi-filiales. RBAC granulaire à 4 niveaux de permissions. Hé
 - RLS PostgreSQL pour l'isolation des données
 - CAPTCHA Cloudflare Turnstile
 - Hébergement Scaleway France (fr-par)
-- RGPD by design — droit d'accès, rectification, effacement, export complet
+- RGPD by design - droit d'accès, rectification, effacement, export complet
 
 ## Tarifs
 
@@ -76,7 +76,7 @@ Vue consolidée multi-filiales. RBAC granulaire à 4 niveaux de permissions. Hé
 ## Contact
 
 - **Email** : contact@yumni.fr
-- **Horaires** : Lun–Ven, 9h–18h CET
+- **Horaires** : Lun-Ven, 9h-18h CET
 - **Réponse** : Sous 24h ouvrées
 - **Démo** : https://yumni.fr/fr/contact
 

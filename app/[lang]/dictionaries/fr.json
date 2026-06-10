@@ -8,14 +8,14 @@
     "seeAllFeatures": "Voir toutes les fonctionnalités →",
     "startFree": "Essayer gratuitement →",
     "back": "← Retour à l'accueil",
-    "hostedInFrance": "Hébergé en France 🇫🇷",
+    "hostedInFrance": "Hébergé en France ",
     "gdprCompliant": "RGPD Conforme",
     "noCreditCard": "Sans carte bancaire",
     "noCommitment": "Sans engagement",
     "tls": "TLS 1.3",
     "scaleway": "Scaleway Cloud",
     "security": "Sécurité :",
-    "france": "France 🇫🇷",
+    "france": "France",
     "response": "Réponse",
     "lessThan24h": "< 24h ouvrées",
     "gdpr": "RGPD",
@@ -29,7 +29,7 @@
     "resources": "Ressources"
   },
   "footer": {
-    "tagline": "Plateforme de pilotage de projet RSE tout-en-un. CSRD\u00a0Ready.",
+    "tagline": "Plateforme de pilotage de projet RSE tout-en-un. CSRD Ready.",
     "product": "Produit",
     "solutions": "Solutions",
     "resources": "Ressources",
@@ -85,10 +85,22 @@
     },
     "socialProof": {
       "items": [
-        { "num": "500+", "label": "organisations pilotées" },
-        { "num": "40", "label": "jours/an économisés par équipe RSE" },
-        { "num": "12s", "label": "pour générer un rapport auditeur" },
-        { "num": "99.9%", "label": "de disponibilité garantie" }
+        {
+          "num": "500+",
+          "label": "organisations pilotées"
+        },
+        {
+          "num": "40",
+          "label": "jours/an économisés par équipe RSE"
+        },
+        {
+          "num": "12s",
+          "label": "pour générer un rapport auditeur"
+        },
+        {
+          "num": "99.9%",
+          "label": "de disponibilité garantie"
+        }
       ]
     },
     "problem": {
@@ -164,10 +176,30 @@
     },
     "stats": {
       "items": [
-        { "value": 40, "suffix": "", "unit": "jours/an", "label": "économisés sur le reporting" },
-        { "value": 1, "suffix": "", "unit": "clic", "label": "rapport COMEX prêt" },
-        { "value": 12, "suffix": "", "unit": "standards", "label": "ESRS couverts nativement" },
-        { "value": 100, "suffix": "%", "unit": "", "label": "données en temps réel" }
+        {
+          "value": 40,
+          "suffix": "",
+          "unit": "jours/an",
+          "label": "économisés sur le reporting"
+        },
+        {
+          "value": 1,
+          "suffix": "",
+          "unit": "clic",
+          "label": "rapport COMEX prêt"
+        },
+        {
+          "value": 12,
+          "suffix": "",
+          "unit": "standards",
+          "label": "ESRS couverts nativement"
+        },
+        {
+          "value": 100,
+          "suffix": "%",
+          "unit": "",
+          "label": "données en temps réel"
+        }
       ]
     },
     "audience": {
@@ -252,9 +284,9 @@
     },
     "deploymentPhase": {
       "title": "Déploiement progressif",
-      "phase1Label": "Phase 1 — Disponible maintenant",
+      "phase1Label": "Phase 1 - Disponible maintenant",
       "phase1Plans": "Freemium · Starter · Enterprise",
-      "phase2Label": "Phase 2 — À partir d'oct. 2026",
+      "phase2Label": "Phase 2 - À partir d'oct. 2026",
       "phase2Plans": "+ Pro + IA"
     },
     "popularBadge": "Recommandé",
@@ -263,7 +295,7 @@
       {
         "name": "Freemium",
         "tagline": "Pour tester Yumni",
-        "disclaimer": "Aperçu du produit — pas un outil de travail quotidien. Pour un usage professionnel, passez au Starter.",
+        "disclaimer": "Aperçu du produit - pas un outil de travail quotidien. Pour un usage professionnel, passez au Starter.",
         "price": "0",
         "priceSuffix": " EUR",
         "priceNote": "Gratuit, sans engagement",
@@ -300,7 +332,7 @@
           "Sans IA",
           "Collaboration & invitations incluses",
           "Reporting & exports complets",
-          "Hébergé en France 🇫🇷"
+          "Hébergé en France "
         ]
       },
       {
@@ -322,7 +354,7 @@
           "Architecture souveraine (Scaleway)",
           "Multi-organisations",
           "99,5% de disponibilité",
-          "Hébergé en France 🇫🇷"
+          "Hébergé en France "
         ]
       },
       {
@@ -344,14 +376,14 @@
           "IA + infra dédiée (fin 2026)",
           "99,9% de disponibilité",
           "Account manager dédié",
-          "Hébergé en France 🇫🇷"
+          "Hébergé en France "
         ]
       }
     ],
     "comparison": {
       "eyebrow": "Comparatif détaillé",
       "title": "Tout ce qui est inclus",
-      "description": "Un seul principe : toutes les fonctionnalités sont accessibles dès le Starter. La montée en gamme se justifie par la taille de l'équipe et l'IA — jamais par des fonctionnalités verrouillées artificiellement.",
+      "description": "Un seul principe : toutes les fonctionnalités sont accessibles dès le Starter. La montée en gamme se justifie par la taille de l'équipe et l'IA - jamais par des fonctionnalités verrouillées artificiellement.",
       "featureCol": "Critère",
       "freemiumCol": "Freemium",
       "starterCol": "Starter",
@@ -365,38 +397,110 @@
         {
           "category": "Accès & Périmètre",
           "items": [
-            { "name": "Utilisateurs", "freemium": "1", "starter": "5", "pro": false, "enterprise": "Illimité" },
-            { "name": "Organisations", "freemium": "1", "starter": "1", "pro": "Multi", "enterprise": "Illimité" }
+            {
+              "name": "Utilisateurs",
+              "freemium": "1",
+              "starter": "5",
+              "pro": false,
+              "enterprise": "Illimité"
+            },
+            {
+              "name": "Organisations",
+              "freemium": "1",
+              "starter": "1",
+              "pro": "Multi",
+              "enterprise": "Illimité"
+            }
           ]
         },
         {
           "category": "Pilotage stratégique",
           "items": [
-            { "name": "Axes, Objectifs, Projets, Actions, KPIs", "freemium": "Limité", "starter": true, "pro": true, "enterprise": true },
-            { "name": "Idées WSJF, Risques, Jalons", "freemium": "Limité", "starter": true, "pro": true, "enterprise": true },
-            { "name": "Conformité CSRD / ESRS", "freemium": "Limité", "starter": true, "pro": true, "enterprise": true }
+            {
+              "name": "Axes, Objectifs, Projets, Actions, KPIs",
+              "freemium": "Limité",
+              "starter": true,
+              "pro": true,
+              "enterprise": true
+            },
+            {
+              "name": "Idées WSJF, Risques, Jalons",
+              "freemium": "Limité",
+              "starter": true,
+              "pro": true,
+              "enterprise": true
+            },
+            {
+              "name": "Conformité CSRD / ESRS",
+              "freemium": "Limité",
+              "starter": true,
+              "pro": true,
+              "enterprise": true
+            }
           ]
         },
         {
           "category": "Collaboration & Données",
           "items": [
-            { "name": "Collaboration & Invitations", "freemium": false, "starter": true, "pro": true, "enterprise": true },
-            { "name": "Pièces jointes", "freemium": false, "starter": true, "pro": true, "enterprise": true },
-            { "name": "Reporting & Exports", "freemium": "Limité", "starter": true, "pro": true, "enterprise": true }
+            {
+              "name": "Collaboration & Invitations",
+              "freemium": false,
+              "starter": true,
+              "pro": true,
+              "enterprise": true
+            },
+            {
+              "name": "Pièces jointes",
+              "freemium": false,
+              "starter": true,
+              "pro": true,
+              "enterprise": true
+            },
+            {
+              "name": "Reporting & Exports",
+              "freemium": "Limité",
+              "starter": true,
+              "pro": true,
+              "enterprise": true
+            }
           ]
         },
         {
           "category": "Intelligence artificielle",
           "items": [
-            { "name": "IA", "freemium": false, "starter": false, "pro": "Bientôt", "enterprise": "Bientôt" }
+            {
+              "name": "IA",
+              "freemium": false,
+              "starter": false,
+              "pro": "Bientôt",
+              "enterprise": "Bientôt"
+            }
           ]
         },
         {
           "category": "Infrastructure & SLA",
           "items": [
-            { "name": "Disponibilité", "freemium": "Standard", "starter": "Standard", "pro": "99,5%", "enterprise": "99,9%" },
-            { "name": "Infrastructure", "freemium": "Mutualisée", "starter": "Mutualisée", "pro": "Mutualisée", "enterprise": "Dédiée" },
-            { "name": "Hébergé en France (Scaleway)", "freemium": true, "starter": true, "pro": true, "enterprise": true }
+            {
+              "name": "Disponibilité",
+              "freemium": "Standard",
+              "starter": "Standard",
+              "pro": "99,5%",
+              "enterprise": "99,9%"
+            },
+            {
+              "name": "Infrastructure",
+              "freemium": "Mutualisée",
+              "starter": "Mutualisée",
+              "pro": "Mutualisée",
+              "enterprise": "Dédiée"
+            },
+            {
+              "name": "Hébergé en France (Scaleway)",
+              "freemium": true,
+              "starter": true,
+              "pro": true,
+              "enterprise": true
+            }
           ]
         }
       ]
@@ -406,10 +510,26 @@
       "title1": "Le temps de piloter.",
       "titleHighlight": "Pas de compiler.",
       "items": [
-        { "value": 12, "suffix": "s", "label": "Générer un rapport COMEX" },
-        { "value": 40, "suffix": "j/an", "label": "Récupérés sur le reporting" },
-        { "value": 12, "suffix": "", "label": "Standards ESRS couverts" },
-        { "value": 4, "suffix": "", "label": "Niveaux de pilotage" }
+        {
+          "value": 12,
+          "suffix": "s",
+          "label": "Générer un rapport COMEX"
+        },
+        {
+          "value": 40,
+          "suffix": "j/an",
+          "label": "Récupérés sur le reporting"
+        },
+        {
+          "value": 12,
+          "suffix": "",
+          "label": "Standards ESRS couverts"
+        },
+        {
+          "value": 4,
+          "suffix": "",
+          "label": "Niveaux de pilotage"
+        }
       ]
     },
     "roi": {
@@ -443,7 +563,7 @@
       "items": [
         {
           "q": "À quoi sert vraiment le Freemium ?",
-          "a": "Le Freemium est un aperçu du produit — pas un outil de travail quotidien. Il est volontairement limité (1 utilisateur, 1 organisation, fonctionnalités restreintes) pour que vous puissiez tester Yumni avant de vous engager. Pour un usage professionnel, passez au Starter à 19 €/user/mois."
+          "a": "Le Freemium est un aperçu du produit - pas un outil de travail quotidien. Il est volontairement limité (1 utilisateur, 1 organisation, fonctionnalités restreintes) pour que vous puissiez tester Yumni avant de vous engager. Pour un usage professionnel, passez au Starter à 19 €/user/mois."
         },
         {
           "q": "Le tarif Starter à 19 € est-il vraiment définitif ?",
@@ -455,7 +575,7 @@
         },
         {
           "q": "Quelle est la différence entre Starter et Enterprise ?",
-          "a": "Le Starter couvre jusqu'à 5 utilisateurs dans 1 organisation — idéal pour une PME, un cabinet ou une équipe RSE. L'Enterprise est conçu pour les grandes structures : utilisateurs illimités, multi-organisations, infrastructure dédiée, SLA 99,9% garanti et account manager dédié. Tarif sur devis."
+          "a": "Le Starter couvre jusqu'à 5 utilisateurs dans 1 organisation - idéal pour une PME, un cabinet ou une équipe RSE. L'Enterprise est conçu pour les grandes structures : utilisateurs illimités, multi-organisations, infrastructure dédiée, SLA 99,9% garanti et account manager dédié. Tarif sur devis."
         },
         {
           "q": "Y a-t-il une remise pour la facturation annuelle ?",
@@ -523,7 +643,7 @@
       "linkedinLabel": "LinkedIn Yumni",
       "linkedinSub": "Suivez nos actualités",
       "scheduleLabel": "France Horaires européens",
-      "scheduleSub": "Lun–Ven, 9h–18h CET",
+      "scheduleSub": "Lun-Ven, 9h-18h CET",
       "responseTitle": "Réponse sous 24h",
       "responseSub": "Garanti pour les demandes commerciales"
     },
@@ -584,9 +704,18 @@
       "columnYou": "Vous",
       "columnClients": "Vos clients",
       "rows": [
-        { "you": "Expertise RSE / CSRD", "clients": "Conseil stratégique" },
-        { "you": "Yumni (multi-org)", "clients": "Plateforme de pilotage" },
-        { "you": "Accès gratuit cabinet", "clients": "Tarif partenaire négocié" }
+        {
+          "you": "Expertise RSE / CSRD",
+          "clients": "Conseil stratégique"
+        },
+        {
+          "you": "Yumni (multi-org)",
+          "clients": "Plateforme de pilotage"
+        },
+        {
+          "you": "Accès gratuit cabinet",
+          "clients": "Tarif partenaire négocié"
+        }
       ]
     },
     "benefits": {
@@ -594,12 +723,30 @@
       "title": "Tout est inclus.",
       "titleHighlight": "Rien à payer.",
       "items": [
-        { "title": "Accès gratuit à la plateforme pour votre cabinet", "description": "Toutes les features, sans limite de durée. Votre cabinet pilote comme un expert." },
-        { "title": "Tarif préférentiel pour vos clients", "description": "Offre négociée pour chacun de vos clients. Vous augmentez votre valeur perçue." },
-        { "title": "Badge \"Partenaire Yumni Certifié\"", "description": "Différenciateur commercial. Affiché sur votre site et vos supports." },
-        { "title": "Matériaux de vente co-brandés", "description": "Slides, one-pager, supports personnalisés à vos couleurs." },
-        { "title": "Formation produit incluse", "description": "Onboarding complet de votre équipe. Maîtrisez l'outil comme un expert." },
-        { "title": "Support prioritaire", "description": "File dédiée. Temps de réponse garanti. Un vrai partenariat." }
+        {
+          "title": "Accès gratuit à la plateforme pour votre cabinet",
+          "description": "Toutes les features, sans limite de durée. Votre cabinet pilote comme un expert."
+        },
+        {
+          "title": "Tarif préférentiel pour vos clients",
+          "description": "Offre négociée pour chacun de vos clients. Vous augmentez votre valeur perçue."
+        },
+        {
+          "title": "Badge \"Partenaire Yumni Certifié\"",
+          "description": "Différenciateur commercial. Affiché sur votre site et vos supports."
+        },
+        {
+          "title": "Matériaux de vente co-brandés",
+          "description": "Slides, one-pager, supports personnalisés à vos couleurs."
+        },
+        {
+          "title": "Formation produit incluse",
+          "description": "Onboarding complet de votre équipe. Maîtrisez l'outil comme un expert."
+        },
+        {
+          "title": "Support prioritaire",
+          "description": "File dédiée. Temps de réponse garanti. Un vrai partenariat."
+        }
       ]
     },
     "expectations": {
@@ -607,12 +754,20 @@
       "title": "Un partenariat",
       "titleHighlight": "à double sens",
       "items": [
-        { "title": "Prescription active auprès de vos clients", "description": "Recommandez Yumni quand la plateforme est pertinente pour leur pilotage RSE." },
-        { "title": "Feedback produit régulier", "description": "Vous êtes nos meilleurs testeurs. Vos retours terrain façonnent la roadmap pour tous." },
-        { "title": "Témoignage ou cas client co-publié (optionnel)", "description": "Pour inspirer d'autres cabinets et renforcer votre visibilité." }
+        {
+          "title": "Prescription active auprès de vos clients",
+          "description": "Recommandez Yumni quand la plateforme est pertinente pour leur pilotage RSE."
+        },
+        {
+          "title": "Feedback produit régulier",
+          "description": "Vous êtes nos meilleurs testeurs. Vos retours terrain façonnent la roadmap pour tous."
+        },
+        {
+          "title": "Témoignage ou cas client co-publié (optionnel)",
+          "description": "Pour inspirer d'autres cabinets et renforcer votre visibilité."
+        }
       ]
     },
-
     "cta": {
       "eyebrow": "Prêt à nous rejoindre ?",
       "title1": "Candidatez au",
@@ -656,10 +811,22 @@
       "statusLabel": "Statut système",
       "statusValue": "OPÉRATIONNEL",
       "statusItems": [
-        { "label": "Chiffrement", "value": "Actif TLS 1.3 / AES-256" },
-        { "label": "Hébergement", "value": "fr-par · Scaleway · France" },
-        { "label": "MFA", "value": "Actif sur tous les comptes" },
-        { "label": "RLS PostgreSQL", "value": "Isolation données activée" }
+        {
+          "label": "Chiffrement",
+          "value": "Actif TLS 1.3 / AES-256"
+        },
+        {
+          "label": "Hébergement",
+          "value": "fr-par · Scaleway · France"
+        },
+        {
+          "label": "MFA",
+          "value": "Actif sur tous les comptes"
+        },
+        {
+          "label": "RLS PostgreSQL",
+          "value": "Isolation données activée"
+        }
       ]
     },
     "hosting": {
@@ -668,10 +835,26 @@
       "titleHighlight": "Vos données aussi.",
       "description": "Yumni est hébergé exclusivement sur Scaleway, data center France (fr-par), soumis au droit européen. Aucune donnée ne transite hors UE.",
       "items": [
-        { "label": "Infrastructure", "value": "Scaleway Cloud", "detail": "Data center fr-par, Paris" },
-        { "label": "Juridiction", "value": "Droit européen", "detail": "Soumis au RGPD & NIS2" },
-        { "label": "Transit données", "value": "UE uniquement", "detail": "Aucun transfert hors UE" },
-        { "label": "Disponibilité", "value": "99.9% SLA", "detail": "Monitoring continu" }
+        {
+          "label": "Infrastructure",
+          "value": "Scaleway Cloud",
+          "detail": "Data center fr-par, Paris"
+        },
+        {
+          "label": "Juridiction",
+          "value": "Droit européen",
+          "detail": "Soumis au RGPD & NIS2"
+        },
+        {
+          "label": "Transit données",
+          "value": "UE uniquement",
+          "detail": "Aucun transfert hors UE"
+        },
+        {
+          "label": "Disponibilité",
+          "value": "99.9% SLA",
+          "detail": "Monitoring continu"
+        }
       ]
     },
     "encryption": {
@@ -700,11 +883,26 @@
       "titleHighlight": "non autorisé.",
       "description": "Un système d'authentification multi-niveaux conçu pour résister aux attaques les plus sophistiquées.",
       "items": [
-        { "title": "JWT + refresh tokens avec rotation", "description": "Tokens à courte durée de vie, rotation automatique à chaque usage. Compromis = révocation immédiate." },
-        { "title": "MFA / 2FA natif", "description": "Authentification à deux facteurs disponible sur tous les plans, sans surcoût. TOTP compatible avec Authy, Google Authenticator." },
-        { "title": "Rate limiting anti-brute force", "description": "Blocage automatique après tentatives répétées. Délais exponentiels. IP banning ciblé." },
-        { "title": "CAPTCHA Cloudflare Turnstile", "description": "Protection à l'inscription sans friction pour l'utilisateur légitime. Invisible pour les humains, bloquant pour les bots." },
-        { "title": "Session invalidation complète", "description": "À la déconnexion, tous les tokens actifs sont révoqués côté serveur. Aucune session zombie possible." }
+        {
+          "title": "JWT + refresh tokens avec rotation",
+          "description": "Tokens à courte durée de vie, rotation automatique à chaque usage. Compromis = révocation immédiate."
+        },
+        {
+          "title": "MFA / 2FA natif",
+          "description": "Authentification à deux facteurs disponible sur tous les plans, sans surcoût. TOTP compatible avec Authy, Google Authenticator."
+        },
+        {
+          "title": "Rate limiting anti-brute force",
+          "description": "Blocage automatique après tentatives répétées. Délais exponentiels. IP banning ciblé."
+        },
+        {
+          "title": "CAPTCHA Cloudflare Turnstile",
+          "description": "Protection à l'inscription sans friction pour l'utilisateur légitime. Invisible pour les humains, bloquant pour les bots."
+        },
+        {
+          "title": "Session invalidation complète",
+          "description": "À la déconnexion, tous les tokens actifs sont révoqués côté serveur. Aucune session zombie possible."
+        }
       ]
     },
     "rbac": {
@@ -713,10 +911,26 @@
       "titleHighlight": "voit ce qu'il doit voir.",
       "description": "4 niveaux de permissions granulaires. Isolation totale des données entre organisations via Row Level Security PostgreSQL.",
       "levels": [
-        { "role": "Owner", "description": "Accès complet, gestion des membres et facturation", "color": "green" },
-        { "role": "Admin", "description": "Configuration, invitations, export des données", "color": "green" },
-        { "role": "Manager", "description": "Création et édition des projets, KPIs et actions", "color": "orange" },
-        { "role": "Viewer", "description": "Lecture seule idéal pour les parties prenantes", "color": "muted" }
+        {
+          "role": "Owner",
+          "description": "Accès complet, gestion des membres et facturation",
+          "color": "green"
+        },
+        {
+          "role": "Admin",
+          "description": "Configuration, invitations, export des données",
+          "color": "green"
+        },
+        {
+          "role": "Manager",
+          "description": "Création et édition des projets, KPIs et actions",
+          "color": "orange"
+        },
+        {
+          "role": "Viewer",
+          "description": "Lecture seule idéal pour les parties prenantes",
+          "color": "muted"
+        }
       ],
       "isolation": "Isolation par organisation via RLS PostgreSQL aucun utilisateur ne peut accéder aux données d'une autre organisation, même en cas de bug applicatif."
     },
@@ -726,14 +940,29 @@
       "titleHighlight": "garantis par design.",
       "description": "La conformité RGPD n'est pas une case à cocher chez Yumni elle est codée dans chaque couche de l'architecture.",
       "rights": [
-        { "title": "Droit d'accès", "description": "Consultez l'intégralité de vos données stockées par Yumni sur simple demande." },
-        { "title": "Droit de rectification", "description": "Corrigez toute donnée inexacte directement depuis votre compte ou via notre DPO." },
-        { "title": "Droit à l'effacement", "description": "Vos données sont supprimées dans les 30 jours suivant la résiliation. Irréversible et complet." },
-        { "title": "Export complet", "description": "Téléchargez l'intégralité de vos données à tout moment, dans un format ouvert et lisible." },
-        { "title": "Pas de revente", "description": "Vos données ne sont jamais vendues, partagées ou utilisées à des fins commerciales tierces. Jamais." }
+        {
+          "title": "Droit d'accès",
+          "description": "Consultez l'intégralité de vos données stockées par Yumni sur simple demande."
+        },
+        {
+          "title": "Droit de rectification",
+          "description": "Corrigez toute donnée inexacte directement depuis votre compte ou via notre DPO."
+        },
+        {
+          "title": "Droit à l'effacement",
+          "description": "Vos données sont supprimées dans les 30 jours suivant la résiliation. Irréversible et complet."
+        },
+        {
+          "title": "Export complet",
+          "description": "Téléchargez l'intégralité de vos données à tout moment, dans un format ouvert et lisible."
+        },
+        {
+          "title": "Pas de revente",
+          "description": "Vos données ne sont jamais vendues, partagées ou utilisées à des fins commerciales tierces. Jamais."
+        }
       ],
       "dpo": "Contact DPO",
-      "dpoEmail": "rgpd@yumni.fr",
+      "dpoEmail": "dpo@yumni.fr",
       "retention": "Conservation : données supprimées dans les 30 jours suivant résiliation"
     },
     "certifications": {
@@ -742,10 +971,30 @@
       "titleHighlight": "comme boussole.",
       "description": "Certifications actuelles et roadmap de conformité notre engagement de transparence envers nos clients.",
       "items": [
-        { "name": "RGPD", "status": "active", "label": "Conforme", "description": "Hébergement et architecture conformes au Règlement Général sur la Protection des Données" },
-        { "name": "NIS2", "status": "progress", "label": "Objectif 2026", "description": "Directive européenne sur la cybersécurité des infrastructures critiques" },
-        { "name": "SOC 2 Type II", "status": "roadmap", "label": "Roadmap", "description": "Audit indépendant de la sécurité, disponibilité et confidentialité des données" },
-        { "name": "ISO 27001", "status": "roadmap", "label": "Roadmap", "description": "Standard international de management de la sécurité de l'information" }
+        {
+          "name": "RGPD",
+          "status": "active",
+          "label": "Conforme",
+          "description": "Hébergement et architecture conformes au Règlement Général sur la Protection des Données"
+        },
+        {
+          "name": "NIS2",
+          "status": "progress",
+          "label": "Objectif 2026",
+          "description": "Directive européenne sur la cybersécurité des infrastructures critiques"
+        },
+        {
+          "name": "SOC 2 Type II",
+          "status": "roadmap",
+          "label": "Roadmap",
+          "description": "Audit indépendant de la sécurité, disponibilité et confidentialité des données"
+        },
+        {
+          "name": "ISO 27001",
+          "status": "roadmap",
+          "label": "Roadmap",
+          "description": "Standard international de management de la sécurité de l'information"
+        }
       ]
     },
     "cta": {
@@ -771,9 +1020,21 @@
       "titleHighlight": "une stratégie RSE structurée.",
       "description": "Quelle que soit sa taille, chaque organisation doit pouvoir structurer sa stratégie RSE, mesurer son impact et reporter avec confiance sans avoir besoin d'une armée de consultants.",
       "stats": [
-        { "value": "12", "suffix": "sec", "label": "Pour générer un rapport COMEX" },
-        { "value": "0", "suffix": "", "label": "Consultant nécessaire pour démarrer" },
-        { "value": "100", "suffix": "%", "label": "Hébergé en France" }
+        {
+          "value": "12",
+          "suffix": "sec",
+          "label": "Pour générer un rapport COMEX"
+        },
+        {
+          "value": "0",
+          "suffix": "",
+          "label": "Consultant nécessaire pour démarrer"
+        },
+        {
+          "value": "100",
+          "suffix": "%",
+          "label": "Hébergé en France"
+        }
       ]
     },
     "values": {
@@ -803,10 +1064,26 @@
       "title": "Du problème",
       "titleHighlight": "à la solution.",
       "events": [
-        { "date": "2024", "title": "Genèse", "description": "Constat : les outils RSE sont trop complexes, trop chers, trop lents. Les PME sont laissées pour compte." },
-        { "date": "2024", "title": "Premiers tests", "description": "Validation terrain avec 15 cabinets conseil et PME. Affinage de l'expérience utilisateur." },
-        { "date": "2025", "title": "Lancement Freemium", "description": "Ouverture au public avec un plan gratuit sans limite de durée. Les premiers utilisateurs nous rejoignent." },
-        { "date": "Aujourd'hui", "title": "Croissance", "description": "Amélioration continue, nouvelles features, premiers clients enterprise. L'aventure continue." }
+        {
+          "date": "2024",
+          "title": "Genèse",
+          "description": "Constat : les outils RSE sont trop complexes, trop chers, trop lents. Les PME sont laissées pour compte."
+        },
+        {
+          "date": "2024",
+          "title": "Premiers tests",
+          "description": "Validation terrain avec 15 cabinets conseil et PME. Affinage de l'expérience utilisateur."
+        },
+        {
+          "date": "2025",
+          "title": "Lancement Freemium",
+          "description": "Ouverture au public avec un plan gratuit sans limite de durée. Les premiers utilisateurs nous rejoignent."
+        },
+        {
+          "date": "Aujourd'hui",
+          "title": "Croissance",
+          "description": "Amélioration continue, nouvelles features, premiers clients enterprise. L'aventure continue."
+        }
       ]
     },
     "team": {
@@ -823,7 +1100,7 @@
       "secondaryButton": "Nous contacter"
     }
   },
-"legal": {
+  "legal": {
     "hero": {
       "eyebrow": "Mentions légales",
       "title1": "Transparence",
@@ -838,68 +1115,1018 @@
       "cookies": "Cookies"
     },
     "lastUpdate": "Dernière mise à jour",
+    "lastUpdateDate": "23 avril 2026",
     "legalNotice": {
       "title": "Mentions légales",
-      "editor": {
-        "title": "Éditeur du site",
-        "company": "Yumni SAS",
-        "capital": "Capital social : 10 000 €",
-        "rcs": "RCS Paris B 123 456 789",
-        "siret": "SIRET : 123 456 789 00001",
-        "vat": "TVA intracommunautaire : FR 12 345678901",
-        "address": "42 rue de la République, 75011 Paris, France",
-        "phone": "Téléphone : +33 1 23 45 67 89",
-        "email": "Email : contact@yumni.fr",
-        "director": "Directeur de la publication : [Nom du fondateur]"
-      },
-      "hosting": {
-        "title": "Hébergement",
-        "company": "Scaleway SAS",
-        "address": "8 rue de la Ville l'Évêque, 75008 Paris, France",
-        "location": "Data center : fr-par (Paris, France)",
-        "note": "L'ensemble des données sont hébergées exclusivement en France, conformément à notre engagement de souveraineté numérique."
-      },
-      "intellectual": {
-        "title": "Propriété intellectuelle",
-        "content": "L'ensemble du contenu de ce site (textes, images, graphismes, logo, icônes, sons, logiciels, etc.) est la propriété exclusive de Yumni SAS ou de ses partenaires et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle. Toute reproduction, représentation, modification, publication, transmission, dénaturation, totale ou partielle du site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que ce soit est interdite sans autorisation écrite préalable de Yumni SAS."
-      }
-    },
-    "terms": {
-      "title": "Conditions Générales d'Utilisation",
-      "sections": [
+      "avisPrealable": "**Avis préalable à la publication :** Conformément à l'article 6 III de la loi n° 2004-575 du 21 juin 2004 (LCEN), les présentes Mentions Légales doivent, avant toute mise en ligne officielle, être complétées des informations non encore disponibles : numéro d'immatriculation RCS, numéro SIREN, numéro de TVA intracommunautaire, adresse du siège social définitif, identité nominative du directeur de la publication, et adresse email de contact officielle de YUMNI SAS. Ces éléments sont d'ordre public et conditionnent la validité légale du document.",
+      "articles": [
         {
-          "title": "1. Objet",
-          "content": "Les présentes Conditions Générales d'Utilisation (CGU) ont pour objet de définir les modalités et conditions dans lesquelles Yumni SAS met à disposition sa plateforme de pilotage RSE, ainsi que les droits et obligations des utilisateurs dans ce cadre."
+          "title": "Article 1 - Identification du responsable du site",
+          "intro": "Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, nous vous informons des éléments suivants :",
+          "subsections": [
+            {
+              "title": "Responsable de publication",
+              "infoCard": [
+                "**YUMNI SAS**"
+              ],
+              "table": {
+                "headers": [
+                  "",
+                  ""
+                ],
+                "rows": [
+                  [
+                    "**Siège social**",
+                    "61 RUE DE LYON, 75012 PARIS"
+                  ],
+                  [
+                    "**Statut juridique**",
+                    "Société par Actions Simplifiée (SAS)"
+                  ],
+                  [
+                    "**Capital social**",
+                    "1 000 €"
+                  ],
+                  [
+                    "**RCS**",
+                    "Paris - 102228608"
+                  ],
+                  [
+                    "**Numéro de TVA intracommunautaire**",
+                    "FR63102228608"
+                  ],
+                  [
+                    "**Email**",
+                    "contact@yumni.fr"
+                  ]
+                ]
+              },
+              "note": "La Plateforme YUMNI est un service en mode SaaS (Software as a Service) destiné **exclusivement à des clients professionnels** (personnes morales et personnes physiques agissant dans le cadre de leur activité professionnelle). Elle n'est pas accessible au grand public et ne constitue pas un service à destination des consommateurs au sens du Code de la consommation."
+            },
+            {
+              "title": "Responsable éditorial",
+              "paragraphs": [
+                "YUMNI SAS est responsable de l'ensemble des contenus éditoriaux publiés sur la Plateforme YUMNI."
+              ]
+            },
+            {
+              "title": "Responsable technique",
+              "paragraphs": [
+                "La direction technique de la Plateforme YUMNI est assurée par YUMNI SAS."
+              ]
+            }
+          ]
         },
         {
-          "title": "2. Acceptation des CGU",
-          "content": "L'accès et l'utilisation de la plateforme Yumni impliquent l'acceptation sans réserve des présentes CGU. L'utilisateur reconnaît avoir pris connaissance de ces conditions et s'engage à les respecter."
+          "title": "Article 2 - Directeur de la publication",
+          "paragraphs": [
+            "Le directeur de la publication est responsable de l'ensemble du contenu édité sur la Plateforme YUMNI, au sens de l'article 6 III de la loi n° 2004-575 du 21 juin 2004."
+          ],
+          "subsections": [
+            {
+              "title": "Coordonnées du directeur",
+              "paragraphs": [
+                "Le directeur de la publication est le représentant légal de YUMNI SAS, dont l'identité nominative doit être renseignée avant toute publication officielle du présent document, conformément aux exigences de l'article 6 III de la LCEN."
+              ],
+              "infoCard": [
+                "YUMNI SAS",
+                "61 RUE DE LYON, 75012 PARIS",
+                "France",
+                "contact@yumni.fr"
+              ]
+            }
+          ]
         },
         {
-          "title": "3. Description du service",
-          "content": "Yumni est une plateforme SaaS de pilotage de la stratégie RSE (Responsabilité Sociétale des Entreprises). Elle permet notamment : la gestion des axes stratégiques et objectifs RSE, le suivi des KPIs et indicateurs, la gestion des risques, la génération de rapports COMEX, la conformité ESRS/CSRD."
+          "title": "Article 3 - Hébergement",
+          "intro": "La Plateforme YUMNI est hébergée exclusivement en **France, au sein de l'Union Européenne**, par le prestataire suivant :",
+          "subsections": [
+            {
+              "title": "Hébergeur principal",
+              "infoCard": [
+                "**Scaleway SAS** (filiale du Groupe Iliad)",
+                "8 rue de la Ville l'Évêque",
+                "75008 Paris, France",
+                "SIRET : 433 115 904 00044",
+                "Site web : www.scaleway.com"
+              ]
+            },
+            {
+              "title": "Services d'hébergement utilisés",
+              "table": {
+                "headers": [
+                  "Service Scaleway",
+                  "Usage sur la Plateforme YUMNI"
+                ],
+                "rows": [
+                  [
+                    "**Serverless Containers**",
+                    "Hébergement du backend applicatif (NestJS) et du frontend (Next.js)"
+                  ],
+                  [
+                    "**Serverless SQL - PostgreSQL 14+**",
+                    "Base de données applicative principale"
+                  ],
+                  [
+                    "**Object Storage (S3-compatible)**",
+                    "Stockage des pièces jointes et archives d'exports RGPD"
+                  ],
+                  [
+                    "**Container Registry**",
+                    "Registre privé des images Docker de déploiement"
+                  ]
+                ]
+              },
+              "paragraphsAfter": [
+                "**Région d'hébergement :** `fr-par` - Paris, France (Union Européenne)",
+                "L'intégralité des données applicatives est hébergée sur le territoire français, conformément aux obligations du Règlement (UE) 2016/679 (RGPD) et à la politique de souveraineté des données de YUMNI SAS."
+              ]
+            },
+            {
+              "title": "Localisation et disponibilité",
+              "paragraphs": [
+                "Les serveurs sont localisés en Union Européenne (région France - Paris). YUMNI SAS s'appuie sur les garanties contractuelles et les niveaux de service de Scaleway pour assurer la continuité de la Plateforme."
+              ]
+            },
+            {
+              "title": "Services tiers intervenant dans la chaîne de traitement",
+              "paragraphs": [
+                "Deux prestataires tiers interviennent de manière limitée et contractuellement encadrée dans la fourniture du service :"
+              ],
+              "labeledBlocks": [
+                {
+                  "label": "**Resend Inc.** (États-Unis)",
+                  "text": "Envoi d'emails transactionnels (vérification d'email, réinitialisation de mot de passe, invitations). Les transferts de données vers Resend Inc. sont encadrés par des Clauses Contractuelles Types approuvées par la Commission européenne."
+                },
+                {
+                  "label": "**Cloudflare Inc.** (États-Unis)",
+                  "text": "Protection anti-bot via CAPTCHA (Cloudflare Turnstile). Les transferts de données vers Cloudflare Inc. sont encadrés par des Clauses Contractuelles Types approuvées par la Commission européenne."
+                }
+              ],
+              "paragraphsAfter": [
+                "L'adresse d'expédition des emails transactionnels de la Plateforme est : **noreply@pilotage-rse.fr**"
+              ]
+            }
+          ]
         },
         {
-          "title": "4. Accès au service",
-          "content": "L'accès à la plateforme nécessite la création d'un compte utilisateur. L'utilisateur s'engage à fournir des informations exactes et à maintenir la confidentialité de ses identifiants de connexion. Tout accès non autorisé à un compte doit être immédiatement signalé à Yumni."
+          "title": "Article 4 - Propriété intellectuelle",
+          "subsections": [
+            {
+              "title": "4.1 Droits de YUMNI SAS",
+              "intro": "L'ensemble des éléments constitutifs de la Plateforme YUMNI, y compris à titre non exhaustif :",
+              "list": [
+                "les interfaces utilisateur, maquettes, gabarits et contenus éditoriaux ;",
+                "la dénomination commerciale **« YUMNI »** et l'ensemble des signes distinctifs, logos et marques associés ;",
+                "les algorithmes, le code source, les modules logiciels, l'architecture applicative et les bases de données ;",
+                "la conception graphique, l'ergonomie, l'expérience utilisateur et le design d'interaction ;",
+                "les modèles de rapports RSE, les templates de présentation PowerPoint générés automatiquement, et l'ensemble des livrables numériques produits par la Plateforme ;",
+                "la structure et l'organisation des données,"
+              ],
+              "paragraphsAfter": [
+                "sont la **propriété exclusive de YUMNI SAS** ou font l'objet de licences dûment concédées à celle-ci. Ils sont protégés par le **Code de la propriété intellectuelle** français et par les conventions internationales en vigueur, notamment la Convention de Berne et l'Accord sur les aspects des droits de propriété intellectuelle qui touchent au commerce (ADPIC).",
+                "Le code source de la Plateforme YUMNI est distribué sous **licence propriétaire** (tous droits réservés - UNLICENSED). Aucune reproduction, décompilation ou ingénierie inverse n'est autorisée."
+              ]
+            },
+            {
+              "title": "4.2 Droits des Clients sur leurs données",
+              "paragraphs": [
+                "Les données professionnelles importées, créées ou générées par les Clients dans la Plateforme YUMNI (projets RSE, objectifs, actions, KPIs, risques, rapports, pièces jointes - ci-après les « **Données Client** ») demeurent la **propriété exclusive du Client**.",
+                "YUMNI SAS ne détient sur les Données Client qu'une licence technique, non exclusive, strictement limitée aux opérations d'hébergement, de traitement, d'affichage et de sauvegarde nécessaires à l'exécution du service contractuel. YUMNI SAS s'interdit formellement de commercialiser, partager, analyser à des fins propres ou exploiter de quelque manière que ce soit les Données Client en dehors de l'exécution du service."
+              ]
+            },
+            {
+              "title": "4.3 Limitations d'utilisation",
+              "intro": "Sans autorisation préalable et écrite de YUMNI SAS, sont strictement interdits :",
+              "list": [
+                "la reproduction, la modification, l'adaptation, la traduction ou la création d'œuvres dérivées de la Plateforme ou de ses composants ;",
+                "la décompilation, le désassemblage ou toute forme d'ingénierie inverse (reverse engineering) du logiciel ;",
+                "l'extraction, le scraping ou la collecte automatisée des données ou de la structure de la Plateforme, par quelque moyen technique que ce soit ;",
+                "la distribution, la revente, la sous-licence ou le partage de l'accès à la Plateforme à des tiers non contractuellement autorisés ;",
+                "l'utilisation des marques, logos, dénominations commerciales ou signes distinctifs de YUMNI SAS sans accord exprès et préalable."
+              ],
+              "paragraphsAfter": [
+                "Toute contrefaçon est susceptible de constituer une infraction pénale au sens des articles L. 335-2 et suivants du Code de la propriété intellectuelle."
+              ]
+            }
+          ]
         },
         {
-          "title": "5. Obligations de l'utilisateur",
-          "content": "L'utilisateur s'engage à : utiliser la plateforme conformément à sa destination, ne pas porter atteinte à la sécurité ou à l'intégrité du service, respecter les droits de propriété intellectuelle de Yumni, ne pas transmettre de contenus illicites, diffamatoires ou préjudiciables."
+          "title": "Article 5 - Responsabilité et limitations",
+          "subsections": [
+            {
+              "title": "5.1 Nature de l'obligation de service",
+              "paragraphs": [
+                "La Plateforme YUMNI est fournie dans le cadre d'une **obligation de moyens**. YUMNI SAS met en œuvre les moyens techniques et organisationnels raisonnables pour assurer la continuité, la sécurité et la fiabilité du service, sans garantie d'absence totale d'erreur, d'interruption ou de défaillance technique.",
+                "Les résultats produits par la Plateforme (scores WSJF, matrices de risques, indicateurs RSE, cartographies ESRS, présentations PowerPoint) constituent des **outils d'aide à la décision** fournis à titre informatif. Ils ne constituent en aucun cas des conseils professionnels certifiés en matière juridique, comptable, financière, extra-financière ou réglementaire. YUMNI SAS décline toute responsabilité quant aux décisions stratégiques ou opérationnelles prises sur la base de ces résultats."
+              ]
+            },
+            {
+              "title": "5.2 Non-responsabilité sur les contenus tiers et les Données Client",
+              "paragraphs": [
+                "En qualité d'**hébergeur** au sens de l'article 6 I 2° de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), YUMNI SAS n'exerce pas de contrôle a priori sur les Données Client importées et gérées dans la Plateforme. YUMNI SAS ne peut être tenue responsable des contenus illicites, inexacts, erronés ou portant atteinte aux droits de tiers, dont elle n'aurait pas eu connaissance ou qu'elle n'aurait pas promptement retirés après notification conforme."
+              ]
+            },
+            {
+              "title": "5.3 Limitation de responsabilité",
+              "intro": "YUMNI SAS ne peut être tenue responsable :",
+              "list": [
+                "des interruptions, ralentissements ou indisponibilités du service liés à l'infrastructure d'hébergement Scaleway, aux réseaux de télécommunication ou à tout prestataire tiers ;",
+                "des erreurs, inexactitudes ou omissions dans les données saisies par les utilisateurs ou importées dans la Plateforme ;",
+                "des dommages résultant d'une utilisation de la Plateforme non conforme à sa destination ou aux présentes Mentions Légales ;",
+                "des dommages indirects, immatériels ou consécutifs, y compris à titre non limitatif la perte de chiffre d'affaires, la perte de données, l'atteinte à l'image ou la perte d'opportunité commerciale, même si YUMNI SAS avait été informée de la possibilité de tels dommages ;",
+                "des défaillances matérielles, logicielles ou réseau relevant de l'environnement informatique du Client ;",
+                "des actes malveillants de tiers (tentatives d'intrusion, rançongiciels, attaques par déni de service distribué) dès lors que YUMNI SAS a mis en place les mesures de sécurité décrites à l'article 12 des présentes."
+              ],
+              "paragraphsAfter": [
+                "La responsabilité de YUMNI SAS, pour quelque cause que ce soit, est en tout état de cause **limitée aux dommages directs, certains et prévisibles** qui lui sont exclusivement et directement imputables, dans la limite du montant des sommes effectivement perçues du Client au titre des **douze (12) mois** précédant le fait générateur du dommage."
+              ]
+            },
+            {
+              "title": "5.4 Accès à la Plateforme - Maintenances et interruptions",
+              "paragraphs": [
+                "YUMNI SAS se réserve le droit de suspendre ou d'interrompre l'accès à la Plateforme à tout moment, notamment pour des opérations de maintenance corrective ou évolutive, des mises à jour de sécurité, ou pour des motifs légaux. Sauf urgence technique, un préavis raisonnable est communiqué aux Clients concernés par voie d'email ou de notification dans l'application. Les interventions planifiées sont, dans la mesure du possible, réalisées en dehors des heures ouvrées (18h00–06h00, heure de Paris)."
+              ]
+            },
+            {
+              "title": "5.5 Force majeure",
+              "paragraphs": [
+                "YUMNI SAS ne peut être tenue responsable de l'inexécution, totale ou partielle, de ses obligations résultant d'un événement de **force majeure** au sens de l'article 1218 du Code civil, notamment : catastrophe naturelle, incendie, pandémie, grève généralisée, coupure généralisée d'Internet, cyberattaque d'ampleur nationale, ou décision contraignante d'une autorité gouvernementale ou judiciaire."
+              ]
+            }
+          ]
         },
         {
-          "title": "6. Disponibilité du service",
-          "content": "Yumni s'efforce d'assurer une disponibilité de la plateforme 24h/24 et 7j/7, avec un objectif de 99.9% d'uptime. Toutefois, Yumni se réserve le droit de suspendre temporairement l'accès pour maintenance ou mise à jour. Les utilisateurs seront informés dans la mesure du possible."
+          "title": "Article 6 - Conditions d'utilisation",
+          "intro": "L'utilisation de la Plateforme YUMNI est subordonnée à l'acceptation pleine et entière des **Conditions Générales d'Utilisation (CGU)** de YUMNI SAS, que le représentant de chaque organisation Cliente accepte lors de la création du compte de son organisation.",
+          "subsections": [
+            {
+              "title": "6.1 Accès réservé aux professionnels",
+              "paragraphs": [
+                "L'accès à la Plateforme YUMNI est **strictement réservé** aux personnes physiques agissant dans le cadre de leur activité professionnelle au sein d'une organisation Cliente disposant d'un contrat d'abonnement en vigueur avec YUMNI SAS. Toute utilisation à titre personnel est exclue.",
+                "Tout accès non autorisé, toute tentative de contournement des mécanismes d'authentification ou de prise de contrôle non autorisée d'un compte est constitutif du délit d'accès frauduleux à un système de traitement automatisé de données, réprimé par l'**article 323-1 du Code pénal**, et susceptible de poursuites pénales."
+              ]
+            },
+            {
+              "title": "6.2 Règles comportementales",
+              "intro": "Les utilisateurs s'engagent notamment à :",
+              "list": [
+                "utiliser la Plateforme conformément à sa destination professionnelle, aux CGU en vigueur et aux présentes Mentions Légales ;",
+                "ne pas partager leurs identifiants d'accès avec des tiers non habilités, y compris au sein de leur propre organisation si ceux-ci ne disposent pas d'un accès contractuellement autorisé ;",
+                "n'importer dans la Plateforme que des données dont ils sont titulaires ou pour lesquelles ils disposent des autorisations nécessaires ;",
+                "ne pas importer de données illicites, de contenu portant atteinte aux droits de tiers, ou de données confidentielles obtenues de manière irrégulière ;",
+                "signaler sans délai tout incident de sécurité, toute compromission de compte ou tout comportement suspect à l'adresse de contact de YUMNI SAS ;",
+                "respecter les politiques de sécurité informatique de leur propre organisation."
+              ]
+            },
+            {
+              "title": "6.3 Suspension et résiliation de compte",
+              "intro": "YUMNI SAS peut suspendre ou résilier l'accès d'un utilisateur ou d'une organisation Cliente, sans préavis ni indemnité, en cas de :",
+              "list": [
+                "violation grave ou répétée des CGU ou des présentes Mentions Légales ;",
+                "activité suspecte susceptible de compromettre la sécurité, la disponibilité ou l'intégrité de la Plateforme ou des données d'autres Clients ;",
+                "non-paiement des sommes dues dans les conditions prévues au contrat d'abonnement."
+              ],
+              "paragraphsAfter": [
+                "Les modalités complètes de résiliation sont définies dans les Conditions Générales d'Utilisation."
+              ]
+            }
+          ]
         },
         {
-          "title": "7. Responsabilité",
-          "content": "Yumni met en œuvre tous les moyens raisonnables pour assurer un service de qualité. Toutefois, Yumni ne saurait être tenue responsable des dommages indirects résultant de l'utilisation ou de l'impossibilité d'utiliser la plateforme."
+          "title": "Article 7 - Données personnelles et confidentialité",
+          "intro": "Le traitement des données à caractère personnel des utilisateurs de la Plateforme YUMNI est régi par la **Politique de Confidentialité** de YUMNI SAS, accessible depuis la Plateforme, élaborée en conformité avec le **Règlement (UE) 2016/679 du 27 avril 2016 relatif à la protection des données personnelles (RGPD)** et la **loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés**, modifiée.",
+          "subsections": [
+            {
+              "title": "7.1 Double qualité de YUMNI SAS au regard du RGPD",
+              "intro": "Dans le cadre de la fourniture du service, YUMNI SAS exerce deux rôles distincts au sens du RGPD :",
+              "labeledBlocks": [
+                {
+                  "label": "En qualité de responsable de traitement :",
+                  "text": "pour les données relatives à la gestion des comptes utilisateurs, à l'authentification, à la facturation, aux communications transactionnelles et à la relation contractuelle."
+                },
+                {
+                  "label": "En qualité de sous-traitant :",
+                  "text": "pour les données professionnelles importées et administrées par le Client dans la Plateforme (projets RSE, actions, KPIs, risques, documents, commentaires). Dans cette hypothèse, le Client conserve la qualité de responsable de traitement."
+                }
+              ]
+            },
+            {
+              "title": "7.2 Vos droits",
+              "intro": "Conformément au RGPD, tout utilisateur dont les données sont traitées par YUMNI SAS en qualité de responsable de traitement dispose des droits suivants :",
+              "subgroups": [
+                {
+                  "label": "Droits disponibles directement depuis la Plateforme :",
+                  "list": [
+                    "Droit d'accès (Art. 15 RGPD) - Export de l'intégralité des données du compte au format structuré",
+                    "Droit de rectification (Art. 16 RGPD) - Modification directe via les paramètres du compte",
+                    "Droit à l'effacement (Art. 17 RGPD) - Suppression définitive et immédiate du compte et des données associées",
+                    "Droit à la portabilité (Art. 20 RGPD) - Génération d'une archive au format structuré, accessible via lien sécurisé pendant 48 heures"
+                  ]
+                },
+                {
+                  "label": "Droits exercés sur demande écrite :",
+                  "list": [
+                    "Droit à la limitation du traitement (Art. 18 RGPD)",
+                    "Droit d'opposition (Art. 21 RGPD)"
+                  ]
+                }
+              ],
+              "paragraphsAfter": [
+                "Pour exercer l'un de ces droits, adressez votre demande à l'adresse de contact de YUMNI SAS avec pour objet : « Demande RGPD - [droit concerné] ». YUMNI SAS s'engage à répondre dans le délai légal de **trente (30) jours** à compter de la réception d'une demande complète, conformément à l'article 12 du RGPD.",
+                "Toute réclamation relative au traitement de données personnelles peut également être adressée à l'autorité de contrôle compétente :"
+              ],
+              "contactCard": [
+                "**Commission Nationale de l'Informatique et des Libertés (CNIL)**",
+                "3 Place de Fontenoy - TSA 80715 - 75334 Paris Cedex 07",
+                "www.cnil.fr"
+              ]
+            },
+            {
+              "title": "7.3 Cookies et traceurs",
+              "paragraphs": [
+                "La Plateforme YUMNI utilise exclusivement des **cookies techniques strictement nécessaires** au fonctionnement du service (maintien de la session authentifiée, mémorisation des appareils de confiance pour l'authentification multifacteur, préférences d'affichage). Aucun cookie publicitaire, de profilage ou de traçage commercial n'est déposé."
+              ]
+            }
+          ]
         },
         {
-          "title": "8. Modification des CGU",
-          "content": "Yumni se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront informés de toute modification substantielle. La poursuite de l'utilisation de la plateforme après notification vaut acceptation des nouvelles conditions."
+          "title": "Article 8 - Signalement de contenus illicites",
+          "intro": "Conformément à l'article 6 I 5° de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), tout utilisateur ou tiers peut signaler à YUMNI SAS des contenus hébergés sur la Plateforme qu'il estime illicites.",
+          "subsections": [
+            {
+              "title": "8.1 Procédure de signalement",
+              "intro": "Le signalement doit être adressé à YUMNI SAS à l'adresse de contact officielle, avec pour objet : **« Signalement contenu illicite »**.",
+              "paragraphs": [
+                "Conformément à l'article 6 I 5° de la LCEN, le signalement doit impérativement comporter :"
+              ],
+              "numberedList": [
+                "La date du signalement ;",
+                "Les nom, prénoms, profession, adresse postale et adresse email du signalant (ou, pour une personne morale, sa forme juridique, sa dénomination, son siège social et l'identité de son représentant légal) ;",
+                "La description précise des faits litigieux et leur localisation précise au sein de la Plateforme ;",
+                "Les motifs pour lesquels le contenu doit être retiré, avec mention des dispositions légales applicables et leur justification ;",
+                "La copie de la correspondance adressée à l'auteur ou à l'éditeur des informations ou activités litigieuses demandant leur interruption, leur retrait ou leur modification, ou la justification de ce que l'auteur ou l'éditeur n'a pu être contacté."
+              ],
+              "warning": "**Avertissement :** Conformément à l'article 6 I 5° de la LCEN, le fait, pour toute personne, de présenter à YUMNI SAS un contenu ou une activité comme illicite dans le but d'en obtenir le retrait ou d'en faire cesser la diffusion, alors qu'elle sait cette information inexacte, est puni d'une peine d'un an d'emprisonnement et de 15 000 euros d'amende."
+            },
+            {
+              "title": "8.2 Traitement des signalements",
+              "paragraphs": [
+                "YUMNI SAS s'engage à accuser réception du signalement et à examiner son bien-fondé avec diligence. Tout contenu manifestement illicite sera retiré ou rendu inaccessible promptement après réception d'un signalement conforme aux exigences de l'article 6 I 5° de la LCEN."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 9 - Droit applicable et compétence",
+          "subsections": [
+            {
+              "title": "9.1 Droit applicable",
+              "paragraphs": [
+                "Les présentes Mentions Légales et l'utilisation de la Plateforme YUMNI sont régies et interprétées conformément au **droit français**, à l'exclusion de toute règle de conflit de lois susceptible de conduire à l'application d'un droit étranger."
+              ]
+            },
+            {
+              "title": "9.2 Juridiction compétente",
+              "paragraphs": [
+                "Compte tenu du caractère exclusivement **professionnel (B2B)** de la Plateforme YUMNI et de sa clientèle, tout litige relatif à l'interprétation, à l'exécution ou à la résiliation des présentes Mentions Légales, ou des contrats d'abonnement conclus entre YUMNI SAS et ses Clients, relèvera de la compétence exclusive du **Tribunal de Commerce de Paris**, nonobstant pluralité de défendeurs ou appel en garantie, sous réserve des dispositions légales impératives qui imposeraient une compétence exclusive distincte."
+              ]
+            },
+            {
+              "title": "9.3 Résolution amiable préalable",
+              "paragraphs": [
+                "Préalablement à toute saisine d'une juridiction, les parties s'engagent à rechercher de bonne foi une résolution amiable de tout différend. À cet effet, la partie la plus diligente adresse à l'autre une **mise en demeure par lettre recommandée avec accusé de réception**, exposant la nature et l'objet du litige.",
+                "Un délai de **trente (30) jours** calendaires est accordé, à compter de la réception de cette mise en demeure, pour parvenir à un accord amiable. À l'expiration de ce délai sans accord, chaque partie recouvre sa pleine liberté d'ester en justice devant la juridiction compétente."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 10 - Modification des mentions légales",
+          "intro": "YUMNI SAS se réserve le droit de modifier les présentes Mentions Légales à tout moment, notamment pour les adapter aux évolutions législatives et réglementaires, aux évolutions techniques de la Plateforme, ou à toute modification de l'organisation de YUMNI SAS.",
+          "subsections": [
+            {
+              "title": "10.1 Notification des modifications",
+              "paragraphs": [
+                "Les modifications substantielles affectant les droits des utilisateurs feront l'objet d'une information préalable par **email à l'adresse du compte** et par **notification dans l'application**, avec un délai de préavis d'au moins **quinze (15) jours** avant leur entrée en vigueur.",
+                "Les modifications mineures à caractère rédactionnel ou de précision seront publiées sur la présente page sans préavis particulier.",
+                "Les modifications imposées par une obligation légale ou réglementaire entrent en vigueur dès la date d'application de cette obligation, sans possibilité de délai de préavis.",
+                "La **date de dernière mise à jour** est indiquée en tête du présent document."
+              ]
+            },
+            {
+              "title": "10.2 Acceptation des modifications",
+              "paragraphs": [
+                "L'utilisation continue de la Plateforme YUMNI après la date d'entrée en vigueur d'une modification des présentes Mentions Légales vaut acceptation pleine et entière de la version révisée.",
+                "En cas de désaccord avec une modification substantielle, le Client dispose de la faculté de résilier son contrat d'abonnement dans les conditions prévues aux Conditions Générales d'Utilisation, sans pénalité liée à ladite modification."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 11 - Contact et support",
+          "subsections": [
+            {
+              "title": "Contact officiel YUMNI SAS",
+              "intro": "Pour toute question ou réclamation relative aux présentes Mentions Légales, à la protection des données personnelles, ou au fonctionnement de la Plateforme YUMNI :",
+              "contactCard": [
+                "**dpo@yumni.fr ou contact@yumni.fr**"
+              ],
+              "paragraphsAfter": [
+                "**Préciser en objet :** `[Mentions légales] / [RGPD] / [Signalement] / [Support] / [Juridique]`",
+                "Le délai légal de réponse aux demandes relatives à l'exercice des droits RGPD est de **trente (30) jours** à compter de la réception d'une demande complète (article 12 du RGPD)."
+              ]
+            },
+            {
+              "title": "Adresse postale",
+              "infoCard": [
+                "YUMNI SAS",
+                "61 RUE DE LYON, 75012 PARIS",
+                "France"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 12 - Conformité légale et réglementations",
+          "intro": "YUMNI SAS conçoit et exploite la Plateforme YUMNI dans le respect des réglementations applicables suivantes :",
+          "subsections": [
+            {
+              "title": "12.1 Lois applicables",
+              "table": {
+                "headers": [
+                  "Texte",
+                  "Référence",
+                  "Objet"
+                ],
+                "rows": [
+                  [
+                    "**LCEN**",
+                    "Loi n° 2004-575 du 21 juin 2004",
+                    "Confiance dans l'économie numérique - obligations d'identification, hébergement, signalement"
+                  ],
+                  [
+                    "**RGPD**",
+                    "Règlement (UE) 2016/679 du 27 avril 2016",
+                    "Protection des données à caractère personnel"
+                  ],
+                  [
+                    "**Loi Informatique et Libertés**",
+                    "Loi n° 78-17 du 6 janvier 1978 modifiée",
+                    "Traitement des données personnelles en droit français"
+                  ],
+                  [
+                    "**Code de la propriété intellectuelle**",
+                    "Notamment L. 112-1 et suivants, L. 335-2 et suivants",
+                    "Protection des logiciels, des bases de données et des marques"
+                  ],
+                  [
+                    "**Code de commerce**",
+                    "Notamment L. 110-1 et suivants",
+                    "Relations contractuelles entre professionnels"
+                  ],
+                  [
+                    "**Code pénal**",
+                    "Art. 323-1 à 323-7",
+                    "Répression des atteintes aux systèmes de traitement automatisé de données"
+                  ]
+                ]
+              }
+            },
+            {
+              "title": "12.2 Engagements de YUMNI SAS",
+              "intro": "YUMNI SAS s'engage à :",
+              "list": [
+                "protéger les données personnelles des utilisateurs conformément au RGPD et à la loi Informatique et Libertés, dans le respect des principes de minimisation, de finalité, de proportionnalité et de sécurité ;",
+                "assurer l'hébergement exclusif de la Plateforme et des données sur le territoire français au sein de l'Union Européenne, via Scaleway SAS (région `fr-par` - Paris) ;",
+                "garantir la confidentialité des Données Client dans le cadre contractuel, sans exploitation commerciale de celles-ci ;",
+                "informer les Clients, sans délai injustifié, de tout incident de sécurité susceptible d'affecter leurs données ou l'accès au service ;",
+                "mettre à disposition des utilisateurs les outils leur permettant d'exercer effectivement leurs droits RGPD (accès, rectification, effacement, portabilité) depuis l'interface de la Plateforme."
+              ]
+            },
+            {
+              "title": "12.3 Mesures de sécurité techniques effectivement déployées",
+              "intro": "Les mesures suivantes sont implémentées et opérationnelles dans la Plateforme YUMNI :",
+              "list": [
+                "Chiffrement de l'ensemble des communications par protocole HTTPS/TLS ;",
+                "Hachage des mots de passe via Bcrypt avec facteur d'itération adapté ;",
+                "Authentification multifacteur (MFA) par protocole TOTP (Time-based One-Time Password), avec chiffrement des secrets TOTP au repos via AES-256-GCM ;",
+                "Contrôle d'accès basé sur les rôles (RBAC), vérifié à chaque requête HTTP adressée à l'API ;",
+                "Protection anti-brute force : verrouillage automatique de l'authentification MFA après trois tentatives échouées consécutives ;",
+                "Validation stricte de l'ensemble des données entrantes par schémas de validation formels ;",
+                "Absence de données à caractère personnel dans les journaux applicatifs ;",
+                "Hébergement exclusif en Union Européenne (Scaleway, France)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 13 - Documents connexes",
+          "intro": "Pour une compréhension complète des droits et obligations régissant l'utilisation de la Plateforme YUMNI, veuillez consulter les documents suivants, qui font corps avec les présentes Mentions Légales :",
+          "subsections": [
+            {
+              "title": "Documents disponibles",
+              "labeledBlocks": [
+                {
+                  "label": "Conditions Générales d'Utilisation (CGU)",
+                  "text": "Règles d'accès et d'utilisation de la Plateforme, droits et obligations des parties, plans d'abonnement, quotas d'utilisation, facturation, durée et résiliation.\n→ Consulter les CGU"
+                },
+                {
+                  "label": "Politique de Confidentialité",
+                  "text": "Traitements de données à caractère personnel, finalités et bases légales, sous-traitants, durées de conservation, exercice des droits RGPD, gestion des cookies.\n→ Consulter la Politique de Confidentialité"
+                },
+                {
+                  "label": "Mentions Légales",
+                  "text": "Identification de l'éditeur, hébergement, propriété intellectuelle, responsabilités légales.\n→ Vous consultez ce document."
+                }
+              ]
+            },
+            {
+              "title": "Dernière mise à jour",
+              "paragraphs": [
+                "Les présentes Mentions Légales ont été mises à jour le **23 avril 2026**."
+              ]
+            }
+          ],
+          "footer": "© 2026 YUMNI SAS - Tous droits réservés. Capital social : 1 000 € - Hébergement : Scaleway SAS, Paris, France (Union Européenne) Droit applicable : droit français - Juridiction compétente : Tribunal de Commerce de Paris"
         }
       ]
+    },
+    "terms": {
+      "title": "Conditions Générales d'Utilisation — Plateforme YUMNI",
+      "tableOfContentsTitle": "Table des matières",
+      "tableOfContents": [
+        "Objet et présentation de la société",
+        "Acceptation des CGU",
+        "Conditions d'accès au service",
+        "Création et gestion du compte",
+        "Usages professionnels et comportements interdits",
+        "Propriété intellectuelle",
+        "Données personnelles et traitement",
+        "Responsabilité de YUMNI",
+        "Suspension, résiliation et clôture de compte",
+        "Services tiers et sous-traitants techniques",
+        "Durée, abonnement et évolution des services",
+        "Droit applicable et litiges",
+        "Contacts et support"
+      ],
+      "articles": [
+        {
+          "title": "Article 1 - Objet et présentation de la société",
+          "intro": "Les présentes Conditions Générales d'Utilisation (ci-après les « **CGU** ») ont pour objet de définir les conditions et modalités d'accès et d'utilisation de la plateforme **YUMNI** (ci-après la « **Plateforme** »), solution logicielle déployée en mode SaaS (*Software as a Service*), exploitée par la société **YUMNI SAS**, société par actions simplifiée au capital de **1 000 euros (€)**, dont le siège social est établi à 61 RUE DE LYON, 75012 PARIS, immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro 102228608 (ci-après « **YUMNI** »).",
+          "paragraphs": [
+            "Conformément à son objet social, YUMNI conçoit, développe et exploite une solution numérique destinée à :"
+          ],
+          "list": [
+            "**(a)** accompagner les organisations professionnelles dans la structuration, le pilotage et le suivi de leur stratégie de **Responsabilité Sociétale des Entreprises (RSE)** ;",
+            "**(b)** fournir des outils de gestion de projets RSE selon les axes Environnement, Social et Gouvernance (ESG) : axes stratégiques, objectifs, projets, actions, jalons, indicateurs de performance (KPIs), gestion des risques et des idées ;",
+            "**(c)** permettre la priorisation des initiatives RSE via des méthodes de scoring objectif (notamment WSJF - *Weighted Shortest Job First*) et la génération de rapports de synthèse RSE au format PowerPoint ;",
+            "**(d)** offrir un espace de travail collaboratif multi-utilisateurs sécurisé à destination exclusive de professionnels."
+          ],
+          "paragraphsAfter": [
+            "**La Plateforme YUMNI est une solution B2B (*Business to Business*) exclusivement réservée aux personnes morales et aux personnes physiques agissant dans le cadre de leur activité professionnelle.** Elle n'est pas destinée au grand public et ne constitue pas un service grand public (B2C). Les dispositions protectrices du droit de la consommation, y compris le droit de rétractation prévu à l'article L.221-18 du Code de la consommation, sont inapplicables aux relations contractuelles régies par les présentes CGU."
+          ]
+        },
+        {
+          "title": "Article 2 - Acceptation des CGU",
+          "intro": "L'accès à la Plateforme et son utilisation sont subordonnés à l'**acceptation expresse, intégrale et sans réserve** des présentes CGU.",
+          "paragraphs": [
+            "Lors de la création d'un compte Organisation ou lors de la souscription d'un abonnement, le Client reconnaît avoir pris connaissance des CGU dans leur intégralité et les accepte en cochant la case prévue à cet effet (« J'accepte les Conditions Générales d'Utilisation ») ou en cliquant sur le bouton d'activation correspondant. Cet acte positif et délibéré constitue une **signature électronique** au sens de l'article 1366 du Code civil et emporte acceptation contractuelle pleine et entière.",
+            "La personne physique procédant à l'inscription au nom d'une société ou d'une organisation déclare et garantit expressément :"
+          ],
+          "list": [
+            "qu'elle dispose des pouvoirs et habilitations nécessaires pour engager ladite entité au titre des présentes CGU ;",
+            "que les informations communiquées lors de l'inscription sont exactes, complètes et à jour."
+          ],
+          "paragraphsAfter": [
+            "En cas de désaccord avec tout ou partie des présentes CGU, le Client doit s'abstenir d'utiliser la Plateforme et adresser ses observations à YUMNI à l'adresse indiquée à l'article 13."
+          ],
+          "note": "**Modifications des CGU :** YUMNI se réserve le droit de modifier les présentes CGU pour les adapter aux évolutions légales, réglementaires, techniques ou commerciales. Les modifications **substantielles** - c'est-à-dire celles affectant les droits et obligations des parties - feront l'objet d'une **information préalable d'au moins 30 jours** par email à l'adresse du compte du Client et/ou par notification in-app. Les modifications d'ordre rédactionnel ou de précision n'affectant pas les droits des parties prennent effet immédiatement après publication. L'utilisation de la Plateforme postérieurement à la date d'entrée en vigueur d'une modification vaut acceptation de la version révisée. En cas de désaccord avec une modification substantielle, le Client peut résilier son abonnement sans pénalité dans les conditions prévues à l'article 9, avant la date d'effet de ladite modification."
+        },
+        {
+          "title": "Article 3 - Conditions d'accès au service",
+          "subsections": [
+            {
+              "title": "3.1 Accès exclusivement professionnel",
+              "paragraphs": [
+                "L'utilisation de la Plateforme est **strictement réservée** aux personnes morales (sociétés, associations, organismes publics, groupements professionnels) et aux personnes physiques agissant dans le cadre exclusif de leur activité professionnelle, disposant de la capacité juridique de contracter. Toute utilisation à des fins personnelles, récréatives ou par des mineurs est formellement interdite.",
+                "La Plateforme est destinée aux entreprises, groupes, ETI, PME, TPE, cabinets de conseil RSE, directeurs RSE, responsables développement durable, consultants, décideurs et toute organisation souhaitant structurer et piloter une démarche RSE professionnelle."
+              ]
+            },
+            {
+              "title": "3.2 Restrictions géographiques",
+              "paragraphs": [
+                "La Plateforme YUMNI est opérée depuis la France et son infrastructure est hébergée exclusivement en **France, au sein de l'Union Européenne**. YUMNI ne garantit pas la disponibilité ou la conformité du service au-delà du territoire de l'Union Européenne."
+              ]
+            },
+            {
+              "title": "3.3 Plans d'abonnement, quotas et fonctionnalités",
+              "intro": "L'accès à la Plateforme est organisé en quatre niveaux d'abonnement. Les quotas et fonctionnalités décrits ci-dessous sont ceux en vigueur à la date des présentes CGU et peuvent évoluer dans les conditions prévues aux articles 2 et 11.",
+              "table": {
+                "headers": ["Plan", "Utilisateurs", "Axes", "Projets", "KPIs", "Risques", "Idées", "Fonctionnalités clés"],
+                "rows": [
+                  ["**Freemium**", "1 (solo)", "5", "10", "20", "15", "20", "Mode solo uniquement - sans collaboration"],
+                  ["**Starter**", "5", "Sans limite", "Sans limite", "Sans limite", "Sans limite", "Sans limite", "Multi-utilisateurs, gestion documentaire, commentaires"],
+                  ["**Pro**", "Lancement fin 2026", "Sans limite", "Sans limite", "Sans limite", "Sans limite", "Sans limite", "Rapports avancés, planification automatique, accès API"],
+                  ["**Enterprise**", "Illimité", "Sans limite", "Sans limite", "Sans limite", "Sans limite", "Sans limite", "Toutes fonctionnalités, support dédié, SLA renforcé"]
+                ]
+              },
+              "paragraphsAfter": [
+                "Le plan **Freemium** est gratuit, sans engagement de durée et limité à un usage solo (un seul Utilisateur, sans fonctionnalités de collaboration multi-utilisateurs). Il est proposé à titre d'essai et de découverte de la Plateforme. YUMNI se réserve le droit de modifier les conditions du plan Freemium ou d'en mettre fin à la disponibilité, sous réserve d'un préavis raisonnable notifié aux utilisateurs concernés.",
+                "Les plans **Starter, Pro et Enterprise** sont des abonnements payants soumis aux conditions tarifaires en vigueur, consultables sur la Plateforme ou sur demande à l'adresse indiquée à l'article 13. En cas de dépassement des quotas alloués à son plan, le Client est notifié et la création de nouvelles entités est bloquée jusqu'à mise à niveau du plan ou libération de ressources. Aucune donnée existante n'est supprimée sans accord préalable du Client."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 4 - Création et gestion du compte",
+          "subsections": [
+            {
+              "title": "4.1 Inscription et compte Organisation",
+              "paragraphs": [
+                "Pour accéder à la Plateforme, le Client crée un **compte Organisation** en fournissant une adresse email professionnelle valide, un mot de passe sécurisé conforme aux exigences de complexité requises, et les informations relatives à son organisation. Le compte Organisation constitue l'espace de travail regroupant l'ensemble des Utilisateurs, données RSE et paramètres du Client.",
+                "L'inscription est complétée par la **vérification obligatoire de l'adresse email** via un lien transmis par la Plateforme. Aucun accès aux fonctionnalités n'est accordé avant validation de l'email.",
+                "Le Client s'engage à maintenir ses informations de compte exactes, complètes et à jour tout au long de la relation contractuelle. Les informations manifestement inexactes ou frauduleuses peuvent entraîner la suspension ou la suppression immédiate du compte."
+              ]
+            },
+            {
+              "title": "4.2 Contrôle d'accès et rôles (RBAC)",
+              "intro": "La Plateforme met en œuvre un système de **contrôle d'accès basé sur les rôles** (*Role-Based Access Control* - RBAC) à quatre niveaux :",
+              "table": {
+                "headers": ["Rôle", "Périmètre d'action"],
+                "rows": [
+                  ["**OWNER**", "Propriétaire de l'Organisation : tous droits, gestion de l'abonnement, des membres et de la facturation"],
+                  ["**ADMIN**", "Administration complète : création, modification et suppression de toutes les entités, gestion des membres"],
+                  ["**MANAGER**", "Gestion opérationnelle : création et modification de projets, idées et actions"],
+                  ["**USER**", "Consultation : accès en lecture seule, soumission d'idées uniquement"]
+                ]
+              },
+              "paragraphsAfter": [
+                "Le rôle **OWNER** est attribué automatiquement à la personne ayant créé l'Organisation. Il est unique et ne peut être transféré qu'explicitement. Le Client (OWNER et ADMIN) est responsable de l'attribution, de la gestion et de la révocation régulière des rôles de ses Utilisateurs, notamment en cas de départ d'un collaborateur ou de modification de ses responsabilités."
+              ]
+            },
+            {
+              "title": "4.3 Sécurité des accès et authentification",
+              "intro": "La Plateforme implémente les mécanismes d'authentification et de sécurité suivants, effectivement déployés :",
+              "list": [
+                "**Identifiants** : adresse email professionnelle + mot de passe (haché en base de données via **Bcrypt**, facteur d'itération 10–12) ;",
+                "**Tokens d'accès JWT** : validité de 7 jours, signés HMAC-SHA256 ;",
+                "**Authentification multifacteur (MFA)** : protocole TOTP (*Time-based One-Time Password*), compatible avec Google Authenticator, Microsoft Authenticator, Authy et équivalents - secrets TOTP chiffrés au repos en **AES-256-GCM** ;",
+                "**Dispositifs de confiance MFA** : mémorisables 30 jours via cookie HttpOnly, Secure, SameSite=Strict ;",
+                "**Codes de secours MFA** : 10 codes à usage unique, hachés individuellement, téléchargeables à l'activation ;",
+                "**Protection anti-brute force** : verrouillage automatique du compte après 3 tentatives MFA échouées consécutives - délai de 5 minutes."
+              ]
+            },
+            {
+              "title": "4.4 Responsabilité du Client sur les accès",
+              "paragraphs": [
+                "Le Client est **seul et entièrement responsable** de la confidentialité des identifiants de l'ensemble de ses Utilisateurs et de toutes les activités réalisées via les comptes de son Organisation. Le Client s'engage à signaler sans délai injustifié tout accès non autorisé, toute compromission de compte ou tout incident de sécurité à YUMNI à l'adresse indiquée à l'article 13. YUMNI décline toute responsabilité résultant de la perte, du vol ou de l'utilisation non autorisée d'identifiants due à une négligence du Client ou de ses Utilisateurs."
+              ]
+            },
+            {
+              "title": "4.5 Restriction, suspension et refus d'accès",
+              "paragraphs": [
+                "YUMNI peut refuser la création d'un compte, suspendre ou supprimer un compte sans préavis en cas de violation grave ou répétée des présentes CGU, d'activité suspecte susceptible de compromettre la sécurité de la Plateforme ou des données de tiers, de non-paiement des sommes dues, ou pour tout autre motif légitime de sécurité ou d'intégrité du service."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 5 - Usages professionnels et comportements interdits",
+          "subsections": [
+            {
+              "title": "5.1 Usage conforme à la destination professionnelle",
+              "paragraphs": [
+                "Le Client et ses Utilisateurs s'engagent à utiliser la Plateforme exclusivement dans le cadre de leur activité professionnelle et conformément à sa destination : le pilotage et la gestion de stratégies RSE. La Plateforme ne peut être utilisée qu'à des fins licites, dans le respect des lois et réglementations applicables ainsi que des droits des tiers.",
+                "Le Client garantit que les données, projets, actions, KPIs, risques et tout contenu qu'il importe ou génère dans la Plateforme (les « **Données Client** ») sont licites et ne portent pas atteinte aux droits de propriété intellectuelle, à la vie privée, à la réputation ou à tout autre droit de tiers."
+              ]
+            },
+            {
+              "title": "5.2 Comportements et usages strictement interdits",
+              "intro": "Le Client et ses Utilisateurs s'engagent formellement à **ne pas** :",
+              "list": [
+                "Accéder à la Plateforme, à des comptes tiers ou à des données auxquels ils ne sont pas habilités, par quelque procédé que ce soit - une telle conduite constituant une infraction pénale visée à l'**article 323-1 du Code pénal** ;",
+                "Tenter de contourner, désactiver, compromettre ou altérer les mécanismes d'authentification, de contrôle d'accès (RBAC) ou de sécurité de la Plateforme ;",
+                "Procéder à la rétro-ingénierie, décompilation, désassemblage, copie ou tentative d'extraction du code source, des algorithmes ou de l'architecture logicielle de la Plateforme - interdit par le **Code de la propriété intellectuelle** et par les présentes CGU ;",
+                "Introduire des virus, chevaux de Troie, *ransomwares*, scripts malveillants, *bots* ou tout code susceptible de perturber, endommager ou prendre le contrôle de la Plateforme ou des systèmes de YUMNI ;",
+                "Procéder à des opérations de *scraping*, collecte automatisée de données ou *crawling* sur la Plateforme sans autorisation préalable et écrite de YUMNI ;",
+                "Importer des données personnelles sensibles au sens de l'article 9 du RGPD (données de santé, opinions politiques, convictions religieuses, données biométriques, etc.) sans base légale appropriée et documentée ;",
+                "Sous-licencier, revendre, louer, céder ou mettre à disposition l'accès à la Plateforme à des tiers non contractuellement habilités, que ce soit à titre onéreux ou gratuit ;",
+                "Partager des identifiants d'accès avec des personnes non Utilisateurs du compte Organisation ou en permettre l'accès à des tiers non habilités ;",
+                "Surcharger délibérément l'infrastructure de la Plateforme par des requêtes abusives, répétées ou automatisées (attaques de type *Denial of Service* ou assimilées) ;",
+                "Utiliser la Plateforme à des fins contraires aux lois et réglementations en vigueur, notamment en matière de concurrence, de droit du travail, de protection des données ou de lutte contre la corruption."
+              ]
+            },
+            {
+              "title": "5.3 Signalement et conséquences",
+              "paragraphs": [
+                "Toute violation des obligations prévues au présent article peut entraîner, sans mise en demeure préalable et sans préjudice de tout dommages et intérêts, la suspension immédiate ou la résiliation du compte dans les conditions prévues à l'article 9. YUMNI se réserve le droit d'engager toute action judiciaire appropriée, y compris pénale, en cas d'atteinte grave à ses systèmes, à ses droits ou aux droits de tiers."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 6 - Propriété intellectuelle",
+          "subsections": [
+            {
+              "title": "6.1 Droits exclusifs de YUMNI",
+              "intro": "L'ensemble des éléments constitutifs de la Plateforme YUMNI, y compris à titre non exhaustif :",
+              "list": [
+                "les interfaces graphiques, maquettes, chartes visuelles, ergonomie et expérience utilisateur ;",
+                "la dénomination commerciale **« YUMNI »** et l'ensemble des signes distinctifs, marques, logos et noms de domaine associés ;",
+                "les algorithmes, code source, modules logiciels, *APIs*, architectures applicatives et bases de données ;",
+                "les modèles de rapports RSE et *templates* de présentation générés automatiquement, la structure des données et l'organisation de l'information ;",
+                "les glossaires, contenus éditoriaux, documentations techniques et méthodologiques,"
+              ],
+              "paragraphsAfter": [
+                "constituent la **propriété exclusive de YUMNI SAS** ou font l'objet de licences dûment accordées à YUMNI, et sont protégés par le **Code de la propriété intellectuelle français** (droit d'auteur, droit des logiciels, droit des bases de données, droit des marques) ainsi que par les conventions internationales applicables. Le code source de la Plateforme est distribué sous **licence propriétaire** (tous droits réservés). Toute reproduction totale ou partielle, décompilation ou ingénierie inverse est formellement et expressément interdite."
+              ]
+            },
+            {
+              "title": "6.2 Licence d'utilisation accordée au Client",
+              "paragraphs": [
+                "YUMNI concède au Client, pour la durée de son abonnement, une **licence d'utilisation de la Plateforme personnelle, non exclusive, non cessible, non sous-licenciable, limitée aux pays de l'Union Européenne**, strictement limitée aux besoins professionnels internes du Client, dans le respect du plan souscrit et des présentes CGU. Cette licence ne confère au Client aucun droit de propriété sur la Plateforme, ses composants, son code source ou ses algorithmes."
+              ]
+            },
+            {
+              "title": "6.3 Droits exclusifs du Client sur ses Données",
+              "paragraphs": [
+                "Les Données Client - c'est-à-dire l'ensemble des données, projets, objectifs, actions, KPIs, risques, idées, rapports, analyses et documents importés, créés ou générés par le Client et ses Utilisateurs dans la Plateforme - demeurent la **propriété exclusive du Client**.",
+                "YUMNI ne détient sur les Données Client qu'une **licence technique strictement limitée** à ce qui est nécessaire à la fourniture du service : hébergement, traitement, affichage, sauvegarde, transmission et, le cas échéant, export dans le cadre contractuel. YUMNI **ne commercialise, ne partage, ne cède, ne loue ni n'exploite les Données Client** à d'autres fins que l'exécution du présent contrat."
+              ]
+            },
+            {
+              "title": "6.4 Portabilité et restitution des données",
+              "paragraphs": [
+                "À l'expiration ou résiliation du contrat, quelle qu'en soit la cause, le Client dispose d'un délai de **30 jours** à compter de la date effective de résiliation pour exporter l'intégralité de ses Données Client via les fonctionnalités d'export disponibles dans la Plateforme (format structuré). Passé ce délai, YUMNI procède à la suppression définitive et irréversible des Données Client de l'ensemble de ses systèmes et sauvegardes, dans les conditions prévues à la Politique de Confidentialité."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 7 - Données personnelles et traitement",
+          "intro": "Le traitement des données personnelles collectées dans le cadre de l'utilisation de la Plateforme est régi par la **Politique de Confidentialité** accessible sur la Plateforme, conforme au **Règlement Général sur la Protection des Données (RGPD - Règlement (UE) 2016/679)** et à la **loi n° 78-17 du 6 janvier 1978 modifiée** (loi Informatique et Libertés).",
+          "subsections": [
+            {
+              "title": "7.1 Double rôle de YUMNI au sens du RGPD",
+              "intro": "Dans le cadre du service, YUMNI exerce deux rôles distincts au sens du RGPD :",
+              "table": {
+                "headers": ["Rôle RGPD", "Périmètre"],
+                "rows": [
+                  ["**Responsable de traitement** (Art. 4.7 RGPD)", "Données des comptes Utilisateurs, authentification, facturation, relation commerciale, emails transactionnels"],
+                  ["**Sous-traitant** (Art. 28 RGPD)", "Données RSE métier importées et administrées par le Client (projets, actions, risques, documents, etc.)"]
+                ]
+              },
+              "paragraphsAfter": [
+                "Le **Client** agit en qualité de **responsable de traitement** pour les Données Client qu'il importe et administre dans la Plateforme. En acceptant les présentes CGU, le Client conclut avec YUMNI un **accord de traitement des données (DPA - *Data Processing Agreement*)** au sens de l'article 28 du RGPD, encadrant l'ensemble des traitements réalisés par YUMNI en qualité de sous-traitant."
+              ]
+            },
+            {
+              "title": "7.2 Hébergement et localisation des données",
+              "paragraphs": [
+                "L'intégralité de l'infrastructure de la Plateforme, des bases de données et des stockages objets est hébergée en **France, au sein de l'Union Européenne**, sur les infrastructures de **Scaleway SAS** (Groupe Iliad), région `fr-par` - Paris. Aucune Donnée Client n'est transférée en dehors de l'Union Européenne, sauf obligation légale ou judiciaire. En cas de transfert hors UE rendu nécessaire par un sous-traitant (voir article 10), les garanties appropriées au sens du Chapitre V du RGPD sont mises en place (Clauses Contractuelles Types approuvées par la Commission européenne)."
+              ]
+            },
+            {
+              "title": "7.3 Mesures de sécurité techniques mises en œuvre",
+              "intro": "Les mesures suivantes sont effectivement déployées sur la Plateforme :",
+              "list": [
+                "Chiffrement de toutes les communications client-serveur via **HTTPS/TLS** ;",
+                "Hachage des mots de passe via **Bcrypt** (facteur d'itération 10–12) ;",
+                "Chiffrement des secrets d'authentification multifacteur via **AES-256-GCM** ;",
+                "Contrôle d'accès **RBAC** appliqué à l'ensemble des requêtes HTTP ;",
+                "Protection anti-brute force avec verrouillage temporaire des accès ;",
+                "Validation systématique des entrées utilisateur via schémas de données stricts ;",
+                "Absence de données personnelles dans les journaux applicatifs (*logs*) ;",
+                "Hébergement exclusivement en Union Européenne sur infrastructure Scaleway."
+              ]
+            },
+            {
+              "title": "7.4 Droits des personnes concernées",
+              "intro": "Conformément au RGPD, chaque Utilisateur dont les données personnelles sont traitées par YUMNI en qualité de responsable de traitement dispose des droits suivants, exercés à l'adresse indiquée à l'article 13 :",
+              "table": {
+                "headers": ["Droit", "Base légale", "Modalité d'exercice"],
+                "rows": [
+                  ["Droit d'accès (Art. 15)", "Art. 15 RGPD", "Export des données via l'interface ou demande écrite"],
+                  ["Droit de rectification (Art. 16)", "Art. 16 RGPD", "Modification directe via les paramètres du compte"],
+                  ["Droit à l'effacement (Art. 17)", "Art. 17 RGPD", "Suppression définitive via l'interface ou demande écrite"],
+                  ["Droit à la portabilité (Art. 20)", "Art. 20 RGPD", "Archive structurée - lien valable 48 heures"],
+                  ["Droit à la limitation (Art. 18)", "Art. 18 RGPD", "Sur demande écrite à YUMNI"],
+                  ["Droit d'opposition (Art. 21)", "Art. 21 RGPD", "Sur demande écrite à YUMNI"]
+                ]
+              },
+              "paragraphsAfter": [
+                "**Délai de réponse légal :** 30 jours à compter de la réception de la demande complète (Art. 12 RGPD), prorogeable une fois de 2 mois pour les demandes complexes.",
+                "En cas de réclamation non résolue, toute personne concernée peut saisir la **Commission Nationale de l'Informatique et des Libertés (CNIL)** - 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 - www.cnil.fr."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 8 - Responsabilité de YUMNI",
+          "subsections": [
+            {
+              "title": "8.1 Obligation de moyens",
+              "paragraphs": [
+                "La Plateforme est fournie dans le cadre d'une **obligation de moyens**. YUMNI met en œuvre les diligences techniques et organisationnelles raisonnables pour assurer la continuité, la disponibilité, la performance et la sécurité du service, sans garantie de disponibilité permanente, ininterrompue ou exempte de toute erreur."
+              ]
+            },
+            {
+              "title": "8.2 Services fournis « en l'état » et nature des outils",
+              "paragraphs": [
+                "La Plateforme et l'ensemble de ses fonctionnalités sont fournis **« en l'état »** et **« selon disponibilité »**. Les outils d'aide à la décision mis à disposition par la Plateforme - scoring WSJF, matrices de risques Impact × Probabilité, tableaux de bord KPIs, rapports générés automatiquement - sont des **instruments d'aide à la décision professionnelle fournis à titre informatif**. Ils ne constituent en aucun cas des conseils professionnels certifiés, des audits RSE, des certifications ou attestations de conformité normative, ni des recommandations d'expert ayant valeur de conseil professionnel engageant la responsabilité de YUMNI."
+              ]
+            },
+            {
+              "title": "8.3 Exclusions de responsabilité",
+              "intro": "YUMNI ne saurait être tenue responsable, notamment mais non limitativement :",
+              "list": [
+                "des **interruptions, ralentissements ou indisponibilités** du service liés à l'infrastructure d'hébergement (Scaleway), au réseau Internet, à des prestataires tiers ou à un cas de Force Majeure au sens de l'article 8.5 ci-après ;",
+                "des **erreurs, inexactitudes ou omissions** dans les Données Client saisies ou importées par les Utilisateurs ;",
+                "des **décisions stratégiques, managériales ou opérationnelles** prises par le Client sur la base des scores, indicateurs, matrices ou rapports générés par la Plateforme, dont l'interprétation et l'usage relèvent de la seule responsabilité du Client ;",
+                "des **dommages indirects, immatériels ou consécutifs** résultant de l'utilisation ou de l'indisponibilité du service, notamment : perte de chiffre d'affaires, atteinte à l'image ou à la réputation, perte de données, perte d'une chance ou d'une opportunité commerciale, préjudice concurrentiel - et ce, même si YUMNI a été informée de leur éventualité ;",
+                "des **défaillances matérielles, logicielles ou réseau** relevant de l'environnement informatique propre au Client ou à ses prestataires ;",
+                "des **actes malveillants de tiers** (intrusions, rançongiciels, attaques par déni de service) dès lors que YUMNI a mis en place les mesures de sécurité décrites à l'article 7.3 ;",
+                "des **pertes de données** imputables à un acte ou une omission du Client ou de ses Utilisateurs."
+              ]
+            },
+            {
+              "title": "8.4 Plafond de responsabilité",
+              "paragraphs": [
+                "La responsabilité totale et cumulée de YUMNI à l'égard d'un Client, toutes causes et tous fondements confondus, est **limitée aux sommes effectivement versées par le Client au titre de son abonnement au cours des 12 mois calendaires précédant le fait générateur de responsabilité**. Pour les utilisateurs du plan Freemium (gratuit), la responsabilité de YUMNI est plafonnée à **100 euros (€)** toutes causes confondues. Ces plafonds ne s'appliquent pas en cas de dol ou de faute lourde de YUMNI."
+              ]
+            },
+            {
+              "title": "8.5 Force Majeure",
+              "paragraphs": [
+                "YUMNI ne peut être tenue responsable de toute inexécution ou retard d'exécution résultant d'un **cas de Force Majeure** au sens de l'article 1218 du Code civil - événement extérieur, imprévisible et irrésistible : catastrophe naturelle, coupure généralisée d'Internet ou d'alimentation électrique, acte de guerre, décision d'autorité publique, pandémie, cyberattaque de grande ampleur et non prévisible. En cas de Force Majeure d'une durée supérieure à **30 jours consécutifs**, chaque partie peut résilier le contrat de plein droit, sans indemnité, par notification écrite à l'autre partie."
+              ]
+            },
+            {
+              "title": "8.6 Garantie du Client",
+              "paragraphs": [
+                "Le Client garantit et indemnise YUMNI contre toute réclamation, action judiciaire, dommage, amende ou préjudice de quelque nature que ce soit résultant : de l'utilisation non conforme de la Plateforme par le Client ou ses Utilisateurs ; de la violation des présentes CGU ; du caractère illicite ou portant atteinte aux droits de tiers des Données Client."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 9 - Suspension, résiliation et clôture de compte",
+          "subsections": [
+            {
+              "title": "9.1 Résiliation à l'initiative du Client",
+              "labeledBlocks": [
+                {
+                  "label": "**Plan Freemium :**",
+                  "text": "Le Client peut clôturer son compte à tout moment, sans préavis ni frais, via les paramètres de son compte Organisation ou par demande écrite à l'adresse indiquée à l'article 13."
+                },
+                {
+                  "label": "**Plans payants :**",
+                  "text": "Le Client peut résilier son abonnement à l'échéance de la période en cours, sous réserve d'adresser sa demande de résiliation par email à YUMNI au moins **30 jours** avant la date de renouvellement automatique. Aucun remboursement de la période d'abonnement en cours n'est accordé, sauf résiliation pour manquement grave de YUMNI dans les conditions prévues au 9.2 ci-dessous."
+                }
+              ],
+              "paragraphsAfter": [
+                "En cas de manquement grave de YUMNI à ses obligations contractuelles non remédié dans un délai de **30 jours** à compter d'une mise en demeure adressée par lettre recommandée avec accusé de réception, le Client est en droit de résilier son abonnement avec remboursement au prorata temporis de la période restante."
+              ]
+            },
+            {
+              "title": "9.2 Suspension ou résiliation à l'initiative de YUMNI",
+              "intro": "YUMNI se réserve le droit de **suspendre ou résilier** l'accès à la Plateforme dans les cas suivants :",
+              "list": [
+                "**Suspension immédiate, sans préavis :** violation grave ou répétée des présentes CGU - notamment tout comportement interdit prévu à l'article 5.2 - ou activité suspecte susceptible de compromettre la sécurité ou l'intégrité de la Plateforme ou des données de tiers ;",
+                "**Suspension après notification de 7 jours :** non-paiement des sommes dues, après mise en demeure restée infructueuse. Durant la suspension pour non-paiement, le Client conserve l'accès en lecture seule à ses Données Client pendant 30 jours pour lui permettre de régulariser sa situation ou d'exporter ses données ;",
+                "**Résiliation avec préavis de 90 jours :** arrêt définitif du service pour des raisons économiques, techniques ou stratégiques, avec organisation de la portabilité complète des Données Client pendant toute la durée du préavis ;",
+                "**Suspension pour obligation légale ou judiciaire :** injonction d'une autorité judiciaire, administrative ou d'une autorité de contrôle compétente."
+              ],
+              "paragraphsAfter": [
+                "En cas de suspension pour violation des CGU, YUMNI adresse une notification écrite au Client à l'adresse de son compte, exposant le motif de la suspension et, le cas échéant, les conditions de levée de celle-ci. En l'absence de régularisation dans le délai imparti, la suspension est convertie en résiliation définitive."
+              ]
+            },
+            {
+              "title": "9.3 Effets de la résiliation - Sort des données",
+              "intro": "À compter de la date effective de résiliation, quelle qu'en soit la cause :",
+              "numberedList": [
+                "L'accès à la Plateforme est fermé ;",
+                "Le Client dispose d'un délai de **30 jours** à compter de la date effective de résiliation pour exporter l'intégralité de ses Données Client via les fonctionnalités d'export disponibles (format structuré) ;",
+                "À l'expiration de ce délai de 30 jours, YUMNI procède à la **suppression définitive et irréversible** de l'ensemble des Données Client de ses systèmes et sauvegardes actives, dans les conditions détaillées par la Politique de Confidentialité ;",
+                "Les obligations contractuelles à vocation permanente des parties - propriété intellectuelle, confidentialité, responsabilité, droit applicable - survivent à la résiliation ou à l'expiration du contrat."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 10 - Services tiers et sous-traitants techniques",
+          "intro": "La Plateforme YUMNI fait appel aux prestataires techniques suivants, susceptibles d'intervenir dans la chaîne de traitement du service :",
+          "table": {
+            "headers": ["Prestataire", "Rôle", "Localisation", "Garanties RGPD"],
+            "rows": [
+              ["**Scaleway SAS** (Groupe Iliad)", "Hébergement de l'intégralité de l'infrastructure, bases de données (PostgreSQL) et stockage objet (S3-compatible)", "France - Paris (`fr-par`) - Union Européenne", "Hébergement UE, conformité RGPD native"],
+              ["**Resend Inc.**", "Envoi des emails transactionnels (vérification email, réinitialisation de mot de passe, invitations collaborateurs)", "États-Unis", "Clauses Contractuelles Types approuvées par la Commission européenne"],
+              ["**Cloudflare Inc.**", "Protection anti-bot via CAPTCHA (Cloudflare Turnstile)", "États-Unis", "Clauses Contractuelles Types approuvées par la Commission européenne"]
+            ]
+          },
+          "paragraphsAfter": [
+            "YUMNI s'engage à ne recourir qu'à des sous-traitants présentant des garanties suffisantes au sens de l'article 28 §1 du RGPD quant à la mise en œuvre de mesures techniques et organisationnelles appropriées. YUMNI demeure responsable à l'égard du Client de la bonne exécution par ses sous-traitants de leurs obligations.",
+            "YUMNI ne peut être tenue responsable des interruptions, erreurs ou indisponibilités imputables à ces prestataires tiers, dès lors que YUMNI a pris les diligences raisonnables dans leur sélection et leur supervision. La Plateforme ne contient pas de liens hypertextes vers des sites tiers. En cas d'intégrations futures avec des services tiers, celles-ci feront l'objet d'une mise à jour des présentes CGU dans les conditions prévues à l'article 2."
+          ]
+        },
+        {
+          "title": "Article 11 - Durée, abonnement et évolution des services",
+          "subsections": [
+            {
+              "title": "11.1 Durée et renouvellement",
+              "paragraphs": [
+                "Les abonnements payants sont souscrits pour une durée initiale d'un **mois** ou d'un **an** selon la périodicité choisie par le Client lors de la souscription. À l'issue de chaque période, l'abonnement est **automatiquement reconduit** pour une durée identique par tacite reconduction, sauf résiliation notifiée dans les conditions prévues à l'article 9.1. La facturation est émise en début de période."
+              ]
+            },
+            {
+              "title": "11.2 Tarifs et modalités de paiement",
+              "paragraphs": [
+                "Les tarifs applicables sont ceux en vigueur à la date de souscription ou de renouvellement, consultables sur la Plateforme. Tous les prix sont exprimés en euros (€) **hors taxes (HT)**. La TVA française au taux légal en vigueur est applicable aux Clients établis en France.",
+                "Le paiement est exigible à réception de la facture émise par YUMNI. Conformément à l'article **L.441-10 du Code de commerce**, tout retard de paiement entre professionnels donne lieu, de plein droit et sans mise en demeure préalable, à l'application de pénalités de retard au taux d'intérêt légal majoré de **10 points**, ainsi qu'à une indemnité forfaitaire pour frais de recouvrement de **40 euros (€)** par facture impayée.",
+                "YUMNI se réserve le droit de modifier ses tarifs, sous réserve d'en informer les Clients par email avec un **préavis minimum de 30 jours** avant l'entrée en vigueur des nouveaux tarifs. En cas de désaccord avec une modification tarifaire, le Client peut résilier son abonnement sans pénalité avant la date d'effet de la modification."
+              ]
+            },
+            {
+              "title": "11.3 Évolution et modification des services",
+              "intro": "YUMNI peut, à tout moment, améliorer, enrichir, modifier ou faire évoluer les fonctionnalités de la Plateforme, notamment pour l'adapter aux évolutions légales, techniques, de sécurité ou aux retours des Clients. Ces évolutions sont notifiées selon les modalités suivantes :",
+              "table": {
+                "headers": ["Type de modification", "Mode de notification", "Délai de préavis"],
+                "rows": [
+                  ["Ajout de fonctionnalités nouvelles", "Optionnel (note de mise à jour)", "Immédiat"],
+                  ["Modification substantielle d'une fonctionnalité existante", "Email + notification in-app", "15 jours minimum"],
+                  ["Suppression d'une fonctionnalité utilisée par le Client", "Email", "30 jours minimum"],
+                  ["Modification des quotas d'un Plan au détriment du Client", "Email", "30 jours minimum"],
+                  ["Arrêt complet du service", "Email + courrier recommandé", "90 jours minimum"]
+                ]
+              },
+              "paragraphsAfter": [
+                "En cas de désaccord avec une modification substantielle affectant l'usage du service, le Client peut résilier son abonnement sans pénalité avant la date d'effet de la modification, en en informant YUMNI dans les conditions de l'article 9."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 12 - Droit applicable et litiges",
+          "subsections": [
+            {
+              "title": "12.1 Droit applicable",
+              "paragraphs": [
+                "Les présentes CGU et l'ensemble des relations contractuelles entre YUMNI et ses Clients sont régis et interprétés exclusivement conformément au **droit français**, sans égard aux règles de conflit de lois. La Convention des Nations Unies sur les contrats de vente internationale de marchandises est expressément exclue."
+              ]
+            },
+            {
+              "title": "12.2 Juridiction compétente",
+              "paragraphs": [
+                "Tout litige relatif à l'interprétation, l'exécution, la résiliation ou la validité des présentes CGU ou de tout contrat conclu entre YUMNI et un Client professionnel sera soumis à la compétence exclusive du **Tribunal de Commerce de Paris**, nonobstant pluralité de défendeurs ou appel en garantie, sauf disposition légale contraire imposant une compétence exclusive distincte."
+              ]
+            },
+            {
+              "title": "12.3 Tentative préalable de résolution amiable",
+              "paragraphs": [
+                "Préalablement à toute action judiciaire ou arbitrale, les parties s'engagent à rechercher de bonne foi une résolution amiable de tout différend. Une mise en demeure précisant l'objet du litige doit être adressée par **lettre recommandée avec accusé de réception** à l'adresse de l'autre partie. Un délai de **30 jours calendaires** est accordé pour parvenir à un accord amiable à compter de la date de réception de la mise en demeure. À l'expiration de ce délai sans accord écrit, les parties retrouvent leur pleine liberté d'ester en justice."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 13 - Contacts et support",
+          "subsections": [
+            {
+              "contactCard": [
+                "Contact unique - Support, questions juridiques et RGPD",
+                "Pour toute question, demande, réclamation ou exercice de droits relatifs aux présentes CGU :",
+                "**Email :** dpo@yumni.fr ou contact@yumni.fr",
+                "**Objet recommandé :** [CGU] / [Support] / [Incident] / [Facturation] / [RGPD - droit concerné] / [Résiliation]",
+                "**Délai de traitement :** Demandes courantes : 48 heures - Demandes RGPD : **30 jours maximum** (obligation légale, Art. 12 RGPD)",
+                "**Adresse postale** (mises en demeure, courriers recommandés) : YUMNI SAS - 61 RUE DE LYON, 75012 PARIS - France"
+              ]
+            },
+            {
+              "infoCard": [
+                "Informations légales",
+                "**YUMNI SAS**",
+                "Société par Actions Simplifiée au capital de **1 000 €**",
+                "Siège social : 61 RUE DE LYON, 75012 PARIS",
+                "RCS : 102228608",
+                "Numéro de TVA intracommunautaire : FR63102228608",
+                "Email : contact@yumni.fr",
+                "Hébergement : **Scaleway SAS**, Paris, France - Union Européenne (région `fr-par`)"
+              ]
+            }
+          ]
+        }
+      ],
+      "relatedDocs": {
+        "title": "Documents connexes",
+        "headers": ["Document", "Contenu"],
+        "rows": [
+          ["**Conditions Générales d'Utilisation** *(ce document)*", "Règles d'accès, droits et obligations des parties, abonnements, responsabilité, résiliation"],
+          ["**Politique de Confidentialité**", "Traitement des données personnelles, sous-traitants, droits RGPD, cookies"],
+          ["**Mentions Légales**", "Identification de l'éditeur, hébergement, responsabilités légales"]
+        ]
+      },
+      "footerNote": "**YUMNI SAS** - Plateforme YUMNI - Solution SaaS de pilotage de la Responsabilité Sociétale des Entreprises\nCapital social : 1 000 € - 61 RUE DE LYON, 75012 PARIS - France\nHébergement : Scaleway SAS, Paris, France (Union Européenne, région `fr-par`)\nCGU mises à jour le **23 avril 2026**\nDroit applicable : droit français - Juridiction : Tribunal de Commerce de Paris"
     },
     "sales": {
       "title": "Conditions Générales de Vente",
@@ -935,43 +2162,645 @@
       ]
     },
     "privacy": {
-      "title": "Politique de confidentialité",
-      "intro": "Yumni SAS s'engage à protéger la vie privée de ses utilisateurs et à traiter leurs données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).",
+      "title": "Politique de Confidentialité",
+      "intro": "YUMNI SAS traite vos données en stricte conformité avec le RGPD (Règlement (UE) 2016/679) et la loi Informatique et Libertés.",
       "sections": [
         {
-          "title": "1. Responsable du traitement",
-          "content": "Yumni SAS, dont le siège social est situé au 42 rue de la République, 75011 Paris, est responsable du traitement des données personnelles collectées sur cette plateforme."
+          "title": "Article 1 - Introduction et responsable du traitement",
+          "paragraphs": [
+            "La présente Politique de Confidentialité (ci-après la « **Politique** ») explique comment **YUMNI SAS** (ci-après « **nous** », « **YUMNI** ») collecte, utilise, traite et protège les données à caractère personnel lorsque vous utilisez la plateforme YUMNI (ci-après la « **Plateforme** »), solution SaaS de pilotage de la stratégie de Responsabilité Sociétale des Entreprises, accessible à l'adresse https://yumni.fr/fr."
+          ],
+          "responsibleLabel": "Responsable du traitement des données :",
+          "responsibleCard": [
+            "YUMNI SAS",
+            "Société par Actions Simplifiée au capital de 1 000 euros (€)",
+            "Siège social : 61 RUE DE LYON, 75012 PARIS, France",
+            "RCS : Paris - 102228608",
+            "Email : contact@yumni.fr"
+          ],
+          "paragraphsAfter": [
+            "Nous nous engageons à respecter et à protéger vos données à caractère personnel en stricte conformité avec le **Règlement (UE) 2016/679 du 27 avril 2016** relatif à la protection des données personnelles (ci-après le « **RGPD** ») et avec la **loi n° 78-17 du 6 janvier 1978** relative à l'informatique, aux fichiers et aux libertés (loi « Informatique et Libertés »), dans leurs versions en vigueur.",
+            "La Plateforme YUMNI est une solution à usage exclusivement **professionnel (B2B)**, destinée à des personnes morales et à des personnes physiques agissant dans le cadre de leur activité professionnelle. Les protections spécifiques du droit de la consommation ne sont pas applicables aux relations entre professionnels dans le cadre des présentes."
+          ]
         },
         {
-          "title": "2. Données collectées",
-          "content": "Nous collectons les données suivantes : informations d'identification (nom, prénom, email professionnel), données de connexion (logs, adresse IP), données d'utilisation de la plateforme, données RSE saisies par l'utilisateur dans le cadre de l'utilisation du service."
+          "title": "Article 2 - Données personnelles collectées",
+          "subsections": [
+            {
+              "title": "2.1 Données obligatoires à la création du compte",
+              "intro": "Lors de l'inscription sur la Plateforme, les données suivantes sont collectées et nécessaires à la fourniture du service :",
+              "list": [
+                "Adresse email professionnelle (identifiant de connexion)",
+                "Mot de passe (stocké exclusivement sous forme hachée - voir Article 7)",
+                "Dénomination ou nom de l'organisation professionnelle du compte",
+                "Rôle attribué dans l'Organisation (OWNER, ADMIN, MANAGER, USER)",
+                "Date et heure de création du compte"
+              ]
+            },
+            {
+              "title": "2.2 Données complémentaires du profil",
+              "intro": "Ces données sont renseignées par l'Utilisateur ou par l'administrateur de l'Organisation, selon les paramètres du compte :",
+              "list": [
+                "Prénom et nom de l'Utilisateur (optionnels selon le Plan)",
+                "Fonction ou titre professionnel (si renseigné)",
+                "Adresse email de facturation et informations de l'entité Cliente (plans payants)"
+              ]
+            },
+            {
+              "title": "2.3 Données liées à l'utilisation de la Plateforme",
+              "intro": "Ces données sont générées par l'activité de l'Utilisateur dans le cadre du service RSE :",
+              "list": [
+                "Axes stratégiques RSE, objectifs SMART, projets, actions et jalons créés ou modifiés",
+                "Indicateurs de performance (KPIs) RSE et leurs séries de valeurs historiques",
+                "Risques RSE renseignés (description, impact, probabilité, plan de traitement)",
+                "Idées et initiatives RSE soumises, avec leur score de priorisation WSJF (Valeur métier, Criticité temporelle, Réduction des risques, Taille du travail)",
+                "Rapports PowerPoint (PPTX) générés et stockés sur l'infrastructure Scaleway Object Storage",
+                "Commentaires et interactions collaboratives entre Utilisateurs d'une même Organisation (plans Starter, Pro, Enterprise)"
+              ],
+              "note": "**Important :** YUMNI SAS traite ces données RSE métier en qualité de **sous-traitant** au sens de l'article 28 du RGPD. Le Client (l'organisation souscriptrice) demeure responsable de traitement pour ces données. Si ces données contiennent des références nominatives à des tiers (salariés, prestataires, partenaires), c'est au Client qu'il incombe d'en assurer la licéité et l'information. Pour une explication complète de ce double rôle, voir la Article 4."
+            },
+            {
+              "title": "2.4 Données d'authentification renforcée (MFA)",
+              "intro": "Lorsque l'Utilisateur active l'authentification multifacteur, nous traitons :",
+              "list": [
+                "Secret TOTP (Time-based One-Time Password), chiffré au repos en **AES-256-GCM**",
+                "Dix (10) codes de secours à usage unique, hachés individuellement",
+                "Empreinte opaque du dispositif de confiance mémorisé, transmise via cookie **HttpOnly, Secure, SameSite=Strict** (durée 30 jours)",
+                "Journaux de tentatives d'authentification : horodatage et résultat (succès / échec), sans conservation d'adresses IP complètes dans les logs applicatifs"
+              ]
+            },
+            {
+              "title": "2.5 Données techniques et de navigation",
+              "intro": "Ces données sont collectées automatiquement à des fins de sécurité, de performance et de maintenance :",
+              "list": [
+                "Adresse IP (partiellement anonymisée dans les journaux applicatifs)",
+                "Type et version du navigateur, système d'exploitation",
+                "Pages consultées, fonctionnalités utilisées, horodatage",
+                "Données de session et tokens JWT côté client",
+                "Journaux d'erreurs et traces applicatives (sans données nominatives conformément à notre politique de journalisation)"
+              ]
+            },
+            {
+              "title": "2.6 Données de facturation (plans payants uniquement)",
+              "list": [
+                "Dénomination sociale et forme juridique de l'entité Cliente",
+                "Adresse postale de facturation",
+                "Adresse email de facturation",
+                "Numéro de TVA intracommunautaire (le cas échéant)",
+                "Historique des abonnements et périodes facturées",
+                "Données de paiement : traitées directement par notre prestataire de paiement. YUMNI SAS ne stocke et ne visualise jamais les numéros de carte bancaire"
+              ]
+            },
+            {
+              "title": "2.7 Données de communication et de support",
+              "list": [
+                "Échanges par email avec notre équipe support",
+                "Tickets de support, demandes fonctionnelles et signalements d'incidents",
+                "Notifications in-app et emails transactionnels (vérification de compte, réinitialisation de mot de passe, alertes de quota, notifications de facturation)"
+              ]
+            }
+          ]
         },
         {
-          "title": "3. Finalités du traitement",
-          "content": "Les données sont collectées pour : la fourniture et l'amélioration du service Yumni, la gestion de la relation client et du support, l'envoi de communications relatives au service (si consentement), le respect de nos obligations légales."
+          "title": "Article 3 - Utilisation des données personnelles",
+          "intro": "Vos données sont utilisées exclusivement pour les finalités suivantes :",
+          "subsections": [
+            {
+              "title": "3.1 Fourniture du service SaaS RSE",
+              "list": [
+                "Créer et gérer votre compte Utilisateur et votre Organisation",
+                "Vous authentifier de manière sécurisée et gérer vos sessions (JWT + MFA)",
+                "Mettre à disposition les fonctionnalités de pilotage RSE : gestion des Axes, Objectifs, Projets, Actions, Jalons, KPIs, Risques et Idées (WSJF)",
+                "Générer et mettre à disposition les rapports PowerPoint exportables",
+                "Afficher les tableaux de bord, la vue Kanban et le calendrier RSE",
+                "Gérer les habilitations et les rôles (RBAC) au sein de votre Organisation",
+                "Assurer la continuité et les sauvegardes du service"
+              ]
+            },
+            {
+              "title": "3.2 Amélioration de la Plateforme",
+              "list": [
+                "Analyser l'usage de la Plateforme sous forme agrégée et **anonymisée** uniquement, sans identification individuelle des Utilisateurs",
+                "Développer, tester et déployer de nouvelles fonctionnalités",
+                "Corriger les anomalies techniques et optimiser les performances",
+                "Améliorer l'expérience utilisateur"
+              ]
+            },
+            {
+              "title": "3.3 Communications transactionnelles et de service",
+              "list": [
+                "Envoyer les emails de vérification de compte, de réinitialisation de mot de passe et d'invitation",
+                "Notifier des alertes de quota, des mises à jour de la Plateforme et des informations contractuelles",
+                "Répondre aux demandes de support et aux réclamations",
+                "Communiquer les informations légales et réglementaires requises"
+              ]
+            },
+            {
+              "title": "3.4 Facturation et gestion commerciale",
+              "list": [
+                "Établir et transmettre les factures",
+                "Gérer les abonnements, les renouvellements et les évolutions de Plan",
+                "Recouvrer les sommes dues dans les conditions prévues aux CGU",
+                "Respecter les obligations comptables légales"
+              ]
+            },
+            {
+              "title": "3.5 Sécurité et conformité légale",
+              "list": [
+                "Détecter et prévenir les accès non autorisés, les tentatives d'intrusion et les comportements abusifs",
+                "Protéger l'intégrité de la Plateforme et des données des autres Clients",
+                "Appliquer les Conditions Générales d'Utilisation",
+                "Répondre aux obligations légales et aux injonctions des autorités judiciaires ou administratives compétentes"
+              ]
+            }
+          ],
+          "note": "**Ce que nous ne faisons pas :** YUMNI SAS ne réalise aucun profilage commercial, aucun ciblage publicitaire, aucune vente, location ou cession de données personnelles à des tiers à des fins propres. Vos données ne servent jamais à des fins autres que celles listées ci-dessus."
         },
         {
-          "title": "4. Base légale",
-          "content": "Le traitement de vos données repose sur : l'exécution du contrat (fourniture du service), notre intérêt légitime (amélioration du service, sécurité), votre consentement (communications marketing), nos obligations légales (comptabilité, fiscalité)."
+          "title": "Article 4 - Base légale du traitement",
+          "intro": "Le traitement de vos données personnelles repose sur les bases légales suivantes, conformément à l'article 6 du RGPD :",
+          "subsections": [
+            {
+              "title": "4.1 Exécution du contrat (Art. 6 §1 b)",
+              "paragraphs": [
+                "La majorité des traitements sont nécessaires à l'exécution des Conditions Générales d'Utilisation que vous avez acceptées, ou à l'exécution de mesures précontractuelles prises à votre demande. Cela inclut notamment la création du compte, l'authentification, la fourniture des fonctionnalités RSE, la facturation et les communications transactionnelles."
+              ]
+            },
+            {
+              "title": "4.2 Obligation légale (Art. 6 §1 c)",
+              "paragraphs": [
+                "Certains traitements sont imposés par la loi, notamment la conservation des documents comptables et des pièces justificatives pendant dix (10) ans en vertu de l'article L.123-22 du Code de commerce, ou la communication de données aux autorités judiciaires en réponse à une injonction légale."
+              ]
+            },
+            {
+              "title": "4.3 Intérêt légitime (Art. 6 §1 f)",
+              "intro": "Nous nous appuyons sur l'intérêt légitime de YUMNI SAS pour les traitements suivants, qui n'outrepassent pas vos droits et libertés fondamentaux dans un contexte strictement professionnel :",
+              "list": [
+                "Sécurité de la Plateforme et prévention des fraudes (journaux d'accès, détection des anomalies, protection anti-brute force)",
+                "Amélioration continue du service par l'analyse de données d'usage agrégées et anonymisées",
+                "Gestion et résolution des litiges éventuels"
+              ]
+            },
+            {
+              "title": "4.4 Double rôle de YUMNI SAS au regard du RGPD",
+              "intro": "YUMNI SAS exerce deux rôles juridiquement distincts selon la nature des données traitées :",
+              "labeledParagraphs": [
+                {
+                  "label": "En qualité de responsable de traitement :",
+                  "text": "pour les données de gestion des comptes Utilisateurs, d'authentification, de facturation, de support et de relation commerciale. La présente Politique de Confidentialité s'applique directement à ces traitements."
+                },
+                {
+                  "label": "En qualité de sous-traitant (Art. 28 RGPD) :",
+                  "text": "pour les Données RSE métier importées, créées et administrées par le Client dans la Plateforme (projets, objectifs, actions, KPIs, risques, idées, rapports, documents). Dans ce cadre, YUMNI SAS ne traite ces données que sur instruction du Client, qui demeure responsable de traitement. Un accord de traitement des données (DPA) est conclu automatiquement lors de l'acceptation des CGU. YUMNI SAS s'engage à ne jamais exploiter les Données Client à des fins propres."
+                }
+              ]
+            }
+          ]
         },
         {
-          "title": "5. Durée de conservation",
-          "content": "Les données sont conservées pendant la durée de la relation contractuelle. Après résiliation, les données sont supprimées dans un délai de 30 jours, à l'exception des données nécessaires au respect de nos obligations légales (comptabilité : 10 ans)."
+          "title": "Article 5 - Partage des données",
+          "intro": "YUMNI SAS s'engage à **ne pas vendre, louer, ni partager vos données personnelles** à des tiers à des fins commerciales.",
+          "subsections": [
+            {
+              "title": "5.1 Sous-traitants techniques autorisés",
+              "intro": "Nous partageons vos données uniquement avec les prestataires techniques suivants, strictement nécessaires à la fourniture du service, liés à YUMNI SAS par des contrats conformes à l'article 28 du RGPD :",
+              "table": {
+                "headers": [
+                  "Sous-traitant",
+                  "Rôle",
+                  "Données transmises",
+                  "Localisation"
+                ],
+                "rows": [
+                  [
+                    "**Scaleway SAS**",
+                    "Hébergement applicatif, bases de données PostgreSQL, stockage objet (rapports PPTX, archives RGPD)",
+                    "Ensemble des données hébergées",
+                    "France - Paris (fr-par) - Union Européenne"
+                  ],
+                  [
+                    "**Resend Inc.**",
+                    "Envoi des emails transactionnels",
+                    "Adresse email destinataire, contenu de l'email",
+                    "États-Unis (CCT Commission européenne)"
+                  ],
+                  [
+                    "**Cloudflare Inc.**",
+                    "Protection anti-bot (Turnstile) sur les formulaires d'authentification",
+                    "Signal anti-bot non nominatif",
+                    "États-Unis (CCT Commission européenne)"
+                  ]
+                ]
+              }
+            },
+            {
+              "title": "5.2 Destinataires légaux",
+              "intro": "Nous pouvons être amenés à communiquer des données aux autorités suivantes, uniquement dans les limites imposées par la loi :",
+              "list": [
+                "**Autorités judiciaires et administratives** (justice, FISC, CNIL) en réponse à une réquisition ou une injonction légale",
+                "**Conseil juridique de YUMNI SAS** dans le cadre de la défense de ses droits en cas de litige, sous obligation de confidentialité"
+              ]
+            },
+            {
+              "title": "5.3 En cas de restructuration de YUMNI SAS",
+              "paragraphs": [
+                "En cas de fusion, acquisition, cession de branche d'activité ou toute autre opération de restructuration affectant YUMNI SAS, vos données pourront être transférées au repreneur ou à l'entité successrice, sous réserve que celle-ci respecte la présente Politique de Confidentialité et vous en soit informé préalablement dans les conditions des CGU."
+              ]
+            },
+            {
+              "title": "5.4 Absence de partage public",
+              "paragraphs": [
+                "La Plateforme YUMNI est un espace de travail privé et fermé. Aucune donnée personnelle, aucune Donnée Client et aucun contenu RSE n'est rendu public ou partagé avec des tiers en dehors des périmètres strictement définis ci-dessus. Un Utilisateur d'une Organisation ne peut accéder aux données des autres Organisations."
+              ]
+            }
+          ]
         },
         {
-          "title": "6. Vos droits",
-          "content": "Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition au traitement de vos données. Pour exercer vos droits, contactez notre DPO : rgpd@yumni.fr"
+          "title": "Article 6 - Durée de conservation des données",
+          "intro": "YUMNI SAS applique des durées de conservation strictement proportionnées aux finalités poursuivies, conformément au principe de limitation de conservation prévu à l'article 5 §1 e) du RGPD.",
+          "subsections": [
+            {
+              "title": "6.1 Pendant la durée du contrat actif",
+              "paragraphs": [
+                "L'ensemble des données du compte Utilisateur et des Données Client hébergées sont conservées pendant toute la durée de l'abonnement souscrit et tant que le compte demeure actif."
+              ]
+            },
+            {
+              "title": "6.2 Après résiliation ou suppression du compte",
+              "list": [
+                "**Données de compte Utilisateur :** supprimées définitivement dans un délai de **30 jours** à compter de la résiliation effective ou de la demande de suppression, à l'issue d'une période de sécurité permettant la récupération en cas d'erreur",
+                "**Données Client (données RSE métier) :** le Client dispose d'un délai de **30 jours** à compter de la résiliation pour exporter l'intégralité de ses données via les fonctionnalités d'export de la Plateforme ; passé ce délai, YUMNI SAS procède à leur suppression définitive et irréversible",
+                "**Données de facturation et pièces comptables :** conservées **10 ans** à compter de la clôture de l'exercice comptable, conformément à l'article L.123-22 du Code de commerce",
+                "**Journaux de sécurité et d'accès :** conservés **12 mois** glissants à des fins de détection d'incidents et d'analyse forensique, puis supprimés",
+                "**Échanges de support :** conservés **3 ans** à compter de la clôture de la demande, dans l'intérêt légitime de gestion des litiges potentiels"
+              ]
+            },
+            {
+              "title": "6.3 Comptes Freemium inactifs",
+              "paragraphs": [
+                "Les comptes Freemium n'ayant enregistré aucune activité pendant **24 mois consécutifs** peuvent faire l'objet d'une procédure de clôture. YUMNI SAS adressera un email d'avertissement à l'adresse du compte au moins **30 jours** avant toute suppression. En l'absence de réaction dans ce délai, le compte et les données associées seront définitivement supprimés."
+              ]
+            }
+          ]
         },
         {
-          "title": "7. Sécurité",
-          "content": "Yumni met en œuvre des mesures techniques et organisationnelles appropriées pour garantir la sécurité de vos données : chiffrement TLS 1.3 en transit, AES-256 au repos, authentification multi-facteurs, isolation des données par organisation."
+          "title": "Article 7 - Sécurité des données",
+          "intro": "YUMNI SAS met en œuvre un ensemble de mesures techniques et organisationnelles robustes pour assurer la confidentialité, l'intégrité et la disponibilité de vos données, conformément à l'article 32 du RGPD.",
+          "subsections": [
+            {
+              "title": "7.1 Mesures techniques",
+              "subgroups": [
+                {
+                  "label": "Chiffrement et protocoles de sécurité :",
+                  "list": [
+                    "Chiffrement de toutes les communications entre les navigateurs et la Plateforme via **HTTPS/TLS** (TLS 1.2 minimum, TLS 1.3 recommandé)",
+                    "Mots de passe stockés exclusivement sous forme de hash irréversible via **Bcrypt** (facteur d'itération 10–12) - aucun mot de passe n'est lisible, même par YUMNI SAS",
+                    "Secrets TOTP (MFA) chiffrés au repos via **AES-256-GCM**",
+                    "Codes de secours MFA hachés individuellement",
+                    "Tokens d'authentification **JWT signés en HMAC-SHA256**, validité de 7 jours, sans état côté serveur (stateless)"
+                  ]
+                },
+                {
+                  "label": "Contrôle d'accès et isolation :",
+                  "list": [
+                    "**Contrôle d'accès basé sur les rôles (RBAC)** vérifié à chaque requête HTTP adressée à l'API : un Utilisateur ne peut accéder qu'aux ressources de son Organisation, dans la limite de son rôle (OWNER, ADMIN, MANAGER, USER)",
+                    "Isolation stricte des données entre Organisations : aucune donnée d'une Organisation n'est accessible par les Utilisateurs d'une autre Organisation"
+                  ]
+                },
+                {
+                  "label": "Protection contre les attaques :",
+                  "list": [
+                    "Verrouillage automatique du compte après **3 tentatives MFA échouées consécutives** (délai de blocage de 5 minutes)",
+                    "Protection anti-bot sur les formulaires d'authentification via Cloudflare Turnstile",
+                    "Validation systématique de toutes les données entrantes côté serveur par schémas formels (Zod)",
+                    "En-têtes HTTP de sécurité : Content Security Policy, HSTS, X-Frame-Options"
+                  ]
+                },
+                {
+                  "label": "Journalisation sans données personnelles :",
+                  "list": [
+                    "Politique stricte d'**absence de données nominatives dans les journaux applicatifs** : les traces de débogage ne contiennent pas d'adresses email, d'identifiants personnels ni de contenu des Données Client"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "7.2 Mesures organisationnelles",
+              "list": [
+                "Accès interne aux données strictement limité au personnel de YUMNI SAS selon le principe du moindre privilège",
+                "Ensemble des sous-traitants liés contractuellement par des obligations de confidentialité et de sécurité conformes à l'article 28 du RGPD",
+                "Politique de sauvegardes régulières des Données Client assurée par Scaleway SAS pour la continuité du service"
+              ]
+            },
+            {
+              "title": "7.3 Notification des violations de données",
+              "intro": "En cas de violation de données personnelles susceptible d'engendrer un risque pour vos droits et libertés, YUMNI SAS s'engage à :",
+              "list": [
+                "**Notifier la CNIL** dans un délai de **72 heures** à compter de la constatation de la violation, conformément à l'article 33 du RGPD",
+                "**Vous informer sans délai indu** lorsque la violation est susceptible d'engendrer un risque élevé pour vos droits et libertés, conformément à l'article 34 du RGPD"
+              ]
+            },
+            {
+              "title": "7.4 Votre responsabilité",
+              "paragraphs": [
+                "La sécurité repose également sur votre vigilance. Vous êtes responsable de la confidentialité de votre mot de passe et de vos dispositifs d'authentification MFA. Ne les communiquez jamais à des tiers. Signalez immédiatement tout accès non autorisé ou toute compromission supposée à dpo@yumni.fr (objet : [Incident sécurité])."
+              ]
+            }
+          ]
         },
         {
-          "title": "8. Transferts hors UE",
-          "content": "Aucun transfert de données hors Union Européenne n'est effectué. L'ensemble de nos données sont hébergées exclusivement en France par Scaleway."
+          "title": "Article 8 - Cookies et technologies de suivi",
+          "subsections": [
+            {
+              "title": "8.1 Cadre applicable",
+              "paragraphs": [
+                "La Plateforme YUMNI est une application SaaS à usage strictement professionnel. Conformément aux recommandations de la CNIL sur les cookies et traceurs, les cookies strictement nécessaires au fonctionnement sécurisé d'un service sont exemptés de recueil de consentement préalable."
+              ]
+            },
+            {
+              "title": "8.2 Cookies strictement nécessaires (exemptés de consentement)",
+              "table": {
+                "headers": [
+                  "Cookie",
+                  "Finalité",
+                  "Durée"
+                ],
+                "rows": [
+                  [
+                    "**Session / JWT**",
+                    "Maintien de la session de connexion de l'Utilisateur",
+                    "7 jours (durée du token)"
+                  ],
+                  [
+                    "**MFA Trusted Device** (HttpOnly, Secure, SameSite=Strict)",
+                    "Mémorisation sécurisée du dispositif de confiance pour l'authentification multifacteur",
+                    "30 jours"
+                  ],
+                  [
+                    "**Préférences d'affichage**",
+                    "Mémorisation des paramètres d'interface de l'Utilisateur (langue, vue active)",
+                    "Durée de la session / du compte"
+                  ]
+                ]
+              }
+            },
+            {
+              "title": "8.3 Protection anti-bot (Cloudflare Turnstile)",
+              "paragraphs": [
+                "La Plateforme utilise Cloudflare Turnstile sur les formulaires d'authentification afin de protéger le service contre les attaques automatisées. Ce composant peut déposer des traceurs techniques de session à des fins de vérification non nominative. Aucune donnée personnelle identifiable n'est transmise à Cloudflare dans ce cadre."
+              ]
+            },
+            {
+              "title": "8.4 Ce que nous n'utilisons pas",
+              "note": "YUMNI SAS n'utilise **aucun cookie publicitaire**, **aucun traceur de marketing comportemental**, **aucune technologie de fingerprinting** à des fins de profilage, et **aucun outil d'analytics tiers** collectant des données personnelles non anonymisées. Aucune régie publicitaire ne reçoit de données relatives aux Utilisateurs de la Plateforme."
+            },
+            {
+              "title": "8.5 Gestion des cookies",
+              "paragraphs": [
+                "Les cookies listés ci-dessus étant strictement nécessaires au fonctionnement et à la sécurité de la Plateforme, leur désactivation via les paramètres du navigateur entraînera l'impossibilité d'accéder au service et de maintenir votre session authentifiée."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 9 - Vos droits RGPD",
+          "intro": "Conformément aux articles 15 à 22 du RGPD, vous disposez des droits suivants sur vos données personnelles traitées par YUMNI SAS en qualité de **responsable de traitement** :",
+          "subsections": [
+            {
+              "title": "9.1 Droit d'accès (Art. 15 RGPD)",
+              "paragraphs": [
+                "Vous pouvez obtenir confirmation que des données vous concernant sont traitées par YUMNI SAS, ainsi qu'une copie de ces données. Vous pouvez accéder à vos données directement depuis l'interface de la Plateforme, ou en adressant une demande écrite à notre contact RGPD. Nous vous répondrons dans un délai de **30 jours**."
+              ]
+            },
+            {
+              "title": "9.2 Droit de rectification (Art. 16 RGPD)",
+              "paragraphs": [
+                "Vous pouvez corriger ou mettre à jour vos données inexactes, incomplètes ou obsolètes directement via les paramètres de votre compte, ou en contactant notre support."
+              ]
+            },
+            {
+              "title": "9.3 Droit à l'effacement (Art. 17 RGPD)",
+              "paragraphs": [
+                "Vous pouvez demander la suppression de votre compte et de l'ensemble de vos données personnelles. La suppression sera effective dans un délai de **30 jours** à compter de votre demande, sous réserve des obligations légales de conservation applicables (notamment les données comptables - voir Article 6.2). Après suppression, aucune restauration n'est possible."
+              ]
+            },
+            {
+              "title": "9.4 Droit à la limitation du traitement (Art. 18 RGPD)",
+              "paragraphs": [
+                "Vous pouvez demander la suspension temporaire du traitement de vos données dans les cas prévus par le RGPD (notamment en cas de contestation de l'exactitude de vos données ou d'opposition au traitement). La demande doit être adressée par écrit."
+              ]
+            },
+            {
+              "title": "9.5 Droit à la portabilité (Art. 20 RGPD)",
+              "paragraphs": [
+                "Vous pouvez demander à recevoir vos données personnelles dans un format structuré, couramment utilisé et lisible par machine. La Plateforme propose une fonctionnalité d'export au format structuré, générant un lien d'accès sécurisé valable **48 heures**."
+              ]
+            },
+            {
+              "title": "9.6 Droit d'opposition (Art. 21 RGPD)",
+              "paragraphs": [
+                "Vous pouvez vous opposer, pour des raisons tenant à votre situation particulière, au traitement de vos données fondé sur l'intérêt légitime de YUMNI SAS (voir Article 4.3). Votre demande sera examinée et nous cesserons le traitement sauf motif légitime impérieux."
+              ]
+            },
+            {
+              "title": "9.7 Droit de ne pas faire l'objet d'une décision entièrement automatisée (Art. 22 RGPD)",
+              "paragraphs": [
+                "YUMNI SAS ne prend aucune décision produisant des effets juridiques ou vous affectant de manière significative sur la seule base d'un traitement automatisé de vos données. Ce droit est pleinement respecté par conception."
+              ]
+            },
+            {
+              "title": "9.8 Comment exercer vos droits",
+              "intro": "Adressez votre demande à :",
+              "contactCard": [
+                "**Email :** dpo@yumni.fr",
+                "**Objet à préciser :** Demande RGPD - [Accès / Rectification / Effacement / Portabilité / Limitation / Opposition]",
+                "**Délai de réponse :** 30 jours maximum à compter de la réception d'une demande complète (Art. 12 RGPD)"
+              ],
+              "paragraphsAfter": [
+                "YUMNI SAS pourra vous demander de justifier de votre identité afin de traiter votre demande dans le respect de la sécurité des données et des droits des tiers.",
+                "**Concernant les Données Client (données RSE métier) :** pour les données personnelles que vous auriez intégrées dans vos espaces RSE, les droits RGPD sont à exercer directement auprès du **Client** (l'organisation souscriptrice), qui en est le responsable de traitement. YUMNI SAS apporte son concours au Client pour répondre à ces demandes dans les délais légaux."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 10 - Transferts internationaux",
+          "subsections": [
+            {
+              "title": "10.1 Hébergement en Union Européenne",
+              "paragraphs": [
+                "La quasi-totalité des données traitées par YUMNI SAS est **hébergée et traitée exclusivement en France, au sein de l'Union Européenne**, sur les infrastructures de **Scaleway SAS** (région fr-par, Paris). Ces traitements ne constituent pas des transferts internationaux au sens du Chapitre V du RGPD.",
+                "L'intégralité des Données Client (données RSE métier) est stockée sur le territoire français. YUMNI SAS s'engage à ne transférer aucune Donnée Client en dehors de l'Union Européenne sans accord préalable et explicite du Client."
+              ]
+            },
+            {
+              "title": "10.2 Transferts vers des pays tiers - Sous-traitants établis aux États-Unis",
+              "intro": "Deux de nos sous-traitants techniques sont établis aux États-Unis. Ces transferts hors de l'Espace Économique Européen (EEE) sont encadrés par les garanties suivantes :",
+              "table": {
+                "headers": [
+                  "Sous-traitant",
+                  "Nature du transfert",
+                  "Garantie applicable"
+                ],
+                "rows": [
+                  [
+                    "**Resend Inc.** (États-Unis)",
+                    "Routage des emails transactionnels (vérification de compte, réinitialisation de mot de passe, notifications)",
+                    "**Clauses Contractuelles Types (CCT)** adoptées par décision de la Commission européenne du 4 juin 2021"
+                  ],
+                  [
+                    "**Cloudflare Inc.** (États-Unis)",
+                    "Traitement du signal anti-bot (Cloudflare Turnstile) sur les formulaires d'authentification",
+                    "**Clauses Contractuelles Types (CCT)** adoptées par décision de la Commission européenne du 4 juin 2021"
+                  ]
+                ]
+              }
+            },
+            {
+              "title": "10.3 Transferts exceptionnels",
+              "paragraphs": [
+                "Si, pour des raisons techniques ou légales imprévues, un transfert de données en dehors de l'EEE s'avérait nécessaire au-delà des cas listés ci-dessus, YUMNI SAS s'engage à mettre en place préalablement les garanties appropriées prévues aux articles 46 et suivants du RGPD (Clauses Contractuelles Types, règles d'entreprise contraignantes, ou toute autre garantie reconnue par les autorités de protection des données européennes), et à en informer les Clients concernés."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 11 - Accès réservé aux professionnels - Exclusion des mineurs",
+          "intro": "La Plateforme YUMNI est une solution SaaS à usage **exclusivement professionnel**, réservée aux personnes physiques majeures (âgées d'au moins **18 ans**) agissant dans le cadre de leur activité professionnelle au sein d'une organisation Cliente disposant d'un abonnement en vigueur.",
+          "subsections": [
+            {
+              "title": "11.1 Interdiction d'accès aux mineurs",
+              "paragraphs": [
+                "L'accès à la Plateforme est **formellement interdit aux personnes mineures**, que ce soit à titre personnel ou professionnel. La Plateforme n'est pas un service grand public et ne s'adresse à aucun titre à des consommateurs ou à des particuliers, quelle que soit leur âge.",
+                "En souscrivant un abonnement ou en créant un compte, vous déclarez et garantissez être majeur et agir dans le cadre de votre activité professionnelle. Si la loi du pays de résidence de l'Utilisateur fixe un âge de majorité supérieur à 18 ans pour l'exercice d'une activité commerciale ou professionnelle autonome, cet âge s'applique."
+              ]
+            },
+            {
+              "title": "11.2 Détection et traitement de comptes non conformes",
+              "paragraphs": [
+                "Si YUMNI SAS venait à constater qu'un compte a été créé par une personne mineure ou à titre strictement personnel, elle procédera à la **suspension immédiate du compte** et à la **suppression définitive de l'ensemble des données associées**, sans préavis ni indemnité. YUMNI SAS décline toute responsabilité pour tout préjudice résultant de la fourniture d'informations inexactes lors de la création de compte."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 12 - Modifications de cette Politique",
+          "intro": "YUMNI SAS se réserve le droit de modifier la présente Politique de Confidentialité pour l'adapter aux évolutions légales, réglementaires, jurisprudentielles, techniques ou organisationnelles.",
+          "subsections": [
+            {
+              "title": "12.1 Notification des modifications",
+              "table": {
+                "headers": [
+                  "Type de modification",
+                  "Modalité",
+                  "Délai de préavis"
+                ],
+                "rows": [
+                  [
+                    "Modification substantielle affectant les droits des personnes concernées",
+                    "Email à l'adresse du compte + notification in-app",
+                    "**30 jours minimum** avant entrée en vigueur"
+                  ],
+                  [
+                    "Modification rédactionnelle ou de précision sans impact sur les droits",
+                    "Publication de la version révisée sur la Plateforme avec indication de la date",
+                    "Immédiate"
+                  ],
+                  [
+                    "Modification imposée par une obligation légale ou réglementaire",
+                    "Email si matériellement possible",
+                    "Dès l'entrée en vigueur de l'obligation légale"
+                  ]
+                ]
+              }
+            },
+            {
+              "title": "12.2 Acceptation des modifications",
+              "paragraphs": [
+                "L'utilisation de la Plateforme après la date d'entrée en vigueur d'une version révisée de la présente Politique vaut **acceptation** de cette version révisée.",
+                "En cas de désaccord avec une modification substantielle, vous pouvez supprimer votre compte et cesser d'utiliser la Plateforme avant la date d'entrée en vigueur de la modification, sans pénalité liée à ladite modification."
+              ]
+            },
+            {
+              "title": "12.3 Dernière mise à jour",
+              "paragraphs": [
+                "Cette Politique a été mise à jour le **23 avril 2026**."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Article 13 - Contacts et réclamations",
+          "contactBlocks": [
+            {
+              "label": "Contact - Protection des données",
+              "intro": "Pour toute question relative à la présente Politique, toute demande d'exercice de droits RGPD, tout signalement ou toute réclamation concernant la protection de vos données personnelles :",
+              "card": [
+                "**Email :** dpo@yumni.fr",
+                "**Objet à préciser :** [Confidentialité] / [RGPD] / [DPA] / [Réclamation] / [Demande - précisez]",
+                "**Délai de réponse RGPD :** 30 jours maximum (Art. 12 RGPD)"
+              ]
+            },
+            {
+              "label": "Adresse postale - Courriers recommandés :",
+              "card": [
+                "YUMNI SAS",
+                "À l'attention du Responsable de la protection des données",
+                "61 RUE DE LYON, 75012 PARIS",
+                "France"
+              ]
+            },
+            {
+              "label": "Délégué à la Protection des Données (DPO)"
+            },
+            {
+              "label": "Informations légales",
+              "card": [
+                "**YUMNI SAS**",
+                "Société par Actions Simplifiée au capital de 1 000 euros (€)",
+                "Siège social : 61 RUE DE LYON, 75012 PARIS, France",
+                "RCS : Paris - SIREN : 102228608",
+                "Hébergement des données : Scaleway SAS, 8 rue de la Ville l'Évêque, 75008 Paris, France - Région fr-par (Union Européenne)"
+              ]
+            },
+            {
+              "label": "Autorité de contrôle",
+              "intro": "Si vous estimez que vos droits en matière de protection des données personnelles n'ont pas été respectés malgré vos démarches auprès de YUMNI SAS, vous avez le droit de déposer une réclamation auprès de l'autorité de contrôle française compétente :",
+              "card": [
+                "**CNIL - Commission Nationale de l'Informatique et des Libertés**",
+                "3 Place de Fontenoy - TSA 80715",
+                "75334 Paris Cedex 07",
+                "Téléphone : +33 (0)1 53 73 22 22",
+                "Site web : www.cnil.fr"
+              ],
+              "outro": "YUMNI SAS vous encourage à la contacter préalablement à toute saisine de la CNIL, afin que nous puissions résoudre votre demande amiablement dans les délais légaux."
+            }
+          ]
         }
       ],
-      "dpoContact": "Contact DPO : rgpd@yumni.fr"
+      "relatedDocs": {
+        "title": "Documents connexes",
+        "headers": [
+          "Document",
+          "Contenu"
+        ],
+        "rows": [
+          [
+            "**Conditions Générales d'Utilisation**",
+            "Règles d'accès, droits et obligations des parties, plans d'abonnement, facturation, résiliation"
+          ],
+          [
+            "**Politique de Confidentialité** (ce document)",
+            "Traitement des données personnelles, cookies, droits RGPD"
+          ],
+          [
+            "**Mentions Légales**",
+            "Identification de l'éditeur, hébergement, responsabilités légales"
+          ]
+        ]
+      },
+      "footerNote": "© 2026 YUMNI SAS - Tous droits réservés. Capital social : 1 000 € - Hébergement : Scaleway SAS, Paris, France (Union Européenne, région fr-par) - Droit applicable : droit français - Autorité de contrôle : CNIL",
+      "dpoContact": "Contact DPO : dpo@yumni.fr"
     },
     "cookies": {
       "title": "Politique cookies",
@@ -1057,14 +2886,36 @@
         }
       ],
       "metrics": [
-        { "value": 12, "suffix": "s", "label": "par rapport client" },
-        { "value": 5, "suffix": "min", "label": "onboarding client" },
-        { "value": 30, "suffix": "+", "label": "clients gérables" },
-        { "value": 100, "suffix": "%", "label": "données isolées" }
+        {
+          "value": 12,
+          "suffix": "s",
+          "label": "par rapport client"
+        },
+        {
+          "value": 5,
+          "suffix": "min",
+          "label": "onboarding client"
+        },
+        {
+          "value": 30,
+          "suffix": "+",
+          "label": "clients gérables"
+        },
+        {
+          "value": 100,
+          "suffix": "%",
+          "label": "données isolées"
+        }
       ],
       "keyArgument": "Yumni devient l'outil de pilotage que vous proposez à vos clients. Vous passez de consultant ponctuel à partenaire technologique continu.",
       "archTitle": "Architecture multi-tenant",
-      "archLabels": ["Votre cabinet", "Client A", "Client B", "Client C", "Vue consolidée"],
+      "archLabels": [
+        "Votre cabinet",
+        "Client A",
+        "Client B",
+        "Client C",
+        "Vue consolidée"
+      ],
       "cta1": "Demander une démo cabinet",
       "cta2": "Programme partenaire →"
     },
@@ -1136,14 +2987,38 @@
         }
       ],
       "archTitle": "Architecture multi-entités",
-      "archLabels": ["Direction Groupe RSE", "Filiale A Normandie", "Filiale B Est", "Filiale C Sud", "Dashboard consolidé"],
+      "archLabels": [
+        "Direction Groupe RSE",
+        "Filiale A Normandie",
+        "Filiale B Est",
+        "Filiale C Sud",
+        "Dashboard consolidé"
+      ],
       "securityBadges": [
-        { "label": "RBAC 4 niveaux", "icon": "shield" },
-        { "label": "MFA / 2FA", "icon": "lock" },
-        { "label": "Hébergé France", "icon": "flag" },
-        { "label": "RGPD by design", "icon": "check" },
-        { "label": "RLS PostgreSQL", "icon": "database" },
-        { "label": "TLS 1.3 + AES-256", "icon": "encrypt" }
+        {
+          "label": "RBAC 4 niveaux",
+          "icon": "shield"
+        },
+        {
+          "label": "MFA / 2FA",
+          "icon": "lock"
+        },
+        {
+          "label": "Hébergé France",
+          "icon": "flag"
+        },
+        {
+          "label": "RGPD by design",
+          "icon": "check"
+        },
+        {
+          "label": "RLS PostgreSQL",
+          "icon": "database"
+        },
+        {
+          "label": "TLS 1.3 + AES-256",
+          "icon": "encrypt"
+        }
       ],
       "cta1": "Demander une démo groupe",
       "cta2": "Contacter notre équipe entreprise →"
@@ -1151,19 +3026,79 @@
     "comparison": {
       "title": "Comparez les solutions",
       "features": [
-        { "name": "Dashboard RSE temps réel", "cabinet": true, "pme": true, "eti": true },
-        { "name": "KPIs & alertes automatiques", "cabinet": true, "pme": true, "eti": true },
-        { "name": "Priorisation WSJF", "cabinet": true, "pme": true, "eti": true },
-        { "name": "Rapport COMEX 1 clic", "cabinet": true, "pme": true, "eti": true },
-        { "name": "Conformité ESRS / CSRD", "cabinet": true, "pme": true, "eti": true },
-        { "name": "Multi-organisation", "cabinet": true, "pme": false, "eti": true },
-        { "name": "Vue consolidée groupe", "cabinet": true, "pme": false, "eti": true },
-        { "name": "RBAC granulaire", "cabinet": true, "pme": false, "eti": true },
-        { "name": "Templates sectoriels", "cabinet": false, "pme": true, "eti": false },
-        { "name": "SSO / SAML", "cabinet": false, "pme": false, "eti": true },
-        { "name": "Account manager dédié", "cabinet": false, "pme": false, "eti": true }
+        {
+          "name": "Dashboard RSE temps réel",
+          "cabinet": true,
+          "pme": true,
+          "eti": true
+        },
+        {
+          "name": "KPIs & alertes automatiques",
+          "cabinet": true,
+          "pme": true,
+          "eti": true
+        },
+        {
+          "name": "Priorisation WSJF",
+          "cabinet": true,
+          "pme": true,
+          "eti": true
+        },
+        {
+          "name": "Rapport COMEX 1 clic",
+          "cabinet": true,
+          "pme": true,
+          "eti": true
+        },
+        {
+          "name": "Conformité ESRS / CSRD",
+          "cabinet": true,
+          "pme": true,
+          "eti": true
+        },
+        {
+          "name": "Multi-organisation",
+          "cabinet": true,
+          "pme": false,
+          "eti": true
+        },
+        {
+          "name": "Vue consolidée groupe",
+          "cabinet": true,
+          "pme": false,
+          "eti": true
+        },
+        {
+          "name": "RBAC granulaire",
+          "cabinet": true,
+          "pme": false,
+          "eti": true
+        },
+        {
+          "name": "Templates sectoriels",
+          "cabinet": false,
+          "pme": true,
+          "eti": false
+        },
+        {
+          "name": "SSO / SAML",
+          "cabinet": false,
+          "pme": false,
+          "eti": true
+        },
+        {
+          "name": "Account manager dédié",
+          "cabinet": false,
+          "pme": false,
+          "eti": true
+        }
       ],
-      "headers": ["Fonctionnalité", "Cabinets", "PME", "ETI"]
+      "headers": [
+        "Fonctionnalité",
+        "Cabinets",
+        "PME",
+        "ETI"
+      ]
     },
     "finalCta": {
       "title1": "Prêt à transformer",
@@ -1180,7 +3115,13 @@
       "title1": "Une plateforme.",
       "title2": "Tout votre pilotage RSE.",
       "subtitle": "De la définition des axes stratégiques à la génération automatique du rapport COMEX Yumni couvre l'intégralité du cycle de vie RSE.",
-      "hierarchy": ["Axes stratégiques", "Objectifs SMART", "Projets RSE", "Actions terrain", "KPIs & Jalons"]
+      "hierarchy": [
+        "Axes stratégiques",
+        "Objectifs SMART",
+        "Projets RSE",
+        "Actions terrain",
+        "KPIs & Jalons"
+      ]
     },
     "features": [
       {
@@ -1189,7 +3130,12 @@
         "title": "Cockpit Dashboard",
         "subtitle": "Votre score RSE en un coup d'œil.",
         "description": "Votre score RSE global, vos alertes en temps réel, vos axes au vert ou en danger en un seul écran. Percez jusqu'au détail de chaque action en 3 clics.",
-        "bullets": ["Score RSE global pondéré par axe", "Alertes automatiques sur KPIs et risques critiques", "Drill-down : Axe → Objectif → Projet → Action", "Suivi budget prévu vs. réel par projet"]
+        "bullets": [
+          "Score RSE global pondéré par axe",
+          "Alertes automatiques sur KPIs et risques critiques",
+          "Drill-down : Axe → Objectif → Projet → Action",
+          "Suivi budget prévu vs. réel par projet"
+        ]
       },
       {
         "tag": "02",
@@ -1197,7 +3143,12 @@
         "title": "KPIs & Alertes",
         "subtitle": "40+ KPIs. Zéro surprise.",
         "description": "Configurez vos indicateurs RSE une fois. Suivez leur évolution en temps réel. Recevez une alerte dès qu'un KPI décroche avant le COMEX.",
-        "bullets": ["40+ KPIs RSE préconfigurés (E, S, G)", "Heatmap de progression vert / orange / rouge", "Alertes automatiques par seuils personnalisables", "Historique trimestriel avec comparaison N-1"]
+        "bullets": [
+          "40+ KPIs RSE préconfigurés (E, S, G)",
+          "Heatmap de progression vert / orange / rouge",
+          "Alertes automatiques par seuils personnalisables",
+          "Historique trimestriel avec comparaison N-1"
+        ]
       },
       {
         "tag": "03",
@@ -1205,7 +3156,12 @@
         "title": "Priorisation WSJF",
         "subtitle": "15 initiatives. Budget pour 5. Laissez les données décider.",
         "description": "Méthode WSJF adaptée à la RSE. Chaque initiative scorée objectivement. Du funnel d'idées au projet validé en quelques clics.",
-        "bullets": ["Score = (Valeur + Urgence + Risque) ÷ Effort", "Pipeline visuel : Inbox → Vote → Score → Projet", "Consensus basé sur les données, pas la politique", "Conversion automatique idée → projet RSE"]
+        "bullets": [
+          "Score = (Valeur + Urgence + Risque) ÷ Effort",
+          "Pipeline visuel : Inbox → Vote → Score → Projet",
+          "Consensus basé sur les données, pas la politique",
+          "Conversion automatique idée → projet RSE"
+        ]
       },
       {
         "tag": "04",
@@ -1213,7 +3169,12 @@
         "title": "Gestion des risques",
         "subtitle": "Chaque risque tracé. Chaque auditeur satisfait.",
         "description": "Matrice Impact × Probabilité. Chaque risque relié à ses actions de mitigation, son responsable et sa deadline. Traçabilité complète pour vos audits CSRD.",
-        "bullets": ["Matrice 5×5 avec code couleur (vert → rouge)", "4 catégories : Légal, Opérationnel, Réputationnel, Financier", "Chaîne d'audit complète : qui, quand, quoi", "Alertes automatiques sur risques critiques"]
+        "bullets": [
+          "Matrice 5×5 avec code couleur (vert → rouge)",
+          "4 catégories : Légal, Opérationnel, Réputationnel, Financier",
+          "Chaîne d'audit complète : qui, quand, quoi",
+          "Alertes automatiques sur risques critiques"
+        ]
       },
       {
         "tag": "05",
@@ -1221,7 +3182,12 @@
         "title": "Rapport COMEX",
         "subtitle": "3 jours → 12 secondes.",
         "description": "Yumni génère automatiquement votre rapport COMEX en PowerPoint natif. Données en temps réel. Branding personnalisé. Export immédiat.",
-        "bullets": ["Format PowerPoint natif, compatible Office", "Logo et charte graphique personnalisés", "Planification auto : hebdo, mensuel, trimestriel", "40 jours/an libérés par équipe RSE"]
+        "bullets": [
+          "Format PowerPoint natif, compatible Office",
+          "Logo et charte graphique personnalisés",
+          "Planification auto : hebdo, mensuel, trimestriel",
+          "40 jours/an libérés par équipe RSE"
+        ]
       },
       {
         "tag": "06",
@@ -1229,7 +3195,12 @@
         "title": "Conformité ESRS",
         "subtitle": "Conforme par design. Pas par rattrapage.",
         "description": "Mapping automatique de vos initiatives sur les 12 standards ESRS. Gap analysis instantanée. Double matérialité intégrée.",
-        "bullets": ["12 standards ESRS couverts nativement", "Gap analysis : standards non couverts identifiés", "Double matérialité (financière + impact)", "Rapport ESRS exportable pour les auditeurs"]
+        "bullets": [
+          "12 standards ESRS couverts nativement",
+          "Gap analysis : standards non couverts identifiés",
+          "Double matérialité (financière + impact)",
+          "Rapport ESRS exportable pour les auditeurs"
+        ]
       },
       {
         "tag": "07",
@@ -1237,7 +3208,12 @@
         "title": "Collaboration",
         "subtitle": "Fini les 47 threads email.",
         "description": "Kanban drag-and-drop. Calendrier RSE. Commentaires avec @mentions. Notifications. Tout le travail au même endroit.",
-        "bullets": ["Kanban d'actions : À faire / En cours / Terminé", "Calendrier des jalons et deadlines", "Commentaires et @mentions sur chaque action", "Journal d'activité et audit trail complet"]
+        "bullets": [
+          "Kanban d'actions : À faire / En cours / Terminé",
+          "Calendrier des jalons et deadlines",
+          "Commentaires et @mentions sur chaque action",
+          "Journal d'activité et audit trail complet"
+        ]
       },
       {
         "tag": "08",
@@ -1245,19 +3221,48 @@
         "title": "Multi-organisation",
         "subtitle": "1 compte. N organisations.",
         "description": "Gestion multi-clients pour les cabinets, multi-filiales pour les groupes. Données isolées. Vue consolidée.",
-        "bullets": ["Onboarding nouveau client en < 5 minutes", "Chaque client dans un espace isolé", "Vue transversale consolidée", "Rapports multi-organisations en 1 clic"]
+        "bullets": [
+          "Onboarding nouveau client en < 5 minutes",
+          "Chaque client dans un espace isolé",
+          "Vue transversale consolidée",
+          "Rapports multi-organisations en 1 clic"
+        ]
       }
     ],
     "roadmap": {
       "eyebrow": "ROADMAP",
       "title": "La vision produit",
       "steps": [
-        { "phase": "Fondations", "title": "Collaboration & Contrôle", "description": "Commentaires, pièces jointes, RBAC pour une collaboration fluide et sécurisée." },
-        { "phase": "Structuration", "title": "Double Matérialité", "description": "Seuils, chaîne de valeur, campagnes structurées pour la conformité ESRS." },
-        { "phase": "Optimisation", "title": "Pilotage Stratégique", "description": "Dashboards interactifs, alertes proactives, KPI liés aux enjeux matériels." },
-        { "phase": "Workflow", "title": "Actions Connectées", "description": "Matérialité, actions et KPIs dans un workflow intelligent avec suivi Kanban." },
-        { "phase": "Intelligence", "title": "IA & Benchmark", "description": "IA et benchmarks sectoriels pour guider vos décisions RSE." },
-        { "phase": "Reporting", "title": "Transparence Totale", "description": "Rapports CSRD, traçabilité totale et partage public RSE." }
+        {
+          "phase": "Fondations",
+          "title": "Collaboration & Contrôle",
+          "description": "Commentaires, pièces jointes, RBAC pour une collaboration fluide et sécurisée."
+        },
+        {
+          "phase": "Structuration",
+          "title": "Double Matérialité",
+          "description": "Seuils, chaîne de valeur, campagnes structurées pour la conformité ESRS."
+        },
+        {
+          "phase": "Optimisation",
+          "title": "Pilotage Stratégique",
+          "description": "Dashboards interactifs, alertes proactives, KPI liés aux enjeux matériels."
+        },
+        {
+          "phase": "Workflow",
+          "title": "Actions Connectées",
+          "description": "Matérialité, actions et KPIs dans un workflow intelligent avec suivi Kanban."
+        },
+        {
+          "phase": "Intelligence",
+          "title": "IA & Benchmark",
+          "description": "IA et benchmarks sectoriels pour guider vos décisions RSE."
+        },
+        {
+          "phase": "Reporting",
+          "title": "Transparence Totale",
+          "description": "Rapports CSRD, traçabilité totale et partage public RSE."
+        }
       ]
     },
     "cta": {
@@ -1275,7 +3280,6 @@
       "titleHighlight": "en action",
       "subtitle": "Du cockpit stratégique au rapport COMEX : découvrez comment Yumni transforme le pilotage RSE de votre organisation."
     },
-
     "form": {
       "windowBar": "yumni.fr / réserver une démo",
       "firstName": "Prénom",
@@ -1285,9 +3289,21 @@
       "company": "Entreprise",
       "companyPlaceholder": "GreenTech Industries",
       "companySize": "Taille de l'entreprise",
-      "companySizes": ["PME < 250 salariés", "ETI 250–5 000", "Cabinet RSE", "Groupe +5 000"],
+      "companySizes": [
+        "PME < 250 salariés",
+        "ETI 250-5 000",
+        "Cabinet RSE",
+        "Groupe +5 000"
+      ],
       "challenge": "Principal défi RSE",
-      "challenges": ["Reporting CSRD", "Pilotage KPIs", "Priorisation initiatives", "Gestion des risques", "Conformité ESRS", "Autre"],
+      "challenges": [
+        "Reporting CSRD",
+        "Pilotage KPIs",
+        "Priorisation initiatives",
+        "Gestion des risques",
+        "Conformité ESRS",
+        "Autre"
+      ],
       "message": "Message",
       "messagePlaceholder": "Décrivez brièvement votre contexte ou vos attentes...",
       "messageOptional": "(optionnel)",
@@ -1306,13 +3322,24 @@
     "valueProps": {
       "title": "Ce que vous verrez",
       "items": [
-        { "title": "Le cockpit en temps réel", "desc": "Score RSE, alertes, heatmap KPIs en un seul écran." },
-        { "title": "La priorisation WSJF", "desc": "Vos initiatives scorées objectivement. Fini les arbitrages politiques." },
-        { "title": "Le rapport COMEX", "desc": "Généré en 12 secondes, pas en 3 jours. PowerPoint natif." },
-        { "title": "La conformité ESRS", "desc": "Gap analysis et mapping automatique sur les 12 standards." }
+        {
+          "title": "Le cockpit en temps réel",
+          "desc": "Score RSE, alertes, heatmap KPIs en un seul écran."
+        },
+        {
+          "title": "La priorisation WSJF",
+          "desc": "Vos initiatives scorées objectivement. Fini les arbitrages politiques."
+        },
+        {
+          "title": "Le rapport COMEX",
+          "desc": "Généré en 12 secondes, pas en 3 jours. PowerPoint natif."
+        },
+        {
+          "title": "La conformité ESRS",
+          "desc": "Gap analysis et mapping automatique sur les 12 standards."
+        }
       ]
     },
-
     "calendly": {
       "title": "Choisissez votre créneau",
       "subtitle": "30 minutes avec un expert Yumni pour découvrir la plateforme en conditions réelles."
@@ -1323,9 +3350,18 @@
       "back": "← Retour à l'accueil"
     },
     "stats": [
-      { "value": "12s", "label": "rapport COMEX" },
-      { "value": "40j", "label": "récupérés / an" },
-      { "value": "12", "label": "standards ESRS" }
+      {
+        "value": "12s",
+        "label": "rapport COMEX"
+      },
+      {
+        "value": "40j",
+        "label": "récupérés / an"
+      },
+      {
+        "value": "12",
+        "label": "standards ESRS"
+      }
     ],
     "errors": {
       "generic": "Une erreur est survenue. Veuillez réessayer.",
@@ -1338,10 +3374,22 @@
       "titleHighlight": "votre pilotage RSE",
       "subtitle": "Une démo personnalisée avec un expert Yumni. On vous montre exactement comment la plateforme s'adapte à votre contexte, avec vos données, vos enjeux, vos urgences.",
       "benefits": [
-        { "icon": "", "text": "Votre score RSE en temps réel : alertes, heatmap, drill-down en 3 clics" },
-        { "icon": "", "text": "La priorisation WSJF qui remplace les arbitrages politiques par les données" },
-        { "icon": "", "text": "Un rapport COMEX généré en 12 secondes, pas en 3 jours" },
-        { "icon": "", "text": "Le mapping ESRS automatique avec gap analysis instantanée sur 12 standards" }
+        {
+          "icon": "",
+          "text": "Votre score RSE en temps réel : alertes, heatmap, drill-down en 3 clics"
+        },
+        {
+          "icon": "",
+          "text": "La priorisation WSJF qui remplace les arbitrages politiques par les données"
+        },
+        {
+          "icon": "",
+          "text": "Un rapport COMEX généré en 12 secondes, pas en 3 jours"
+        },
+        {
+          "icon": "",
+          "text": "Le mapping ESRS automatique avec gap analysis instantanée sur 12 standards"
+        }
       ],
       "step1Label": "Choisissez un créneau",
       "step2Label": "Vos coordonnées",
@@ -1394,7 +3442,7 @@
     "pricing": {
       "title": "Tarifs Yumni | Freemium gratuit · Starter 19€/user · Pro + IA à venir · Enterprise",
       "description": "Tarifs Yumni : Freemium gratuit (aperçu), Starter à 19€/user/mois (prix garanti à vie), Pro + IA en octobre 2026, Enterprise sur devis. Toutes les fonctionnalités dès le Starter. Sans carte bancaire.",
-      "ogTitle": "Tarifs Yumni — Simple, transparent, sans surprise",
+      "ogTitle": "Tarifs Yumni - Simple, transparent, sans surprise",
       "ogDescription": "Freemium pour tester, Starter à 19€ garanti, Pro + IA en octobre 2026, Enterprise sur devis. Commencez à piloter votre RSE gratuitement."
     },
     "partners": {

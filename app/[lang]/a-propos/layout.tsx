@@ -32,7 +32,7 @@ export async function generateMetadata({
       alternateLocale: lang === "fr" ? "en_US" : "fr_FR",
       siteName: "Yumni",
       url: `${SITE_URL}/${lang}/a-propos`,
-      images: [{ url: `${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`, width: 1200, height: 630, alt: "Yumni — Plateforme RSE" }],
+      images: [{ url: `${SITE_URL}/Screen/01-hero-cockpit-ensemble.png`, width: 1200, height: 630, alt: "Yumni - Plateforme RSE" }],
     },
     twitter: {
       card: "summary_large_image",

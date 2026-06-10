@@ -1,12 +1,12 @@
 /**
- * Articles — données depuis Cloudflare R2
+ * Articles - données depuis Cloudflare R2
  *
  * Structure R2 :
  *   articles/fr/<slug>.md
  *   articles/en/<slug>.md
  *
  * Le fichier MD contient un frontmatter YAML avec toutes les métadonnées.
- * Aucune config manuelle — déposer le .md dans R2, il apparaît automatiquement.
+ * Aucune config manuelle - déposer le .md dans R2, il apparaît automatiquement.
  */
 
 import matter from "gray-matter";

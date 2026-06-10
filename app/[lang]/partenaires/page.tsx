@@ -20,7 +20,7 @@ import { track } from "../../lib/analytics";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 /* ================================================================
-   UTILITY — Fade in on scroll
+   UTILITY - Fade in on scroll
    ================================================================ */
 
 function FadeIn({
@@ -48,7 +48,7 @@ function FadeIn({
 }
 
 /* ================================================================
-   UTILITY — Animated counter
+   UTILITY - Animated counter
    ================================================================ */
 
 function CountUp({
@@ -87,7 +87,7 @@ function CountUp({
 }
 
 /* ================================================================
-   NETWORK VISUAL — Animated constellation hero
+   NETWORK VISUAL - Animated constellation hero
    ================================================================ */
 
 function NetworkVisual() {
@@ -114,7 +114,7 @@ function NetworkVisual() {
         </div>
       </motion.div>
 
-      {/* Partner nodes — orbiting around */}
+      {/* Partner nodes - orbiting around */}
       {[
         { top: "15%", left: "20%", delay: 0.5, label: "Cabinet A", color: "bg-green" },
         { top: "12%", left: "65%", delay: 0.7, label: "Cabinet B", color: "bg-orange" },
@@ -200,7 +200,7 @@ function NetworkVisual() {
 }
 
 /* ================================================================
-   FLOW DIAGRAM — Partner model (2-column: Vous → Vos clients)
+   FLOW DIAGRAM - Partner model (2-column: Vous → Vos clients)
    ================================================================ */
 
 function FlowDiagram() {
@@ -284,7 +284,7 @@ function FlowDiagram() {
 }
 
 /* ================================================================
-   BENEFIT CARD — Glassmorphism on dark bg
+   BENEFIT CARD - Glassmorphism on dark bg
    ================================================================ */
 
 const benefitIcons = [
@@ -359,7 +359,7 @@ function TransformRow({
 }
 
 /* ================================================================
-   EXPECTATION NODE — Dialogue axis item (no cards)
+   EXPECTATION NODE - Dialogue axis item (no cards)
    ================================================================ */
 
 function ExpectationNode({
@@ -408,9 +408,9 @@ function ExpectationNode({
         transition={{ duration: 0.6, delay: 0.3, ease }}
       />
 
-      {/* ── Content block — alternating sides ────────── */}
+      {/* ── Content block - alternating sides ────────── */}
       <div className={`md:w-[45%] ${isLeft ? "md:mr-auto md:pr-16" : "md:ml-auto md:pl-16"}`}>
-        {/* Ghost number — bleeds behind */}
+        {/* Ghost number - bleeds behind */}
         <motion.div
           className={`absolute pointer-events-none select-none ${
             isLeft
@@ -455,7 +455,7 @@ function ExpectationNode({
           </span>
         </motion.div>
 
-        {/* Title — large editorial */}
+        {/* Title - large editorial */}
         <motion.h3
           className={`relative font-display text-2xl md:text-3xl lg:text-[2.25rem] text-forest tracking-tight leading-[1.15] ${
             isLeft ? "" : "md:text-left"
@@ -467,7 +467,7 @@ function ExpectationNode({
           {title}
         </motion.h3>
 
-        {/* Description — subtle, offset */}
+        {/* Description - subtle, offset */}
         <motion.p
           className="text-muted text-sm md:text-[0.94rem] leading-relaxed mt-4 max-w-md"
           initial={{ opacity: 0, y: 12 }}
@@ -482,7 +482,7 @@ function ExpectationNode({
 }
 
 /* ================================================================
-   PARTNER FORM — Application
+   PARTNER FORM - Application
    ================================================================ */
 
 function PartnerForm() {
@@ -717,17 +717,17 @@ export default function PartenairesPage() {
     <>
       {/* ─── HERO ──────────────────────────────────────────── */}
       <section className="relative pt-32 pb-8 md:pt-44 md:pb-16 overflow-hidden">
-        {/* Background — matching homepage hero style */}
+        {/* Background - matching homepage hero style */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Large sweeping arcs — creates depth and visual pull */}
+          {/* Large sweeping arcs - creates depth and visual pull */}
           <svg className="absolute -right-[15%] -top-[10%] w-[80%] h-[120%] opacity-[0.05]" viewBox="0 0 800 800" fill="none">
             <circle cx="400" cy="400" r="380" stroke="#1B3A2D" strokeWidth="1.2" />
             <circle cx="400" cy="400" r="300" stroke="#1B3A2D" strokeWidth="0.8" />
             <circle cx="400" cy="400" r="220" stroke="#1B3A2D" strokeWidth="0.5" />
           </svg>
-          {/* Soft green ambient — top right */}
+          {/* Soft green ambient - top right */}
           <div className="absolute -top-[200px] -right-[200px] w-[700px] h-[700px] rounded-full bg-green/[0.05]" />
-          {/* Warm accent — bottom left */}
+          {/* Warm accent - bottom left */}
           <div className="absolute bottom-0 -left-[100px] w-[400px] h-[400px] rounded-full bg-orange/[0.05]" />
           {/* Warm gradient towards bottom */}
           <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-orange/[0.05] via-orange/[0.025] to-transparent" />
@@ -826,7 +826,7 @@ export default function PartenairesPage() {
 
 
 
-      {/* ─── BENEFITS — Dark section ──────────────────────── */}
+      {/* ─── BENEFITS - Dark section ──────────────────────── */}
       <section className="py-24 md:py-36 bg-forest relative overflow-hidden">
         {/* Decorative background */}
         <div className="absolute inset-0">
@@ -889,7 +889,7 @@ export default function PartenairesPage() {
         </div>
       </section>
 
-      {/* ─── EXPECTATIONS — Dialogue Axis ────────────────── */}
+      {/* ─── EXPECTATIONS - Dialogue Axis ────────────────── */}
       <section className="py-28 md:py-44 bg-sand/40 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn className="text-center mb-24 md:mb-32">
@@ -942,7 +942,7 @@ export default function PartenairesPage() {
       <section id="candidater" className="py-24 md:py-36 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
-            {/* Left — Text + visual */}
+            {/* Left - Text + visual */}
             <FadeIn>
               <span className="text-sm font-semibold tracking-widest uppercase text-orange">
                 {t.partners.cta.eyebrow}
@@ -982,7 +982,7 @@ export default function PartenairesPage() {
               </div>
             </FadeIn>
 
-            {/* Right — Form */}
+            {/* Right - Form */}
             <FadeIn delay={0.2}>
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-green-light/20 via-transparent to-orange-light/10 rounded-[2rem] blur-2xl" />
@@ -1007,7 +1007,7 @@ export default function PartenairesPage() {
         </div>
       </section>
 
-      {/* ─── FINAL CTA — Island ────────────────────────────── */}
+      {/* ─── FINAL CTA - Island ────────────────────────────── */}
       <section className="my-12 md:my-20 mx-4 md:mx-8 lg:mx-12">
         <div className="relative bg-forest rounded-3xl overflow-hidden">
           {/* Decorative layers */}

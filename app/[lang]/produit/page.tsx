@@ -17,7 +17,7 @@ import { track } from "../../lib/analytics";
 const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 /* ================================================================
-   UTILITY — FadeIn
+   UTILITY - FadeIn
    ================================================================ */
 
 function FadeIn({
@@ -45,7 +45,7 @@ function FadeIn({
 }
 
 /* ================================================================
-   FEATURE ICONS — inline SVGs for each feature tab
+   FEATURE ICONS - inline SVGs for each feature tab
    ================================================================ */
 
 const featureIcons = [
@@ -68,7 +68,7 @@ const featureIcons = [
 ];
 
 /* ================================================================
-   VISUALS — Cockpit (from homepage)
+   VISUALS - Cockpit (from homepage)
    ================================================================ */
 
 function CockpitVisual() {
@@ -202,7 +202,7 @@ function CockpitVisual() {
 }
 
 /* ================================================================
-   VISUALS — KPI
+   VISUALS - KPI
    ================================================================ */
 
 function KPIVisual() {
@@ -279,7 +279,7 @@ function KPIVisual() {
 }
 
 /* ================================================================
-   VISUALS — WSJF
+   VISUALS - WSJF
    ================================================================ */
 
 function WSJFVisual() {
@@ -347,7 +347,7 @@ function WSJFVisual() {
 }
 
 /* ================================================================
-   VISUALS — Risques
+   VISUALS - Risques
    ================================================================ */
 
 function RisquesVisual() {
@@ -403,7 +403,7 @@ function RisquesVisual() {
 }
 
 /* ================================================================
-   VISUALS — Reporting
+   VISUALS - Reporting
    ================================================================ */
 
 function ReportingVisual() {
@@ -463,7 +463,7 @@ function ReportingVisual() {
 }
 
 /* ================================================================
-   VISUALS — ESRS (new)
+   VISUALS - ESRS (new)
    ================================================================ */
 
 function ESRSVisual() {
@@ -526,7 +526,7 @@ function ESRSVisual() {
 }
 
 /* ================================================================
-   VISUALS — Collaboration (new)
+   VISUALS - Collaboration (new)
    ================================================================ */
 
 function CollaborationVisual() {
@@ -596,7 +596,7 @@ function CollaborationVisual() {
 }
 
 /* ================================================================
-   VISUALS — Multi-org (new)
+   VISUALS - Multi-org (new)
    ================================================================ */
 
 function MultiOrgVisual() {
@@ -697,17 +697,17 @@ function ProductHero() {
 
   return (
     <section className="relative -mt-16 pt-40 pb-16 md:pt-52 md:pb-24 overflow-hidden">
-      {/* Background — matching homepage style */}
+      {/* Background - matching homepage style */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Large sweeping arcs — creates depth and visual pull */}
+        {/* Large sweeping arcs - creates depth and visual pull */}
         <svg className="absolute -right-[15%] -top-[10%] w-[80%] h-[120%] opacity-[0.05]" viewBox="0 0 800 800" fill="none">
           <circle cx="400" cy="400" r="380" stroke="#1B3A2D" strokeWidth="1.2" />
           <circle cx="400" cy="400" r="300" stroke="#1B3A2D" strokeWidth="0.8" />
           <circle cx="400" cy="400" r="220" stroke="#1B3A2D" strokeWidth="0.5" />
         </svg>
-        {/* Soft green ambient — top right */}
+        {/* Soft green ambient - top right */}
         <div className="absolute -top-[200px] -right-[200px] w-[700px] h-[700px] rounded-full bg-green/[0.05]" />
-        {/* Warm accent — bottom left */}
+        {/* Warm accent - bottom left */}
         <div className="absolute bottom-0 -left-[100px] w-[400px] h-[400px] rounded-full bg-orange/[0.05]" />
         {/* Warm gradient towards bottom */}
         <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-orange/[0.05] via-orange/[0.025] to-transparent" />
@@ -729,7 +729,7 @@ function ProductHero() {
             {p.hero.subtitle}
           </motion.p>
 
-          {/* Animated hierarchy — compact inline flow */}
+          {/* Animated hierarchy - compact inline flow */}
           <motion.div 
             className="mb-12" 
             initial={{ opacity: 0, y: 16 }} 
@@ -771,13 +771,13 @@ function ProductHero() {
 }
 
 /* ================================================================
-   FEATURE SHOWCASE — zero-click alternating scroll
+   FEATURE SHOWCASE - zero-click alternating scroll
    Each feature tells its own micro-story as the user scrolls.
    Nudge badges highlight the killer stat per feature.
    No clicks required. No cognitive overhead. Just value.
    ================================================================ */
 
-/* Nudge stat for each feature — the one number that triggers desire */
+/* Nudge stat for each feature - the one number that triggers desire */
 const nudgeBadges = [
   { stat: "1 écran", label: "Score RSE global" },         // Cockpit
   { stat: "40+", label: "KPIs préconfigurés" },            // KPIs
@@ -791,14 +791,14 @@ const nudgeBadges = [
 
 /* Background treatment: alternate between clean/subtle to create rhythm */
 const rowBg = [
-  "",                                          // 0 — white
-  "bg-sand/30",                                // 1 — warm
-  "",                                          // 2 — white
-  "bg-forest",                                  // 3 — dark (wow moment)
-  "",                                          // 4 — white
-  "bg-sand/30",                                // 5 — warm
-  "",                                          // 6 — white
-  "bg-gradient-to-br from-forest/[0.03] to-sand/20", // 7 — subtle close
+  "",                                          // 0 - white
+  "bg-sand/30",                                // 1 - warm
+  "",                                          // 2 - white
+  "bg-forest",                                  // 3 - dark (wow moment)
+  "",                                          // 4 - white
+  "bg-sand/30",                                // 5 - warm
+  "",                                          // 6 - white
+  "bg-gradient-to-br from-forest/[0.03] to-sand/20", // 7 - subtle close
 ];
 
 /* When dark bg, override text colors */
@@ -870,7 +870,7 @@ function FeatureRow({ feature, index, Visual }: {
               {feature.title}
             </h3>
 
-            {/* Subtitle — the hook */}
+            {/* Subtitle - the hook */}
             <p className={`text-lg font-display italic mb-5 ${dark ? "text-green-muted" : "text-green"}`}>
               {feature.subtitle}
             </p>
@@ -880,7 +880,7 @@ function FeatureRow({ feature, index, Visual }: {
               {feature.description}
             </p>
 
-            {/* Bullets — staggered reveal */}
+            {/* Bullets - staggered reveal */}
             <ul className="space-y-2.5 mb-7">
               {feature.bullets.map((bullet: string, bi: number) => (
                 <motion.li
@@ -898,7 +898,7 @@ function FeatureRow({ feature, index, Visual }: {
               ))}
             </ul>
 
-            {/* Nudge badge — the killer stat */}
+            {/* Nudge badge - the killer stat */}
             <motion.div
               className={`inline-flex items-center gap-3 px-4 py-2.5 rounded-xl ${
                 dark
@@ -975,7 +975,7 @@ function RoadmapSection() {
 
         {/* Creative timeline layout */}
         <div className="relative">
-          {/* Central timeline spine — visible on desktop */}
+          {/* Central timeline spine - visible on desktop */}
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2">
             <motion.div 
               className="w-full h-full bg-gradient-to-b from-green/20 via-green/40 to-orange/30"
@@ -997,7 +997,7 @@ function RoadmapSection() {
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.7, delay: 0.2 + i * 0.15, ease }}
                 >
-                  {/* Timeline node — center */}
+                  {/* Timeline node - center */}
                   <div className="hidden lg:flex absolute left-1/2 top-8 -translate-x-1/2 z-10">
                     <motion.div 
                       className={`w-12 h-12 rounded-full flex items-center justify-center shadow-lg ${i < 3 ? "bg-green text-white" : "bg-orange text-white"}`}

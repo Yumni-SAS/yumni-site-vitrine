@@ -51,7 +51,7 @@ export async function POST(request: Request) {
       from: "Yumni Demo <onboarding@resend.dev>",
       to: ["contact@yumni.fr"],
       replyTo: email,
-      subject: `[Yumni Démo] ${company} — ${firstName}`,
+      subject: `[Yumni Démo] ${company} - ${firstName}`,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: #1B3A2D; padding: 32px; border-radius: 12px 12px 0 0;">

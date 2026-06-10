@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ressources RSE | Yumni — Guides, Articles & Téléchargements",
+  title: "Ressources RSE | Yumni - Guides, Articles & Téléchargements",
   description:
     "Accédez à notre bibliothèque de ressources RSE : guides pratiques CSRD, templates, webinars et articles d'experts pour piloter votre conformité.",
   openGraph: {

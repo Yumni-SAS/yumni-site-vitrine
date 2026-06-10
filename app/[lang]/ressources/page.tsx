@@ -59,7 +59,7 @@ function FormatIcon({ format }: { format: string }) {
   return icons[format] ?? icons.PDF;
 }
 
-/* ─── Article card — Featured ─────────────────────────────────── */
+/* ─── Article card - Featured ─────────────────────────────────── */
 
 function ArticleCardFeatured({ article, lang }: { article: ArticleMeta; lang: string }) {
   return (
@@ -77,7 +77,7 @@ function ArticleCardFeatured({ article, lang }: { article: ArticleMeta; lang: st
           <span className="text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-white/15 text-white/90">
             {article.category}
           </span>
-          <span className="text-white/40 text-xs">— À la une</span>
+          <span className="text-white/40 text-xs">- À la une</span>
         </div>
 
         <h2 className="font-display text-3xl lg:text-4xl font-bold leading-tight mb-4 group-hover:text-green transition-colors duration-300">
@@ -110,7 +110,7 @@ function ArticleCardFeatured({ article, lang }: { article: ArticleMeta; lang: st
   );
 }
 
-/* ─── Article card — Standard ────────────────────────────────── */
+/* ─── Article card - Standard ────────────────────────────────── */
 
 function ArticleCard({ article, lang }: { article: ArticleMeta; lang: string }) {
   return (
@@ -249,10 +249,10 @@ export default async function RessourcesPage({
   return (
     <div className="bg-white min-h-screen">
 
-      {/* ── Hero — même pattern que solutions ──────────────────── */}
+      {/* ── Hero - même pattern que solutions ──────────────────── */}
       <section className="relative -mt-16 pt-36 pb-16 md:pt-44 md:pb-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Cercles concentriques SVG — discrets */}
+          {/* Cercles concentriques SVG - discrets */}
           <svg className="absolute -right-[10%] -top-[10%] w-[65%] h-[120%] opacity-[0.04]" viewBox="0 0 800 800" fill="none">
             <circle cx="400" cy="400" r="380" stroke="#1B3A2D" strokeWidth="1.2" />
             <circle cx="400" cy="400" r="300" stroke="#1B3A2D" strokeWidth="0.8" />
@@ -369,8 +369,7 @@ export default async function RessourcesPage({
             </p>
             <Link
               href={`/${locale}/demo`}
-              className="inline-flex items-center gap-2 bg-green text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-white hover:text-forest transition-all duration-300 group"
-            >
+              className="group inline-flex items-center gap-2 bg-white text-forest font-semibold px-10 py-4 rounded-full text-sm shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:bg-green-light hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)] transition-all duration-300">
               {copy.ctaBtn}
               <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
