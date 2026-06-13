@@ -112,12 +112,12 @@ function DashboardMock() {
           </div>
           <span className="ml-3 text-[11px] text-muted tracking-wide">{t.home.dashMock.cockpit}</span>
         </div>
-        <div className="p-6">
-          <div className="grid grid-cols-4 gap-3 mb-6">
+        <div className="p-4 sm:p-6">
+          <div className="grid grid-cols-2 gap-2 mb-4">
             {kpis.map((kpi, i) => (
-              <motion.div key={i} className="p-3 rounded-lg bg-cream/80" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 + i * 0.1, duration: 0.5 }}>
+              <motion.div key={i} className="p-2.5 rounded-lg bg-cream/80" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 + i * 0.1, duration: 0.5 }}>
                 <div className="text-[10px] text-muted mb-1">{kpi.label}</div>
-                <div className="text-base font-semibold text-ink">{kpi.val}</div>
+                <div className="text-sm font-semibold text-ink">{kpi.val}</div>
                 <div className="mt-2 h-1 rounded-full bg-line overflow-hidden">
                   <motion.div className={`h-full rounded-full ${kpi.color}`} animate={{ width: [`${40 + i * 15}%`, `${55 + i * 10}%`, `${40 + i * 15}%`] }} transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut" }} />
                 </div>
@@ -429,7 +429,7 @@ function CockpitVisual() {
                 3 axes stratégiques
               </motion.span>
             </div>
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 gap-2">
               {[
                 { icon: "B", label: "Budget Total", val: "1.0M€" },
                 { icon: "P", label: "Projets Actifs", val: "8" },
@@ -561,7 +561,7 @@ function KPIVisual() {
       {/* ─ Header ─ */}
       <div className="px-5 pt-4 pb-3 flex-shrink-0">
         {/* Summary stat cards */}
-        <div className="grid grid-cols-4 gap-2 mb-3">
+        <div className="grid grid-cols-2 gap-2 mb-3">
           {[
             { icon: "T", label: "TOTAL", val: "12", sub: "Nombre total d'indicateurs", color: "text-green" },
             { icon: "S", label: "SUR LA BONNE VOIE", val: "6", sub: "KPIs atteignant leurs cibles (≥80%)", color: "text-green" },
@@ -1137,22 +1137,22 @@ function RisquesVisual() {
       <div className="flex-1 p-3 flex flex-col gap-2.5 overflow-hidden">
         {/* ── Summary strip ── */}
         <motion.div
-          className="flex items-center gap-2 shrink-0"
+          className="flex flex-wrap items-center gap-1.5 shrink-0"
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease }}
         >
-          <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-red-50 border border-red-200/50">
+          <div className="flex items-center gap-1 px-2 py-1 rounded-lg bg-red-50 border border-red-200/50">
             <div className="w-2 h-2 rounded-full bg-red-400" />
             <span className="text-[10px] font-semibold text-red-600">3</span>
             <span className="text-[9px] text-red-500/80">critiques</span>
           </div>
-          <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-orange-50 border border-orange-200/50">
+          <div className="flex items-center gap-1 px-2 py-1 rounded-lg bg-orange-50 border border-orange-200/50">
             <div className="w-2 h-2 rounded-full bg-orange" />
             <span className="text-[10px] font-semibold text-orange-600">5</span>
             <span className="text-[9px] text-orange-500/80">élevés</span>
           </div>
-          <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200/50">
+          <div className="flex items-center gap-1 px-2 py-1 rounded-lg bg-emerald-50 border border-emerald-200/50">
             <div className="w-2 h-2 rounded-full bg-green" />
             <span className="text-[10px] font-semibold text-emerald-600">4</span>
             <span className="text-[9px] text-emerald-500/80">maîtrisés</span>
@@ -1555,36 +1555,36 @@ function ScrollFeatures() {
       {/* Left edge accent - visible vertical rail with green tint */}
       <div className="absolute top-0 left-[6%] w-[2px] h-full bg-gradient-to-b from-green/8 via-green/12 to-green/4 pointer-events-none hidden lg:block" />
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 w-full">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
+          <div className="grid lg:grid-cols-2 gap-3 sm:gap-5 lg:gap-16 items-center">
             <div>
-              <p className="text-green text-sm font-medium tracking-widest uppercase mb-6">{t.home.features.eyebrow}</p>
-              <div className="flex items-center gap-3 mb-8">
-                <span className="text-3xl font-display text-green">{activeIndex + 1}</span>
-                <span className="text-lg text-muted font-light">/</span>
-                <span className="text-lg text-muted font-light">{visuals.length}</span>
+              <p className="text-green text-xs sm:text-sm font-medium tracking-widest uppercase mb-3 sm:mb-6">{t.home.features.eyebrow}</p>
+              <div className="flex items-center gap-3 mb-3 sm:mb-8">
+                <span className="text-2xl sm:text-3xl font-display text-green">{activeIndex + 1}</span>
+                <span className="text-base sm:text-lg text-muted font-light">/</span>
+                <span className="text-base sm:text-lg text-muted font-light">{visuals.length}</span>
               </div>
-              <div className="flex flex-col gap-2 mb-10">
+              <div className="flex flex-col gap-1.5 mb-3 sm:mb-10">
                 <div className="flex items-center gap-2">
                   {visuals.map((_, i) => (
                     <div key={i} className={`h-1.5 rounded-full transition-all duration-500 ${i === activeIndex ? "w-8 bg-green" : i < activeIndex ? "w-3 bg-green/35" : "w-3 bg-line"}`} />
                   ))}
                 </div>
-                <p className="text-[11px] text-muted/60 tracking-wide">
+                <p className="hidden sm:block text-[11px] text-muted/60 tracking-wide">
                   {locale === "fr"
                     ? `Fonctionnalité ${activeIndex + 1} sur ${visuals.length} - défilez pour explorer`
                     : `Feature ${activeIndex + 1} of ${visuals.length} - scroll to explore`}
                 </p>
               </div>
               <motion.div key={activeIndex} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}>
-                <h3 className="font-display text-3xl md:text-4xl text-green mb-4 leading-tight">{featureItems[activeIndex]?.title}</h3>
-                <p className="text-muted leading-relaxed max-w-md text-base">{featureItems[activeIndex]?.description}</p>
+                <h3 className="font-display text-xl sm:text-3xl md:text-4xl text-green mb-2 sm:mb-4 leading-tight">{featureItems[activeIndex]?.title}</h3>
+                <p className="hidden sm:block text-muted leading-relaxed max-w-md text-base">{featureItems[activeIndex]?.description}</p>
               </motion.div>
-              <div className="mt-8">
+              <div className="mt-2 sm:mt-8">
                 <Link href={`/${locale}/produit`} className="text-green text-sm font-medium hover:text-forest transition-colors">{t.common.seeAllFeatures}</Link>
               </div>
             </div>
-            <div className="hidden lg:block">
+            <div className="aspect-square max-h-[42vh] sm:max-h-[56vh] lg:max-h-none">
               <motion.div key={activeIndex} initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
                 {visuals[activeIndex]}
               </motion.div>
@@ -2397,28 +2397,8 @@ function AudienceSection() {
           </h2>
         </FadeIn>
         <div className="grid lg:grid-cols-[1fr_420px] gap-10 lg:gap-16 items-start">
-          <FadeIn>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-forest">
-              <motion.div key={active} className={`absolute inset-0 bg-gradient-to-br ${gradients[active]}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} />
-              <div className="relative z-10 flex flex-col justify-between h-full p-8 md:p-10">
-                <div>
-                  <motion.span key={`tag-${active}`} className="inline-block text-xs font-semibold tracking-widest uppercase text-white/70 mb-4" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>{a.tag}</motion.span>
-                  <motion.h3 key={`title-${active}`} className="font-display text-3xl md:text-4xl text-white leading-tight mb-2" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.05 }}>{a.title}</motion.h3>
-                  <motion.p key={`sub-${active}`} className="font-display text-xl text-white/60 italic" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.1 }}>{a.subtitle}</motion.p>
-                </div>
-                <motion.div key={`points-${active}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.15 }}>
-                  <ul className="space-y-2 mb-6">
-                    {a.points.map((pt: string, j: number) => (
-                      <li key={j} className="flex items-start gap-2.5 text-white/85 text-sm leading-relaxed"><span className="text-orange mt-0.5 shrink-0">✓</span>{pt}</li>
-                    ))}
-                  </ul>
-                  <Link href={`/${locale}${a.href}`} onClick={() => track("home_audience_cta", { audience: a.tag })} className="inline-flex items-center gap-1.5 text-white text-sm font-semibold bg-white/15 hover:bg-white/25 px-5 py-2.5 rounded-xl transition-colors">{a.cta}</Link>
-                </motion.div>
-              </div>
-            </div>
-          </FadeIn>
-          <div className="flex flex-col gap-3">
-            {/* Selector label - communicates "pick your profile" */}
+          {/* Selector buttons — on mobile appears first so user knows what to tap */}
+          <div className="order-first lg:order-last flex flex-col gap-3">
             <div className="flex items-center justify-between mb-2 px-1">
               <span className="text-xs font-semibold text-forest/60 tracking-widest uppercase">
                 {locale === "fr" ? "Quel est votre profil ?" : "What's your profile?"}
@@ -2427,7 +2407,6 @@ function AudienceSection() {
             </div>
             {audiences.map((item: { tag: string; title: string }, i: number) => (
               <button key={i} onClick={() => { setActive(i); track("home_audience_click", { audience: item.tag }); }} className={`relative overflow-hidden text-left px-6 py-5 rounded-xl transition-all duration-300 border cursor-pointer ${i === active ? "bg-green-light/40 border-green/20 shadow-[0_2px_12px_rgba(0,129,74,0.08)]" : "bg-white border-line hover:border-green/15 hover:bg-sand/40"}`}>
-                {/* Shimmer spotlight sweep on inactive cards */}
                 {i !== active && (
                   <motion.div
                     className="absolute inset-0 pointer-events-none rounded-xl"
@@ -2438,7 +2417,6 @@ function AudienceSection() {
                 )}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3 mb-1.5">
-                    {/* Pulsing dot on inactive cards to invite interaction */}
                     {i !== active ? (
                       <span className="relative flex h-2.5 w-2.5">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green/30 opacity-75" />
@@ -2450,16 +2428,39 @@ function AudienceSection() {
                     <span className={`text-sm font-bold transition-colors ${i === active ? "text-forest" : "text-muted"}`}>{item.tag}</span>
                   </div>
                   {i !== active && (
-                    <svg className="w-4 h-4 text-muted/40 shrink-0 group-hover:text-green transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg className="w-4 h-4 text-muted/40 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
                   )}
                 </div>
-                <p className={`text-sm leading-relaxed ml-[22px] transition-colors ${i === active ? "text-ink" : "text-subtle"}`}>{item.title}</p>
+                {/* Titre toujours lisible — text-muted au lieu de text-subtle */}
+                <p className={`text-sm leading-relaxed ml-[22px] transition-colors ${i === active ? "text-ink" : "text-muted"}`}>{item.title}</p>
                 {i === active && <motion.div className="mt-3 ml-[22px] h-0.5 bg-green rounded-full" initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ duration: 0.4, ease: "easeOut" }} />}
               </button>
             ))}
           </div>
+
+          {/* Green card — on mobile appears after the selector buttons */}
+          <FadeIn className="order-last lg:order-first">
+            <div className="relative rounded-2xl overflow-hidden bg-forest md:aspect-[4/3]">
+              <motion.div key={active} className={`absolute inset-0 bg-gradient-to-br ${gradients[active]}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} />
+              <div className="relative z-10 flex flex-col gap-5 md:justify-between md:h-full p-6 md:p-10">
+                <div>
+                  <motion.span key={`tag-${active}`} className="inline-block text-xs font-semibold tracking-widest uppercase text-white/70 mb-3" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>{a.tag}</motion.span>
+                  <motion.h3 key={`title-${active}`} className="font-display text-2xl sm:text-3xl md:text-4xl text-white leading-tight mb-2" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.05 }}>{a.title}</motion.h3>
+                  <motion.p key={`sub-${active}`} className="font-display text-lg text-white/60 italic" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.1 }}>{a.subtitle}</motion.p>
+                </div>
+                <motion.div key={`points-${active}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.15 }}>
+                  <ul className="space-y-2 mb-5">
+                    {a.points.map((pt: string, j: number) => (
+                      <li key={j} className="flex items-start gap-2.5 text-white/85 text-sm leading-relaxed"><span className="text-orange mt-0.5 shrink-0">✓</span>{pt}</li>
+                    ))}
+                  </ul>
+                  <Link href={`/${locale}${a.href}`} onClick={() => track("home_audience_cta", { audience: a.tag })} className="inline-flex items-center gap-1.5 text-white text-sm font-semibold bg-white/15 hover:bg-white/25 px-5 py-2.5 rounded-xl transition-colors">{a.cta}</Link>
+                </motion.div>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </div>
     </section>
@@ -2494,12 +2495,12 @@ function CTADashboardLarge() {
           <div className="flex gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-green/60" /><span className="w-2.5 h-2.5 rounded-full bg-orange/50" /><span className="w-2.5 h-2.5 rounded-full bg-white/20" /></div>
           <span className="ml-3 text-[11px] text-white/30">{t.home.dashMock.cockpit}</span>
         </div>
-        <div className="p-6">
-          <div className="grid grid-cols-4 gap-3 mb-6">
+        <div className="p-4 sm:p-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-4 sm:mb-6">
             {kpis.map((kpi, i) => (
-              <div key={i} className="p-3 rounded-lg bg-white/[0.06]">
+              <div key={i} className="p-2.5 sm:p-3 rounded-lg bg-white/[0.06]">
                 <div className="text-[10px] text-white/40 mb-1">{kpi.label}</div>
-                <div className="text-lg font-semibold text-white">{kpi.val}</div>
+                <div className="text-base sm:text-lg font-semibold text-white">{kpi.val}</div>
                 <div className="mt-2 h-1 rounded-full bg-white/10 overflow-hidden">
                   <motion.div className={`h-full rounded-full ${kpi.color}`} animate={{ width: [`${40 + i * 15}%`, `${55 + i * 10}%`, `${40 + i * 15}%`] }} transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut" }} />
                 </div>
@@ -2562,7 +2563,7 @@ function FinalCTA() {
       <CTAFloatingCard className="top-[38%] right-4 xl:right-10 animate-float-slow" delay={0.7}>
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 rounded-full bg-green/20 flex items-center justify-center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00814A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><div className="text-[10px] text-white/50">ESRS</div><div className="text-xs font-semibold text-white">{t.home.cta.esrsStandards}</div></div>
+          <div><div className="text-[10px] text-white/50">Conformité</div><div className="text-xs font-semibold text-white">{t.home.cta.esrsStandards}</div></div>
         </div>
       </CTAFloatingCard>
 

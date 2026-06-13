@@ -116,7 +116,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => track("cta_click", { source: "header", action: "trial" })}
-              className="bg-green text-white text-sm font-medium px-5 py-2 rounded-xl hover:bg-forest transition-colors"
+              className="hidden md:block bg-green text-white text-sm font-medium px-5 py-2 rounded-xl hover:bg-forest transition-colors"
             >
               {t.common.freeTrial}
             </Link>
@@ -129,17 +129,17 @@ export default function Header() {
             >
               <span
                 className={`block w-5 h-0.5 bg-ink transition-all duration-300 ${
-                  menuOpen ? "rotate-45 translate-y-[4px]" : ""
+                  menuOpen ? "rotate-45 translate-y-2" : ""
                 }`}
               />
               <span
                 className={`block w-5 h-0.5 bg-ink transition-all duration-300 ${
-                  menuOpen ? "opacity-0" : ""
+                  menuOpen ? "opacity-0 scale-x-0" : ""
                 }`}
               />
               <span
                 className={`block w-5 h-0.5 bg-ink transition-all duration-300 ${
-                  menuOpen ? "-rotate-45 -translate-y-[4px]" : ""
+                  menuOpen ? "-rotate-45 -translate-y-2" : ""
                 }`}
               />
             </button>
@@ -174,6 +174,17 @@ export default function Header() {
                 >
                   {t.common.demo}
                 </Link>
+                <div className="pt-3 pb-1">
+                  <Link
+                    href="https://freemium-app.yumni.fr/fr/auth/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => { setMenuOpen(false); track("cta_click", { source: "header_mobile_menu", action: "trial" }); }}
+                    className="block w-full text-center bg-green text-white text-sm font-medium px-5 py-3 rounded-xl hover:bg-forest transition-colors"
+                  >
+                    {t.common.freeTrial}
+                  </Link>
+                </div>
               </div>
             </motion.div>
           )}

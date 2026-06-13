@@ -37,10 +37,10 @@
     "productLinks": {
       "cockpit": "Cockpit",
       "kpis": "KPIs & Alerts",
-      "wsjf": "WSJF Prioritization",
+      "wsjf": "Impact prioritization",
       "risks": "Risk Management",
       "reporting": "Reporting",
-      "esrs": "ESRS Compliance"
+      "esrs": "Multi-framework Compliance"
     },
     "solutionLinks": {
       "consulting": "Consulting firms",
@@ -71,7 +71,7 @@
       "title1": "Secure your",
       "titleHighlight": "CSR compliance",
       "title2": "before the audit",
-      "subtitle": "CSRD, ESRS, double materiality: Yumni structures your CSR governance and reduces your financial, legal and reputational risks.",
+      "subtitle": "Multi-framework, structured management, documented compliance: Yumni centralizes your CSR approach and reduces your financial, legal and reputational risks.",
       "trustedBy": "Trusted by"
     },
     "trust": {
@@ -85,10 +85,6 @@
     },
     "socialProof": {
       "items": [
-        {
-          "num": "500+",
-          "label": "organizations managed"
-        },
         {
           "num": "40",
           "label": "days/year saved per CSR team"
@@ -119,8 +115,8 @@
         },
         {
           "num": "12",
-          "stat": "ESRS standards to cover",
-          "detail": "12 standards, double materiality, KPIs by pillar. Excel won't cut it. Compliance requires a dedicated tool."
+          "stat": "ESRS standards, and that's just the start",
+          "detail": "CSRD is not your only CSR obligation. Sector frameworks, labor law, partner expectations: each has its own indicators and its own deadlines."
         }
       ]
     },
@@ -149,8 +145,8 @@
           "description": "Alert thresholds on all your indicators. Detect gaps before they become non-compliance risks."
         },
         {
-          "tag": "WSJF",
-          "title": "WSJF Prioritization",
+          "tag": "Priorities",
+          "title": "Prioritize by impact",
           "subtitle": "Decide by value, not intuition",
           "description": "Prioritize initiatives by business impact, regulatory urgency and effort. Every CSR investment is justifiable."
         },
@@ -167,10 +163,10 @@
           "description": "Auto-generated board report in PowerPoint. Real-time data, custom branding, instant export."
         },
         {
-          "tag": "ESRS",
-          "title": "ESRS Compliance",
-          "subtitle": "12 standards, governed and documented",
-          "description": "Gap analysis, double materiality, real-time ESRS coverage. Your CSRD dossier prepared and kept up to date."
+          "tag": "Frameworks",
+          "title": "Multi-framework compliance",
+          "subtitle": "One framework, or many — the same platform",
+          "description": "Map your actions to as many frameworks as needed. One entry, multiple frameworks covered automatically."
         }
       ]
     },
@@ -192,7 +188,7 @@
           "value": 12,
           "suffix": "",
           "unit": "standards",
-          "label": "ESRS covered natively"
+          "label": "covered, multi-framework approach"
         },
         {
           "value": 100,
@@ -209,24 +205,24 @@
       "items": [
         {
           "tag": "Consulting firm",
-          "title": "Industrialize your CSRD offering",
+          "title": "Industrialize your CSR offering",
           "subtitle": "Same rigor, every client.",
           "points": [
             "Multi-tenant: 1 account, N clients, isolated data",
             "Auditor report in 12 seconds",
-            "ESRS gap analysis sellable to your clients"
+            "Multi-framework compliance analysis sellable to your clients"
           ],
           "cta": "Consulting solution →",
           "href": "/solutions/cabinets-conseil"
         },
         {
           "tag": "SME",
-          "title": "Get ahead of CSRD without a dedicated team",
+          "title": "Manage your CSR obligations without a dedicated team",
           "subtitle": "Cheaper than a consultant. More reliable than Excel.",
           "points": [
             "Operational in 10 minutes",
             "Pre-configured templates",
-            "ESRS compliance guided standard by standard"
+            "Compliance guided framework by framework"
           ],
           "cta": "Start for free →",
           "href": "https://freemium-app.yumni.fr/fr/auth/login"
@@ -234,7 +230,7 @@
         {
           "tag": "Mid-caps & Groups",
           "title": "Consolidate CSR across the group",
-          "subtitle": "Every subsidiary, every KPI, one view.",
+          "subtitle": "Every subsidiary, every framework, one view.",
           "points": [
             "Real-time multi-subsidiary consolidation",
             "Granular RBAC, 4 permission levels",
@@ -255,7 +251,7 @@
       "risques": "Risks",
       "actions": "Actions",
       "rapportPret": "Report ready",
-      "esrsStandards": "12/12 standards",
+      "esrsStandards": "Multi-framework",
       "actionEnCours": "Action in progress",
       "bilanCarbone": "Carbon Footprint Q4",
       "uptime": "Uptime"
@@ -351,6 +347,8 @@
         "features": [
           "All features",
           "AI (late 2026)",
+          "Advanced collaboration & notifications",
+          "External Stakeholder Portal",
           "Sovereign architecture (Scaleway)",
           "Multi-organizations",
           "99.5% uptime",
@@ -431,7 +429,8 @@
               "enterprise": true
             },
             {
-              "name": "CSRD / ESRS Compliance",
+              "name": "Multi-framework compliance",
+              "note": "Progressive rollout",
               "freemium": "Limited",
               "starter": true,
               "pro": true,
@@ -1083,6 +1082,11 @@
           "date": "Today",
           "title": "Growth",
           "description": "Continuous improvement, new features, first enterprise clients. The adventure continues."
+        },
+        {
+          "date": "Q3–Q4 2026",
+          "title": "Multi-framework, AI & Stakeholders",
+          "description": "Launch of the multi-framework engine, AI integration, and external Stakeholder Portal."
         }
       ]
     },
@@ -3153,7 +3157,7 @@
       {
         "tag": "03",
         "id": "wsjf",
-        "title": "WSJF Prioritization",
+        "title": "Prioritize by impact",
         "subtitle": "15 initiatives. Budget for 5. Let data decide.",
         "description": "WSJF method adapted for CSR. Each initiative scored objectively. From idea pipeline to validated project in a few clicks.",
         "bullets": [
@@ -3192,14 +3196,14 @@
       {
         "tag": "06",
         "id": "esrs",
-        "title": "ESRS Compliance",
+        "title": "Multi-framework compliance",
         "subtitle": "Compliant by design. Not by catchup.",
-        "description": "Automatic mapping of your initiatives to the 12 ESRS standards. Instant gap analysis. Integrated double materiality.",
+        "description": "Map your initiatives to your compliance frameworks. Visualize coverage gaps in one screen. Manage every framework from the same platform.",
         "bullets": [
-          "12 ESRS standards covered natively",
-          "Gap analysis: uncovered standards identified",
-          "Double materiality (financial + impact)",
-          "Exportable ESRS report for auditors"
+          "CSRD, DUERP, ISO 26000, EcoVadis: map each initiative to the right framework",
+          "Gap analysis: coverage gaps identified automatically",
+          "Integrated double materiality",
+          "Exportable compliance report for your auditors"
         ]
       },
       {
@@ -3232,36 +3236,79 @@
     "roadmap": {
       "eyebrow": "ROADMAP",
       "title": "The product vision",
-      "steps": [
+      "subtitle": "An ambitious product built in the right order, from structured compliance to artificial intelligence.",
+      "keyValue": "1 entry → N frameworks",
+      "keyValueDesc": "Map your initiative to all your compliance frameworks in a single entry.",
+      "statusLabels": {
+        "current": "In progress",
+        "next": "Next",
+        "future": "Coming soon",
+        "horizon": "Horizon"
+      },
+      "quarters": [
         {
-          "phase": "Foundations",
-          "title": "Collaboration & Control",
-          "description": "Comments, attachments, RBAC for fluid and secure collaboration."
+          "id": "q3-2026",
+          "label": "Q3 2026",
+          "status": "current",
+          "headline": "The foundations of serious CSR management",
+          "blocks": [
+            {
+              "icon": "shield",
+              "title": "Your legal obligations, finally alive",
+              "description": "DUERP, ISO 26000 & VSME natively integrated. Enter your initiative once — map it to every framework without re-entering data."
+            },
+            {
+              "icon": "building",
+              "title": "Management at scale",
+              "description": "Group, subsidiaries, role-based permissions and stakeholder mapping. The backbone for complex organisations."
+            },
+            {
+              "icon": "sparkle",
+              "title": "Interface redesigned from scratch",
+              "description": "Fewer clicks, more clarity. Every action leads somewhere, no friction, no detours."
+            }
+          ]
         },
         {
-          "phase": "Structure",
-          "title": "Double Materiality",
-          "description": "Thresholds, value chain, structured campaigns for ESRS compliance."
+          "id": "q4-2026",
+          "label": "Q4 2026",
+          "status": "next",
+          "headline": "Artificial intelligence enters your CSR management",
+          "blocks": [
+            {
+              "icon": "brain",
+              "title": "Import & classify without the effort",
+              "description": "AI imports your data (Excel, PDF, ERP) and automatically maps your CSR actions to the right frameworks. You approve, it classifies."
+            },
+            {
+              "icon": "people",
+              "title": "Internal & external in one tool",
+              "description": "Real-time collaboration, clearly separated communication spaces, instant notifications. Zero lost emails."
+            },
+            {
+              "icon": "layers",
+              "title": "Advanced CSRD compliance",
+              "description": "Double Materiality, Value Chain, IRO. The level of compliance that large organisations already demand."
+            }
+          ]
         },
         {
-          "phase": "Optimization",
-          "title": "Strategic Steering",
-          "description": "Interactive dashboards, proactive alerts, KPIs linked to material issues."
-        },
-        {
-          "phase": "Workflow",
-          "title": "Connected Actions",
-          "description": "Materiality, actions and KPIs in an intelligent workflow with Kanban tracking."
-        },
-        {
-          "phase": "Intelligence",
-          "title": "AI & Benchmark",
-          "description": "AI and sector benchmarks to guide your CSR decisions."
-        },
-        {
-          "phase": "Reporting",
-          "title": "Total Transparency",
-          "description": "CSRD reports, full traceability and public CSR sharing."
+          "id": "q1-q2-2027",
+          "label": "Q1–Q2 2027",
+          "status": "future",
+          "headline": "Predictive intelligence & external visibility",
+          "blocks": [
+            {
+              "icon": "bell",
+              "title": "Act before the problem arrives",
+              "description": "Predictive alerts, off-track KPIs detected early. You anticipate, you no longer react."
+            },
+            {
+              "icon": "globe",
+              "title": "Show what you do, prove it",
+              "description": "Public CSR page, EcoVadis & GRI Standards readiness, CSR actions library and pre-project diagnostic."
+            }
+          ]
         }
       ]
     },

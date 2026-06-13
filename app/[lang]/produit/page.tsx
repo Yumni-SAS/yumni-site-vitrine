@@ -168,7 +168,7 @@ function CockpitVisual() {
         <motion.div initial={false} animate={{ opacity: activeTab === 1 ? 1 : 0, x: activeTab === 1 ? 0 : 12 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className={`${activeTab === 1 ? "" : "pointer-events-none absolute inset-x-5 top-0"}`}>
           <div className="rounded-xl border border-line/50 bg-gradient-to-br from-white to-sand/30 p-4 mb-3">
             <div className="flex items-center justify-between mb-3"><div className="text-[12px] font-semibold text-ink">Vue Portefeuille RSE</div><motion.span className="text-[9px] bg-green text-white rounded-full px-2 py-0.5 font-medium" initial={{ opacity: 0 }} animate={{ opacity: activeTab === 1 ? 1 : 0 }} transition={{ delay: 0.4, duration: 0.6 }}>3 axes stratégiques</motion.span></div>
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 gap-2">
               {[{ label: "Budget Total", val: "1.0M€" }, { label: "Projets Actifs", val: "8" }, { label: "Actions en Cours", val: "14" }, { label: "KPIs Suivis", val: "12" }].map((card, i) => (
                 <motion.div key={card.label} className="rounded-lg border border-line/40 bg-white p-2" initial={{ opacity: 0, y: 8 }} animate={{ opacity: activeTab === 1 ? 1 : 0, y: activeTab === 1 ? 0 : 8 }} transition={{ delay: 0.3 + i * 0.08, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}>
                   <div className="text-[9px] text-muted flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-green/40" />{card.label}</div>
@@ -184,7 +184,7 @@ function CockpitVisual() {
                   <div className="flex items-center gap-2"><span className="text-[11px] font-semibold text-ink truncate">{axis.name}</span><span className="text-[8px] bg-green-light text-green rounded-full px-1.5 py-0.5 font-medium">active</span></div>
                   <motion.span className="text-lg font-bold text-green" initial={{ opacity: 0 }} animate={{ opacity: activeTab === 1 ? 1 : 0 }} transition={{ delay: 0.7 + i * 0.12, duration: 0.6 }}>{axis.score}</motion.span>
                 </div>
-                <div className="grid grid-cols-4 gap-1.5">
+                <div className="grid grid-cols-2 gap-1.5">
                   {[{ l: "Objectifs", v: "3" }, { l: "Projets", v: "2" }, { l: "Actions", v: "1" }, { l: "KPIs", v: "2" }].map((stat, si) => (
                     <motion.div key={stat.l} className="rounded-md bg-sand/50 p-1.5" initial={{ opacity: 0 }} animate={{ opacity: activeTab === 1 ? 1 : 0 }} transition={{ delay: 0.6 + i * 0.12 + si * 0.05, duration: 0.55 }}>
                       <div className="text-[9px] text-muted flex items-center gap-0.5"><span className="w-1 h-1 rounded-full bg-green/40" />{stat.l}</div>
@@ -216,7 +216,7 @@ function KPIVisual() {
         <div className="ml-3 flex-1 h-6 rounded-md bg-white/80 border border-line/50 flex items-center px-2.5"><span className="text-[12px] text-muted/60 tracking-wide">app.yumni.fr / kpis</span></div>
       </div>
       <div className="px-5 pt-4 pb-3 shrink-0">
-        <div className="grid grid-cols-4 gap-2 mb-3">
+        <div className="grid grid-cols-2 gap-2 mb-3">
           {[{ label: "TOTAL", val: "12", color: "text-green" }, { label: "SUR CIBLE", val: "6", color: "text-green" }, { label: "À RISQUE", val: "3", color: "text-orange" }, { label: "PROGRESSION", val: "72.4%", color: "text-ink" }].map((stat, i) => (
             <motion.div key={stat.label} className="rounded-lg border border-line/40 bg-white p-2.5" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 + i * 0.08, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}>
               <span className="text-[9px] text-muted uppercase tracking-wider">{stat.label}</span>
@@ -784,7 +784,7 @@ const nudgeBadges = [
   { stat: "0", label: "débats subjectifs" },                // WSJF
   { stat: "5×5", label: "matrice temps réel" },             // Risques
   { stat: "12 sec", label: "au lieu de 3 jours" },          // Reporting
-  { stat: "12/12", label: "standards ESRS" },               // ESRS
+  { stat: "100%", label: "conformité multi-référentiels" },    // Multi-ref
   { stat: "0", label: "threads email perdus" },             // Collaboration
   { stat: "< 5 min", label: "onboarding client" },          // Multi-org
 ];
@@ -826,26 +826,24 @@ function FeatureRow({ feature, index, Visual }: {
         </div>
       )}
 
-      <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-24">
-        <div className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${reversed ? "direction-rtl" : ""}`} style={reversed ? { direction: "rtl" } : {}}>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-24">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
           {/* ── Visual side ── */}
           <motion.div
-            className="w-full"
-            style={reversed ? { direction: "ltr" } : {}}
+            className={`w-full ${reversed ? "lg:order-2" : ""}`}
             initial={{ opacity: 0, x: reversed ? 40 : -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, ease }}
           >
-            <div className="aspect-[4/3] max-h-[480px] w-full">
+            <div className="aspect-[4/3] max-h-[480px] w-full overflow-hidden rounded-2xl">
               <Visual />
             </div>
           </motion.div>
 
           {/* ── Text side ── */}
           <motion.div
-            className="w-full"
-            style={reversed ? { direction: "ltr" } : {}}
+            className={`w-full ${reversed ? "lg:order-1" : ""}`}
             initial={{ opacity: 0, y: 28 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15, ease }}
@@ -937,115 +935,207 @@ function FeatureShowcase() {
 }
 
 /* ================================================================
-   ROADMAP SECTION
+   ROADMAP SECTION — Vision produit
+   Layout :
+     · Q3 2026 (actif) : carte pleine largeur, 3 blocs côte à côte
+     · Q4 2026 + Q1-Q2 2027 : 2 cartes côte à côte
+     · Q3 2027 : bande compacte "horizon"
+   Chaque carte porte un titre fort + des blocs narratifs avec icône.
    ================================================================ */
+
+type RoadmapBlock = { icon: string; title: string; description: string };
+type RoadmapQuarter = {
+  id: string; label: string;
+  status: "current" | "next" | "future" | "horizon";
+  headline: string; blocks: RoadmapBlock[];
+};
+
+const RM_ICONS: Record<string, React.ReactNode> = {
+  shield: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>,
+  building: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>,
+  sparkle: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.88 5.76H20l-4.94 3.59 1.88 5.76L12 14.52l-4.94 3.59 1.88-5.76L4 8.76h6.12L12 3z"/></svg>,
+  brain: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>,
+  people: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
+  layers: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>,
+  bell: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>,
+  globe: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>,
+  document: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>,
+};
+
+const RM_THEME = {
+  current: {
+    card:       "bg-white border-green/20 shadow-[0_12px_48px_rgba(0,129,74,0.10)]",
+    bar:        "bg-green",
+    label:      "text-green font-bold",
+    badge:      "bg-green text-white",
+    headline:   "text-forest",
+    block:      "bg-green/[0.04] border border-green/10 hover:bg-green/[0.07]",
+    blockIcon:  "text-green",
+    blockTitle: "text-forest",
+    blockDesc:  "text-ink-light",
+  },
+  next: {
+    card:       "bg-white border-forest/12 shadow-[0_6px_28px_rgba(0,0,0,0.05)]",
+    bar:        "bg-forest",
+    label:      "text-muted",
+    badge:      "bg-forest text-white",
+    headline:   "text-forest/85",
+    block:      "bg-forest/[0.035] border border-forest/8 hover:bg-forest/[0.06]",
+    blockIcon:  "text-forest/70",
+    blockTitle: "text-forest/90",
+    blockDesc:  "text-muted",
+  },
+  future: {
+    card:       "bg-white/90 border-orange/12 shadow-[0_4px_18px_rgba(0,0,0,0.04)]",
+    bar:        "bg-orange/60",
+    label:      "text-muted/80",
+    badge:      "bg-orange/10 text-orange border border-orange/20",
+    headline:   "text-forest/65",
+    block:      "bg-orange/[0.04] border border-orange/10 hover:bg-orange/[0.07]",
+    blockIcon:  "text-orange/70",
+    blockTitle: "text-forest/70",
+    blockDesc:  "text-muted/80",
+  },
+  horizon: {
+    card:       "bg-sand/50 border-line/50",
+    bar:        "bg-line",
+    label:      "text-muted/60",
+    badge:      "bg-sand text-muted/70",
+    headline:   "text-muted",
+    block:      "bg-sand/80 border border-line/40",
+    blockIcon:  "text-muted/50",
+    blockTitle: "text-muted",
+    blockDesc:  "text-muted/60",
+  },
+} as const;
 
 function RoadmapSection() {
   const { t } = useDictionary();
-  const roadmap = t.product.roadmap;
+  const roadmap = t.product.roadmap as {
+    eyebrow: string; title: string; subtitle: string;
+    keyValue: string; keyValueDesc: string;
+    statusLabels: Record<string, string>;
+    quarters: RoadmapQuarter[];
+  };
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: "-80px" });
 
-  const phaseIcons = [
-    <svg key="0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 3v18M3 9h18" /></svg>,
-    <svg key="1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="12" r="3" /><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" /></svg>,
-    <svg key="2" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>,
-    <svg key="3" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><line x1="8" y1="6" x2="21" y2="6" /><line x1="8" y1="12" x2="21" y2="12" /><line x1="8" y1="18" x2="21" y2="18" /><line x1="3" y1="6" x2="3.01" y2="6" /><line x1="3" y1="12" x2="3.01" y2="12" /><line x1="3" y1="18" x2="3.01" y2="18" /></svg>,
-    <svg key="4" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M12 2a5 5 0 0 1 5 5c0 3-5 8-5 8s-5-5-5-8a5 5 0 0 1 5-5z" /><circle cx="12" cy="7" r="1.5" /></svg>,
-    <svg key="5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg>,
-  ];
+  const [q3_26, q4_26, q1q2_27] = roadmap.quarters as RoadmapQuarter[];
+
+  /* Renders a block (icon + title + desc) inside a quarter card */
+  const Block = ({ block, qi, bi, status }: { block: RoadmapBlock; qi: number; bi: number; status: string }) => {
+    const th = RM_THEME[status as keyof typeof RM_THEME] ?? RM_THEME.future;
+    return (
+      <motion.div
+        className={`rounded-xl p-4 transition-colors duration-200 ${th.block}`}
+        initial={{ opacity: 0, y: 14 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.18 + qi * 0.13 + bi * 0.09, ease }}
+      >
+        <div className={`mb-3 ${th.blockIcon}`}>{RM_ICONS[block.icon] ?? RM_ICONS.document}</div>
+        <p className={`text-[11px] font-bold uppercase tracking-wider mb-1.5 ${th.blockTitle}`}>{block.title}</p>
+        <p className={`text-xs leading-relaxed ${th.blockDesc}`}>{block.description}</p>
+      </motion.div>
+    );
+  };
+
+  /* Renders a full quarter card */
+  const QuarterCard = ({ quarter, qi, fullWidth = false }: { quarter: RoadmapQuarter; qi: number; fullWidth?: boolean }) => {
+    const th = RM_THEME[quarter.status as keyof typeof RM_THEME] ?? RM_THEME.future;
+    const isCurrent = quarter.status === "current";
+    const cols = fullWidth
+      ? "grid-cols-1 md:grid-cols-3"
+      : quarter.blocks.length >= 2
+        ? "grid-cols-1 sm:grid-cols-2"
+        : "grid-cols-1";
+
+    return (
+      <motion.div
+        className={`relative rounded-2xl border overflow-hidden ${th.card}`}
+        initial={{ opacity: 0, y: 36 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.7, delay: qi * 0.14, ease }}
+      >
+        {/* Top accent bar */}
+        <div className={`h-[3px] w-full ${th.bar}`} />
+
+        <div className={`p-6 ${fullWidth ? "md:p-8 lg:p-10" : ""}`}>
+          {/* Header row */}
+          <div className="flex items-center justify-between mb-5">
+            <span className={`text-[10px] font-bold uppercase tracking-widest ${th.label}`}>{quarter.label}</span>
+            <div className="flex items-center gap-2">
+              {isCurrent && (
+                <motion.span
+                  className="w-2 h-2 rounded-full bg-green"
+                  animate={{ opacity: [1, 0.25, 1], scale: [1, 1.4, 1] }}
+                  transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+                />
+              )}
+              <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${th.badge}`}>
+                {roadmap.statusLabels[quarter.status]}
+              </span>
+            </div>
+          </div>
+
+          {/* Headline */}
+          <h3 className={`font-display leading-snug mb-6 ${th.headline} ${fullWidth ? "text-2xl md:text-3xl" : "text-lg md:text-xl"}`}>
+            {quarter.headline}
+          </h3>
+
+          {/* Blocks */}
+          <div className={`grid gap-3 ${cols}`}>
+            {quarter.blocks.map((block, bi) => (
+              <Block key={bi} block={block} qi={qi} bi={bi} status={quarter.status} />
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    );
+  };
 
   return (
     <section ref={ref} className="py-24 md:py-36 relative overflow-hidden bg-gradient-to-b from-white via-sand/20 to-white">
-      {/* Decorative background elements */}
+
+      {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <svg className="absolute -left-[10%] top-[20%] w-[50%] h-[60%] opacity-[0.03]" viewBox="0 0 600 600" fill="none">
+        <svg className="absolute -left-[8%] top-[15%] w-[45%] h-[60%] opacity-[0.03]" viewBox="0 0 600 600" fill="none">
           <circle cx="300" cy="300" r="280" stroke="#E8752A" strokeWidth="1" />
-          <circle cx="300" cy="300" r="200" stroke="#E8752A" strokeWidth="0.6" />
+          <circle cx="300" cy="300" r="190" stroke="#E8752A" strokeWidth="0.6" />
         </svg>
-        <div className="absolute top-[10%] right-[5%] w-[300px] h-[300px] rounded-full bg-green/[0.02] blur-[80px]" />
-        <div className="absolute bottom-[10%] left-[10%] w-[400px] h-[400px] rounded-full bg-orange/[0.03] blur-[100px]" />
+        <div className="absolute top-[8%] right-[4%] w-[320px] h-[320px] rounded-full bg-green/[0.025] blur-[90px]" />
+        <div className="absolute bottom-[12%] left-[8%] w-[450px] h-[450px] rounded-full bg-orange/[0.03] blur-[110px]" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6">
-        <FadeIn className="text-center mb-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+
+        {/* Section header */}
+        <FadeIn className="text-center mb-12 md:mb-16">
           <p className="text-orange text-sm font-semibold tracking-widest uppercase mb-4">{roadmap.eyebrow}</p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-forest leading-tight">{roadmap.title}</h2>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-forest leading-tight mb-5">
+            {roadmap.title}
+          </h2>
+          <p className="text-muted text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+            {roadmap.subtitle}
+          </p>
+          {/* Core value pill */}
+          <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 px-5 py-3 rounded-2xl bg-green/[0.05] border border-green/10 shadow-[0_2px_16px_rgba(0,129,74,0.06)]">
+            <span className="font-display text-lg md:text-xl font-bold text-green">{roadmap.keyValue}</span>
+            <span className="hidden sm:block w-px h-5 bg-green/25 shrink-0" />
+            <span className="text-sm text-muted text-center sm:text-left">{roadmap.keyValueDesc}</span>
+          </div>
         </FadeIn>
 
-        {/* Creative timeline layout */}
-        <div className="relative">
-          {/* Central timeline spine - visible on desktop */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2">
-            <motion.div 
-              className="w-full h-full bg-gradient-to-b from-green/20 via-green/40 to-orange/30"
-              initial={{ scaleY: 0 }}
-              animate={inView ? { scaleY: 1 } : {}}
-              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-              style={{ transformOrigin: "top" }}
-            />
+        {/* Cards layout */}
+        <div className="space-y-4 lg:space-y-5">
+
+          {/* Q3 2026 — pleine largeur, carte héros */}
+          {q3_26 && <QuarterCard quarter={q3_26} qi={0} fullWidth />}
+
+          {/* Q4 2026 + Q1-Q2 2027 — côte à côte */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5">
+            {q4_26   && <QuarterCard quarter={q4_26}   qi={1} />}
+            {q1q2_27 && <QuarterCard quarter={q1q2_27} qi={2} />}
           </div>
-
-          <div className="space-y-8 lg:space-y-0">
-            {roadmap.steps.map((step: { phase: string; title: string; description: string }, i: number) => {
-              const isLeft = i % 2 === 0;
-              return (
-                <motion.div 
-                  key={i} 
-                  className={`relative lg:grid lg:grid-cols-2 lg:gap-16 ${i > 0 ? "lg:-mt-8" : ""}`}
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.7, delay: 0.2 + i * 0.15, ease }}
-                >
-                  {/* Timeline node - center */}
-                  <div className="hidden lg:flex absolute left-1/2 top-8 -translate-x-1/2 z-10">
-                    <motion.div 
-                      className={`w-12 h-12 rounded-full flex items-center justify-center shadow-lg ${i < 3 ? "bg-green text-white" : "bg-orange text-white"}`}
-                      initial={{ scale: 0 }}
-                      animate={inView ? { scale: 1 } : {}}
-                      transition={{ duration: 0.5, delay: 0.4 + i * 0.15, type: "spring", stiffness: 200 }}
-                    >
-                      <span className="font-display font-bold text-lg">{i + 1}</span>
-                    </motion.div>
-                  </div>
-
-                  {/* Content card */}
-                  <div className={`${isLeft ? "lg:pr-20" : "lg:col-start-2 lg:pl-20"}`}>
-                    <div className={`group relative p-6 rounded-2xl border bg-white shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] transition-all duration-500 ${i < 3 ? "border-green/20 hover:border-green/40" : "border-orange/20 hover:border-orange/40"}`}>
-                      {/* Accent bar */}                      
-                      {/* Mobile phase indicator */}
-                      <div className="lg:hidden flex items-center gap-3 mb-4">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center ${i < 3 ? "bg-green text-white" : "bg-orange text-white"}`}>
-                          <span className="font-bold">{i + 1}</span>
-                        </div>
-                        <span className="text-xs text-muted uppercase tracking-widest font-medium">{step.phase}</span>
-                      </div>
-
-                      {/* Header */}
-                      <div className="flex items-start gap-4 mb-4">
-                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${i < 3 ? "bg-green-light/60 text-green group-hover:bg-green group-hover:text-white" : "bg-orange-light/60 text-orange group-hover:bg-orange group-hover:text-white"} transition-all duration-300`}>
-                          {phaseIcons[i]}
-                        </div>
-                        <div>
-                          <div className="hidden lg:block text-[10px] text-muted uppercase tracking-widest font-medium mb-1">{step.phase}</div>
-                          <h3 className="text-lg font-bold text-forest">{step.title}</h3>
-                        </div>
-                      </div>
-
-                      {/* Description */}
-                      <p className="text-muted text-sm leading-relaxed pl-0 lg:pl-16">{step.description}</p>
-
-                    </div>
-                  </div>
-
-                  {/* Spacer for alternating layout */}
-                  {isLeft && <div className="hidden lg:block" />}
-                </motion.div>
-              );
-            })}
-          </div>
-
-
         </div>
       </div>
     </section>

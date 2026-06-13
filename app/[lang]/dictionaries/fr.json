@@ -37,10 +37,10 @@
     "productLinks": {
       "cockpit": "Cockpit",
       "kpis": "KPIs & Alertes",
-      "wsjf": "Priorisation WSJF",
+      "wsjf": "Priorisation par impact",
       "risks": "Gestion des risques",
       "reporting": "Reporting",
-      "esrs": "Conformité ESRS"
+      "esrs": "Conformité multi-référentiels"
     },
     "solutionLinks": {
       "consulting": "Cabinets de conseil",
@@ -71,7 +71,7 @@
       "title1": "Anticipez vos",
       "titleHighlight": "obligations RSE",
       "title2": "avant qu'elles s'imposent",
-      "subtitle": "CSRD, ESRS, double matérialité : Yumni structure votre pilotage RSE et réduit vos risques financiers, juridiques et réputationnels.",
+      "subtitle": "Multi-référentiels, pilotage structuré, conformité documentée : Yumni centralise votre démarche RSE et réduit vos risques financiers, juridiques et réputationnels.",
       "trustedBy": "Ils nous font confiance"
     },
     "trust": {
@@ -85,10 +85,6 @@
     },
     "socialProof": {
       "items": [
-        {
-          "num": "500+",
-          "label": "organisations pilotées"
-        },
         {
           "num": "40",
           "label": "jours/an économisés par équipe RSE"
@@ -119,8 +115,8 @@
         },
         {
           "num": "12",
-          "stat": "Standards ESRS à couvrir",
-          "detail": "12 standards, double matérialité, KPIs par pilier. Excel ne suffit pas. La conformité exige un outil dédié."
+          "stat": "Standards ESRS, et ce n'est qu'un début",
+          "detail": "La CSRD ne sera pas votre seule obligation RSE. Référentiels sectoriels, législation, attentes des partenaires : chaque cadre a ses propres indicateurs et ses propres délais."
         }
       ]
     },
@@ -149,8 +145,8 @@
           "description": "Seuils d'alerte sur tous vos indicateurs. Détection des écarts avant qu'ils ne deviennent des risques de non-conformité."
         },
         {
-          "tag": "WSJF",
-          "title": "Priorisation WSJF",
+          "tag": "Priorités",
+          "title": "Priorisez par impact",
           "subtitle": "Arbitrer par la valeur, pas l'intuition",
           "description": "Priorisez vos initiatives par impact business, urgence réglementaire et effort. Chaque investissement RSE est justifiable."
         },
@@ -167,10 +163,10 @@
           "description": "Rapport COMEX auto-généré en PowerPoint. Données temps réel, branding personnalisé, export immédiat."
         },
         {
-          "tag": "ESRS",
-          "title": "Conformité ESRS",
-          "subtitle": "12 standards, pilotés et documentés",
-          "description": "Gap analysis, double matérialité, couverture ESRS temps réel. Votre dossier CSRD préparé et maintenu à jour."
+          "tag": "Référentiels",
+          "title": "Conformité multi-référentiels",
+          "subtitle": "Un cadre, ou plusieurs — la même plateforme",
+          "description": "Rattachez vos actions à autant de référentiels que nécessaire. Une saisie, plusieurs cadres couverts automatiquement."
         }
       ]
     },
@@ -192,7 +188,7 @@
           "value": 12,
           "suffix": "",
           "unit": "standards",
-          "label": "ESRS couverts nativement"
+          "label": "couverts, approche multi-référentiels"
         },
         {
           "value": 100,
@@ -209,24 +205,24 @@
       "items": [
         {
           "tag": "Cabinet de conseil",
-          "title": "Industrialisez votre offre CSRD",
+          "title": "Industrialisez votre offre RSE",
           "subtitle": "Même rigueur, chaque client.",
           "points": [
             "Multi-tenant : 1 compte, N clients, données isolées",
             "Rapport auditeur en 12 secondes",
-            "Gap analysis ESRS vendable à vos clients"
+            "Analyse de conformité multi-référentiels vendable à vos clients"
           ],
           "cta": "Solution cabinet →",
           "href": "/solutions/cabinets-conseil"
         },
         {
           "tag": "PME",
-          "title": "Anticipez la CSRD sans équipe dédiée",
+          "title": "Pilotez vos obligations RSE sans équipe dédiée",
           "subtitle": "Moins cher qu'un consultant. Plus fiable qu'Excel.",
           "points": [
             "Opérationnel en 10 minutes",
             "Templates préconfigurés",
-            "Conformité ESRS guidée standard par standard"
+            "Conformité guidée, référentiel par référentiel"
           ],
           "cta": "Voir la solution PME →",
           "href": "/solutions"
@@ -234,7 +230,7 @@
         {
           "tag": "ETI & Groupes",
           "title": "Consolidez la RSE de tout le groupe",
-          "subtitle": "Chaque filiale, chaque KPI, une vue.",
+          "subtitle": "Chaque filiale, chaque référentiel, une vue.",
           "points": [
             "Consolidation multi-filiales temps réel",
             "RBAC granulaire, 4 niveaux de permissions",
@@ -255,7 +251,7 @@
       "risques": "Risques",
       "actions": "Actions",
       "rapportPret": "Rapport prêt",
-      "esrsStandards": "12/12 standards",
+      "esrsStandards": "Multi-référentiels",
       "actionEnCours": "Action en cours",
       "bilanCarbone": "Bilan Carbone Q4",
       "uptime": "Uptime"
@@ -351,6 +347,8 @@
         "features": [
           "Toutes les fonctionnalités",
           "IA (fin 2026)",
+          "Collaboration avancée & notifications",
+          "Portail Parties Prenantes externes",
           "Architecture souveraine (Scaleway)",
           "Multi-organisations",
           "99,5% de disponibilité",
@@ -431,7 +429,8 @@
               "enterprise": true
             },
             {
-              "name": "Conformité CSRD / ESRS",
+              "name": "Conformité multi-référentiels",
+              "note": "En déploiement progressif",
               "freemium": "Limité",
               "starter": true,
               "pro": true,
@@ -1083,6 +1082,11 @@
           "date": "Aujourd'hui",
           "title": "Croissance",
           "description": "Amélioration continue, nouvelles features, premiers clients enterprise. L'aventure continue."
+        },
+        {
+          "date": "Q3–Q4 2026",
+          "title": "Multi-référentiels, IA & Parties Prenantes",
+          "description": "Lancement du moteur multi-référentiels, intégration de l'intelligence artificielle et portail Parties Prenantes externes."
         }
       ]
     },
@@ -3153,7 +3157,7 @@
       {
         "tag": "03",
         "id": "wsjf",
-        "title": "Priorisation WSJF",
+        "title": "Priorisation par impact",
         "subtitle": "15 initiatives. Budget pour 5. Laissez les données décider.",
         "description": "Méthode WSJF adaptée à la RSE. Chaque initiative scorée objectivement. Du funnel d'idées au projet validé en quelques clics.",
         "bullets": [
@@ -3192,14 +3196,14 @@
       {
         "tag": "06",
         "id": "esrs",
-        "title": "Conformité ESRS",
+        "title": "Conformité multi-référentiels",
         "subtitle": "Conforme par design. Pas par rattrapage.",
-        "description": "Mapping automatique de vos initiatives sur les 12 standards ESRS. Gap analysis instantanée. Double matérialité intégrée.",
+        "description": "Rattachez vos initiatives à vos référentiels de conformité. Visualisez vos trous de couverture en un écran. Pilotez chaque cadre depuis la même plateforme.",
         "bullets": [
-          "12 standards ESRS couverts nativement",
-          "Gap analysis : standards non couverts identifiés",
-          "Double matérialité (financière + impact)",
-          "Rapport ESRS exportable pour les auditeurs"
+          "CSRD, DUERP, ISO 26000, EcoVadis : rattachez chaque initiative au bon cadre",
+          "Gap analysis : les trous de couverture identifiés automatiquement",
+          "Double matérialité intégrée",
+          "Rapport de conformité exportable pour vos auditeurs"
         ]
       },
       {
@@ -3232,36 +3236,79 @@
     "roadmap": {
       "eyebrow": "ROADMAP",
       "title": "La vision produit",
-      "steps": [
+      "subtitle": "Un produit ambitieux construit dans l'ordre, de la conformité structurée à l'intelligence artificielle.",
+      "keyValue": "1 saisie → N cadres",
+      "keyValueDesc": "Rattachez votre démarche à tous vos référentiels en une seule saisie.",
+      "statusLabels": {
+        "current": "En cours",
+        "next": "Prochain",
+        "future": "À venir",
+        "horizon": "Horizon"
+      },
+      "quarters": [
         {
-          "phase": "Fondations",
-          "title": "Collaboration & Contrôle",
-          "description": "Commentaires, pièces jointes, RBAC pour une collaboration fluide et sécurisée."
+          "id": "q3-2026",
+          "label": "Q3 2026",
+          "status": "current",
+          "headline": "Les fondations d'un pilotage RSE sérieux",
+          "blocks": [
+            {
+              "icon": "shield",
+              "title": "Vos obligations légales, enfin vivantes",
+              "description": "DUERP, ISO 26000 & VSME intégrés nativement. Saisissez votre démarche une fois, rattachez-la à tous vos référentiels sans ressaisie."
+            },
+            {
+              "icon": "building",
+              "title": "Pilotage à grande échelle",
+              "description": "Groupe, filiales, droits d'accès par rôle et cartographie des parties prenantes. La structure pour piloter des organisations complexes."
+            },
+            {
+              "icon": "sparkle",
+              "title": "Interface repensée de fond en comble",
+              "description": "Moins de clics, plus de clarté. Chaque action mène quelque part, sans friction ni détour."
+            }
+          ]
         },
         {
-          "phase": "Structuration",
-          "title": "Double Matérialité",
-          "description": "Seuils, chaîne de valeur, campagnes structurées pour la conformité ESRS."
+          "id": "q4-2026",
+          "label": "Q4 2026",
+          "status": "next",
+          "headline": "L'intelligence artificielle entre dans votre pilotage",
+          "blocks": [
+            {
+              "icon": "brain",
+              "title": "Import & classification sans effort",
+              "description": "L'IA importe vos données (Excel, PDF, ERP) et range automatiquement vos actions dans les bons cadres RSE. Vous validez, elle classe."
+            },
+            {
+              "icon": "people",
+              "title": "Internes & externes dans le même outil",
+              "description": "Collaboration en temps réel, espaces d'échange clairement séparés, notifications instantanées. Zéro email perdu."
+            },
+            {
+              "icon": "layers",
+              "title": "CSRD niveau avancé",
+              "description": "Double Matérialité, Chaîne de Valeur, IRO. Le niveau de conformité que les grandes organisations exigent déjà."
+            }
+          ]
         },
         {
-          "phase": "Optimisation",
-          "title": "Pilotage Stratégique",
-          "description": "Dashboards interactifs, alertes proactives, KPI liés aux enjeux matériels."
-        },
-        {
-          "phase": "Workflow",
-          "title": "Actions Connectées",
-          "description": "Matérialité, actions et KPIs dans un workflow intelligent avec suivi Kanban."
-        },
-        {
-          "phase": "Intelligence",
-          "title": "IA & Benchmark",
-          "description": "IA et benchmarks sectoriels pour guider vos décisions RSE."
-        },
-        {
-          "phase": "Reporting",
-          "title": "Transparence Totale",
-          "description": "Rapports CSRD, traçabilité totale et partage public RSE."
+          "id": "q1-q2-2027",
+          "label": "Q1–Q2 2027",
+          "status": "future",
+          "headline": "Intelligence prédictive & visibilité externe",
+          "blocks": [
+            {
+              "icon": "bell",
+              "title": "Agissez avant que le problème arrive",
+              "description": "Alertes prédictives, KPIs hors trajectoire détectés en avance. Vous anticipez, vous ne subissez plus."
+            },
+            {
+              "icon": "globe",
+              "title": "Montrez ce que vous faites, prouvez-le",
+              "description": "Page RSE publique, préparation EcoVadis & GRI Standards, bibliothèque d'actions et diagnostic RSE avant de démarrer."
+            }
+          ]
         }
       ]
     },
@@ -3360,7 +3407,7 @@
       },
       {
         "value": "12",
-        "label": "standards ESRS"
+        "label": "référentiels de conformité"
       }
     ],
     "errors": {

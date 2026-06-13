@@ -60,7 +60,7 @@ function CabinetVisual() {
   }, [clients.length]);
 
   return (
-    <div className="w-full h-full flex flex-col gap-3 select-none">
+    <div className="w-full flex flex-col gap-3 select-none">
       {/* Top - stat */}
       <div className="rounded-2xl bg-forest px-5 py-4 flex items-center justify-between">
         <div>
@@ -132,11 +132,12 @@ function CabinetVisual() {
 
 /* ================================================================
    VISUAL - PME
-   Story : parcours de 0 à CSRD Ready en 4 étapes simples
+   Story : parcours de 0 à Conformité prête en 4 étapes simples
    ================================================================ */
 
 function PMEVisual() {
   const [activeStep, setActiveStep] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const steps = [
     {
@@ -162,12 +163,20 @@ function PMEVisual() {
     },
     {
       num: "04",
-      label: "CSRD Ready",
-      detail: "Couverture ESRS visible. Rapport COMEX en 1 clic.",
+      label: "Conformité prête",
+      detail: "Couverture référentiels visible. Rapport COMEX en 1 clic.",
       badge: "✓ Conforme",
       badgeColor: "bg-green text-white",
     },
   ];
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   useEffect(() => {
     const iv = setInterval(() => setActiveStep((p) => (p + 1) % steps.length), 2400);
@@ -175,7 +184,7 @@ function PMEVisual() {
   }, [steps.length]);
 
   return (
-    <div className="w-full h-full flex flex-col gap-3 select-none">
+    <div className="w-full flex flex-col gap-3 select-none">
       {/* Steps */}
       <div className="flex-1 flex flex-col gap-2.5">
         {steps.map((s, i) => {
@@ -185,16 +194,14 @@ function PMEVisual() {
             <motion.div
               key={s.num}
               onClick={() => { setActiveStep(i); track("solutions_step_click", { step: s.num }); }}
-              animate={{
+              animate={isMobile ? { opacity: 1 } : {
                 opacity: isDone ? 0.55 : 1,
                 scale: isActive ? 1 : 0.99,
               }}
               transition={{ duration: 0.3, ease }}
-              className={`rounded-2xl border-2 px-5 py-4 cursor-pointer transition-all duration-300 ${
+              className={`rounded-2xl border-2 px-5 py-4 cursor-pointer transition-colors duration-300 ${
                 isActive
                   ? "border-green/30 bg-green-light/30 shadow-sm"
-                  : isDone
-                  ? "border-line/40 bg-white"
                   : "border-line/40 bg-white"
               }`}
             >
@@ -218,26 +225,40 @@ function PMEVisual() {
                   <div className={`text-sm font-semibold transition-colors ${isActive ? "text-ink" : "text-muted"}`}>
                     {s.label}
                   </div>
-                  {isActive && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      transition={{ duration: 0.3 }}
-                      className="text-[11px] text-muted mt-0.5 leading-relaxed"
-                    >
-                      {s.detail}
-                    </motion.div>
+                  {isMobile ? (
+                    /* Mobile : texte toujours visible, aucun changement de hauteur */
+                    <div className="text-[11px] text-muted mt-0.5 leading-relaxed">{s.detail}</div>
+                  ) : (
+                    /* Desktop : expansion animée */
+                    isActive && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        transition={{ duration: 0.3 }}
+                        className="text-[11px] text-muted mt-0.5 leading-relaxed"
+                      >
+                        {s.detail}
+                      </motion.div>
+                    )
                   )}
                 </div>
 
-                {isActive && (
-                  <motion.span
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className={`text-[10px] font-bold px-2.5 py-1 rounded-full flex-shrink-0 ${s.badgeColor}`}
-                  >
+                {isMobile ? (
+                  /* Mobile : badge toujours visible */
+                  <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full flex-shrink-0 ${s.badgeColor}`}>
                     {s.badge}
-                  </motion.span>
+                  </span>
+                ) : (
+                  /* Desktop : badge apparaît uniquement sur la carte active */
+                  isActive && (
+                    <motion.span
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      className={`text-[10px] font-bold px-2.5 py-1 rounded-full flex-shrink-0 ${s.badgeColor}`}
+                    >
+                      {s.badge}
+                    </motion.span>
+                  )
                 )}
               </div>
             </motion.div>
@@ -248,7 +269,7 @@ function PMEVisual() {
       {/* Progress bar */}
       <div className="rounded-xl border border-line bg-white px-4 py-3">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-[11px] font-semibold text-ink">Progression CSRD</span>
+          <span className="text-[11px] font-semibold text-ink">Progression RSE</span>
           <span className="text-[11px] font-bold text-green">{Math.round(((activeStep + 1) / steps.length) * 100)}%</span>
         </div>
         <div className="h-2 bg-line rounded-full overflow-hidden">
@@ -277,14 +298,14 @@ function ETIVisual() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-0 select-none px-4">
+    <div className="w-full flex flex-col items-center gap-0 select-none px-2 sm:px-4 py-6">
 
       {/* Direction groupe */}
       <motion.div
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease }}
-        className="rounded-2xl border-2 border-forest/20 bg-forest/5 px-6 py-3.5 text-center w-56"
+        className="rounded-2xl border-2 border-forest/20 bg-forest/5 px-4 sm:px-6 py-3 sm:py-3.5 text-center w-48 sm:w-56"
       >
         <div className="text-[10px] font-bold tracking-widest uppercase text-forest/50 mb-0.5">Direction groupe</div>
         <div className="text-sm font-bold text-forest">GreenTech Industries</div>
@@ -292,10 +313,10 @@ function ETIVisual() {
       </motion.div>
 
       {/* Connector */}
-      <div className="flex flex-col items-center gap-0 py-1">
+      <div className="flex flex-col items-center gap-0 py-1 w-full max-w-xs sm:max-w-sm">
         <div className="w-px h-5 bg-line-dark/50" />
         {/* Horizontal line */}
-        <div className="relative flex items-start justify-center" style={{ width: 320 }}>
+        <div className="relative flex items-start justify-center w-full">
           <div className="absolute top-0 left-[15%] right-[15%] h-px bg-line-dark/50" />
           {filiales.map((_, i) => (
             <div
@@ -309,7 +330,7 @@ function ETIVisual() {
       </div>
 
       {/* Filiales */}
-      <div className="grid grid-cols-3 gap-3 w-full max-w-xs">
+      <div className="grid grid-cols-3 gap-2 sm:gap-3 w-full max-w-xs sm:max-w-sm">
         {filiales.map((f, i) => (
           <motion.div
             key={f.name}
@@ -337,7 +358,7 @@ function ETIVisual() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.55, ease }}
-        className="rounded-2xl border-2 border-green/25 bg-green-light/40 px-6 py-4 text-center w-64"
+        className="rounded-2xl border-2 border-green/25 bg-green-light/40 px-4 sm:px-6 py-3 sm:py-4 text-center w-56 sm:w-64"
       >
         <div className="text-[10px] font-bold tracking-widest uppercase text-green/60 mb-1">Rapport groupe consolidé</div>
         <div className="flex items-center justify-center gap-2">
@@ -413,7 +434,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.12, ease }}
           >
-            La CSRD s&rsquo;impose. Les obligations réglementaires s&rsquo;accumulent. Yumni structure votre pilotage RSE - quel que soit votre périmètre.
+            Les obligations RSE s&rsquo;imposent. Les référentiels se multiplient. Yumni structure votre pilotage, quel que soit votre périmètre.
           </motion.p>
 
           {/* Persona anchors */}
@@ -513,43 +534,40 @@ function PersonaRow({
 
   return (
     <div id={id} ref={ref} className={`${bg} relative overflow-hidden scroll-mt-24`}>
-      <div className="relative max-w-7xl mx-auto px-6 pt-14 pb-16 md:pt-20 md:pb-24">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-14 pb-16 md:pt-20 md:pb-24">
 
         {/* Audience section header - full width */}
         <motion.div
-          className="mb-12 md:mb-16"
+          className="mb-10 md:mb-16"
           initial={{ opacity: 0, y: -12 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.55, ease }}
         >
-          <div className="flex items-center gap-5">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-5">
             <div className="h-px w-8 bg-green/40 flex-shrink-0" />
             <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-green/70">Pour les</p>
             <div className="h-px w-4 bg-line flex-shrink-0" />
-            <p className="font-display text-2xl md:text-3xl font-bold text-forest">{eyebrow}</p>
-            <div className="h-px flex-1 bg-line" />
+            <p className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-forest">{eyebrow}</p>
+            <div className="hidden md:block h-px flex-1 bg-line" />
           </div>
         </motion.div>
 
-        <div
-          className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
-          style={reversed ? { direction: "rtl" } : {}}
-        >
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Visual */}
           <motion.div
-            style={reversed ? { direction: "ltr" } : {}}
+            className={reversed ? "lg:order-2" : ""}
             initial={{ opacity: 0, x: reversed ? 40 : -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, ease }}
           >
-            <div className="aspect-[4/3] max-h-[440px] w-full">
+            <div className="w-full rounded-2xl overflow-hidden">
               <Visual />
             </div>
           </motion.div>
 
           {/* Text */}
           <motion.div
-            style={reversed ? { direction: "ltr" } : {}}
+            className={reversed ? "lg:order-1" : ""}
             initial={{ opacity: 0, y: 28 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15, ease }}
@@ -639,13 +657,13 @@ function FinalCTA() {
         <div className="relative z-10 max-w-2xl mx-auto text-center py-20 md:py-28 px-6">
           <FadeIn>
             <h2 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.1]">
-              La CSRD n&rsquo;attend pas.{" "}
+              La conformité n&rsquo;attend pas.{" "}
               <span className="italic text-green-muted">Votre pilotage non plus.</span>
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="mt-5 text-lg text-white/55 leading-relaxed">
-              Cockpit RSE, KPIs automatisés, conformité ESRS, rapport COMEX en 12 secondes. Structurez votre RSE avant l&rsquo;audit.
+              Cockpit RSE, KPIs automatisés, conformité multi-référentiels, rapport COMEX en 12 secondes. Structurez votre RSE avant l&rsquo;audit.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
@@ -716,11 +734,11 @@ export default function SolutionsPage() {
         eyebrow="PME"
         headline="Votre RSE structurée."
         headlineAccent="Pilotée depuis votre direction."
-        subtitle="La CSRD vous oblige à reporter. Structurez votre pilotage RSE sans projet long, sans recrutement dédié, et sans dépendre d'Excel. Yumni s'intègre à votre organisation existante."
+        subtitle="Vos obligations RSE vous imposent de reporter. Structurez votre pilotage sans projet long, sans recrutement dédié, et sans dépendre d'Excel. Yumni s'intègre à votre organisation existante."
         bullets={[
           "Démarrez gratuitement. Montez en puissance à votre rythme - votre cabinet RSE reste votre allié stratégique.",
           "Templates sectoriels pré-configurés - axes, objectifs, KPIs recommandés. Opérationnel en 2 minutes.",
-          "12 standards ESRS mappés automatiquement. Vos gaps identifiés en un écran avant votre audit.",
+          "Vos référentiels de conformité mappés automatiquement. Vos gaps identifiés en un écran avant votre audit.",
         ]}
         nudgeStat="−40j/an"
         nudgeLabel="économisés sur le reporting"
