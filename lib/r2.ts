@@ -9,9 +9,10 @@
  *   R2_PUBLIC_URL        - URL publique du bucket (ex: https://assets.yumni.fr)
  *
  * Structure du bucket :
- *   articles/fr/<slug>.md       ← articles en français
- *   articles/en/<slug>.md       ← articles en anglais
  *   fichiers/<categorie>/<nom>  ← fichiers téléchargeables (PDF, XLSX, MP4…)
+ *
+ * Les articles de blog ne sont plus stockés ici : voir lib/articles.ts
+ * (contenu local dans content/articles/).
  */
 
 import {

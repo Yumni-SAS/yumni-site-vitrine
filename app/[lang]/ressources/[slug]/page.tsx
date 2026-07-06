@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { getArticle, getAllSlugs, type ArticleLang } from "@/lib/articles";
 
@@ -34,6 +35,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime: article.date,
       authors: [article.author],
+      images: article.image ? [{ url: article.image }] : undefined,
     },
   };
 }
@@ -68,16 +70,6 @@ function ReadingProgressBar() {
   );
 }
 
-/* ─── Formatted date ──────────────────────────────────────────── */
-
-function formatDate(iso: string, lang: string) {
-  return new Date(iso).toLocaleDateString(lang === "fr" ? "fr-FR" : "en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-}
-
 /* ─── Page ────────────────────────────────────────────────────── */
 
 export default async function ArticleDetailPage({
@@ -92,8 +84,8 @@ export default async function ArticleDetailPage({
   if (!article) notFound();
 
   const copy = locale === "fr"
-    ? { back: "← Toutes les ressources", minRead: "min de lecture", share: "Partager", tags: "Thèmes", ctaTitle: "Vous souhaitez en savoir plus ?", ctaSubtitle: "Découvrez comment Yumni vous aide à structurer votre pilotage RSE.", ctaBtn: "Voir la démo" }
-    : { back: "← All resources", minRead: "min read", share: "Share", tags: "Topics", ctaTitle: "Want to learn more?", ctaSubtitle: "Discover how Yumni helps you structure your ESG management.", ctaBtn: "See the demo" };
+    ? { back: "Toutes les ressources", minRead: "min de lecture", share: "Partager", tags: "Thèmes", ctaTitle: "Vous souhaitez en savoir plus ?", ctaSubtitle: "Découvrez comment Yumni vous aide à structurer votre pilotage RSE.", ctaBtn: "Voir la démo", inlineCta: "Envie de tester Yumni par vous-même ?", startFree: "Essayer gratuitement →" }
+    : { back: "All resources", minRead: "min read", share: "Share", tags: "Topics", ctaTitle: "Want to learn more?", ctaSubtitle: "Discover how Yumni helps you structure your ESG management.", ctaBtn: "See the demo", inlineCta: "Want to try Yumni for yourself?", startFree: "Try free →" };
 
   return (
     <>
@@ -137,34 +129,52 @@ export default async function ArticleDetailPage({
             </h1>
 
             {/* Description */}
-            <p className="text-lg text-muted leading-relaxed mb-8 max-w-2xl">
+            <p className="text-lg text-muted leading-relaxed max-w-2xl">
               {article.description}
             </p>
-
-            {/* Author + date */}
-            <div className="flex items-center gap-4 pt-6 border-t border-line">
-              <div className="w-10 h-10 rounded-full bg-forest flex items-center justify-center text-white text-sm font-bold shrink-0">
-                {article.author.split(" ").map((n) => n[0]).join("").slice(0, 2)}
-              </div>
-              <div>
-                <div className="font-semibold text-sm text-ink">{article.author}</div>
-                {article.authorRole && (
-                  <div className="text-xs text-muted">{article.authorRole} · {formatDate(article.date, locale)}</div>
-                )}
-              </div>
-            </div>
           </div>
         </header>
+
+        {/* ── Cover image ──────────────────────────────────────────── */}
+        {article.image && (
+          <div className="max-w-4xl mx-auto px-6 -mt-8 relative z-10">
+            <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src={article.image}
+                alt={article.title}
+                fill
+                priority
+                className="object-cover"
+                sizes="(min-width: 1024px) 896px, 100vw"
+              />
+            </div>
+          </div>
+        )}
 
         {/* ── Article body ────────────────────────────────────────── */}
         <main className="max-w-4xl mx-auto px-6 py-14 lg:py-16">
           <div className="lg:grid lg:grid-cols-[1fr_200px] lg:gap-16 items-start">
 
-            {/* Content */}
-            <article
-              className="prose-article"
-              dangerouslySetInnerHTML={{ __html: article.contentHtml }}
-            />
+            <div>
+              {/* Content */}
+              <article
+                className="prose-article"
+                dangerouslySetInnerHTML={{ __html: article.contentHtml }}
+              />
+
+              {/* Inline trial CTA */}
+              <div className="mt-10 pt-8 border-t border-line flex flex-wrap items-center gap-4">
+                <p className="text-sm text-muted">{copy.inlineCta}</p>
+                <Link
+                  href="https://freemium-app.yumni.fr/fr/auth/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-forest transition-colors shadow-[0_4px_20px_rgba(0,129,74,0.25)]"
+                >
+                  {copy.startFree}
+                </Link>
+              </div>
+            </div>
 
             {/* Sidebar - sticky */}
             <aside className="hidden lg:block">

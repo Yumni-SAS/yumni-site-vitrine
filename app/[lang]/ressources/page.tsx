@@ -1,5 +1,6 @@
 import type { ReactElement } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { getAllArticles, type ArticleMeta } from "@/lib/articles";
 import { getAllFichiers, CATEGORY_LABELS, type Fichier, type FichierCategorie } from "@/lib/fichiers-r2";
 
@@ -67,9 +68,18 @@ function ArticleCardFeatured({ article, lang }: { article: ArticleMeta; lang: st
       href={`/${lang}/ressources/${article.slug}`}
       className="group relative col-span-2 flex flex-col overflow-hidden rounded-3xl bg-forest text-white p-8 lg:p-10 min-h-[300px] hover:shadow-2xl transition-shadow duration-500"
     >
+      {article.image ? (
+        <Image
+          src={article.image}
+          alt=""
+          fill
+          className="object-cover opacity-30 group-hover:scale-105 transition-transform duration-500"
+          sizes="(min-width: 1024px) 66vw, 100vw"
+        />
+      ) : null}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-green/20" />
-        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/70 to-forest/30" />
       </div>
 
       <div className="relative z-10 flex flex-col h-full">
@@ -119,6 +129,17 @@ function ArticleCard({ article, lang }: { article: ArticleMeta; lang: string }) 
       className="group flex flex-col rounded-2xl border border-line bg-white hover:border-green/40 hover:shadow-lg transition-all duration-300 overflow-hidden"
     >
       <div className="h-0.5 w-full bg-gradient-to-r from-forest to-green opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      {article.image ? (
+        <div className="relative w-full aspect-[16/9] overflow-hidden bg-sand">
+          <Image
+            src={article.image}
+            alt=""
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes="(min-width: 1024px) 33vw, 100vw"
+          />
+        </div>
+      ) : null}
       <div className="flex flex-col h-full p-6">
         <div className="flex items-center gap-2 mb-4">
           <span className={`text-xs font-semibold tracking-wide uppercase px-2.5 py-1 rounded-full ${getCategoryStyle(article.category)}`}>
